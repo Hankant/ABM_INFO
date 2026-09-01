@@ -1,0 +1,1726 @@
+
+===== PDF PAGE 1 =====
+
+Unveiling the Truth and Facilitating Change: Towards Agent-based
+Large-scale Social Movement Simulation
+Xinyi Mou1, Zhongyu Wei1,2, Xuanjing Huang3,4
+∗
+1School of Data Science, Fudan University, China
+2Research Institute of Intelligent and Complex Systems, Fudan University, China
+3School of Computer Science, Fudan University, China
+4Shanghai Collaborative Innovation Center of Intelligent Visual Computing, China
+{xymou20,zywei,xjhuang}@fudan.edu.cn
+Abstract
+GGeeoorrggee FFllooyydd,, aa 4466--yyeeaarr--oolldd AAffrriiccaann--AAmmeerriiccaann mmaann,, ddiieedd iinn
+MMiinnnneeaappoolliiss aafftteerr bbeeiinngg hhaannddccuuffffeedd aanndd ppiinnnneedd ttoo tthhee ggrroouunndd bbyy
+DDeerreekk CChhaauuvviinn,, aa wwhhiittee ppoolliiccee ooffffiicceerr……
+Social media has emerged as a cornerstone of
+social movements, wielding significant influ- John Smith @user1: It’s time for … 𝑡
+He/him
+ence in driving societal change. Simulating Highly active and
+passionate about #BlackLiveMatters He
+the response of the public and forecasting the sharing information can not breathe! TT
+and taking part … ww
+p
+p
+o
+o
+t
+r
+e
+ta
+n
+n
+ti
+t
+a
+.
+l
+H
+im
+ow
+pa
+e
+c
+v
+t
+er
+h
+,
+a
+e
+s
+x
+b
+is
+e
+t
+c
+in
+o
+g
+m
+m
+e
+e
+in
+th
+c
+o
+re
+d
+a
+s
+si
+f
+n
+o
+g
+r
+l
+s
+y
+im
+im
+u
+-
+-
+Message Feed
+TT
+rr
+eettttii
+𝑡+1
+lating such phenomena encounter challenges
+A
+A H
+n
+n e
+n
+r n
+a
+/ s a
+is
+h D
+m
+e a
+o
+v
+de
+is
+rately
+@JohnSmith: #Black…
+ee
+nniill ee mmii
+concerning their efficacy and efficiency in cap- active. She enjoys The officer was too
+detailing and cruel. We must …
+turing the behaviors of social movement par- refining ideas …
+ticipants. In this paper, we introduce a hybrid … …
+framework for social media user simulation,
+wherein users are categorized into two types. Figure 1: An illustration of user interactions and attitude
+Core users are driven by Large Language Mod- changes after a trigger event happens. Users can take
+els, while numerous ordinary users are mod- actions such as posting and retweeting according to their
+eled by deductive agent-based models. We traits, and their generated content will be stored in the
+further construct a Twitter-like environment Twitter timeline and fed to their connected users. Users
+to replicate their response dynamics follow- can change attitudes once perceive others’ opinions.
+ing trigger events. Subsequently, we develop a
+multi-faceted benchmark SoMoSiMu-Bench
+for evaluation and conduct comprehensive ex- tions. Therefore, proactive measures to anticipate
+periments across real-world datasets. Exper- the impact of such events become imperative.
+imental results demonstrate the effectiveness Previous research on analyzing online social
+and flexibility of our method 1.
+movements has primarily concentrated on retro-
+spective analysis of content and users (Giorgi et al.,
+1 Introduction
+2022; Roy and Goldwasser, 2023), rather than uti-
+In the past decades, social media has wit- lizing simulation for prediction. Agent-based mod-
+nessed many social movements, such as the els (ABMs) have been extensively employed for
+Arab Spring (Rane and Salem, 2012) and simulation in social science (Schelling, 2006; Jack-
+#Metoo (Brünker et al., 2020). Twitter stands out son et al., 2017), wherein each agent symbolizes
+as a prominent forum giving powerful voices to an individual, and interactions among agents give
+groups demanding change. As illustrated in Fig- rise to distinct social phenomena. Typically, ABMs
+ure 1, the dissemination of breaking news on Twit- are micro-level mathematical models that define
+ter prompts the proliferation of opinions, influenc- how individuals affect each other, creating collec-
+ing collective sentiment and shaping societal agen- tive social patterns through simulating interaction
+das, often resulting in real-world actions (Roy and at scale (Törnberg et al., 2023).
+Goldwasser, 2023). Although the majority of so- Recently, Large Language Models (LLMs) have
+cial movements are reported peaceful, the sheer demonstrated impressive ability in human-level in-
+scale of participation can sometimes escalate into telligence (Wang et al., 2023b; Xi et al., 2023).
+violence and destruction, posing potential ramifica- LLM-based user simulations have been success-
+fully experimented in domains such as recommen-
+∗Corresponding author.
+dation (Wang et al., 2023c; Zhang et al., 2023)
+1Code and data are available at https://github.com/
+xymou/social_simulation. and collaborative work (Chen et al., 2023; Qian
+4789
+Findings of the Association for Computational Linguistics: ACL 2024, pages 4789–4809
+August 11-16, 2024 ©2024 Association for Computational Linguistics
+
+===== PDF PAGE 2 =====
+
+et al., 2023b). However, the exploration of con- three real-world movements and corresponding
+ducting large-scale online social movement simu- evaluation methods. Experiment results and anal-
+lations using LLMs remains limited and presents ysis demonstrate the effectiveness of our method.
+the following challenges: (1) How to accurately
+simulate users of social media and replicate their 2 Formalization of Public Opinion
+behaviors within the community? (2) How to effi- Dynamics Simulation
+ciently simulate a large number of users, given the
+Modeling the change in people’s attitudes, beliefs
+impracticality of employing thousands of LLMs?
+and opinions is crucial since opinion change can
+(3) How to comprehensively evaluate the effective-
+result in societal phenomena such as bipolariza-
+ness of the simulation?
+tion and extremization. In this section, we present
+To handle these challenges, this paper introduces
+the preliminaries of agent-based models and the
+a novel hybrid framework for social media user
+formulation of the targeted task.
+simulation. Considering the Pareto distribution 2
+inherent in social media user engagement, we cate- 2.1 Preliminaries
+gorize users into two types: core users, comprising
+2.1.1 Agent-based Models in Opinion
+active and influential figures such as opinion lead-
+Dynamics
+ers, and ordinary users. Core users are character-
+Agent-based models (ABMs) are micro-level math-
+ized and driven by LLMs, enabling emulation of
+ematical models defining how an individual agent
+their complex behaviors, while a vast number of
+adjusts the attitudes toward specific topics based
+ordinary users are governed by ABMs, providing a
+on the opinions of others (Lorenz et al., 2021;
+practical way for user simulation in large scale.
+Chuang and Rogers, 2023). By simulating interac-
+Based on the hybrid mechanism composed of
+tions among individual behaviors, ABMs enable
+two types of users, we establish an online so-
+the identification of emergent, group-level mech-
+cial media environment tailored for online so-
+anisms that could not be predicted using the char-
+cial movement simulation and evaluation. In this
+acteristics of individuals within a social system
+environment, messages are organized in Twitter-
+alone (Törnberg et al., 2023).
+like timelines and offline news can be dissemi-
+Typically, in ABMs for opinion dynamics, each
+nated. User interactions and resultant collective
+agent keeps a continuous attitude score represent-
+attitudes are observed through attitude scores. To
+ing its opinion, where the sign of the score repre-
+systematically evaluate the simulation, we pro-
+sents attitude direction, i.e., positive or negative,
+pose a novel benchmark SoMoSiMu-Bench, in-
+and the magnitude of the score describes the at-
+cluding three real-world collected datasets (Metoo,
+titude intensity. ABMs define how this score is
+RoeOverturned and BlackLivesMatter) and an eval-
+changed under the influence of others. Although
+uation strategy at both the micro and macro lev-
+the exact formulations vary in different ABMs,
+els, focusing on individual user alignment and sys-
+most models can be decomposed into components
+temic outcomes respectively. Evaluation results on
+that are present across ABMs and be expressed in
+SoMoSiMu-Bench demonstrate the effectiveness
+a unified formulation (Chuang and Rogers, 2023),
+of our simulation framework.
+where three key functions can specify it, i.e., the at-
+Our contributions can be summarized as follows:
+titude update function f , the selection function
+update
+- We introduce a hybrid simulation framework f and the message function f .
+selection message
+where two types of users are separately mod-
+Update Function The update function generally
+eled, to tackle the cost and efficiency challenges
+defines the change of attitudes. Formally, the atti-
+associated with simulating massive participants.
+tude update is:
+- We develop a simulator tailored for online social
+movements, featuring a Twitter-like environment ∆a i,t = a i,t+1 a i,t = f update (a i,t ,M i,t ), (1)
+−
+and modeling of user opinion dynamics. where ∆a is the attitude change of agent i from
+i,t
+- We provide the first benchmark SoMoSiMu- time step t to t + 1, a and a are the atti-
+i,t i,t+1
+Bench for social movement simulation evalua- tude of agent i before and after interaction, and
+tion, including a data collection consisting of M = m j J are the messages the
+i,t j,t i,t
+{ | ∈ }
+agent i receive from J , i.e., those who interact
+2https://en.wikipedia.org/wiki/Pareto_ i,t
+distribution with the agent i at time step t.
+4790
+
+===== PDF PAGE 3 =====
+
+Agent Interaction
+core user
+ordinary user
+Timeline 𝑡 =1 𝑡 =2 … 𝑡 =𝑛
+Core User Context to Core User @Anna: Ordinary User
+You are Anna. Anna is a left- Attitude at time 𝑡
+Memory Profile Module Memory leaning user who is active …
+Writing Retrieval
+Memory Module The news you got is …
+Update Function 𝑓𝑢𝑝𝑑𝑎𝑡𝑒
+Your memory is …
+Action Module
+Post Retweet
+The Twitter page is … Selection Function 𝑓𝑠𝑒𝑙𝑒𝑐𝑡𝑖𝑜𝑛
+Reply Like R
+W
+e
+h
+s
+a
+p
+t
+o
+w
+n
+i
+s
+ll
+e
+y
+:
+ou do next? Message Function 𝑓𝑚𝑒𝑠𝑠𝑎𝑔𝑒
+Post a tweet: This is a total farce! Attitude at time 𝑡+1
+Do Nothing #BlackLiveMatters
+postprocess➔ attitude:
+Figure 2: The proposed framework architecture. The bottom part illustrates the architecture of core users and the
+mechanism for ordinary users. The top part presents the simulation process. At each round, core user agents take
+action by generating textual responses based on contextual information, and their attitudes are conveyed to ordinary
+users after postprocessing, while ordinary users communicate using attitude scores directly.
+Selection Function The selection function deter- self-evolve, deconstruct complex tasks, and trans-
+mines the set of agents J that will have a social late the agent’s decisions into specific outcomes.
+i,t
+influence on agent i. It can be driven by internal fac- Benefiting from the strong generative ability of
+tors like internal intendancy to interact with those LLMs, LLM-empowered agents can model more
+more similar to them, or by external factors such complex behaviors of users instead of simply rep-
+as recommendation algorithms of the platforms. resenting opinions with a single score.
+Message Function The message function deter-
+2.2 Task Formulation
+mines the message m that agent j shares based
+j,t
+on its attitude a . Formally, it is also a continuous In this paper, we aim to predict how a group of
+j,t
+score, a function of the attitude a : users’ opinions on a social movement event change
+j,t
+through agent-based simulation, and compare the
+m = f (a ), (2) simulation results with real-world scenarios. We
+j,t message j,t
+consider a group of users = 1,...,U , each
+U { }
+Most ABMs assume that agents convey their in- of whom participates in an online social move-
+ternal attitude with other agents without bias, i.e., ment and has an attitude on the specific topic. The
+m j,t = f message (a j,t ) = a j,t . attitudes evolve through social interaction. Let
+a i,t A = [ 1,1] be the attitude that user i holds
+2.1.2 LLM-empowered Agents ∈ −
+at time step t 1,2,... = N, where the sign
+∈ { }
+Recently, a growing research area employs LLMs of a entails the direction of the attitude and the
+i,t
+to construct autonomous agents, where the key idea absolute value of a represents the magnitude of
+i,t
+is to equip LLMs with crucial human capabilities the attitude. For each user, we instantiate the corre-
+such as memory and planning. In terms of agent sponding agent with the user’s initial attitude and
+architecture, existing research can be synthesized profile, and construct the social networks based
+into a unified framework consisting of the profile on the authentic following relationships on Twitter.
+module, the memory module, the planning module, Then, we aim to (1) simulate the behaviors of users
+and the action module (Wang et al., 2023b). They at the individual level given a certain context in the
+are designed to indicate the profiles of the agent pattern of single-round simulation; and (2) simulate
+roles, help the agents accumulate experiences and continuously to observe how collective opinions
+4791
+
+===== PDF PAGE 4 =====
+
+shift over time resulting from user interactions. post original content. (2) Amplifier: users who
+collect multiple thoughts and share ideas and opin-
+3 Hybrid Framework for Social Media ions. (3) Curator: they use a broader context to
+Simulation define ideas. They tend to take the ideas of others
+and either validate, question, challenge or dismiss
+User engagement in social networks often exhibits
+them. (4) Commentator: users who take part in
+a Pareto distribution, where the bulk of content orig-
+something to which they strongly feel about. They
+inates from a small fraction of individuals. Thus,
+retweet actively. (5) Viewer: the inactive major-
+those more active and influential such as opinion
+ity, who prefer to consume information rather than
+leaders should be modeled finely, while the silent
+create or share information online.
+majority can be controlled by simpler models. The
+overall framework is illustrated in Figure 2, where
+3.1.2 Memory Module
+social media users are divided into core users and
+We consider two types of memory to fully char-
+ordinary users. The two types of users are driven by
+acterize the social media user and reconstruct the
+different models, to address the cost and efficiency
+human-like memory mechanisms. (1) Personal
+issues of using thousands of LLMs.
+Experience: The personal experience is authentic
+3.1 Simulation of Core Users records of the users, which can be extracted from
+the users’ historical tweets before the event hap-
+We build an agent architecture by empowering
+pens. By retrieving the relevant experience and
+LLMs with the necessary capabilities for core user
+opinions of the user, it would be easier to infer
+simulation. An overview of the agent’s architecture
+how this user would behave in similar situations.
+is illustrated in the left lower part of Figure 2. The
+(2) Event Memory: The event memory represents
+agent is equipped with a profile module, a mem-
+the observation of the agent itself and other visi-
+ory module, and an action module, to complete the
+ble agents. It captures specific and concentrated
+complex operations on Twitter.
+insights after the event happens, i.e., after the sim-
+3.1.1 Profile Module ulation starts. We integrate a memory module to
+manipulate the memories of agents, mainly includ-
+We extract and summarize the following informa-
+ing three operations:
+tion from real user data and prompt the correspond-
+ing agents when simulating:
+Memory Writing The raw observations includ-
+Demographics The basic profile is demograph- ing behaviors performed by the agents themselves
+ics, such as name, gender, political leaning and and tweets visible to the agents are input into the
+account type (Brünker et al., 2020). This informa- memory module after each round’s interaction, in
+tion is highly related to the user’s potential stance both forms of natural languages and vectors.
+on social events. We induce the demographics from
+Memory Retrieval Agents can extract informa-
+users’ biographies and previous tweets. The imple-
+tion from the memories considering different fac-
+mentation details can be found in Appendix B.2.
+tors. The retrieval function gets observations based
+Social Traits As participants in a social platform, on recency, relevance, importance and immediacy
+agents’ social traits such as activity and influence (Park et al., 2023; Chen et al., 2023), where re-
+also capture important characteristics. Activity cency assigns a higher score to memory objects
+quantifies the frequency of a user’s interaction, that were recently accessed, relevance assigns a
+while influence reflects the quality and popularity higher score to memory objects that are related to
+of generated content. Since users exhibit long-tail the current situation, importance assigns a higher
+distribution among these social traits, we segment score to memory objects that the agent believes
+them into three uneven tiers (Zhang et al., 2023). to be important, and immediacy assigns a higher
+score to memory that needs quick attention or im-
+Communication Roles To more accurately de-
+mediate response. The top-ranked memories are
+scribe users in participation of social movements,
+subsequently integrated as part of the prompt.
+we integrate Edelman’s topology of influence (TOI)
+(Bentwood, 2008; Tinati et al., 2012) to identify Memory Reflection We incorporate the reflec-
+the communication roles of online users: (1) Idea tion operation to urge the agents to generate high-
+Starter: individuals who start the conversation and level thoughts. We follow Park et al. to im-
+4792
+
+===== PDF PAGE 5 =====
+
+plement reflection periodically, with steps includ- time step t + 1 for other users who follow Anna.
+ing: (1) generating the most salient questions that For ordinary users, information is transmitted ac-
+can be asked given the agent’s recent experiences; cording to the message function defined in ABMs.
+(2) prompting agents to extract high-level insights
+Interaction between Heterogeneous Agents
+from retrieved relevant memories. This type of
+Since ABMs only accept numeric inputs and out-
+memory will be included alongside other observa-
+puts, we need to transform the content generated
+tions when retrieval occurs.
+by core users into attitude scores for ABMs. Ex-
+3.1.3 Action Module ternal LLMs are employed to annotate the stance,
+We design an action module tailored for social me- i.e., attitude direction of the content, and sentiment
+dia ecology, where actions are highly related to in- analysis tool is applied to calculate the attitude in-
+formation and attitude propagation, including: (1) tensity. After this postprocessing, the scores can
+Post: post original content; (2) Retweet: retweet be processed by the message function in ABMs.
+an existing tweet in the agent’s page, either forward Considering that the impact of ordinary users on
+directly or post additional statements; (3) Reply: core users is subtle, we currently do not address the
+reply to authors of existing tweets or replies; (4) influence from ordinary users to core users.
+Like: like an existing tweet; (5) Do Nothing: do
+3.4 Simulation Environment
+nothing and keep silent. The optional actions are
+presented to the agents via prompting. The agents’ To simulate and evaluate users’ reactions during
+responses are then parsed into concrete effects on real events, we build a Twitter-like simulation plat-
+the environment, such as adding a new tweet or form that the agents are situated within and discuss
+increasing the retweets of an existing tweet. the execution of the simulation.
+3.2 Simulation of Ordinary Users Message Feed Mechanism The environment op-
+erates based on the concept of timeline (Tinati et al.,
+Initial Attitudes To restore the real situation and
+2012). In this environment, each user has a time-
+lay the foundation for reliable simulation, we ini-
+line of tweets created by themselves and other users
+tialize the attitudes based on the corresponding
+they follow. Also, a public timeline is kept to store
+user’s tweets at that time period, instead of setting
+tweets sent by all users. At each round, the most
+the initial opinions uniformly distributed. This can
+recent tweets are provided for prompting.
+be implemented by annotating the direction and
+density of their generated content on Twitter. Offline News Feed Some offline events often
+act as catalysts for social movements, such as the
+Attitude Change Mechanism We employ
+George Floyd incident triggering the widespread
+ABMs in opinion dynamics in Sec. 2.1.1 to model
+#BlackLivesMatter movement. Thus, we provide
+the attitude change of ordinary users. Formally, at
+real-world events described in natural languages as
+time step t, agent i interacts with a set of agents
+background information to the core user agents.
+J based on the selection function f . The
+i,t selection
+selected agents then share their messages based on
+3.5 Simulation Process
+the message function f , which is a function
+message
+Our simulator operates in different ways for differ-
+of their attitudes. After receiving the messages,
+ent purposes in Sec. 2.2. To validate the replication
+agent i updates its attitude from a to a based
+i,t i,t+1
+of user behaviors, the simulator can run in a single
+on the attitude update function f .
+update
+round, where the provided context is authentic. To
+3.3 Interaction between Agents estimate future public opinion, our simulator can
+also operate in a round-by-round manner, where
+In the hybrid system, the interaction between dif-
+the subsequent context contains simulated content.
+ferent agents is shown at the top of Figure 2.
+During each round, i.e., time step, agents for core
+Interaction between Homogeneous Agents users autonomously give a thought before taking
+Core users convey their thoughts to others by gen- actions and then decide what actions they would
+erating specific content, in the form of natural lan- like to take. Overall, LLM agents for core users per-
+guages. For example, as shown in Figure 2, user form actions based on the following information:
+Anna generates a post at time step t, and this con- (1) profile or description of the agent; (2) memory
+tent will be part of the "Twitter page" in prompt at of the agent; (3) triggering offline news; (4) the
+4793
+
+===== PDF PAGE 6 =====
+
+Dataset Event #Users #Tweets Time Span their overall tweet frequency. Next, we randomly
+E1 1,000 18,638 Oct 15 - Oct 22, 2017 sample ordinary users from those who tweeted dur-
+Metoo
+E2 1,000 13,291 Jan 06 - Jan 13, 2018 ing the event period. Subsequently, we collect their
+E1 1,000 61,687 May 02 - May 09, 2022
+Roe social networks and tweets during the event pe-
+E2 1,000 59,829 Jun 24 - Jul 01, 2022
+P1 1,000 10,710 May 25 - Jun 01, 2020 riod and annotate the attitude scores using GPT-
+BLM
+P2 1,000 21,480 Jun 02 - Jun 09, 2020 3.5 (OpenAI, 2023) and Textblob 3.
+To reduce the annotation cost for validation,
+Table 1: Statistics of our dataset. In Metoo, E1 is Amer-
+rather than the simulation cost, we retain 700 or-
+ican actress Alyssa Milano starts the #Metoo move-
+dinary users. As a result, 1,000 users are acquired
+ment and E2 is #Timesup campaign on the 2019 Golden
+for the simulation of each event. The statistics of
+Globes Awards; In Roe, E1 is The leakage of the
+Supreme Court draft opinion and E2 is The Supreme the datasets are presented in Table 1. More details
+Court overturns Roe v. Wade; In BLM, we include two can be found in Appendix B.
+phases after the Murder of George Floyd.
+4.2 Micro Alignment Evaluation
+To evaluate the effectiveness of the simulation at
+Twitter page showing tweets visible to the agent;
+the individual level, we simulate in single rounds by
+(5) notifications containing replies to the agent. A
+providing authentic contextual information to each
+full prompt example can be found in Appendix C.3.
+core user agent and assess their decision-making.
+Agents for ordinary users update their attitudes
+based on the pre-defined formulas in ABMs and
+- Stance Alignment: We evaluate the stance of
+perceived messages from other agents. The process
+generated content, i.e., classify it into three cat-
+is shown in the algorithms in Appendix C.1.
+egories: support, neutral and oppose. Since the
+categories are concentrated on support and neu-
+4 SoMoSiMu-Bench: A Benchmark for
+tral, the mean absolute error (MAE) of attitude
+Social Movement Simulation
+scores is also reported.
+In this section, we present the SoMoSiMu-Bench, - Content Alignment: We classify the agent-
+a benchmark for simulation evaluation. We con- generated content into 5 types, i.e., Call for Ac-
+struct a data collection, composed of three social tion, Sharing of Opinion, Reference to a Third
+movements on Twitter. Then, evaluation strategies Party, Testimony and Other (Brünker et al.,
+at the micro and macro levels are designed. 2020). Accuracy and macro F1 score are re-
+ported, and cosine similarity between simulated
+4.1 Datasets
+content and real content is also provided.
+We first present the construction of our dataset.
+- Behavior Alignment: We evaluate whether the
+agents take the corresponding actions done by
+Data Collection To broadly evaluate the sim-
+users. Since only posting and retweeting can be
+ulation performance of the proposed method,
+observed in Twitter datasets, we narrow down the
+we construct three Twitter datasets by collecting
+action space to post and retweet. Accuracy and
+tweets related to specific social movements, i.e.,
+macro F1 score are reported.
+Metoo (Maiorana et al., 2020), RoeOverturned
+(Roe) (Chang et al., 2023) and BlackLivesMatter
+4.3 Macro System Evaluation
+(BLM) (Giorgi et al., 2022). For each movement,
+To evaluate the effectiveness of the simulation at
+we collect tweets spanning two specific events or
+the macro level, we quantify the attitude distribu-
+phases, as outlined in Table 1.
+tion from both horizontal and vertical perspectives
+User Selection Due to the absence of an author- in a complete multi-round simulation.
+itative definition for core users, we identify core
+- Static Attitude Distribution: We capture charac-
+users by ranking all participants based on the ac-
+teristics of attitude distribution in quantitative
+tivity and influence metrics in practice. From the
+terms: Bias and Diversity (Lorenz et al., 2021).
+gathered tweets, we select 300 core users by first
+Bias is measured as the deviation of the mean
+identifying the top 100 most influential individuals
+attitude from the neutral attitude, and Diversity is
+based on the number of received retweets. We then
+the standard deviation of attitudes. We measure
+extend this selection by selecting an additional 200
+active users from their social networks, based on 3https://github.com/sloria/TextBlob
+4794
+
+===== PDF PAGE 7 =====
+
+at every time step and average over time. Dif- Stance Content Behavior
+Datasets
+Acc. F1 MAE Acc. F1 Sim. Acc. F1
+ferences between simulated and real measures
+Metoo 0.9679 0.3400 0.2311 0.7010 0.1988 0.8064 0.7313 0.5212
+∆Bias and ∆Div. are reported. Roe 0.9430 0.3361 0.2058 0.6423 0.1957 0.8090 0.6665 0.4691
+BLM 0.8991 0.3735 0.1627 0.7353 0.2218 0.8406 0.7796 0.5759
+- Time Series of the Average Attitude: We measure
+the similarity between the time series of average Table 2: Results of micro alignment evaluation.
+attitude and the simulated one, using Dynamic
+Time Warping (DTW) (Müller, 2007) and Pear- core users based on AgentVerse (Chen et al., 2023),
+son correlation coefficient (Cohen et al., 2009). while for ordinary users we use the mesa 4 library
+to implement the conventional agent-based mod-
+Calibration and Validation To find the proper
+els. For micro alignment evaluation, we sample
+parameters for ABMs in the hybrid system, we per-
+(user, context) pairs from the dataset detailed in
+form the calibration and validation settings (Geste-
+Appendix B.4 to reduce cost. For macro system
+feld and Lorenz, 2023). Calibration aims to find the
+evaluation, we run 14 steps for each event and more
+best combination of parameters that can help match
+details can be found in Appendix C.
+the empirical distributions. We specify parameter
+values for a parameter sweep to produce simulation
+5.2 Micro Alignment Evaluation
+results on E1 or P1 of each movement. Then, we
+Table 2 shows the results of the micro alignment
+report the validation results on E2 or P2. Since
+evaluation on the three datasets. We can observe:
+simulating with LLMs hundreds of times is unaf-
+fordable, we perform calibration in pure ABMs and - LLM-empowered agents effectively model core
+apply the optimal parameters to the hybrid model. users’ stances on specific topics. This can be
+The details can be found in Appendix C.4. attributed to the personalized profiles reflecting
+users’ leanings. However, they struggle to gen-
+5 Experiments
+erate non-supportive content, resulting in low F1
+scores. This is because LLMs tend to produce
+5.1 Experiment Settings
+content with clear stances, unlike real users, who
+We incorporate the following ABMs for ordinary
+may illustrate more complex behaviors, such as
+users in the hybrid framework. Meanwhile, we
+sharing external links or mentions.
+employ these ABMs to model all users (referred to
+- The LLM-empowered agents can replicate the
+as pure ABMs) as baselines for comparison. More
+content generated by users. Both in the real data
+details can be found in Appendix A.
+and simulated results, user-generated content is
+- Bounded Confidence Model (BC) (Deffuant concentrated in call for action and sharing of
+et al., 2000): it assumes that if the received mes- opinions. It’s difficult for agents to generate tes-
+sage is close enough to an agent’s attitude, the timony content since they lack the offline experi-
+message has an assimilation force on the agent. ence of the users. Moreover, the overall cosine
+- Bounded Confidence Model-Multiple similarity between real and simulated content ap-
+(HK) (Rainer and Krause, 2002): a vari- proaches 80%, affirming their capability to repli-
+ant of BC, which can handle multiple sources. cate user responses to specific contexts.
+- Relative Agreement Model (RA) (Deffuant et al., - The LLM-empowered agents can well distin-
+2002): extends the BC in that the similarity bias guish between different users who are more in-
+is a continuously decaying function. clined to create original content and those who
+prefer to retweet, achieving over 72% accuracy
+- Social Judgement Model (SJ) (Jager and Am-
+on all the three datasets. It can be attributed to
+blard, 2005): additionally includes a repulsion
+the portrayal of social traits and communication
+force based on BC.
+roles in the profile, which indirectly influences
+- Lorenz (Lorenz et al., 2021): includes assimila-
+the agents’ choice of actions. The ablation study
+tion force, reinforcement force, similarity bias,
+in Appendix D.1 further demonstrates this.
+polarization factor and source credibility.
+5.3 Macro System Evaluation
+For all the experiments, we use GPT-3.5-Turbo-
+0613 to simulate core users, with max tokens set Table 3 shows the results of the macro system eval-
+to 256 and temperature set to 0 for more deter- uation. We can observe:
+ministic results. We implement LLM-empowered 4https://mesa.readthedocs.io/en/stable/
+4795
+
+===== PDF PAGE 8 =====
+
+Metoo Roe BLM
+Method
+∆Bias↓ ∆Div.↓ DTW↓ Corr.↑ ∆Bias↓ ∆Div.↓ DTW↓ Corr.↑ ∆Bias↓ ∆Div.↓ DTW↓ Corr.↑
+BC 0.0124 0.0184 2.7760 0.4831 0.0265 0.0144 5.7662 -0.7755 0.0078 0.0036 5.2289 -0.4404
+Hybrid w/ BC 0.0135 0.0108 1.8440 0.7043 0.0239 0.0121 2.4611 0.3607 0.0300 0.0069 3.9254 0.1248
+HK 0.0093 0.0105 2.9171 0.0262 0.0258 0.0185 7.7254 -0.7532 0.0081 0.0101 4.1204 -0.3026
+Hybrid w/ HK 0.0126 0.0037 1.9136 0.6517 0.0319 0.0157 3.6752 -0.0807 0.0578 0.0093 3.7288 -0.2433
+RA 0.0062 0.0055 3.1063 -0.0687 0.0237 0.0120 2.9521 0.0811 0.0039 0.0017 3.0441 0.2666
+Hybrid w/ RA 0.0117 0.0008 1.7829 0.7238 0.0221 0.0104 2.3326 0.4274 0.0376 0.0070 2.2353 0.6050
+SJ 0.0064 0.0192 2.2994 0.2009 0.0209 0.0106 1.2739 0.6177 0.0411 0.0072 2.7778 0.4475
+Hybrid w/ SJ 0.0098 0.0119 2.2789 0.6327 0.0203 0.0095 1.1896 0.6598 0.0076 0.0018 2.4564 0.5167
+Lorenz 0.0131 0.0198 5.3049 -0.4657 0.0352 0.0172 1.1027 0.7329 0.0895 0.0094 2.8897 0.4387
+Hybrid w/ Lorenz 0.0035 0.0116 2.9857 0.6103 0.0093 0.0147 1.0148 0.7576 0.0023 0.0079 2.5394 0.5055
+Table 3: Results of macro system evaluation. The average results of 3 runs are reported. In the vast majority of cases,
+hybrid systems show improvements across various aspects compared to ABMs. Bold presents the best performance
+in the column. Underline indicates the metric for the hybrid model did not surpass that of the corresponding ABM.
+- Overall, the hybrid models outperform pure 0.016
+ABMs in terms of both static measures and time
+0.012 series measures. Among the models, those based
+on the RA and Lorenz demonstrate advantages 0.008
+across various datasets, benefiting from the abil- 0.004
+300 600 9001000
+ity of RA and Lorenz in modeling situations of # of Agents
+(a)
+extremism (Chuang and Rogers, 2023).
+- Hybrid models usually exhibit higher attitude
+bias compared with the corresponding pure
+ABMs. It’s also the result of the LLMs’ leaning
+to generate content with clear stances. With more
+agents modeled as positive towards the topic, the
+overall level of attitude is also overestimated.
+- Taking advantage of the accurate replication of at-
+titudes of core users empowered by LLMs, even
+when pure ABMs fail to capture the overall trend
+in attitude changes, the overall trend can be cor-
+rected in the hybrid models under the guidance
+of these powerful LLM-based agents.
+5.4 Scalability Analysis
+Figure 3 depicts the performance and runtime vari-
+ations observed in the Metoo experiment across
+different numbers of agents. For comparative anal-
+ysis, we establish the real distribution of 1,000
+agents in Sec. 5.3 as the reference and assess the
+performance of hybrid models featuring 300 core
+users alongside varying numbers of ordinary users.
+In Figure 3a, except for ∆ , all other metrics
+Bias
+exhibit only a slight decline as the proportion of
+ordinary users increases, indicating that a sampling
+simulation approach can yield competitive results.
+Figure 3b illustrates the simulation time ratio with
+varying numbers of agents relative to the time in the
+main experiment with 1,000 agents, where the core
+users remain fixed at 300. Notably, the runtime
+primarily depends on the time required for LLM
+serusaeM
+citatS
+1.175
+1.150 1.125
+Bias Div. 1.100 DTW 1.075 Corr.
+1.050
+1.025
+300 500 800 1000 5000 10000
+# of Agents
+(b)
+oitaR
+emiT
+1.800
+1.600
+1.400 1.200
+1.000
+0.800
+serusaeM
+seireS
+emiT
+Figure 3: (a) System metrics when simulating with
+varying numbers of agents (better viewed in color); (b)
+Running Efficiency with varying numbers of agents.
+API key invocation, with scaling up the number of
+ordinary users hardly imposing additional burden,
+unless the simulation population exceeds millions,
+when further engineering enhancements and hard-
+ware optimizations become necessary. This obser-
+vation underscores the scalability of our method.
+5.5 Further Analysis
+We further discuss more details about the simula-
+tion of the LLM-empowered core users, offering
+insights to enhance community communication.
+5.5.1 Replication of Echo Chambers
+We aim to assess whether the simulation can repli-
+cate the echo chamber, a common phenomenon in
+online social networks. We explore this question
+from the perspective of the consumption and pro-
+duction of content (Garimella et al., 2018). The
+content of production is the content generated by
+the agents, while the content of consumption is that
+generated by agents they “follow”. The similarity
+between production and consumption indicates the
+users’ tendency to consume content that is similar
+to their own. Figure 4 reveals that as the number
+of epochs increases, the average similarity shows
+an overall upward trend. These results validate the
+system’s capability to reflect the echo chambers.
+4796
+
+===== PDF PAGE 9 =====
+
+0.96
+0.95
+0.94
+0.93
+0.92
+2 4 6 8 10
+Epochs
+(a)
+ytiralimiS
+0.98
+0.97
+0.96
+0.95
+2 4 6 8 10
+Epochs
+(b)
+ytiralimiS
+versal framework, agents with slightly different
+architectures have been widely applied in various
+scenarios and applications. Among these works,
+some are utilized for task-solving purposes, i.e.,
+executing pre-defined tasks, such as software de-
+velopment (Qian et al., 2023a,b; Hong et al., 2023),
+collaboration (Chen et al., 2023), and exploring the
+world in Minecraft (Wang et al., 2023a). Others fo-
+Figure 4: (a) Similarity of content of consumption and
+cus on simulation, where the replication of human
+production on Metoo simulation; (b) Similarity of con-
+behaviors is focused. Scenarios including social
+tent of consumption and production on Roe simulation.
+interaction, (Park et al., 2022; Liu et al., 2023)
+BLM is not reported since it is a partial phrase.
+recommendation (Wang et al., 2023c; Zhang et al.,
+2023), the world war (Hua et al., 2023) and commu-
+Method Avg. Homogeneity Avg. Toxity
+nication game (Xu et al., 2023) have been explored
+S1 0.8551 0.1426 to provide insights on communication. Most works
+S2 0.8580 0.1296 only require a small number of agents and haven’t
+S3 0.8962 0.1163 considered scenarios requiring large-scale agents.
+Table 4: Results of solutions to break the echo chambers.
+6.2 Social Simulation
+Bold presents the best performance in the column.
+Agent-based models for social simulation on opin-
+ion dynamics mainly focus on how individu-
+5.5.2 Intervention: Break the Echo Chambers
+als change their attitudes due to others’ influ-
+Given that echo chambers often contribute to polar-
+ence (Chuang and Rogers, 2023; Chuang et al.,
+ization, we aim to explore strategies to mitigate this
+2023). These models can be divided into deductive
+effect while safeguarding users’ freedom of expres-
+ABMs and inductive ABMs. Represented by the
+sion. We propose and test three solutions in our
+Bounded Confidence Model (Deffuant et al., 2000),
+simulation framework: S1 - Feeding the opposite
+the former category is based on psychology, such
+opinions; S2 - Feeding the neutral opinions; S3 -
+as the social judgment theory (Sherif and Hovland,
+Establishing public spaces for debate or discussion,
+1961). By contrast, the latter often involves hu-
+achieved by encouraging users to share opinions
+man experiments, which are expensive and with
+using platform-provided public hashtags. We exper-
+limited scale. With ability in human-level intelli-
+iment on the Metoo dataset and evaluate the homo-
+gence, LLM-empowered agents have potential to
+geneity and toxicity of different situations. The ho-
+serve as a substitute for human subjects. Park et al.
+mogeneity is measured by the method in Sec. 5.5.1
+and Törnberg et al. provide a simulation platform
+and the toxicity is measured using the Perspective
+to help designers see beyond social interactions
+API 5. Table 4 illustrates that all three approaches
+that people intend and improve social interaction.
+can reduce the echo chambers, but the introduction
+Sotopia (Zhou et al., 2023) designs an evaluation
+of opposing opinions can increase the toxicity of framework for social intelligence. S3 (Gao et al.,
+the community, while establishing spaces for open
+2023) simulate public opinion through Markov
+discussion can promote more peaceful exchanges.
+Chain and LLMs, but how they deal with the large
+scale of users remains ambiguous.
+6 Related Work
+6.1 LLM-empowered Autonomous Agents 7 Conclusion
+With the prominent development of Large Lan-
+In this paper, we propose a hybrid framework for
+guage Models, the LLM-empowered autonomous
+social media user simulation. We empower core
+agent has recently gained significant attention. In-
+users and ordinary users with LLMs and ABMs,
+tegrating profile, memory, reflection and planning
+and we provide a Twitter-like environment and a
+modules, Park et al. design generative agents to
+benchmark SoMoSiMu-Bench for simulation and
+simulate the human daily life. Based on this uni-
+evaluation. Experiment results demonstrate the
+5https://developers.perspectiveapi.com/ effectiveness and flexibility of our method.
+4797
+
+===== PDF PAGE 10 =====
+
+Acknowledgement Felix Brünker, Magdalena Wischnewski, Milad
+Mirbabaie, and Judith Meinert. 2020. The role of
+This work is supported by National Natural Science social media during social movements–observations
+Foundation of China (No. 62176058) and National from the# metoo debate on twitter.
+Key R&D Program of China (2023YFF1204800).
+Rong-Ching Chang, Ashwin Rao, Qiankun Zhong, Mag-
+The project’s computational resources are sup-
+dalena Wojcieszak, and Kristina Lerman. 2023. #
+ported by CFFF platform of Fudan University and roeoverturned: Twitter dataset on the abortion rights
+the data collecting is supported by DBCloud. We controversy. In Proceedings of the International
+AAAI Conference on Web and Social Media, vol-
+would also like to thank the chairs and reviewers
+ume 17, pages 997–1005.
+for their constructive feedback.
+Weize Chen, Yusheng Su, Jingwei Zuo, Cheng Yang,
+Limitations Chenfei Yuan, Chen Qian, Chi-Min Chan, Yujia
+Qin, Yaxi Lu, Ruobing Xie, et al. 2023. Agent-
+Our work is the first step towards a large-scale verse: Facilitating multi-agent collaboration and ex-
+simulation implemented by a hybrid framework ploring emergent behaviors in agents. arXiv preprint
+and it is limited in two aspects. In terms of data, arXiv:2308.10848.
+although we have incorporated a larger number
+Yun-Shiuan Chuang, Agam Goyal, Nikunj Harlalka,
+of agents than other studies, due to limitations in
+Siddharth Suresh, Robert Hawkins, Sijia Yang, Dha-
+annotation costs, we have not yet validated interac- van Shah, Junjie Hu, and Timothy T Rogers. 2023.
+tions among millions of agents. In terms of LLM- Simulating opinion dynamics with networks of llm-
+based agents. arXiv preprint arXiv:2311.09618.
+empowered agents, due to reinforcement learning
+techniques, LLMs are also biased toward being
+Yun-Shiuan Chuang and Timothy T Rogers. 2023. Com-
+more polite, articulate and respectful than users on putational agent-based models in opinion dynamics:
+real-world social media platforms (Törnberg et al., A survey on social simulations and empirical studies.
+arXiv preprint arXiv:2306.03446.
+2023), bringing bias to our study. More careful
+prompt engineering will be considered to solve this
+Israel Cohen, Yiteng Huang, Jingdong Chen, Jacob Ben-
+problem in future work. esty, Jacob Benesty, Jingdong Chen, Yiteng Huang,
+and Israel Cohen. 2009. Pearson correlation coeffi-
+Ethics Statement cient. Noise reduction in speech processing, pages
+1–4.
+Data Collection and Privacy Our data collection
+Guillaume Deffuant, Frédéric Amblard, Gérard Weis-
+is in compliance with Twitter’s terms of service and
+buch, and Thierry Faure. 2002. How can extremism
+matches previous publications. Although tweets
+prevail? a study based on the relative agreement in-
+are public, when releasing data, we will share tweet teraction model. Journal of artificial societies and
+id rather than raw data, to minimize the privacy risk. social simulation, 5(4).
+Furthermore, during the simulation, we anonymize
+Guillaume Deffuant, David Neau, Frederic Amblard,
+each user by renaming them.
+and Gérard Weisbuch. 2000. Mixing beliefs among
+interacting agents. Advances in Complex Systems,
+Simulation for Social Good The purpose of this
+3(01n04):87–98.
+paper is to use simulation to recreate the real sit-
+uation of social movements and provide insights Chen Gao, Xiaochong Lan, Zhihong Lu, Jinzhu Mao,
+for improving harmonious communication among Jinghua Piao, Huandong Wang, Depeng Jin, and
+Yong Li. 2023. S 3: Social-network simulation sys-
+users. But it might also be misused to label peo-
+tem with large language model-empowered agents.
+ple with a specific label that they do not want to
+arXiv preprint arXiv:2307.14984.
+be associated with. We suggest that when in use
+the tools should be accompanied by descriptions Kiran Garimella, Gianmarco De Francisci Morales,
+Aristides Gionis, and Michael Mathioudakis. 2018.
+about their limitations and imperfect performance,
+Political discourse on social media: Echo chambers,
+as well as allow users to opt out from being the
+gatekeepers, and the price of bipartisanship. In Pro-
+subjects of measurement. ceedings of the 2018 world wide web conference,
+pages 913–922.
+Martin Gestefeld and Jan Lorenz. 2023. Calibrating an
+References
+opinion dynamics model to empirical opinion distri-
+Jonny Bentwood. 2008. Distributed influence: Quanti- butions and transitions. Journal of Artificial Societies
+fying the impact of social. and Social Simulation, 26(4).
+4798
+
+===== PDF PAGE 11 =====
+
+Salvatore Giorgi, Sharath Chandra Guntuku, McKenzie Chen Qian, Xin Cong, Cheng Yang, Weize Chen,
+Himelein-Wachowiak, Amy Kwarteng, Sy Hwang, Yusheng Su, Juyuan Xu, Zhiyuan Liu, and Maosong
+Muhammad Rahman, and Brenda Curtis. 2022. Twit- Sun. 2023a. Communicative agents for software de-
+ter data of the #blacklivesmatter movement and velopment. arXiv preprint arXiv:2307.07924.
+counter protests: 2013 to 2021.
+Chen Qian, Yufan Dang, Jiahao Li, Wei Liu, Weize
+Chen, Cheng Yang, Zhiyuan Liu, and Maosong
+Sirui Hong, Xiawu Zheng, Jonathan Chen, Yuheng
+Sun. 2023b. Experiential co-learning of software-
+Cheng, Jinlin Wang, Ceyao Zhang, Zili Wang, Steven
+developing agents. arXiv preprint arXiv:2312.17025.
+Ka Shing Yau, Zijuan Lin, Liyang Zhou, et al. 2023.
+Metagpt: Meta programming for multi-agent collabo-
+Hegselmann Rainer and Ulrich Krause. 2002. Opinion
+rative framework. arXiv preprint arXiv:2308.00352.
+dynamics and bounded confidence: models, analysis
+and simulation.
+Wenyue Hua, Lizhou Fan, Lingyao Li, Kai Mei,
+Jianchao Ji, Yingqiang Ge, Libby Hemphill, and Halim Rane and Sumra Salem. 2012. Social media, so-
+Yongfeng Zhang. 2023. War and peace (waragent): cial movements and the diffusion of ideas in the arab
+Large language model-based multi-agent simulation uprisings. Journal of international communication,
+of world wars. arXiv preprint arXiv:2311.17227. 18(1):97–111.
+Shamik Roy and Dan Goldwasser. 2023. “a tale of
+Joshua Conrad Jackson, David Rand, Kevin Lewis,
+two movements’: Identifying and comparing per-
+Michael I Norton, and Kurt Gray. 2017. Agent-based
+modeling: A guide for social psychologists. So- spectives in# blacklivesmatter and# bluelivesmatter
+cialPsychologicalandPersonalityScience, 8(4):387– movements-related tweets using weakly supervised
+graph-based structured prediction. In Findings of the
+395.
+Association for Computational Linguistics: EMNLP
+2023, pages 10437–10467.
+Wander Jager and Frédéric Amblard. 2005. Uniformity,
+bipolarization and pluriformity captured as generic
+Thomas C Schelling. 2006. Micromotives and macrobe-
+stylized behavior with an agent-based simulation
+havior. WW Norton & Company.
+model of attitude change. Computational & Mathe-
+matical Organization Theory, 10:295–303. Muzafer Sherif and Carl I Hovland. 1961. Social judg-
+ment: Assimilation and contrast effects in communi-
+Ruibo Liu, Ruixin Yang, Chenyan Jia, Ge Zhang, Denny cation and attitude change.
+Zhou, Andrew M Dai, Diyi Yang, and Soroush
+Vosoughi. 2023. Training socially aligned language Ramine Tinati, Leslie Carr, Wendy Hall, and Jonny
+models in simulated human society. arXiv preprint Bentwood. 2012. Identifying communicator roles
+arXiv:2305.16960. in twitter. In Proceedings of the 21st international
+conference on World Wide Web, pages 1161–1168.
+Jan Lorenz, Martin Neumann, and Tobias Schröder.
+Petter Törnberg, Diliara Valeeva, Justus Uitermark,
+2021. Individual attitude change and societal dynam-
+and Christopher Bail. 2023. Simulating social me-
+ics: Computational experiments with psychological
+dia using large language models to evaluate al-
+theories. Psychological Review, 128(4):623.
+ternative news feed algorithms. arXiv preprint
+arXiv:2310.05984.
+Zachary Maiorana, Pablo Morales Henry, and Jennifer
+Weintraub. 2020. #metoo Digital Media Collection - Guanzhi Wang, Yuqi Xie, Yunfan Jiang, Ajay Man-
+Twitter Dataset. dlekar, Chaowei Xiao, Yuke Zhu, Linxi Fan, and An-
+ima Anandkumar. 2023a. Voyager: An open-ended
+Meinard Müller. 2007. Dynamic time warping. Infor- embodied agent with large language models. arXiv
+mation retrieval for music and motion, pages 69–84. preprint arXiv:2305.16291.
+Lei Wang, Chen Ma, Xueyang Feng, Zeyu Zhang, Hao
+OpenAI. 2023. Openai gpt3.5-turbo api.
+Yang, Jingsen Zhang, Zhiyuan Chen, Jiakai Tang,
+Xu Chen, Yankai Lin, et al. 2023b. A survey on large
+Joon Sung Park, Joseph O’Brien, Carrie Jun Cai, Mered-
+language model based autonomous agents. arXiv
+ith Ringel Morris, Percy Liang, and Michael S Bern-
+preprint arXiv:2308.11432.
+stein. 2023. Generative agents: Interactive simulacra
+of human behavior. In Proceedings of the 36th An-
+Lei Wang, Jingsen Zhang, Xu Chen, Yankai Lin, Rui-
+nual ACM Symposium on User Interface Software
+hua Song, Wayne Xin Zhao, and Ji-Rong Wen. 2023c.
+and Technology, pages 1–22.
+Recagent: A novel simulation paradigm for recom-
+mender systems. arXiv preprint arXiv:2306.02552.
+Joon Sung Park, Lindsay Popowski, Carrie Cai, Mered-
+ith Ringel Morris, Percy Liang, and Michael S Bern- Zhiheng Xi, Wenxiang Chen, Xin Guo, Wei He, Yiwen
+stein. 2022. Social simulacra: Creating populated Ding, Boyang Hong, Ming Zhang, Junzhe Wang,
+prototypes for social computing systems. In Proceed- Senjie Jin, Enyu Zhou, et al. 2023. The rise and
+ings of the 35th Annual ACM Symposium on User potential of large language model based agents: A
+Interface Software and Technology, pages 1–18. survey. arXiv preprint arXiv:2309.07864.
+4799
+
+===== PDF PAGE 12 =====
+
+Yuzhuang Xu, Shuo Wang, Peng Li, Fuwen Luo, Xi- A Agent-based Models
+aolong Wang, Weidong Liu, and Yang Liu. 2023.
+Exploring large language models for communica- In this section, we present the agent-based models
+tion games: An empirical study on werewolf. arXiv based on different psychological theories in de-
+preprint arXiv:2309.04658.
+tail, following the unified formulation proposed by
+An Zhang, Leheng Sheng, Yuxin Chen, Hao Li, Yang Chuang and Rogers (2023). Assume that there are
+Deng, Xiang Wang, and Tat-Seng Chua. 2023. On N agents with index i 1,2,...,N in a system
+∈ { }
+generative agents in recommendation. arXiv preprint I , where each agent has an attitude toward
+system
+arXiv:2310.10108.
+the same topic. Let a be the attitude score of
+i,t
+Xuhui Zhou, Hao Zhu, Leena Mathur, Ruohong Zhang, agent i at time t, J i,t be the set of agents that will
+Haofei Yu, Zhengyang Qi, Louis-Philippe Morency, influence agent i at time t, m be the message that
+j,t
+Yonatan Bisk, Daniel Fried, Graham Neubig, et al.
+agent j convey to other agents at time t.
+2023. Sotopia: Interactive evaluation for social
+intelligence in language agents. arXiv preprint
+A.1 Bounded Confidence Model (BC)
+arXiv:2310.11667.
+The bounded-confidence (BC) model was proposed
+by (Deffuant et al., 2000). It assumes that when
+the message m is close enough to the agent i’s
+j,t
+attitude a , the message exerts an assimilation
+i,t
+force on the agent’s attitude.
+Update Function The attitude update function
+is:
+∆a = α sim(a ,m ) (a a ), (3)
+i,t i i,t j,t j,t i,t
+· · −
+where
+1, if a a < ε
+sim(a i,t ,m j,t ) = 0 | , o j, t t h − erw i i , s t e | i ,
+(cid:26)
+(4)
+Selection Function The selection function is:
+J =f (i,t) = one random agent j
+i,t select
+{
+in the system within the confidence bound,
+i.e., whose a a < ε , except the
+j,t i,t i
+| − |
+agent i itself ,
+}
+(5)
+where the number of source agents is set to N =
+J
+1.
+Message Function The message function is:
+m = f (a ) = a , (6)
+j,t message j,t j,t
+Other Assumptions α i [0,1]
+∈
+A.2 Bounded Confidence Model-Multiple
+(HK)
+Rainer and Krause (2002)’s bounded confidence
+model is an extension of the bounded confidence
+model, where it can handle multiple source agents,
+i.e., 1 <= N <= N.
+J
+4800
+
+===== PDF PAGE 13 =====
+
+Update Function The update function is: h i,j is the overlap between seg i,t and seg j,t . The
+term h /u is referred to as the relative agreement
+N 1 i,j j
+∆a i,t =
+εi
+of the agent j with the agent i.
+(N + 1) · (N )
+εi εi
+(7)
+sim(a ,a ) (a a ), Selection Function The selection function is:
+i,t j,t i,t j,t
+· · −
+j X∈ Ji,t J i,t =f select (i,t) = one random agent j in
+{
+where I , except the agent i itself},
+system
+1, if a a < ε (13)
+sim(a i,t ,m j,t ) = 0 | , o j, t t h − erw i i , s t e | i ,
+(cid:26) Message Function The message function is:
+(8)
+m = f ([a u ,a + u ])
+ε is the confidence bound, N is the number of j,t message j,t j,t j,t j,t
+i εi − (14)
+agents within the confidence bound. = [a j,t u j,t ,a j,t + u j,t ],
+−
+Selection Function The selection function is: Other Assumptions α i [0,1].
+∈
+J =f (i,t) = I i = {all the N
+i,t select system
+\{ } A.4 Social Judgement Model (SJ)
+agents in the system except the agent i ,
+} The social judgment (SJ) model differs from the
+(9)
+bounded confidence model in that it additionally
+Note that only those within the confidence bound includes a repulsion force. It assumes that an agent
+influence the agent i’s attitude. will assimilate towards the message m if it is
+j,t
+close enough to its attitude a , and will distance
+Message Function The message function is: i,t
+away from the message if it is too far away from
+m = f (a ) = a , (10) its attitude.
+j,t message j,t j,t
+Other Assumptions The strength of the social Update Function The attitude update function
+influence is a function of the number of agents in is:
+the confidence bound, i.e., α (N ) =
+Nεi
+.
+i εi (Nεi +1) ∆a
+i,t
+=α
+i
+·
+[sim(a
+i,t
+,m
+j,t
+)
+·
+(a
+j,t
+−
+a
+i,t
+)
+(15)
++ rep(a ,m )],
+A.3 Relative Agreement Model (RA) i,t j,t
+The relative agreement (RA) model extends the where
+bounded confidence model in that the similarity
+sim(a ,a ) (a a ) =
+bias asm(a ,m ) is a continuously decaying i,t j,t j,t i,t
+i,t j,t · −
+function. The RA model assumes that the more (a a ),
+j,t − i,t (16)
+the message m agrees with a , the more suscep- if a a < u ,
+j,t i,t j,t i,t i
+ | − |
+tible the agent i is to its assimilation force. 0, otherwise
+
+In the RA model, there is an uncertainty u > 0
+i,t
+
+around each agent’s attitude a . Therefore, the
+i,t
+(a a ),
+agent i’s attitude is modeled as a segment seg i,t = − j,t − i,t
+rep(a ,a ) = if a a > t , (17)
+[a i,t u i,t ,a i,t + u i,t ]. When agent j influences i,t j,t  | j,t − i,t | i
+− 0, otherwise
+the agent i, the larger their segments "agree", the 
+larger the influence should be.
+u and t specifythe latitude of acceptance and
+i i
+Update Function The update function is: the latitude of rejection, respectively.
+∆a = α sim(a ,u ,a ,u ) (a a ), Selection Function The selection function is:
+i,t i i,t i,t j,t j,t i,t j,t
+· · −
+(11)
+J =f (i,t) = one random agent j in
+i,t select
+{
+where I , except the agent i itself},
+system
+(h /u ) 1, (18)
+i,j j
+−
+sim(a ,u ,a ,u ) = if (h /u ) > 1 ,
+i,t i,t j,t j,t i,j j
+ Message Function The message function is:
+0, otherwise
+
+(12)
+m = f (a ) = a , (19)
+ j,t message j,t j,t
+4801
+
+===== PDF PAGE 14 =====
+
+Figure 5: The data processing process.
+Other Assumptions α i [0,1]. Selection Function The selection function is:
+∈
+J =f (i,t) = one random agent j in I
+A.5 Lorenz Model i,t select system
+, except the agent i itself},
+Lorenz et al. (2021) proposed a model which in- (cid:8)
+cludes assimilation force, reinforcement force, sim- (25)
+ilarity bias, polarization factor, and source credibil-
+Message Function The message function is:
+ity.
+m = f (a ) = a , (26)
+Update Function The attitude update function j,t message j,t j,t
+is:
+B Data Collection
+∆a =α s(i,j)pol (a )sim(a ,m )
+i,t i i,t i,t j,t
+[ρ asm(a ,m ) + (1 ρ) ref (m )],
+i,t j,t j,t
+· · − ·
+B.1 Tweets of Social Movements
+(20)
+We get tweet ids of the three social movements
+where the polarization factor is: from Maiorana et al., Chang et al. and (Giorgi
+et al., 2022), and crawl those during the required
+M2 a 2
+pol(a ) = − i,t , (21) event periods. Overall, a total of 4,985,000,
+i,t M2
+22,869,406, and 25,112,678 tweets were col-
+The hyperparameter parameter M is the theoretical lected. Subsequently, we sample users described
+boundary for the attitude space. The similarity bias in Sec. 4.1 from the authors of these tweets. After
+is: collecting these data, the post-processing process
+is shown in Figure 5.
+λk
+sim(a ,m ) = , (22)
+i,t j,t λk + m a k B.2 Profile Construction
+j,t i,t
+| − |
+As mentioned in Sec. 3.1.1, we include demograph-
+The hyperparameters λ and k specify the shape ics, social traits and communication roles in the
+of the similarity bias function. The reinforcement profile of each agent. We construct profiles from
+force is: the bios and tweets of Twitter users.
+ref(m ) = m , (23) Demographics In order to minimize the noise
+j,t j,t
+caused by annotating, we first identify gender, po-
+The assimilation force is: litical leaning and account type from one’s bio
+using regular expression with strict rules. Then,
+asm(a ,m ) = (m a ), (24) we prompt GPT-3.5-Turbo-0613 to infer those can
+i,t j,t j,t i,t
+−
+4802
+
+===== PDF PAGE 15 =====
+
+not be directly matched. The candidate list for Prompt for Profile Generation
+account type was acquired from (Brünker et al.,
+Given the following observation about
+2020): [Journalist, Private Person, Celebrity, Me-
+an individual {name}, please summarize
+dia Organization, Activist, Politician, Social Bot,
+the relevant details from the profile. His
+NGO, International Organization, Company, Gov-
+or her profile information is as follows:
+ernmental Organization, Suspended Accounts].
+Social Traits The activity level and influence Name: {name}
+level are measured by the number of tweets and Gender: {gender}
+number of followers for each user. We follow Political Leaning: {ideo}
+(Zhang et al., 2023) to allocate the social trait of Activity Level: {activity}
+activity and influence to each user based on the Influence Level: {influence}
+ascending order of the measurement with a ratio of Feature: {commu_role}
+6:3:1. The activity levels include [not active, mod- Account Type: {account_type}
+erately active, highly activity] and the influence Short Bio: {bio}
+levels include [not influential, moderately influen- A selection of posted tweets: {tweets}
+tial, highly influential]. You can deduce the preferences and
+personality from the bio and tweets, but
+Communication Role We identify the communi-
+please avoid repeating the observation in
+cation roles of each user by calculating the metrics
+the summary.
+proposed by (Tinati et al., 2012) and (Bentwood,
+Summary:
+2008). Then, we assign corresponding descriptions
+of the roles when generating profiles of users.
+B.3 Annotation of User-generated Content
+• Idea Starter: Start a conversational meme, and
+We annotate the stance and content type expressed
+tend to be highly engaged with the media and
+in users’ tweets and simulated content using GPT-
+post original content.
+3.5-Turbo-0613 with temperature set to 0:
+• Amplifier: Collect multiple thoughts and
+Prompt for Content Annotation
+share ideas and opinions. Enjoy being the
+first one to retweet original content.
+Please classify the text into one of the
+following categories based on its content.
+• Curator: Use a broader context to define ideas.
+Only output your choice.
+Tend to take ideas of others and either validate,
+question, challenge, or dismiss them. Tend to
+1. call for action: tweet contained
+be the ties that form between others, aggregat-
+a call for action (e.g. requesting, chal-
+ing ideas together to help clarify and steer the
+lenging, promoting, inviting, summoning
+topic of conversation.
+someone to do something).
+• Commentator: Detail and refine ideas. Take 2. testimony: tweet contained a
+part in something to which he or she strongly testimony of the victim (e.g. report,
+feels about. Want to share information not for declaration, first-person experience).
+self-benefit. 3. sharing of opinion: e.g. evaluation,
+appreciation, addition, analysis of
+• Viewer: Take a passive interest in the conver- opinions.
+sation. Leave footprint by viewing rather than 4. reference to a third party: reporting
+contributing to the conversation. Prefer to con- on something/-one, direct and indirect
+sume information rather than create or share quotes.
+information online. 5. other: other content that does not fall
+into the above categories.
+After acquiring the attributes of the user, we
+prompt GPT-3.5-Turbo-0613 to rephrase the profile
+Text: {text}
+using natural languages. The prompt template is as
+Answer:
+follows:
+4803
+
+===== PDF PAGE 16 =====
+
+Dataset Size Stance Content Behavior Algorithm 1 Single-round Simulation for Core
+Metoo 2,214 2,166:33:15 89:78:67:1,792:188 422:1,792 User Behavior Replication
+Roe 3,595 3,528:29:38 48:6:72:3,362:107 233:3,362
+1: Inputs: Core users U and corresponding real
+BLM 971 934:33:4 31:10:20:887:23 84:887
+contexts C, size of (user, context) pairs N
+Table 5: Description of Dataset for Micro-level Align- 2: Outputs: Predicted behavior of each agent for
+ment Evaluation. Stance column indicates the distribu- users U
+tion of support, neutral and oppose; Content column
+3: Initialize agents:
+indicates the distribution of call for action, testimony,
+4: for i in 1 to N do
+sharing of opinion, reference to a third party and other;
+Behave column indicates the distribution of post and 5: Assign the profile of user u i to its agent
+retweet. 6: end for
+7: Simulate:
+8: for i in 1 to N do
+Prompt for Stance Annotation 9: agent u i generates response based on its pro-
+file and context c
+What’s the author’s stance on {target}? i
+10: end for
+Please choose from Support, Neutral,
+11: return simulated response of each (user, con-
+and Oppose. Only output your choice.
+text) pair
+Text: {text}
+Stance:
+to 256 and temperature set to 0 for more deter-
+ministic results. We run the simulator on a Linux
+server with a single NVIDIA GeForce RTX 4090
+B.4 Micro-level Dataset Description
+24GB GPU and an Intel(R) Xeon(R) Gold 6226R
+CPU. The average cost for the whole simulation
+When preparing micro-level (user, context) sam-
+for an event is around 20-30 dollars. (Note that
+ples, we randomly sample from the datasets, in-
+the cost was estimated when GPT-3.5-Turbo points
+stead of using the whole dataset to reduce cost.
+to GPT-3.5-Turbo-0613, so the costs may increase
+When sampling, we set some rules to remove those
+now since GPT-3.5-Turbo-0613 becomes one of
+difficult or ambiguous for LLMs to annotate: (1)
+the older models). For each event, we simulate 14
+We remove samples whose ground truth response
+steps, with the step size estimated by calculating
+tweets have fewer than 10 words after removing
+the average posting interval of users in the empir-
+hashtags and URLs. (2) We remove tweets that are
+ical data. For the validation of pure ABMs, we
+merely direct reposts of news articles without ex-
+report the average results of 10 runs. For the valida-
+pressing their opinions. As a result, we got datasets
+tion of hybrid models, we simulate once and keep
+for micro-level alignment shown in Table 5. We
+the generated content of core use agents to run the
+have manually reviewed 100 random samples for
+hybrid systems 10 times and report the average
+each label category and found the GPT annotation
+results.
+consistency to be 0.93 and 0.92 for stance and con-
+tent respectively. C.3 Prompt and Response Example for Core
+User Agent
+C Simulation Details
+Prompt Example of Core Users in Metoo
+C.1 Simulation Process Movement.
+The simulation processes for micro-level user be-
+You are using the social media Twitter.
+havior replication and macro-level opinion dynam-
+You might need to perform reaction to
+ics modeling are shown in Algorithm 1 and Algo-
+the observation. You need to answer
+rithm 2 respectively.
+what you will do to the observations
+based on the following information:
+C.2 Simulation Settings
+(1) You are e***1. e***1 is a highly
+For all the experiments, we use GPT-3.5-Turbo-
+active and influential activist on social
+0613 to simulate core users, with max tokens set
+4804
+
+===== PDF PAGE 17 =====
+
+media. e***1 enjoys collecting and
+sharing ideas and opinions, often being
+the first to do so. e***1 tends to validate,
+question, challenge, or dismiss the ideas
+of others and help clarify and steer
+conversations. e***1’s bio includes
+Algorithm 2 Multi-round Simulation for Opinion hashtags and affiliations related to
+Dynamics Forecasting progressive causes such as supporting
+1: Inputs: Core users Uc and ordinary users Uo Joe Biden and Kamala Harris, Black
+Lives Matter, LGBTQ+ rights, and
+2: Outputs: Attitude scores for each agent of
+users in Uc and Uo, at time 1 to T resistance against oppressive systems.
+e***1 has retweeted posts about meeting
+3: Initialize agents:
+4: for each user agent i in 1 to Uc do Kamala Harris, hiring Mary to score a
+5: Assign the profile of user uc to its agent film, criticizing Senator Ron Johnson,
+i
+recommending Neal Katyal for a case,
+6: Set initial attitude score a i,t
+and expressing excitement for the future
+7: Set visible agent set according to the authen-
+of Impact.
+tic social networks
+(2) Current time is 2018-01-07 12:00:00
+8: end for
+9: for each user agent j in 1 to Uo do (3) The news you got is "At the Golden
+Globes Awards ceremony in Los Angeles,
+10: Set initial attitude score a j,t
+most guests showed up dressed in black
+11: end for
+out of solidarity with the MeToo and
+12: Simulate continuous interactions:
+Time’s Up movement and the victims of
+13: for each time step in 1 to T do
+14: for each user agent i in 1 to Uc do sexual violence."
+(4) Your personal experience is e***1
+15: Manipulate the memory by reflecting and
+leans towards supporting candidates who
+retrieving relevant memory
+prioritize human rights, oppose potential
+16: Generate response r i,t based on its profile,
+national abortion bans, and criticize
+memory, triggering news, Twitter page
+some government actions.
+and notifications at time t
+(5) Your recent memory is [g***n]:
+17: Update the attitude score a i,t according
+g***n replies to [G***s]: I applaud the
+to r
+i,t
+guests at the Golden Globes for using
+18: Manipulate the memory by writing obser-
+their platform to support the MeToo and
+vations
+Time’s Up movement. It’s important to
+19: end for
+20: for each user agent j in 1 to Uo do continue raising awareness about sexual
+violence. #GoldenGlobes #MeToo
+21: Select the set of agents to interact with
+#TimesUp.
+A through the selection function
+j,t
+[s***e]: s***e replies to [C***N]: It’s
+22: Update the attitude score a j,t based on
+disappointing to see President Trump
+the update function and attitude scores of
+endorsing someone accused of sexual
+agents in A
+j,t
+misconduct. We need leaders who take
+23: end for
+these allegations seriously. #MeToo.
+24: end for
+[j***3]: j***3 replies to [C***N]: It’s
+25: return Attitude scores for each agent of users
+in Uc and Uo, at time 1 to T concerning that President Trump en-
+dorsed Roy Moore despite the allegations
+of sexual misconduct against him. This
+sends a message that such behavior is
+acceptable. #MeToo #TimesUp.
+[e***1]: e***1 likes a tweet of [w***r]:
+’President Trump’s endorsement of Roy
+4805
+
+===== PDF PAGE 18 =====
+
+Moore, accused of sexual misconduct, #MeToo #TimesUp –Post Time: 2018-
+is deeply troubling. It undermines the 01-06 20:00:00
+fight against sexual violence and the (7) The notifications you can see are
+values of the MeToo movement. #MeToo
+#TimesUp’. In terms of how you actually per-
+[T***x]: The solidarity shown at the form the action, you take action by
+Golden Globes Awards ceremony in calling functions. Currently, there are the
+support of the MeToo and Time’s Up following functions that can be called.
+movement is inspiring. Let’s keep the - do_nothing(): Do nothing. There is
+conversation going and work towards nothing that you like to respond to.
+a more inclusive and equal society. - post(content): Post a tweet. ‘content‘ is
+#MeToo #TimesUp the sentence that you will post.
+(6) The twitter page you can see is - retweet(content, author, origi-
+tweet id: 356 [T***x]: The solidarity nal_tweet_id, original_tweet). Retweet
+shown at the Golden Globes Awards or quote an existing tweet in your Twitter
+ceremony in support of the MeToo and page. ‘content‘ is the statements that
+Time’s Up movement is inspiring. Let’s you attach when retweeting. If you want
+keep the conversation going and work to say nothing, set ‘content‘ to None.
+towards a more inclusive and equal ‘author‘ is the author of the tweet that
+society. #MeToo #TimesUp –Post Time: you want to retweet, it should be the
+2018-01-07 04:00:00 concrete name. ‘original_tweet_id‘ and
+tweet id: 244 [w***r]: President ‘original_tweet‘ are the id and content of
+Trump’s endorsement of Roy Moore, the retweeted tweet.
+accused of sexual misconduct, is deeply - reply(content, author, origi-
+troubling. It undermines the fight against nal_tweet_id). Reply to an existing tweet
+sexual violence and the values of the in your Twitter page or reply one of
+MeToo movement. #MeToo #TimesUp replies in your notifications, but don’t
+–Post Time: 2018-01-06 20:00:00 reply to yourself and those not in your
+tweet id: 132 [T***x]: I applaud the Twitter page. ‘content‘ is what you
+guests at the Golden Globes for standing will reply to the original tweet or other
+in solidarity with the MeToo and Time’s comments. ‘author‘ is the author of the
+Up movement. It’s important to support original tweet or comment that you want
+the victims of sexual violence and work to reply to. ‘original_tweet_id‘ is the id
+towards a safer and more equal society. of the original tweet.
+#GoldenGlobes #MeToo #TimesUp - like(author, original_tweet_id). Press
+–Post Time: 2018-01-06 20:00:00 like on an existing tweet in your Twitter
+tweet id: 129 [e***1]: It’s inspiring page. ‘author‘ is the author of the
+to see the guests at the Golden Globes original tweet that you like. ‘origi-
+Awards ceremony showing solidarity nal_tweet_id‘ is the id of the original
+with the MeToo and Time’s Up move- tweet.
+ment. This is an important step towards
+ending sexual violence and creating Call one function at a time, please
+a safer world for everyone. #MeToo give a thought before calling these
+#TimesUp #GoldenGlobes –Post Time: actions, i.e., use the following format
+2018-01-06 20:00:00 strictly:
+tweet id: 72 [r***7]: President Trump’s
+endorsement of Roy Moore, despite [OPTION 1]
+the allegations of sexual misconduct, Thought: None of the observation attract
+is deeply troubling. We must hold our my attention, I need to:
+leaders accountable for their actions. Action: do_nothing()
+4806
+
+===== PDF PAGE 19 =====
+
+Dataset Models alpha bc_bound init_uct acc_thred rej_thred lambda k tho
+BC 0.10 0.30 - - - - - -
+[OPTION 2] HK 0.25 0.10 - - - - - -
+Metoo RA 0.30 - 0.20 - - - - -
+Thought: due to ‘xxx‘, I need to: SJ 0.15 - - 0.10 0.90 - - -
+Lorenz 0.10 - - - - 1.00 2.00 0.90
+Action: post(content="yyy") BC 0.15 0.10 - - - - - -
+HK 0.25 0.10 - - - - - -
+Roe RA 0.10 - 0.20 - - - - -
+SJ 0.30 - - 0.10 1.90 - - -
+Lorenz 0.10 - - - - 2.00 10.00 0.50
+[OPTION 3] BC 0.15 0.10 - - - - - -
+HK 0.10 0.10 - - - - - -
+Thought: due to ‘xxx‘, I need to: BLM RA 0.10 - 0.20 - - - - -
+SJ 0.20 - - 0.50 1.50 - - -
+Lorenz 0.10 - - - - 2.00 2.00 0.30
+Action: retweet(content="yyy", au-
+thor="zzz", original_tweet_id="0", Table 6: Calibrated parameters of the ABMs. “-” de-
+original_tweet="kkk") notes non-applicable parameters.
+[OPTION 4] Datasets Stance Content Behavior
+Acc. F1 MAE Acc. F1 Sim. Acc. F1
+Thought: due to ‘xxx‘, I need to:
+Metoo 0.9679 0.3400 0.2311 0.7010 0.1988 0.8064 0.7313 0.5212
+Action: reply(content="yyy", au- w/osoc. 0.9630 0.2720 0.2344 0.6671 0.1915 0.8016 0.7019 0.5136
+w/ocom. 0.9535 0.3393 0.2299 0.6671 0.1960 0.8027 0.7010 0.5128
+thor="zzz", original_tweet_id="0") Roe 0.9430 0.3361 0.2058 0.6423 0.1957 0.8090 0.6665 0.4691
+w/osoc. 0.9302 0.3214 0.1914 0.6120 0.1895 0.8062 0.6403 0.4645
+w/ocom. 0.9193 0.3229 0.2170 0.5839 0.1826 0.8082 0.6106 0.4494
+[OPTION 5] BLM 0.8991 0.3735 0.1627 0.7353 0.2218 0.8406 0.7796 0.5759
+w/osoc. 0.8679 0.3692 0.1800 0.6220 0.1814 0.7703 0.7570 0.5217
+Thought: due to ‘xxx‘, I need to: w/ocom. 0.8805 0.3839 0.1856 0.7281 0.2075 0.8235 0.7734 0.5663
+Action: like(author="zzz", origi-
+Table 7: Results of ablation study.
+nal_tweet_id="1")
+Now begin your actions. Remem- the data of E1 or P1 for each movement, where we
+ber only write one function call after run the models with each parameter combination 5
+‘Action:‘. times and record the average result. The parameter
+Based on the above history, what will combination with the lowest ∆Bias and ∆Div.
+you, e***1, do next? is retained. The parameter combinations used in
+pure ABMs and our hybrid models are illustrated
+in Table 6. The explanations of each parameter is
+as follows:
+Response Example of Core Users in
+Metoo Movement.
+- alpha: the strength of the social influence of
+Thought: The observation about the source agents;
+solidarity shown at the Golden Globes
+- bc_bound: the confidence bound of the agents in
+in support of the MeToo and Time’s Up
+the Bounded Confidence Models;
+movement aligns with my progressive
+- init_uct: the uncertainty term in the Relative
+values and interests.
+Agreement Model;
+Action: retweet(content=None, au-
+thor="T***x", original_tweet_id="356", - acc_thred: the threshold for the latitude of ac-
+original_tweet="The solidarity shown ceptance of the agents in the Social Judgement
+at the Golden Globes Awards ceremony Model;
+in support of the MeToo and Time’s Up - rej_thred: the threshold for the latitude of rejec-
+movement is inspiring. Let’s keep the tion of the agents in the Social Judgement Model;
+conversation going and work towards
+- lambda: hyperparameter specifying the shape of
+a more inclusive and equal society.
+the similarity bias function in the Lorenz Model;
+#MeToo #TimesUp")
+- k: hyperparameter specifying the shape of the
+similarity bias function in the Lorenz Model;
+- tho: the degree of assimilation, which controls
+C.4 Parameters of ABMs
+the relative contribution of the assimilation force
+versus the reinforcement force in the Lorenz
+As mentioned in Sec. 4.3, we find the best pa- Model.
+rameter combinations by parameter sweeping on
+4807
+
+===== PDF PAGE 20 =====
+
+Metoo Roe BLM
+Method temp.
+∆Bias↓ ∆Div.↓ DTW↓ Corr.↑ ∆Bias↓ ∆Div.↓ DTW↓ Corr.↑ ∆Bias↓ ∆Div.↓ DTW↓ Corr.↑
+0 0.0135 0.0108 1.8440 0.7043 0.0239 0.0121 2.4611 0.3607 0.0300 0.0069 3.9254 0.1248
+Hybridw/BC
+1 0.0160 0.0145 3.2916 0.4363 0.0229 0.0030 3.6380 0.2041 0.0290 0.0046 3.5227 -0.0838
+0 0.0126 0.0037 1.9136 0.6517 0.0319 0.0157 3.6752 -0.0807 0.0578 0.0093 3.7288 -0.2433
+Hybridw/HK
+1 0.0131 0.0091 3.4085 0.3111 0.0334 0.0057 6.1835 -0.4999 0.0410 0.0071 4.5660 -0.2447
+0 0.0117 0.0008 1.7829 0.7238 0.0221 0.0104 2.3326 0.4274 0.0376 0.0070 2.2353 0.6050
+Hybridw/RA
+1 0.0116 0.0042 3.1318 0.4829 0.0207 0.0016 2.8546 0.5260 0.0257 0.0035 2.5903 0.6009
+0 0.0098 0.0119 2.2789 0.6327 0.0203 0.0095 1.1896 0.6598 0.0076 0.0018 2.4564 0.5167
+Hybridw/SJ
+1 0.0107 0.0180 2.9388 0.5447 0.0188 0.0080 2.5737 0.7047 0.0034 0.0037 3.4908 0.5333
+0 0.0035 0.0116 2.9857 0.6103 0.0093 0.0147 1.0148 0.7576 0.0023 0.0079 2.5394 0.5055
+Hybridw/Lorenz
+1 0.0013 0.0158 2.3384 0.5796 0.0148 0.0052 0.9340 0.8765 0.0154 0.0049 3.2131 0.5038
+Table 8: Results of macro system evaluation with LLM-empowered agents’ temperature set to 0 and 1.
+D Simulation Results choose to retweet, although we have em-
+phasized that it is news that can not be
+D.1 Ablation Study
+retweeted directly. This could be related to
+To validate the effectiveness of the proposed com- the instruction-following ability of LLMs. We
+ponents in the LLM agent profile module, we con- believe fine-tuning LLMs with social media
+duct an ablation study on the micro-level align- user data would mitigate this problem.
+ment of core users, where the social traits (soc.)
+and communication roles (com.) are excluded. Ta- • Repeat retweeting itself: sometimes the
+ble 7 shows that all these elements contribute to the agents repeat retweeting themselves for con-
+alignment of the users. secutive steps. This results from the limited
+context of agents in simulation, where the
+D.2 The Influence of Temperature most severe situation is that there are no peo-
+We test different temperatures for the generation ple an agent follows in the subgraph, so the
+of core user agents, to help trade off the certainty signals it receives are limited. The root cause
+and diversity of the generation results. Table 8 of this problem is that the real user context is
+shows the results of the macro system evaluation much more complex than that in simulation,
+when the temperature of LLMs is set to 0 (in our with more information sources from different
+main experiments) and 1. The results show that channels even outside Twitter, so reproducing
+the temperature parameter influencing the genera- real behaviors is challenging.
+tion content of core user agents can make a huge
+difference to the systematic results. Among all
+the candidates, hybrid models with SJ and Lorenz
+models show the best robustness on the time series
+metrics.
+D.3 Visualization of Collective Results
+We observe the simulated systematical outcomes
+at the macro level. Figure 6 shows examples of
+the simulated results and their corresponding true
+situations.
+D.4 Error Analysis
+In this section, we present the errors and bias in the
+simulation.
+Unintended Behavior During the simulation, we
+observed some unintended behaviors generated by
+core user agents:
+• Retweet non-tweet news: sometimes the
+agents mistake the news as a "tweet" and
+4808
+
+===== PDF PAGE 21 =====
+
+Figure 6: Examples of collective results. (a) Example of the simulation results of Hybrid w/ BC (temperature=0)
+on Metoo movement. Since the empirical data contains a discussion about Donald Trump’s endorsement of Roy
+Moore, we also include this background information with the news of the Time’s Up movement at the Golden
+Globes Awards ceremony. (b) Example of the simulation results of Hybrid w/ Lorenz (temperature=1) on Roe
+movement. (c) Example of the simulation results of Hybrid w/ RA (temperature=0) on BLM movement.
+4809

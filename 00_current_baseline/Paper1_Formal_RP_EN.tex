@@ -1,0 +1,1083 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[a4paper,margin=2.35cm]{geometry}
+% Overleaf-compatible font setup. The document can be compiled with
+% pdfLaTeX, XeLaTeX, or LuaLaTeX; no proprietary system fonts are required.
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{newtxtext}
+  \usepackage[scaled=0.92]{helvet}
+\else
+  \usepackage{fontspec}
+  \setmainfont{TeX Gyre Termes}
+  \setsansfont{TeX Gyre Heros}[Scale=0.92]
+\fi
+\usepackage[nopatch=footnote]{microtype}
+\usepackage{amsmath,amssymb,mathtools}
+\ifPDFTeX
+  \usepackage{newtxmath}
+\fi
+\usepackage{booktabs,longtable,array,tabularx}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[round,authoryear]{natbib}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{hanging}
+\usepackage{ragged2e}
+\usepackage{setspace}
+
+\definecolor{navy}{HTML}{17324D}
+\definecolor{midgray}{HTML}{5F6870}
+\titleformat{\section}{\Large\bfseries\color{navy}}{\thesection.}{0.6em}{}
+\titleformat{\subsection}{\large\bfseries\color{navy}}{\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries\color{navy}}{\thesubsubsection}{0.6em}{}
+\titlespacing*{\section}{0pt}{1.3em}{0.55em}
+\titlespacing*{\subsection}{0pt}{1.0em}{0.4em}
+\titlespacing*{\subsubsection}{0pt}{0.8em}{0.3em}
+\setlist{leftmargin=1.6em,itemsep=0.3em,topsep=0.4em}
+\renewcommand{\arraystretch}{1.2}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\onehalfspacing
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\small\color{midgray}Research Proposal}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+
+\setlength{\emergencystretch}{2em}
+\setlength{\bibhang}{1.5em}
+\setlength{\bibsep}{0.6em}
+\renewcommand{\bibfont}{\small\RaggedRight}
+\urlstyle{same}
+\Urlmuskip=0mu plus 1mu
+\captionsetup[table]{font=small,labelfont=bf,skip=6pt}
+\setlength{\LTpre}{0.6em}
+\setlength{\LTpost}{0.6em}
+\newcommand{\term}[1]{\textit{#1}}
+\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=navy,citecolor=navy,pdfauthor={Xiangyu Xu},pdftitle={How Does AI Change Information Acquisition and Opinion Formation in Human Groups?}}
+\fancyhead[L]{\small\color{midgray}AI and Group Opinion Formation}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace*{2.5cm}
+{\sffamily\bfseries\color{navy}\LARGE Research Proposal\par}
+\vspace{1.2cm}
+{\sffamily\bfseries\Huge How Does AI Change Information Acquisition and Opinion Formation in Human Groups?\par}
+\vspace{1.5cm}
+{\sffamily\Large Xiangyu Xu\par}
+\vspace{0.8cm}
+
+\vfill
+\end{titlepage}
+
+\section*{Abstract}
+
+Large language models can change the information people encounter, share, and use when forming opinions. Similar model outputs need not produce similar human opinions. This proposal examines that link at the group level. It asks how LLM information search differs from traditional search, how exposure and diffusion affect opinion updating, and whether random routing across model families changes an identified group-level pattern. A hybrid agent-based model combines explicit behavioral rules with LLM agents and separates message generation, selection, and opinion updating. Human data are required for calibration and independent validation. The analysis allows convergence, clustering, persistent disagreement, and little change; it does not treat any distributional pattern as evidence of better or worse political judgment. A shared human-curated brief tests the alternative explanation of common information input. The concrete setting, primary outcome, and remaining implementation choices will be fixed before confirmatory analysis.
+
+\textbf{Keywords:} large language models; information search; information diffusion; opinion dynamics; agent-based modeling
+
+\section{Research Background}
+
+People use large language models (LLMs) to obtain explanations, arguments, and policy information. Unlike conventional information retrieval, LLMs generate integrated natural-language responses. Group members may then restate or share these responses, or continue asking questions about them. LLMs can thus affect information content, member exposure, and subsequent diffusion.
+
+\citet{jiang2025}, in \emph{Artificial Hivemind: The Open-Ended Homogeneity of Language Models}, identify intra-model repetition and inter-model homogeneity in open-ended generation. Their study examines homogeneity in model outputs. It does not examine how people update their opinions after seeing those outputs. \citet{fugener2021}, in \emph{Will Humans-in-the-Loop Become Borgs? Merits and Pitfalls of Working with AI}, show that AI assistance may improve individual performance while increasing correlations among members' choices. \citet{doshi2024} report that generative AI can improve individual creative performance while reducing the diversity of group-level content. These studies show why individual outcomes and group distributions require separate analysis.
+
+Changes in information exposure do not guarantee changes in political opinions. \citet{nyhan2023} reduced Facebook users' exposure to like-minded sources but found no measurable changes across eight preregistered political-attitude outcomes. The present study therefore identifies the information and opinion layers separately. The model of \citet{perra2019} includes opinion posting, the filtering of personal timelines, and opinion updating based on timeline content. Filtering rules and network structure jointly affect local homogeneous clusters, the survival of minority opinions, and the overall opinion distribution. Their study shows why a dynamic model must include information exposure, member diffusion, and opinion updating.
+
+Research on information cocoons and algorithmic personalization separates information exposure, information diffusion, selective acceptance, and group opinion evolution. This study uses that distinction to construct an ABM of LLM-mediated group information processes. Information cocoons are outside the research object, dependent variable, and claimed contribution of this paper.
+
+Research on algorithmic monoculture provides a system-level basis for intervention at the LLM layer. \citet{kleinberg2021} define \term{algorithmic monoculture} as a condition in which multiple decision-makers use the same algorithm. They show that this pattern can reduce system-level outcomes even when the individual algorithm is highly accurate. The theory concerns the correlation structure created by use of a shared algorithm. This paper applies it to generative information environments. When members use the same generative model, the arguments, evidence, and errors they receive may become more correlated. Subsequent diffusion may amplify these relations.
+
+Major model providers have already adopted several technologies adjacent to the problem of information diversity. OpenAI adjusts model behavior through requirements for covering multiple viewpoints, evaluations of political bias, and participatory \term{collective alignment}~\citep{openai_political_bias,openai_collective_alignment}. Anthropic uses Collective Constitutional AI to incorporate public input into a model constitution~\citep{anthropic2023}. Google's AI co-scientist uses multi-agent modules for Generation, Reflection, Ranking, and Evolution, together with web search and specialized models, to generate candidate hypotheses~\citep{gottweis2025}. Microsoft Foundry Model Router routes requests among multiple models according to quality, cost, and latency~\citep{microsoft2026}. Gemini Grounding can generate one or more search queries and synthesize web sources~\citep{google2026}. These systems address response bias, value input, candidate generation, task matching, and factual grounding, respectively. Existing official evaluations do not examine whether they reduce overlap in the information received by different users. Provider practices establish the practical feasibility of multi-model, multi-agent, and multi-source architectures; they do not directly establish that group-level information diversity has increased.
+
+\subsection{The research gap}
+
+Previous studies examine LLM-output homogeneity, group diversity in human-AI collaboration, algorithmic information exposure, member diffusion, and opinion dynamics. They have not jointly identified:
+
+\begin{enumerate}
+\item How characteristics of LLM output translate into members' actual information exposure;
+\item How member sharing and network diffusion change the coverage and repeated exposure of LLM-generated information;
+\item How heavily exposed information is weighted in individual opinion updating and how it subsequently produces group opinion evolution;
+\item How a shared generative source and user-conditioned generation account for different outcomes, including convergence, clustering, polarization, and no effect;
+\item Whether independent random routing across model families or providers can change the information process and attenuate an identified pattern of group opinion evolution;
+\item Whether large-scale ABM results generated by rule-based and LLM agents can obtain parameter calibration and out-of-sample support from the sharing behavior and opinion changes of real people.
+\end{enumerate}
+
+The study tests how the information members receive and share affects their subsequent opinions and the distribution of opinions across the group.
+
+\section{Research Questions}
+
+\subsection{Overarching theme}
+
+\begin{quote}\itshape
+How does AI change information acquisition and opinion formation in human groups?
+\end{quote}
+
+The overarching theme defines the research domain. Because ``AI,'' ``information acquisition,'' and ``opinion formation'' each cover multiple technologies, behaviors, and outcomes, the study delimits the technical object, its operating process, and the group-level outcome.
+
+\subsection{Main research question}
+
+\begin{quote}\itshape
+How do large language models change group opinion distributions?
+\end{quote}
+
+The technical object is the large language model. The study examines what information members receive from LLMs and other members. It then tracks which information is transmitted, how it enters opinion updating, and how the group opinion distribution changes over time. Search frequency, search stopping, perceived information sufficiency, and source trust are outside the current line of inquiry.
+
+\subsection{Subquestions}
+
+Here, group opinion evolution means systematic changes in the group opinion distribution over repeated interactions. These changes include shifts in the group mean, convergence, polarization, clustering, and fragmentation. Each is a distinct distributional pattern and must be reported separately.
+
+\begin{quote}\itshape
+SQ1: How do large language models change information exposure and information diffusion within groups?
+\end{quote}
+
+\begin{quote}\itshape
+SQ2: How do changes in information exposure and diffusion affect individual opinion updating and group opinion evolution?
+\end{quote}
+
+\begin{quote}\itshape
+SQ3: If the above patterns of group opinion evolution are observed, can technical interventions at the LLM layer attenuate them?
+\end{quote}
+
+The three subquestions form a single process chain:
+
+\begin{equation*}
+\begin{aligned}\text{LLM generation and technical configuration} &\rightarrow \text{individual information exposure} \\
+&\rightarrow \text{member sharing and network diffusion} \\
+&\rightarrow \text{acceptance weights and opinion updating} \\
+&\rightarrow \text{group opinion evolution}\end{aligned}
+\end{equation*}
+
+No single term summarizes every stage of this process chain. Surface-level textual similarity belongs to the technical-output layer. Information overlap indicates the distribution of information exposure. Active sharing is a member behavior. Subjective credibility assigned to factual claims and the weight placed on external information belong to the individual-updating layer. Convergence, polarization, and clustering are group-level opinion outcomes.
+
+Information overlap is retained as an auxiliary empirical indicator. It measures the extent to which two or more members receive the same information items. Information items are restricted to coded factual claims, supporting or opposing arguments, and sources. For issue $q$, the set of information items received by member $i$ is denoted by $I_{iq}$. Information overlap in statistical group $g$ is measured as the within-group mean of pairwise Jaccard overlap:
+
+\begin{equation*}
+O_{gq}
+=
+\frac{2}{n_g(n_g-1)}
+\sum_{i<j}
+\frac{|I_{iq}\cap I_{jq}|}{|I_{iq}\cup I_{jq}|}
+\end{equation*}
+
+$O_{gq}=0$ indicates that members share no information items. $O_{gq}=1$ indicates that members receive identical information items. This indicator does not measure similarity in wording, sharing behavior, subjective credibility, update weights, or opinion convergence.
+
+\subsection{Competing expectations}
+
+No directional hypotheses are specified at present. The theory permits three competing outcomes:
+
+\begin{enumerate}
+\item A shared generative source and repeated exposure cause members to update in similar directions, and group opinions converge;
+\item Generation conditioned on initial positions, selective sharing, or bounded acceptance causes different camps to update in their respective directions, producing clustering, polarization, or fragmentation;
+\item Information exposure and diffusion change, but the group opinion distribution shows no measurable change.
+\end{enumerate}
+
+These outcomes imply different theoretical explanations. A single directional hypothesis cannot be specified before the model and primary outcome are fixed. Formal directional hypotheses will follow the pilot studies that determine the primary evolutionary measure, update rule, and first-stage result of the technical intervention. SQ3 remains conditional. The study will test an intervention at the LLM layer only if SQ2 identifies a stable pattern of group opinion evolution.
+
+\section{Research Object and Scope}
+
+\subsection{Technical object}
+
+The research object is limited to large language models that generate natural-language responses. The main experimental conditions are a shared single LLM and independent random routing across model families or providers. The routing configuration is an experimental condition, not a theoretical construct. Neutral prompts constitute the main setting; stance-conditioned prompts are used only for boundary tests.
+
+\subsection{Unit of analysis}
+
+The primary unit of analysis is a statistical group with an information-diffusion network. Members interact separately with an LLM and may also share information with other members through network ties that are prespecified or empirically calibrated. The group is used to calculate information exposure, diffusion paths, individual opinion trajectories, and the final opinion distribution.
+
+The statistical group does not perform a joint task or make a formal team decision. Although the model may include information transmission and social influence among members, its conclusions cannot be directly generalized to real organizational teams with defined roles, status relations, and shared responsibilities.
+
+\subsection{Meaning of opinion}
+
+This paper uses \term{opinion} to mean an individual's position on a specific public-policy issue. It can be measured as degree of policy support or on a continuous opposition-support scale. A factual belief has a verifiable truth value, and a general ideology is relatively stable. The opinion state studied here is distinct from both.
+
+The \term{opinion state} in the ABM is a formal state variable. Whether it represents the policy attitudes of real people must be established through calibration with human data and out-of-sample validation.
+
+\subsection{Group-level outcomes}
+
+The group opinion distribution is the distribution of members' opinion states within the same statistical group. Change in within-group opinion variance is a candidate primary measure. The final primary measure, reference condition, direction, and smallest effect of interest remain to be fixed before confirmatory analysis. Auxiliary measures include shifts in the mean position, pairwise opinion distance between members, the number of opinion clusters, and distributional bimodality.
+
+Consensus, differentiation, and polarization describe distributional patterns; they do not automatically indicate judgment quality. Political attitudes and policy preferences usually lack a unique ground truth, so the main study does not use accuracy to evaluate whether they are better or worse.
+
+\section{Theoretical Framework}
+
+\subsection{The theoretical tension}
+
+The same generative system may provide members with similarly directed information and promote opinion convergence. It may also condition information on members' initial positions. Selective diffusion and acceptance could then promote clustering, polarization, or fragmentation. These competing possibilities define the theoretical tension.
+
+SQ3 translates this theoretical tension into a system-level intervention. The inclusion of multiple models, agents, sources, or public value inputs within a system does not guarantee changes in member exposure, diffusion, or opinion evolution. Shared alignment rules, routing objectives, ranking criteria, and aggregation procedures may compress internal differences. Independent random routing across model families or providers must first change the information process before it can attenuate the group-level evolutionary pattern identified in SQ2.
+
+Under common, nonpersonalized prompting, a model's own generative tendencies may lead different members to receive similar arguments and evidence. Continued exposure to similarly directed information may produce opinion convergence. When users' initial positions enter the prompt, the model may select arguments consistent with those positions; different initial camps may then update in their respective directions, leaving the group divided or producing more pronounced clustering. Experiments with LLM agents by \citet{chuang2024} show that adding confirmation-bias prompts can produce opinion fragmentation in simulated groups.
+
+Output homogeneity alone cannot establish an effect of LLMs on group opinion distributions. The study must identify three stages:
+
+\begin{enumerate}
+\item Whether LLM generation and technical configuration change members' information exposure;
+\item How members diffuse this information and how heavily exposed information is weighted in opinion updating;
+\item Whether these changes enter individual opinion updating and group opinion evolution.
+\end{enumerate}
+
+This tension places ``convergence driven by a shared model prior'' and ``differentiation driven by user-conditioned generation'' at the same level of analysis. Whether a prompt contains the user's initial position is treated as a prespecified boundary condition, not as a separate research line.
+
+\subsection{Empirical premise: LLMs may change the correlation structure of group information inputs}
+
+\citet{jiang2025} identify both intra-model repetition and inter-model homogeneity in open-ended generation. This finding indicates that, even when members query models separately, the resulting technical outputs may still contain similar arguments, evidence, sources, or errors. \citet{fugener2021} find that AI assistance can improve individual performance while increasing correlations among members' choices. \citet{doshi2024} find that generative AI can improve individual creative performance while reducing the diversity of group-level output. These findings support the starting premise that separate individual use of AI does not guarantee mutually independent information inputs at the group level.
+
+This empirical premise concerns only the relation between technical outputs and group information inputs. It leaves open whether members believe the content and whether the group converges, polarizes, or experiences lower judgment quality. SQ1 tests whether model-output characteristics translate into differences in member exposure and information diffusion.
+
+\subsection{Group information processes: distribution, exposure, and diffusion must be separated}
+
+\citet{stasser1985}'s work on \term{shared information} and \term{unshared information} shows that the number of members who possess an information item affects which information is more likely to enter collective processing during group discussion. \citet{steinel2010} further distinguish what information members possess from whether they reveal, conceal, or misrepresent it. These studies distinguish the initial distribution of information across members from members' active sharing of information.
+
+Research on algorithmic information environments adds an exposure layer. \citet{nyhan2023} successfully changed the proportion of like-minded sources to which users were exposed but did not observe corresponding changes in preregistered political-attitude measures. This result supports identifying information exposure separately from opinion outcomes. \citet{perra2019} place opinion posting, filtering of personal timelines, and timeline-based opinion updating in the same network model. They show that filtering rules and network structure can change local homogeneous clusters, the persistence of minority opinions, and the overall opinion distribution. Their model provides the dynamic structure used in this paper: generated content enters individual exposure and then diffuses through the network.
+
+Research on information cocoons and algorithmic personalization provides a reference for modeling these processes as separate layers. This paper draws on its treatment of exposure selection, network diffusion, and opinion evolution. The study does not test whether individuals are in information cocoons. It also makes no theoretical contribution claim about the information-cocoon literature.
+
+\subsection{Opinion dynamics: the same information environment can produce different group outcomes}
+
+Opinion dynamics provides the central theoretical basis for SQ2. The DeGroot model represents opinion updating as a weighted average of others' opinions; under appropriate connectivity conditions, this updating process can lead to consensus~\citep{degroot1974}. The Friedkin--Johnsen model retains individuals' attachment to their initial positions, allowing social influence to coexist with persistent disagreement~\citep{friedkin1990}. The Hegselmann--Krause bounded-confidence model specifies that individuals incorporate only information within a threshold distance from their own opinions, which can generate multiple opinion clusters~\citep{hegselmann2002}. These models yield different predictions: common input and broad acceptance favor convergence, whereas attachment to initial positions and bounded acceptance can sustain disagreement or produce clustering.
+
+This paper does not assume in advance that any single update rule is the true mechanism. Human calibration experiments estimate attachment to initial positions, acceptance weights placed on external information, and opinion change, after which candidate rules are compared by their ability to predict held-out issues. In this study, opinion dynamics converts natural-language information generated by LLMs into testable individual opinion trajectories and group-level distributional outcomes. It accommodates competing outcomes, including convergence, persistent disagreement, clustering, and no measurable change.
+
+\subsection{Algorithmic monoculture: from a shared technical source to intervention at the LLM layer}
+
+\citet{kleinberg2021}'s work on \term{algorithmic monoculture} examines the correlated signals, rankings, or decisions that arise when multiple decision-makers use the same algorithm. The theory evaluates system-level outcomes under shared algorithm use and extends analysis beyond the accuracy of an individual algorithm. This paper derives a proposition to be tested: use of the same LLM may increase the correlation of members' information exposure and error structures. Member diffusion may amplify this correlation.
+
+This theory identifies an intervention point for SQ3 but does not imply that a multi-model architecture will automatically be effective. Different models may rely on common training data, alignment rules, and retrieval sources and thus still provide similar information. Independent random routing across model families or providers must first change a defined information-exposure or diffusion measure and must subsequently attenuate the same group-opinion outcome identified in SQ2 before the claim of technical mitigation is supported.
+
+\subsection{Integrated framework and research questions}
+
+The four bodies of literature form the following theoretical chain:
+
+\begin{equation*}
+\begin{aligned}\text{LLM generation and technical configuration} &\rightarrow \text{information exposure} \\
+&\rightarrow \text{member sharing and network diffusion} \\
+&\rightarrow \text{acceptance weights and individual opinion updating} \\
+&\rightarrow \text{group opinion evolution}\end{aligned}
+\end{equation*}
+
+SQ1 tests whether technical outputs enter group information processes. SQ2 tests how information exposure and diffusion produce group-level outcomes through different opinion-update rules. SQ3 tests whether technical interventions at the LLM layer can attenuate an identified evolutionary pattern. The framework allows three competing paths. Common information inputs combined with broad acceptance may promote convergence. Generation conditioned on initial positions, selective sharing, and bounded acceptance may produce clustering or polarization. Changes in the information environment may produce no measurable change in group opinions. The theoretical contribution depends on whether the study can distinguish among these paths.
+
+\section{Constructs and Variables}
+
+\subsection{Homogeneity of LLM output}
+
+\begin{itemize}
+\item Original terms: \term{intra-model repetition}, \term{inter-model homogeneity}, and \term{Artificial Hivemind}.
+\item Source: \citet{jiang2025}.
+\item Theoretical definition: content similarity across repeated generations from one model or across generations from different models.
+\item Excludes: homogenization of human opinions, group consensus, and declines in judgment quality.
+\item Level of analysis: technical-output level.
+\item Position in the model: antecedent and first-stage outcome.
+\item Empirical measures: argument overlap, semantic similarity, source overlap, and correlations among stance scores.
+\end{itemize}
+
+\subsection{Information exposure}
+
+\begin{itemize}
+\item Original terms: \term{information exposure} and \term{exposure to viewpoints}.
+\item Sources: \citet{nyhan2023}; \citet{perra2019}.
+\item Theoretical definition: the content that a user actually sees or receives in an information environment.
+\item Excludes: whether the user believes the content, whether the user changes policy support, and the final group distribution.
+\item Level of analysis: individual-input level; relations among members' inputs can also be compared at the group level.
+\item Position in the model: after LLM generation and routing configuration, but before member diffusion and opinion updating.
+\item Empirical measures: factual claims, arguments, sources, and stance information received by each member; at the group level, viewpoint coverage, source composition, repeated exposure, proportion of unique information, and pairwise information overlap among members.
+\end{itemize}
+
+Information overlap is a relational indicator at this layer. Surface-level similarity in wording is measured separately through lexical or character overlap; semantic similarity is measured using validated text representations. Neither measure substitutes for coding factual claims, arguments, and sources.
+
+\subsection{Information sharing and diffusion}
+
+\begin{itemize}
+\item Original terms: \term{information sharing}, \term{posting}, and \term{information diffusion}.
+\item Sources: \citet{perra2019}; \citet{stasser1985}; \citet{steinel2010}.
+\item Theoretical definition: the process through which members post, restate, or send information they possess to other members and through which that information spreads along a relational network.
+\item Excludes: information initially received from an LLM, the weight assigned to seen information during opinion updating, and whether final opinions converge.
+\item Level of analysis: member behavior, network edge, and statistical group.
+\item Position in the model: the interactive process between information exposure and opinion updating.
+\item Empirical measures: number and proportion of sharing events, number of recipients, diffusion depth and breadth, proportion of cross-cutting diffusion, and the diffusion path of each information item.
+\end{itemize}
+
+\subsection{Opinion, acceptance weights, and opinion dynamics}
+
+\begin{itemize}
+\item Original terms: \term{opinion}, \term{opinion dynamics}, \term{bounded confidence}, and \term{susceptibility to influence}.
+\item Sources: DeGroot~\citep{degroot1974}, Friedkin and Johnsen~\citep{friedkin1990}, Hegselmann and Krause~\citep{hegselmann2002}, and \citet{perra2019}.
+\item Theoretical definition: \term{opinion} is an individual's discrete or continuous position on a specific issue; opinion dynamics describes how this state changes in response to external information and social influence. $\lambda_i$ is the weight of social influence in a member's overall update, and $w_{ij,t}$ is the relative weight of exposed message $j$ in the social-influence input for that round. Both are model-implementation parameters, not independent theoretical constructs.
+\item Excludes: whether texts are similar, whether information is shared, the objective truth of factual propositions, stable personality, and general political identity.
+\item Level of analysis: individual state and individual updating process.
+\item Position in the model: after information exposure and diffusion, but before formation of the group distribution.
+\item Empirical measures: pretest, round-by-round, and posttest scores on a policy-support scale; $\lambda_i$ and $w_{ij,t}$ are estimated from opinion changes in human experiments. When materials contain factual propositions with verifiable truth values, the subjective credibility that participants assign to those propositions is measured separately.
+\end{itemize}
+
+\subsection{Group opinion evolution}
+
+\begin{itemize}
+\item Original terms: related research commonly uses \term{opinion distribution}, \term{opinion share}, \term{consensus}, and \term{polarization} to describe group states~\citep{perra2019,hegselmann2002}.
+\item Theoretical definition: the statistical distribution of all members' opinion states within the same group and changes in that distribution over rounds of interaction.
+\item Excludes: normative evaluations of the quality of group opinions.
+\item Level of analysis: statistical group.
+\item Position in the model: core dependent variable.
+\item Empirical measures: group mean, within-group variance, mean pairwise distance, number of opinion clusters, bimodality, and changes in these quantities relative to the initial state.
+\end{itemize}
+
+\subsection{Algorithmic monoculture and technical intervention at the LLM layer}
+
+\begin{itemize}
+\item Original term: \term{algorithmic monoculture}.
+\item Source: \citet{kleinberg2021}.
+\item Theoretical definition: multiple decision-makers use the same algorithm, producing correlated signals, rankings, or decision outcomes.
+\item Excludes: repeated generation within a single model, any form of model-market concentration, and similarity in performance across all models.
+\item Level of analysis: the technical system used by the group.
+\item Position in the model: a system-level antecedent of information exposure and subsequent group evolution, and the intervention point for SQ3.
+\item Empirical correspondence: in the shared-model condition, all members use the same base LLM. In the technical-intervention condition, each member independently draws an LLM from a prespecified pool spanning model families or providers. The structure of model use is directly determined by experimental assignment.
+\end{itemize}
+
+\subsection{Variables and empirical correspondence}
+
+Table~\ref{tab:variables} summarizes variables and empirical measures.
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.18}
+\begin{longtable}{@{}>{\RaggedRight\arraybackslash}p{0.14\textwidth}>{\RaggedRight\arraybackslash}p{0.18\textwidth}>{\RaggedRight\arraybackslash}p{0.20\textwidth}>{\RaggedRight\arraybackslash}p{0.40\textwidth}@{}}
+\caption{Variables and empirical measures}\label{tab:variables}\\
+\toprule
+\textbf{Position} & \textbf{Variable} & \textbf{Level of analysis} & \textbf{Empirical measure} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Position} & \textbf{Variable} & \textbf{Level of analysis} & \textbf{Empirical measure} \\
+\midrule
+\endhead
+Independent variable & Information-acquisition condition (SQ1); LLM routing (SQ3) & Technical system & Traditional search versus LLM information search; within LLM use, shared model versus independent random routing \\
+Technical output & Characteristics of LLM responses & Response/model & Surface similarity in wording, semantic similarity, overlap in factual claims and arguments, source overlap, stance direction; error correlation only for claims with independently verified truth values \\
+Intermediate stage 1 & Information exposure & Individual and statistical group & Information received by each member, source composition, repeated exposure, viewpoint coverage, proportion of unique information, pairwise information overlap among members \\
+Intermediate stage 2 & Information sharing and diffusion & Member/network edge/statistical group & Sharing proportion, number of recipients, diffusion depth and breadth, proportion of cross-cutting diffusion, diffusion paths \\
+Intermediate stage 3 & Social-influence weight $\lambda_i$ and message weight $w_{ij,t}$ & Individual/message & Estimated from opinion changes in human experiments; subjective credibility is measured separately in factual-proposition tasks \\
+Dynamic state & Individual opinion & Individual & Policy-support scale and round-by-round change \\
+Core outcome & Group opinion evolution & Statistical group $\times$ round & Group mean, within-group variance, pairwise distance, opinion clusters, bimodality, and changes in these quantities \\
+Boundary condition & Whether the prompt includes the initial position & Technical input & Neutral prompt, stance-conditioned prompt \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+\clearpage
+\section{Research Method}
+
+\subsection{Overall method}
+
+The study uses a hybrid ABM calibrated with human data. Two types of agents operate within a common population, network, information environment, set of state variables, and sequence of time steps. Rule-based agents follow explicit opinion-dynamics equations. LLM agents use individual profiles, current opinions, historical memory, and information received in the current round to generate structured next-period opinions and behaviors. Both agent types use the same opinion scale and behavioral fields. They can exchange information within the same network, and their opinion trajectories can be compared directly. HiSim, developed by \citet{mou2024}, provides a methodological precedent in which LLM-driven core users and deductive-ABM ordinary users operate together.
+
+Here, ``hybrid'' refers specifically to the coexistence of two implementations of agent behavior within the same ABM. Real human data initialize agent characteristics, calibrate the parameters of rule-based agents, and validate opinion transitions for both types of agents. Population, network, and data source do not themselves define the model as hybrid.
+
+LLMs have two separate roles in the study. The LLM information source provides policy information to the group. LLM agents simulate how some members understand and express natural-language information and update their opinions. The study records the models, prompts, inputs, and outputs used for each role. This separation prevents the same model from simultaneously providing information, simulating people, and coding outcomes.
+
+The complete process is:
+
+\begin{equation*}
+\begin{aligned}\text{LLM response} &\rightarrow \text{text coding} \\
+&\rightarrow \text{information exposure} \\
+&\rightarrow \text{sharing and network diffusion} \\
+&\rightarrow \text{acceptance weights and opinion updating} \\
+&\rightarrow \text{group opinion evolution}\end{aligned}
+\end{equation*}
+
+The ABM is used to conduct large-scale counterfactual comparisons. Human experiments estimate opinion-update parameters and test whether the model predicts issues not used for calibration. Emergent results from the ABM alone cannot establish causal effects in real populations.
+
+\subsubsection{Three behavioral functions}
+
+Rule-based agents and LLM agents share three behavioral interfaces. Following HiSim's formal treatment of selection, message, and update functions~\citep{mou2024}, the three functions define how an agent generates a message, selects its exposure, and updates its opinion in each round:
+
+\begin{equation*}
+m_{j,t}=f_{\text{message}}(x_{j,t},z_j,H_{j,t},E_t),
+\end{equation*}
+
+\begin{equation*}
+J_{i,t}=f_{\text{selection}}(i,G_t,\{m_{j,t}\},x_{i,t}),
+\end{equation*}
+
+\begin{equation*}
+x_{i,t+1}=f_{\text{update}}
+\left(x_{i,t},\{m_{j,t}:j\in J_{i,t}\},z_i,H_{i,t}\right).
+\end{equation*}
+
+Here, $x_{i,t}$ denotes the opinion state of agent $i$ in round $t$. $z_i$ denotes individual characteristics supported by human data. $H_{i,t}$ includes historical memory and the initial opinion $x_{i,0}$. $E_t$ denotes the external information environment, and $G_t$ denotes the network. $J_{i,t}$ is a set of message identifiers actually encountered by member $i$ in that round. Each message record has a sender, a source identifier, and coded factual claims or arguments. These fields are kept distinct. Sources and claims are not elements of $J_{i,t}$.
+
+The three functions have the following meanings in the model:
+
+\begin{enumerate}
+\item The message function $f_{\text{message}}$ determines how an agent converts its current state into a transmissible message. Rule-based agents use prespecified templates or numerical mappings. LLM agents generate natural-language messages from individual profiles, current opinions, and historical records and return structured fields such as stance, arguments, sources, and behavior type.
+\item The selection function $f_{\text{selection}}$ determines which candidate messages enter an agent's actual exposure set. In the main model, both agent types use the same explicit selection rule. Network reachability, recommendation probability, and the information actually encountered by the agent are recorded separately. Fixing the exposure mechanism in this way facilitates identification of differences in message generation and opinion updating.
+\item The update function $f_{\text{update}}$ returns the next-period opinion. Rule-based agents use candidate opinion-dynamics equations calibrated with human data. LLM agents read the individual profile, current opinion, history, and exposure bundle and return an opinion on the same scale. Any additional text or sharing suggestion is recorded separately and cannot silently replace the declared message or sharing rule. Opinion outputs are validated against transitions observed in real people.
+\end{enumerate}
+
+LLMs and the ABM are integrated through the implementation of the agent behavioral functions. The opinion-update function is the primary point of integration for opinion evolution. The message function handles natural-language expression and transmission. The selection function remains explicit and controllable in the main model. Both agent types operate with the same state variables, network structure, and update sequence.
+
+\subsubsection{Implementation schedule and unresolved choices}
+
+Within a round, the implementation must distinguish available messages, actual exposure, opinion updating, and onward sharing. The message interface produces content; selection records the message identifiers actually encountered; update returns the next opinion. Onward sharing is governed by the sharing implementation specified below. Each emitted message and each sharing decision is executed once, with its production round and recipient-exposure round recorded. A single LLM call may produce several fields, but each field must be assigned to only one of these operations.
+
+Whether LLM-generated sharing decisions are used in a supplementary condition, and the exact within-round timing, remain implementation choices to be fixed before model validation. They cannot be changed across source conditions without being treated as separate manipulations. In the SQ2 human-calibrated diffusion condition, the prescribed sharing probabilities control diffusion; an LLM suggestion cannot override them.
+
+\subsection{Policy issues}
+
+The initial plan uses approximately 24 public-policy issues spanning the economy, environment, education, public health, immigration, and technology regulation. Each issue uses a continuous support scale and records initial opinions. The final number of issues will be determined by a simulation-based power analysis that treats the issue as the unit of generalization.
+
+A single political issue cannot support general conclusions about group opinion formation. A large number of random seeds estimates only simulation error; it does not substitute for multiple issues.
+
+\subsection{LLM information layer}
+
+The main configurations are:
+
+\begin{enumerate}
+\item Shared model: group members use the same base LLM;
+\item Independent random routing: at the start of each issue, each member is independently assigned a base LLM drawn from a prespecified model pool. Subsequent interactions on that issue remain with the assigned model. The pool must include different model families or providers;
+\item Traditional-search baseline: members use traditional search engines to acquire information. Queries, returned sources, selected materials, and actual exposure are recorded. A human-curated repository is not a substitute for this condition; a shared human-curated brief is retained separately as an alternative-source check.
+\end{enumerate}
+
+Routing probabilities are prespecified and are not adjusted according to the user's initial opinion, prompt content, question difficulty, cost, or model-predicted response quality. This restriction prevents the endogenous model selection found in commercial routers. Candidate models must first be calibrated for mean information quality. Formal comparisons should approximately match the quantity of information, text length, factual accuracy, mean stance direction, and readability at the member level.
+
+Models, prompts, sampling parameters, output length, number of interaction rounds, and temporal version must be fully recorded. A common neutral prompt is the main setting. Prompts that include users' initial positions are used for boundary tests and cannot be pooled with the main setting. High-temperature sampling, AI personas, and multi-agent debate within a single model are not the primary technical interventions for SQ3. These configurations may change wording, predefined stances, or internal reasoning processes without changing member exposure, diffusion, or opinion evolution.
+
+\subsection{Text-measurement layer}
+
+Each response is coded for:
+
+\begin{itemize}
+\item Direction and strength of stance;
+\item Distinguishable factual claims;
+\item Supporting and opposing arguments;
+\item Cited or mentioned information sources;
+\item Semantic representation.
+\end{itemize}
+
+At the text layer, the study separately measures surface similarity in wording, semantic similarity, overlap in factual claims and arguments, source overlap, stance direction, and error correlation. Lexical or character overlap measures surface wording; human-validated semantic representations measure semantic similarity; and information-item coding identifies factual claims, arguments, and sources. Information overlap is only one measure at the text and information-exposure layers. It does not measure information diffusion, subjective credibility, acceptance weights, or opinion outcomes. Automated coders must be validated on human-annotated samples, with classification accuracy, coding agreement, and rules for resolving disagreements reported.
+
+The same generative model cannot simultaneously generate responses, perform final text coding, and update human opinions.
+
+\subsection{Information-exposure layer}
+
+Initial agent exposure is determined by LLM responses. Subsequent exposure comes from both LLMs and content shared by other members in the network. In each round, the model records the information actually received by each agent, its source, arrival time, and diffusion path. At the group level, it reports viewpoint coverage, source composition, repeated exposure, proportion of unique information, pairwise information overlap among members, and cross-cutting exposure.
+
+Process identification for SQ2 uses a fixed response library and the same initial group, with counterfactual runs that separately change information allocation and network-diffusion rules. Conditions must match information quantity, text length, factual accuracy, the balance of supporting and opposing arguments, mean stance direction, and readability. If these attributes cannot be matched, no causal interpretation is assigned to a single information process.
+
+\subsection{Information-diffusion layer}
+
+Each agent may share information it has encountered with its network neighbors. The model records sharing behavior, recipients, diffusion depth, and diffusion breadth in every round. The probability of sharing and its relations with opinion distance, information source, or content attributes must be determined from human behavioral data, existing data, or prespecified sensitivity ranges. Demographic characteristics and LLM-generated personality descriptions cannot substitute directly for actual sharing behavior.
+
+The diffusion network may use an empirical network, a prespecified network structure, or robustness comparisons across multiple structures. Network structure is an input condition; actual sharing events and diffusion paths are process variables.
+
+\subsection{Acceptance weights and opinion updating}
+
+Each agent has an initial opinion. Whether social-influence weights and acceptable opinion distances enter the agent state is determined jointly by human calibration data and candidate update models. The candidate primary structure for rule-based agents is a Friedkin--Johnsen update that retains the initial opinion; a bounded-confidence model tests whether selective acceptance produces different outcomes. The final primary update rule will be selected according to predictive performance on held-out human observations.
+
+The baseline update for a rule-based agent can be written as:
+
+\begin{equation*}
+x_{i,t+1}
+=
+(1-\lambda_i)x_{i,0}
++
+\lambda_i
+\sum_{j\in J_{i,t}}
+w_{ij,t}s_{j,t},
+\qquad
+\sum_jw_{ij,t}=1.
+\end{equation*}
+
+Here, $x_{i,0}$ is the member's initial opinion. $s_{j,t}$ is the coded stance of message $j$. $\lambda_i\in[0,1]$ is the weight of social influence in the update, and $1-\lambda_i$ is the member's attachment to the initial opinion. $w_{ij,t}$ is the weight of exposed message $j$ in member $i$'s update. The classical Friedkin--Johnsen model uses others' opinions as social-influence inputs~\citep{friedkin1990}. This project connects the coded stances of natural-language messages to the same structure. The equation is therefore a candidate implementation of the text-state interface.
+
+The bounded-confidence test further specifies $w_{ij,t}=0$ when $|s_{j,t}-x_{i,t}|>\varepsilon_i$. $\varepsilon_i$ denotes the acceptable opinion distance and corresponds to the confidence bound in the Hegselmann--Krause model~\citep{hegselmann2002}.
+
+LLM agents do not directly apply the numerical equation above. They receive an individual profile, current opinion, historical memory, and the current exposure bundle and return a next-period opinion in a prespecified format. Message generation and onward sharing are assigned to their separate interfaces. In the human-calibrated diffusion condition, estimated sharing probabilities determine whether and where a message is shared; generated sharing suggestions cannot override those probabilities. The next-period opinion must use the same scale as the rule-based agents. The model also retains the original natural-language rationale so that consistency between the numerical state and the publicly expressed position can be checked. LLM output represents only the state transition of a simulated agent and cannot be interpreted directly as the internal thought process of a real person.
+
+The distributions of $\lambda_i$, $w_{ij,t}$, and $\varepsilon_i$ must come from estimates based on human experiments, existing panel data, or explicit sensitivity ranges. Opinion-transition direction, magnitude, and sharing behavior of LLM agents must likewise be tested on held-out human observations. When research materials include verifiable factual propositions, the subjective credibility assigned by members to those propositions must also be measured; policy support cannot substitute for factual belief. Demographic characteristics and personality descriptions cannot directly substitute for actual opinion-transition data.
+
+\subsection{Calibration with human data}
+
+The calibration experiment records initial positions on multiple policy issues. Participants receive randomly assigned coded information, after which their opinions are measured again. The experiment estimates:
+
+\begin{itemize}
+\item Individual differences in opinion inertia;
+\item How the distance between information and an initial position affects the magnitude of updating;
+\item Whether members share information they encounter and with whom;
+\item How repeated exposure and member restatement affect acceptance weights;
+\item Differences in updating across issues in response to the same information;
+\item The joint distribution of parameters.
+\end{itemize}
+
+Parameter estimation and construction of LLM-agent profiles use development data. Candidate rules are compared using model-selection data, with separate participants or issues reserved for final independent validation. The concrete sample sources and split sizes remain to be specified. Fit to initialization data does not validate opinion updating. Sample size will be determined through simulation-based power analysis using the group design, expected intragroup correlation, and smallest effect of interest.
+
+\subsection{Group construction and simulation runs}
+
+Each statistical group consists of rule-based agents and LLM agents with heterogeneous initial opinions and an information-diffusion network. The proportion and sampling rules for LLM agents will be fixed after pilot studies and included in the sensitivity analysis. The same initial group and network are used in paired runs across conditions with common random numbers to reduce irrelevant Monte Carlo variation. Run logs separately preserve raw LLM responses, text coding, information exposure, sharing paths, rule-agent update parameters, structured LLM-agent outputs, agent states, and group outcomes so that every layer remains auditable.
+
+The simulation should report entities, state variables, processes, scheduling, initialization, input data, and submodels according to the ODD protocol~\citep{grimm2020}.
+
+\subsection{Model validation}
+
+Model validation follows a layered procedure. Program verification, parameter calibration, empirical validation, and sensitivity analysis address different questions and cannot be replaced by superficial similarity in final group-level curves. Empirical validation of an ABM requires an explicit correspondence among theory, model structure, and real-world data~\citep{windrum2007}. Multi-level pattern comparison reduces the problem of observationally equivalent explanations produced by fitting a single outcome~\citep{grimm2005}.
+
+\subsubsection{Program verification}
+
+Program verification tests whether the code correctly implements the declared model. Each behavioral function is tested separately. The message-function test checks the output format. The selection-function test checks whether $J_{i,t}$ follows the network and exposure rules. The update-function test checks whether a given input produces the prescribed next-period state. The model is also tested under extreme conditions, including no messages, identical messages, opposing messages, and disconnected networks. Reproducibility is checked with fixed model versions, inputs, and random seeds. Program verification establishes implementation correctness. It provides no evidence of empirical validity.
+
+\subsubsection{Empirical validation of the three functions}
+
+The message function is compared with texts produced by real participants under the same profile, issue, and information conditions. Comparisons cover stance direction, factual claims, arguments, sources, expressions of uncertainty, and sharing behavior. Automated text coding must first be validated on human-annotated samples.
+
+The selection function uses human reading and information-selection data to estimate whether a message enters actual exposure. Reading and ignoring are tested on held-out participants or issues. Sharing is validated separately against the module that produces onward transmission; it is not counted again as selection.
+
+The update function is validated against initial opinions, controlled information exposure, and post-exposure opinions. Rule-based agents, LLM agents, and an opinion-invariance baseline receive the same held-out cases. Comparisons assess the direction and magnitude of opinion change and the resulting distribution. Data used for parameter estimation, prompt construction, or model selection cannot be reused as the final independent validation sample.
+
+\subsubsection{Incremental test of the hybrid architecture}
+
+A rule-only ABM, the hybrid ABM, and simple baseline models are compared under the same initial population, network, information materials, and random conditions. The central question is whether adding LLM agents improves prediction of message expression, opinion change, sharing behavior, and group distributions for held-out issues and participants. If the hybrid ABM does not deliver stable out-of-sample improvement, the methodological conclusion is restricted to opinion-dynamics results that can be explained by the rule-only ABM, and no predictive advantage is claimed for adding LLM agents. Validated message and diffusion records may still support a narrower contribution to inspecting information processes; fluent generated explanations alone do not establish a human mechanism.
+
+\subsubsection{Validation of group-level patterns}
+
+When small-scale, multi-round data on real group interaction are available, real and simulated groups are compared under the same initial opinion distribution, network, information materials, and number of interaction rounds. Comparison measures include the mean and variance of opinions, opinion clusters, degree of bimodality, cross-cutting exposure, diffusion depth and breadth, and round-by-round opinion trajectories. Multiple micro- and macro-level patterns jointly serve as validation targets, avoiding a fit to only one aggregate mean~\citep{grimm2005}.
+
+If real group trajectories are unavailable, the paper can claim only that the three functions have been calibrated or validated at the individual level. Long-run group results must then be defined as empirically constrained model emergence and counterfactual simulation. They cannot be described as quantitative predictions of long-run opinion evolution in real societies.
+
+\subsubsection{Functional ablation and sensitivity analysis}
+
+Functional ablation holds the message, selection, or update function fixed in turn while changing the remaining functions to determine whether group outcomes arise from information generation, information selection, or opinion updating. Sensitivity analysis varies the proportion of LLM agents, network structure, update sequence, candidate opinion-dynamics rule, model version, sampling parameters, prompting method, and random seed. Results that hold under only one configuration must be interpreted within that configuration.
+
+The ODD protocol is used to report the model's purpose, entities and state variables, process schedule, design concepts, initialization, external inputs, and submodels in full~\citep{grimm2020}. It improves model transparency and reproducibility. Empirical validity still comes from calibration with human data, out-of-sample prediction, and comparison of group-level patterns described above.
+
+\section{Identification and Statistical Analysis}
+
+\subsection{Identification of SQ1}
+
+SQ1 compares groups using traditional search engines with groups using LLMs for information search. Corresponding human search records must represent search-engine results and member selection. The platform, recruitment source, and data-collection protocol remain to be specified. Model coefficients such as $\beta$ and $\gamma$ are implementation inputs. Message overlap, actual exposure, and diffusion paths are outputs. The main simulation comparison holds behavioral coefficients fixed across information-source conditions. Any condition-specific coefficient difference requires separate human behavioral data and cannot be inferred from a change in model inputs.
+
+\subsubsection{Parameterized output of the message function}
+
+The message generated by agent $j$ in round $t$ is represented as:
+
+\begin{equation*}
+m_{j,t}
+=
+\left(
+s_{j,t},
+\mathbf q_{j,t},
+\mathbf r_{j,t}
+\right),
+\end{equation*}
+
+where $s_{j,t}\in[-1,1]$ denotes the stance position of the message. $\mathbf q_{j,t}\in\{0,1\}^{K}$ indicates whether the message contains factual claim or argument $k$. $\mathbf r_{j,t}\in\{0,1\}^{L}$ indicates whether the message uses information source $l$. The message function is written as:
+
+\begin{equation*}
+m_{j,t}
+=
+f_{\text{message}}
+(x_{j,t},z_j,H_{j,t}).
+\end{equation*}
+
+SQ1 compares $E(s_{j,t})$, $Var(s_{j,t})$, $P(q_{j,t,k}=1)$, and $P(r_{j,t,l}=1)$ across information conditions. Group-level message overlap at the factual-claim layer is defined as:
+
+\begin{equation*}
+C^{M}_{g,t}
+=
+\frac{2}{n(n-1)}
+\sum_{i<j}
+\frac{|Q_{i,t}\cap Q_{j,t}|}
+{|Q_{i,t}\cup Q_{j,t}|},
+\end{equation*}
+
+Here, $Q_{i,t}$ contains the coded claims in the candidate messages available to member $i$ before selection. Actual-exposure claim sets are defined separately below. $C^{M}_{g,t}$ is a project-specific Jaccard-overlap measure, not a theoretical construct. Semantic similarity is supplementary and does not replace coding claims, arguments, and sources. Empty unions have no defined Jaccard value and are recorded as unavailable, with their frequency reported; they are not silently coded as zero or one. The message-layer comparison is:
+
+\begin{equation*}
+C^{M}_{\text{shared LLM}}
+-
+C^{M}_{\text{search}}.
+\end{equation*}
+
+\subsubsection{Parameterized implementation of the selection function}
+
+The selection function determines whether a candidate message enters member $i$'s actual exposure set:
+
+\begin{equation*}
+J_{i,t}
+=
+f_{\text{selection}}
+(N_i,x_{i,t},\{m_{j,t}\}).
+\end{equation*}
+
+Here, $N_i$ denotes candidate message identifiers accessible to member $i$ through the network. A candidate implementation is:
+
+\begin{equation*}
+P(j\in J_{i,t})
+=
+\operatorname{logit}^{-1}
+\left[
+\beta_0
++
+\beta_d|s_{j,t}-x_{i,t}|
++
+\beta_rR_{i,j,t}
++
+\beta_nA_{ij}
+\right].
+\end{equation*}
+
+Here, $\beta_0$ is the baseline log-odds of exposure. $\beta_d$ captures how distance between the message and the current opinion affects the probability of selection. $R_{i,j,t}$ counts prior rounds in which member $i$ encountered a message from the source associated with message $j$. $\beta_r$ captures how repeated exposure affects reselection. $A_{ij}$ indicates whether member $i$ is connected in the network to the source of message $j$. $\beta_n$ captures how network connectivity affects information selection. This equation is a candidate project-specific implementation for estimating selection behavior. It is not a fixed equation from an established theory. Its coefficients require human information-selection data, and the main simulation holds them fixed across source conditions. Baseline probability is obtained by applying inverse-logit to the intercept. If the candidate set includes only connected sources, $A_{ij}$ is constant and its coefficient is not estimated separately. Network accessibility then acts as a constraint.
+
+Let $K^{E}_{i,t}=\{k:\exists j\in J_{i,t},\ q_{j,t,k}=1\}$ be the set of coded claims or arguments in messages actually encountered by member $i$. Claim overlap in actual exposure is defined as:
+
+\begin{equation*}
+C^{E}_{g,t}
+=
+\frac{2}{n(n-1)}
+\sum_{i<j}
+\frac{|K^{E}_{i,t}\cap K^{E}_{j,t}|}
+{|K^{E}_{i,t}\cup K^{E}_{j,t}|}.
+\end{equation*}
+
+Source overlap and exact-message overlap are recorded separately using their corresponding identifiers. Empty claim unions are treated as unavailable and reported. The cumulative number of rounds in which member $i$ encounters claim $k$ through round $t$ is:
+
+\begin{equation*}
+R_{i,k,t}
+=
+\sum_{\tau=1}^{t}
+\mathbb I(k\in K^{E}_{i,\tau}).
+\end{equation*}
+
+The selection-layer comparison is $C^{E}_{\text{shared LLM}}-C^{E}_{\text{search}}$. It tests whether the information actually encountered contains more shared claims. Differences in $\beta_d$ can be assessed using condition-specific human selection data, but cannot be interpreted as a simulated treatment effect when those coefficients are fixed inputs.
+
+\subsubsection{Parameterized implementation of sharing and diffusion}
+
+A candidate implementation of sharing behavior is:
+
+\begin{equation*}
+P(Y_{i,j,t}^{\text{share}}=1)
+=
+\operatorname{logit}^{-1}
+\left[
+\gamma_0
++
+\gamma_d|s_{j,t}-x_{i,t}|
++
+\gamma_rR_{i,j,t}
++
+\gamma_sS_j
+\right],
+\end{equation*}
+
+where $\gamma_0$ is the baseline log-odds of sharing. $\gamma_d$ captures the effect of opinion distance on sharing, and $\gamma_r$ captures the effect of repeated exposure. $S_j$ denotes the information-source category, and $\gamma_s$ captures its effect on sharing. This equation is a candidate implementation. Its parameters must come from human sharing data or prespecified sensitivity ranges. The main source comparisons hold these parameters fixed. Separate estimates from human data and sensitivity inputs are identified as such. They are not reported as effects generated by the simulation. The intercept is on the log-odds scale.
+
+Diffusion depth, diffusion breadth, and the proportion of cross-cutting diffusion are process outcomes generated by repeated application of the sharing function in the network. SQ1 tests:
+
+\begin{equation*}
+\begin{aligned}\text{LLM information condition} &\rightarrow \left( C^{M},C^{E},\text{sharing outcomes} \right) \\
+&\rightarrow \text{diffusion paths}.\end{aligned}
+\end{equation*}
+
+The analysis model must include issue effects and account for dependencies created when the same response, member, and network recur across rounds. Response content, actual exposure, and network diffusion must be reported separately. A change at one layer cannot substitute for measurement at another.
+
+\subsection{Identification of SQ2}
+
+SQ2 uses a fixed message library, the same initial groups, and the same networks. It directly manipulates exposure commonality in the selection function and diffusion intensity in the sharing function and then observes the output of the opinion-update function. Information exposure and diffusion must be changed exogenously; the analysis cannot rely only on correlations among process differences that arise naturally in SQ1.
+
+\subsubsection{Exposure commonality and diffusion intensity}
+
+The first experimental control is exposure commonality $c$:
+
+\begin{equation*}
+c\in\{c_{\text{low}},c_{\text{high}}\}.
+\end{equation*}
+
+The $c_{\text{high}}$ condition assigns more of the same factual claims and arguments to members, whereas the $c_{\text{low}}$ condition assigns more distinct information. The two conditions approximately match information quantity, text length, factual accuracy, mean stance direction, the balance of supporting and opposing arguments, and readability. The realized $C^{E}_{g,t}$ is used to test the success of the manipulation. $c$ is an experimental control defined for this study, not a new theoretical construct.
+
+The second experimental control is diffusion intensity $\pi$:
+
+\begin{equation*}
+\pi\in\{0,\hat\pi_{\text{human}}\},
+\end{equation*}
+
+where $\pi=0$ means that members cannot continue to share information and $\pi=\hat\pi_{\text{human}}$ means that members diffuse information according to sharing probabilities estimated from human data. The two-dimensional simulation conditions are shown in Table~\ref{tab:exposure_diffusion}:
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.18}
+\begin{longtable}{@{}>{\RaggedRight\arraybackslash}p{0.16\textwidth}>{\RaggedRight\arraybackslash}p{0.36\textwidth}>{\RaggedRight\arraybackslash}p{0.36\textwidth}@{}}
+\caption{Exposure and diffusion conditions}\label{tab:exposure_diffusion}\\
+\toprule
+\textbf{} & \textbf{$\pi=0$} & \textbf{$\pi=\hat\pi_{\text{human}}$} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{} & \textbf{$\pi=0$} & \textbf{$\pi=\hat\pi_{\text{human}}$} \\
+\midrule
+\endhead
+$c=c_{\text{high}}$ & High common exposure, no diffusion & High common exposure, diffusion enabled \\
+$c=c_{\text{low}}$ & Low common exposure, no diffusion & Low common exposure, diffusion enabled \\
+\bottomrule
+\end{longtable}
+\end{center}
+
+This comparison separately identifies the effects of exposure commonality, member diffusion, and their interaction on individual opinion change and group opinion distributions.
+
+\subsubsection{Acceptance of social influence in the Friedkin--Johnsen structure}
+
+Rule-based agents may use a Friedkin--Johnsen structure that retains the initial opinion:
+
+\begin{equation*}
+x_{i,t+1}
+=
+(1-\lambda_i)x_{i,0}
++
+\lambda_i
+\sum_{j\in J_{i,t}}
+w_{ij,t}s_{j,t},
+\qquad
+\sum_jw_{ij,t}=1.
+\end{equation*}
+
+Here, $x_{i,0}$ is the member's initial opinion. $\lambda_i\in[0,1]$ is the weight of social influence in the update. $1-\lambda_i$ denotes the member's attachment to the initial opinion. $w_{ij,t}$ is the weight of message $j$ in member $i$'s update. The classical Friedkin--Johnsen model uses others' opinions as social-influence inputs~\citep{friedkin1990}. The equation above uses the coded message stance $s_{j,t}$ and is the project's implementation of a text-state interface. It cannot be presented as the complete original equation from Friedkin and Johnsen.
+
+SQ2 first compares:
+
+\begin{equation*}
+\Delta x_i(c_{\text{high}},\pi)
+-
+\Delta x_i(c_{\text{low}},\pi),
+\end{equation*}
+
+and then tests how this difference varies with $\lambda_i$. This comparison asks whether the effect of common exposure occurs primarily among members who place greater weight on social influence.
+
+\subsubsection{Acceptable opinion distance in the bounded-confidence model}
+
+The bounded-confidence model further specifies:
+
+\begin{equation*}
+w_{ij,t}=0
+\quad\text{if}\quad
+|s_{j,t}-x_{i,t}|>\varepsilon_i,
+\end{equation*}
+
+where $\varepsilon_i$ denotes member $i$'s acceptable opinion distance. This parameter corresponds to the confidence bound in the Hegselmann--Krause bounded-confidence model~\citep{hegselmann2002}. SQ2 compares:
+
+\begin{equation*}
+Y(c_{\text{high}},\varepsilon_{\text{large}})
+-
+Y(c_{\text{low}},\varepsilon_{\text{large}})
+\end{equation*}
+
+and:
+
+\begin{equation*}
+Y(c_{\text{high}},\varepsilon_{\text{small}})
+-
+Y(c_{\text{low}},\varepsilon_{\text{small}}),
+\end{equation*}
+
+where $Y$ denotes a prespecified measure of the group opinion distribution. When $\varepsilon_i$ is large, members can incorporate information from a wider range of positions. When $\varepsilon_i$ is small, information beyond the threshold does not enter the update. Different combinations of common exposure, messages conditioned on initial positions, and acceptable opinion distance can produce convergence, persistent disagreement, or multiple opinion clusters.
+
+The main parameter comparison for rule-based agents is therefore:
+
+\begin{equation*}
+\boxed{
+c
+\times
+\pi
+\times
+\lambda
+\times
+\varepsilon
+\rightarrow
+\text{individual opinion change and group distribution}
+}.
+\end{equation*}
+
+Here, $c$ is the exposure commonality controlled by the selection function. $\pi$ is the diffusion intensity controlled by the sharing function. $\lambda$ is the social-influence weight in the Friedkin--Johnsen structure. $\varepsilon$ is the acceptable opinion distance in the bounded-confidence model.
+
+The weighting equations apply when at least one acceptable message is available; weights are normalized over that nonempty set. The empty-set state transition remains to be fixed before implementation and sensitivity testing. An empty sum cannot be inserted into the displayed equation without specifying its behavioral meaning. The initial opinion is retained in each agent's state. No claim about no-message behavior is made until this rule is declared and verified.
+
+\subsubsection{Comparable behavioral response of LLM agents}
+
+LLM agents do not have native $\lambda_i$ or $\varepsilon_i$ parameters. For LLM agents, the study directly records:
+
+\begin{equation*}
+\Delta x^{\text{LLM}}_{i,t}
+=
+x^{\text{LLM}}_{i,t+1}
+-
+x^{\text{LLM}}_{i,t},
+\end{equation*}
+
+and estimates their behavioral response using the same exposure and diffusion manipulations:
+
+\begin{equation*}
+\Delta x^{\text{LLM}}_{i,t}
+=
+\theta_0
++
+\theta_1(\bar s_{i,t}-x_{i,t})
++
+\theta_2c
++
+\theta_3\pi
++
+\theta_4c(\bar s_{i,t}-x_{i,t})
++
+u_{i,t}.
+\end{equation*}
+
+$\theta_1$ describes the empirical relation between changes in the LLM agent's state and message-opinion distance. It is a reduced-form description of LLM output, not a psychological parameter inside the LLM. The direction and magnitude of state transitions are compared separately for human participants, LLM agents, and rule-based agents under the same information manipulations. $\theta_1^{\text{human}}$, $\theta_1^{\text{LLM}}$, and $\lambda_i$ in the rule-based model have different definitions. A direct parameter-equality test would therefore be invalid.
+
+SQ2 holds message content, information quality, and initial groups constant. It changes exposure commonality $c$ and diffusion intensity $\pi$ to estimate their effects on individual opinion updating. The analysis then examines whether these effects vary with social-influence weight $\lambda$ and acceptable opinion distance $\varepsilon$. Candidate outcomes are changes in the group mean, within-group variance, clustering, and bimodality. One primary distributional measure and its comparison direction will be fixed before confirmatory analysis. The other measures will be reported as supplementary outcomes. Differences in group outcomes can be attributed to the manipulated stage only when the other processes and average member-level information attributes are approximately matched.
+
+\subsection{Identification of SQ3}
+
+SQ3 is tested only after SQ2 identifies a stable pattern of group opinion evolution. The primary technical intervention is independent random routing across model families or providers. The core comparison is between a condition in which all members use the same LLM and a condition that uses this routing scheme. SQ3 changes only the information-source models. The models and settings used to simulate people remain fixed. The technical intervention must change at least one defined information process and then attenuate the same group-level evolutionary measure used in SQ2. A change confined to model labels, surface wording, or backend architecture does not constitute effective mitigation.
+
+Commercial model routers select models according to quality, cost, latency, or question difficulty. Their routing outcomes are therefore endogenous to input characteristics. Such routers establish the practical feasibility of multi-model architectures. They cannot supply the causal comparison required for SQ3. The formal study uses independent random routing with prespecified probabilities.
+
+\subsection{Unit of generalization and uncertainty}
+
+The primary statistical unit is the ``statistical group $\times$ issue.'' Issues should enter hierarchical models or resampling procedures as a dimension of generalization. Random seeds estimate Monte Carlo uncertainty. They are not independent empirical observations.
+
+The analysis also reports:
+
+\begin{itemize}
+\item Heterogeneity across issues;
+\item Sensitivity to model and prompt versions;
+\item Uncertainty in parameters calibrated from human data;
+\item Robustness across different opinion-update rules;
+\item Out-of-sample prediction error on held-out issues.
+\end{itemize}
+
+\section{Tests of AI Specificity}
+
+A shared human-curated brief is a necessary alternative-source check. If quality-matched shared human information produces the same information exposure, sharing, acceptance, and opinion evolution through the same diffusion network, the paper can support only a general effect of common information input. The following provide evidence for examining AI specificity, but none alone is sufficient to exclude a general information-source explanation:
+
+\begin{enumerate}
+\item Content relations or repeated exposure produced through separate LLM interactions are consistently different from those produced by human information or search information;
+\item User-conditioned generation and members' follow-up queries produce dynamic diffusion and differentiation that fixed human materials cannot readily reproduce;
+\item Independent random routing across model families or providers consistently changes the information process and attenuates an identified pattern of group opinion evolution.
+\end{enumerate}
+
+If none of these conditions holds, the result supports a common-information-input explanation in an LLM setting. It does not support a distinct theoretical effect of AI.
+
+\section{Validity and Reproducibility}
+
+\subsection{Construct validity}
+
+\begin{itemize}
+\item Validate the extraction of arguments, stances, and sources through human coding;
+\item Separate textual relations, information exposure, sharing behavior, factual beliefs, acceptance weights, and policy opinions;
+\item Do not use text similarity as a substitute for opinion change.
+\end{itemize}
+
+\subsection{Internal validity}
+
+\begin{itemize}
+\item Conduct paired counterfactual runs using the same response library, initial groups, and networks;
+\item Match member-level information quantity, accuracy, mean stance, and readability;
+\item Change information allocation, diffusion processes, and acceptance rules separately;
+\item Prespecify neutral prompts and stance-conditioned prompts;
+\item Control model versions, sampling settings, and issue order.
+\end{itemize}
+
+\subsection{External validity}
+
+\begin{itemize}
+\item Use multiple policy domains;
+\item Calibrate rule-based agents with opinion changes observed in real people and validate state transitions of LLM agents;
+\item Constrain diffusion parameters using human sharing behavior or explicit sensitivity ranges;
+\item Test predictions on held-out issues;
+\item Limit conclusions about statistical groups to settings with information-diffusion networks but without formal team tasks.
+\end{itemize}
+
+\subsection{Reproducibility}
+
+\begin{itemize}
+\item Preserve complete prompts, model versions, sampling parameters, and timestamps;
+\item Fix random seeds and record failed calls;
+\item Release text-coding protocols, rules for constructing the response library, network and diffusion rules, implementation details for the three behavioral functions, and the ABM code;
+\item Report the model according to the ODD protocol~\citep{grimm2020}.
+\end{itemize}
+
+\section{Expected Contributions}
+
+\subsection{From individual human-AI interaction to group opinion formation}
+
+Existing research on human-AI collaboration shows that AI can improve individual performance. The same research reports higher correlations among members' judgments or lower diversity in group-level output~\citep{fugener2021,doshi2024}. Positive individual-level effects may therefore coexist with different group-level distributions.
+
+The model tests how these group outcomes may arise. When members interact separately with LLMs, model-generated information enters their exposure. Active sharing and network diffusion can then transmit that information to other members and affect their opinion updating. Separate member-LLM interactions may change the group distributions of both information and opinions.
+
+One expected contribution to research on human-LLM interaction is a micro-to-macro explanation that links individual interactions to group opinion distributions:
+
+\begin{equation*}
+\begin{aligned}\text{individual--LLM interaction} &\rightarrow \text{group information distribution} \\
+&\rightarrow \text{member sharing and network diffusion} \\
+&\rightarrow \text{group opinion distribution}.\end{aligned}
+\end{equation*}
+
+This explanation extends the outcome of inquiry from individual performance, individual attitudes, or one-time adoption to multiple members, repeated interaction, and group opinion evolution.
+
+\subsection{Incorporating natural-language information processes into opinion dynamics}
+
+Classical opinion-dynamics models primarily use numerical opinion states and social-influence weights to explain consensus, persistent disagreement, and opinion clustering~\citep{degroot1974,friedkin1990,hegselmann2002}. These models usually represent social influence through the positions of others and the weights assigned to them. Specific arguments, evidence, and sources are often compressed into numerical inputs.
+
+LLMs add a natural-language information layer that can vary independently within the opinion-formation process. Different arguments can express the same opinion position. Members may also receive similar or different information from the same model. The paper separates message generation, information selection, and opinion updating:
+
+\begin{equation*}
+\begin{aligned}f_{\text{message}} &\rightarrow f_{\text{selection}} \\
+&\rightarrow f_{\text{update}}.\end{aligned}
+\end{equation*}
+
+This decomposition distinguishes three explanations. Group opinions may become closer because the model generated similar information, because members encountered and diffused similar information, or because members applied similar update weights. The resulting model includes natural-language messages and their diffusion. It tests how information content enters individual opinion trajectories and group-level distributions.
+
+\subsection{Explaining why LLMs may produce both convergence and differentiation}
+
+Research on LLM-output homogeneity motivates a conditional prediction of group convergence. Different members who use the same model with common prompts may receive similar arguments, evidence, and sources~\citep{jiang2025}. Research on algorithmic personalization and bounded confidence supports a competing prediction. Different camps may update in their respective directions when the model conditions directionally consistent information on a user's initial position and members accept only content close to their own positions~\citep{perra2019,hegselmann2002}.
+
+This paper places both predictions in the same opinion-dynamics framework and tests two boundary conditions. One condition is whether generation depends on a user's initial position. Common neutral prompts are more likely to produce similar information. Stance-conditioned prompts are more likely to produce directionally different information. The other condition is the distance over which members accept opinions. A larger acceptable distance facilitates influence across positions. A smaller distance helps opinion clusters persist.
+
+Different combinations of shared generative tendencies, user-conditioned generation, information selection, and opinion-update rules can produce convergence, persistent disagreement, clustering, or no measurable change. The study tests when shared LLM use produces convergence, clustering, or little opinion change.
+
+\subsection{Extending the explanatory scope of ABMs to natural-language information processes}
+
+In this paper, the ABM is a modeling method and a generative explanatory strategy. Traditional opinion-dynamics ABMs use explicit state variables, network structures, and update equations. They explain how individual interactions generate consensus, persistent disagreement, or opinion clustering. Their rules are transparent, but the content transmitted among members is usually compressed into numerical opinions. These models can show an opinion changing from $x_{i,t}$ to $x_{i,t+1}$. They provide less detail about the arguments a member encountered, the sources supporting those arguments, and the messages that entered opinion updating through diffusion.
+
+The hybrid ABM retains explicit network structures and opinion-update rules while adding natural-language messages and records of their diffusion:
+
+\begin{equation*}
+\begin{aligned}\text{natural-language messages} &\rightarrow \text{actual exposure sets} \\
+&\rightarrow \text{sharing paths} \\
+&\rightarrow \text{numerical opinion updating}.\end{aligned}
+\end{equation*}
+
+Rule-based agents and LLM agents share three functional interfaces: message, selection, and update. The model preserves agents' natural-language messages and the stances and factual claims in those messages. It also records the information encountered by members, sharing and diffusion paths, and round-by-round opinion states. These records allow the study to trace group-level opinion outcomes through their information pathways. They distinguish similarity in message generation, similarity in actual exposure, selective diffusion, and similarity in opinion-update rules.
+
+This method extends the explanatory scope of ABMs in generative-AI settings. Traditional ABMs provide controllable micro-level rules and macro-level emergent structures. LLM agents add natural-language information generation and expression. The hybrid model records both numerical states and language processes behind group-level outcomes.
+
+This methodological contribution has two boundaries. Readable natural-language output does not make the LLM's internal generative process transparent. Language records also require validation through human coding. The hybrid ABM must be compared with a rule-only ABM on held-out participants and issues. The hybrid model supports an additional explanatory-value claim only if it provides information pathways unavailable to the rule-only model or improves out-of-sample predictive performance.
+
+\subsection{Conditional technical and governance implications}
+
+Algorithmic monoculture provides the theoretical basis for SQ3~\citep{kleinberg2021}. The paper does not claim it as a separate primary theoretical contribution. If a shared LLM changes group opinion distributions through information exposure and diffusion, the paper tests whether independent random routing across model families or providers attenuates that pattern.
+
+This test asks whether reducing dependence on a single model source changes the information that group members receive and diffuse. It then examines whether group opinion evolution changes. The technical intervention must change a defined information process and attenuate the same group-level outcome used in SQ2, with mean information quality approximately matched. A system-design recommendation requires both conditions.
+
+Research on information cocoons and algorithmic personalization provides modeling references for information exposure, network diffusion, selective acceptance, and opinion dynamics. The paper does not claim ``the discovery of a new information cocoon'' as a theoretical contribution.
+
+All contributions above are expected contributions subject to empirical testing. The formal paper will retain, narrow, or remove each claim according to the actual results of SQ1-SQ3.
+
+\subsection{Design choices to be fixed before confirmatory analysis}
+
+The concrete policy setting, target population, recruitment or existing-data source, search platform, empirical network, and interpretation of a simulation time step remain to be specified. A set of approximately 24 issues is a candidate scope. It is not a validated or final task set. Model selection and final validation require distinct data. The primary distributional outcome, SQ3 attenuation criterion, final update rule, empty-message behavior, and within-round schedule must be fixed before confirmatory runs. Error correlation is measured only for factual claims with independently coded truth values. It is not measured for policy-support positions. Matching mean information attributes identifies effects under those matched conditions. It does not estimate every content difference between technologies.
+
+\section{Falsification and Scope Conditions}
+
+The current theoretical claims must be narrowed if any of the following results occurs:
+
+\begin{enumerate}
+\item Compared with traditional search-engine acquisition, LLM acquisition changes only surface wording and does not change factual claims, arguments, sources, stances, or members' actual exposure, leaving SQ1 without a substantive first stage;
+\item Information exposure changes, but member sharing, acceptance weights, and opinion updating do not, so the LLM effect remains confined to the information-input layer;
+\item Sharing and diffusion change, but the group mean, variance, clustering, and bimodality do not, so the group-evolution pathway in SQ2 is unsupported;
+\item Counterfactual conditions for exposure, diffusion, or acceptance cannot match member-level information attributes, preventing causal identification of the corresponding process;
+\item Independent random routing changes no defined information process or fails to attenuate the same group-evolution measure used in SQ2, rendering the current technical intervention for SQ3 ineffective;
+\item The primary results appear only among agents for which the LLM itself decides sharing or opinion updating and cannot be reproduced through human calibration or on held-out issues;
+\item The results depend on a single issue, model, prompt, network, or opinion-update equation;
+\item A shared human-curated brief fully reproduces the effect through the same diffusion network, and the LLM has no distinctive effect arising from dynamic generation, diffusion, or technical intervention.
+\end{enumerate}
+
+Result 1 restricts the study to textual differences. Results 2--4 undermine the proposed link between information processes and group opinion evolution. Result 5 rejects the current technical intervention. Result 8 retains only a general common-information-input explanation and removes the claim of an AI-specific theoretical effect.
+
+The study fixes the overarching theme, the core research question and its three subquestions, and the conditional structure of SQ3. It also fixes independent random routing across model families or providers as the primary candidate intervention. The unit of analysis is a statistical group with an information-diffusion network. Information exposure, diffusion, social-influence weights, message weights, opinion updating, and group evolution remain separate. The ABM requires calibration with human data. Pilot studies and power analysis will determine methodological parameters such as group size, number of issues and rounds, base model versions, sample size, and parameter distributions. These parameters must not retroactively change the core research question.
+
+
+
+
+
+
+\begingroup
+\RaggedRight
+\begin{thebibliography}{99}
+\RaggedRight
+\interlinepenalty=10000
+
+\bibitem[Anthropic(2023)]{anthropic2023}
+Anthropic. (2023). Collective Constitutional AI: Aligning a language model with public input. \url{https://www.anthropic.com/news/collective-constitutional-ai-aligning-a-language-model-with-public-input}
+
+\bibitem[Chuang et al.(2024)]{chuang2024}
+Chuang, Y.-S., Goyal, A., Harlalka, N., et al. (2024). Simulating opinion dynamics with networks of LLM-based agents. In \textit{Findings of the Association for Computational Linguistics: NAACL 2024} (pp. 3326--3346). \url{https://aclanthology.org/2024.findings-naacl.211/}
+
+\bibitem[DeGroot(1974)]{degroot1974}
+DeGroot, M. H. (1974). Reaching a consensus. \textit{Journal of the American Statistical Association, 69}(345), 118--121. \url{https://doi.org/10.1080/01621459.1974.10480137}
+
+\bibitem[Doshi and Hauser(2024)]{doshi2024}
+Doshi, A. R., \& Hauser, O. P. (2024). Generative AI enhances individual creativity but reduces the collective diversity of novel content. \textit{Science Advances, 10}(28). \url{https://doi.org/10.1126/sciadv.adn5290}
+
+\bibitem[Friedkin and Johnsen(1990)]{friedkin1990}
+Friedkin, N. E., \& Johnsen, E. C. (1990). Social influence and opinions. \textit{Journal of Mathematical Sociology, 15}(3--4), 193--206. \url{https://doi.org/10.1080/0022250X.1990.9990069}
+
+\bibitem[F\"ugener et al.(2021)]{fugener2021}
+F\"ugener, A., Grahl, J., Gupta, A., et al. (2021). Will humans-in-the-loop become Borgs? Merits and pitfalls of working with AI. \textit{MIS Quarterly, 45}(3), 1527--1556. \url{https://doi.org/10.25300/MISQ/2021/16553}
+
+\bibitem[Google(2026)]{google2026}
+Google. (2026). Grounding with Google Search. Google AI for Developers. \url{https://ai.google.dev/gemini-api/docs/google-search}
+
+\bibitem[Gottweis and Natarajan(2025)]{gottweis2025}
+Gottweis, J., \& Natarajan, V. (2025). Accelerating scientific breakthroughs with an AI co-scientist. Google Research. \url{https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist/}
+
+\bibitem[Grimm et al.(2005)]{grimm2005}
+Grimm, V., Revilla, E., Berger, U., et al. (2005). Pattern-oriented modeling of agent-based complex systems: Lessons from ecology. \textit{Science, 310}(5750), 987--991. \url{https://doi.org/10.1126/science.1116681}
+
+\bibitem[Grimm et al.(2020)]{grimm2020}
+Grimm, V., Railsback, S. F., Vincenot, C. E., et al. (2020). The ODD protocol for describing agent-based and other simulation models: A second update to improve clarity, replication, and structural realism. \textit{Journal of Artificial Societies and Social Simulation, 23}(2). \url{https://doi.org/10.18564/jasss.4259}
+
+\bibitem[Hegselmann and Krause(2002)]{hegselmann2002}
+Hegselmann, R., \& Krause, U. (2002). Opinion dynamics and bounded confidence models, analysis, and simulation. \textit{Journal of Artificial Societies and Social Simulation, 5}(3). \url{https://www.jasss.org/5/3/2.html}
+
+\bibitem[Jiang et al.(2025)]{jiang2025}
+Jiang, L., Chai, Y., Li, M., et al. (2025). Artificial Hivemind: The open-ended homogeneity of language models. \textit{Advances in Neural Information Processing Systems}. \url{https://openreview.net/forum?id=saDOrrnNTz}
+
+\bibitem[Kleinberg and Raghavan(2021)]{kleinberg2021}
+Kleinberg, J., \& Raghavan, M. (2021). Algorithmic monoculture and social welfare. \textit{Proceedings of the National Academy of Sciences, 118}(22), e2018340118. \url{https://doi.org/10.1073/pnas.2018340118}
+
+\bibitem[Microsoft(2026)]{microsoft2026}
+Microsoft. (2026). How model router works in Microsoft Foundry. Microsoft Learn. \url{https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-router-how-it-works}
+
+\bibitem[Mou et al.(2024)]{mou2024}
+Mou, X., Wei, Z., \& Huang, X. (2024). Unveiling the truth and facilitating change: Towards agent-based large-scale social movement simulation. In \textit{Findings of the Association for Computational Linguistics: ACL 2024} (pp. 4789--4809). \url{https://doi.org/10.18653/v1/2024.findings-acl.285}
+
+\bibitem[Nyhan et al.(2023)]{nyhan2023}
+Nyhan, B., Settle, J., Thorson, E., et al. (2023). Like-minded sources on Facebook are prevalent but not polarizing. \textit{Nature, 620}, 137--144. \url{https://doi.org/10.1038/s41586-023-06297-w}
+
+\bibitem[OpenAI(2025a)]{openai_collective_alignment}
+OpenAI. (2025a). Collective alignment: Public input on our Model Spec. \url{https://openai.com/index/collective-alignment-aug-2025-updates/}
+
+\bibitem[OpenAI(2025b)]{openai_political_bias}
+OpenAI. (2025b). Defining and evaluating political bias in LLMs. \url{https://openai.com/index/defining-and-evaluating-political-bias-in-llms/}
+
+\bibitem[Perra and Rocha(2019)]{perra2019}
+Perra, N., \& Rocha, L. E. C. (2019). Modelling opinion dynamics in the age of algorithmic personalisation. \textit{Scientific Reports, 9}, 7261. \url{https://doi.org/10.1038/s41598-019-43830-2}
+
+\bibitem[Stasser and Titus(1985)]{stasser1985}
+Stasser, G., \& Titus, W. (1985). Pooling of unshared information in group decision making: Biased information sampling during discussion. \textit{Journal of Personality and Social Psychology, 48}(6), 1467--1478. \url{https://doi.org/10.1037/0022-3514.48.6.1467}
+
+\bibitem[Steinel et al.(2010)]{steinel2010}
+Steinel, W., Utz, S., \& Koning, L. (2010). The good, the bad and the ugly thing to do when sharing information: Revealing, concealing and lying depend on social motivation, distribution and importance of information. \textit{Organizational Behavior and Human Decision Processes, 113}(2), 85--96. \url{https://doi.org/10.1016/j.obhdp.2010.07.001}
+
+\bibitem[Windrum et al.(2007)]{windrum2007}
+Windrum, P., Fagiolo, G., \& Moneta, A. (2007). Empirical validation of agent-based models: Alternatives and prospects. \textit{Journal of Artificial Societies and Social Simulation, 10}(2), 8. \url{https://www.jasss.org/10/2/8.html}
+
+\end{thebibliography}
+\endgroup
+
+\end{document}

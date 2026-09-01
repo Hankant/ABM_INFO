@@ -1,0 +1,47 @@
+# Local credentials and machine-specific configuration
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Python caches and virtual environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Node dependencies and build output
+node_modules/
+dist/
+build/
+
+# LaTeX intermediate files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# Office and OS temporary files
+~$*
+.DS_Store
+Thumbs.db
+
+# Local caches and generated render output
+.cache/
+rendered/
+
+# Third-party and user-supplied paper full text stays local.
+# Public metadata, BibTeX, notes, and verified links remain tracked.
+/02_literature/papers/**/*.pdf
+/02_literature/user_supplied_originals/**/*.pdf

@@ -1,0 +1,206 @@
+{
+  "path": "E:\\Info_AI\\LaTeX\\Paper1_AI_Group_Information_Acquisition_and_Opinion_Formation_Formal_RP_EN.tex",
+  "sha256": "bf0b44232940bf59554c8d031ed7a0c384d5d205c5494214ad0f950af892d500",
+  "lines": 1043,
+  "body_word_approx": 10660,
+  "cites": {
+    "jiang2025": 4,
+    "fugener2021": 3,
+    "doshi2024": 3,
+    "nyhan2023": 3,
+    "perra2019": 7,
+    "kleinberg2021": 4,
+    "openai2025a": 1,
+    "openai2025b": 1,
+    "anthropic2023": 1,
+    "gottweis2025": 1,
+    "microsoft2026": 1,
+    "google2026": 1,
+    "chuang2024": 1,
+    "stasser1985": 2,
+    "steinel2010": 2,
+    "degroot1974": 3,
+    "friedkin1990": 5,
+    "hegselmann2002": 7,
+    "mou2024": 2,
+    "grimm2020": 3,
+    "windrum2007": 1,
+    "grimm2005": 2
+  },
+  "bib_count": 22,
+  "missing_cite_keys": [],
+  "uncited_bib_keys": [],
+  "duplicate_bib_keys": [],
+  "labels": [],
+  "refs": [],
+  "unreferenced_labels": [],
+  "tables": [
+    {
+      "line": 332,
+      "type": "longtable",
+      "caption": false
+    },
+    {
+      "line": 686,
+      "type": "longtable",
+      "caption": false
+    }
+  ],
+  "numbered_equations": [],
+  "term_counts": {
+    "innovative": 0,
+    "pioneering": 0,
+    "revolutionary paradigm": 0,
+    "transformative framework": 0,
+    "superior": 0,
+    "surpass": 0,
+    "excel": 0,
+    "remarkable": 0,
+    "unprecedented": 0,
+    "breakthrough performance": 0,
+    "general-purpose": 0,
+    "is capable of": 0,
+    "notably": 0,
+    "yet": 1,
+    "yielding": 0,
+    "at its essence": 0,
+    "encompass": 1,
+    "differentiate": 0,
+    "reveal": 1,
+    "underscore": 0,
+    "pave the way for": 0,
+    "highlight the potential of": 0,
+    "profound challenges": 0,
+    "stems from": 0,
+    "rigid": 0,
+    "impede": 0,
+    "delve": 0,
+    "leverage": 0,
+    "foster": 0,
+    "crucial": 0,
+    "comprehensive": 0,
+    "robust": 0,
+    "unified": 1,
+    "thereby": 2,
+    "therefore": 9,
+    "taken together": 1,
+    "not merely": 0,
+    "rather than": 1
+  },
+  "em_dash_count": 0,
+  "hits": [
+    {
+      "line": 73,
+      "terms": [
+        "therefore"
+      ],
+      "text": "Large language models (LLMs) have become interactive gateways through which people obtain explanations, arguments, and policy information. Unlike conventional information retrieval, LLMs directly generate integrated natural-language responses. After receiving these responses, group members may restate, share, or continue to interact around them. LLMs can therefore change information content, member exposure, and subsequent diffusion processes at the same time."
+    },
+    {
+      "line": 75,
+      "terms": [
+        "taken together"
+      ],
+      "text": "Jiang et al., in \\emph{Artificial Hivemind: The Open-Ended Homogeneity of Language Models}, identify both intra-model repetition and inter-model homogeneity in open-ended generation \\cite{jiang2025}. Their study identifies homogeneity at the level of model output but does not examine how people update their opinions after exposure to such output. F\\\"ugener et al., in \\emph{Will Humans-in-the-Loop Become Borgs? Merits and Pitfalls of Working with AI}, show that AI assistance may improve individual performance while increasing correlations among members' choices \\cite{fugener2021}. Doshi and Hauser further report that generative AI can improve individual creative performance while reducing the diversity of content produced at the group level \\cite{doshi2024}. Taken together, these studies show that individual-level outcomes and group-level distributions require separate analysis."
+    },
+    {
+      "line": 108,
+      "terms": [
+        "encompass"
+      ],
+      "text": "The overarching theme defines the research domain. Because ``AI,'' ``information acquisition,'' and ``opinion formation'' each encompass multiple technologies, behaviors, and outcomes, the study delimits the technical object, the process through which it operates, and the group-level outcome."
+    },
+    {
+      "line": 197,
+      "terms": [
+        "yet",
+        "thereby"
+      ],
+      "text": "The theoretical tension is that the same generative system may provide members with similarly directed information and thereby promote opinion convergence, yet it may also generate different information conditional on members' initial positions and, through selective diffusion and acceptance, promote clustering, polarization, or fragmentation."
+    },
+    {
+      "line": 203,
+      "terms": [
+        "therefore"
+      ],
+      "text": "The effect of LLMs on group opinion distributions therefore cannot be inferred directly from output homogeneity. The study must identify three stages:"
+    },
+    {
+      "line": 217,
+      "terms": [
+        "therefore"
+      ],
+      "text": "This empirical premise concerns only the relation between technical output and group information inputs. It does not establish that members will believe the content, nor does it establish that a group will ultimately converge, polarize, or experience lower judgment quality. SQ1 must therefore test whether model-output characteristics actually translate into differences in member exposure and information diffusion."
+    },
+    {
+      "line": 221,
+      "terms": [
+        "reveal"
+      ],
+      "text": "Stasser and Titus's work on \\term{shared information} and \\term{unshared information} shows that the number of members who possess an information item affects which information is more likely to enter collective processing during group discussion \\cite{stasser1985}. Steinel et al. further distinguish what information members possess from whether they reveal, conceal, or misrepresent it \\cite{steinel2010}. Together, these studies show that the initial distribution of information across members and members' active sharing of information are separate processes."
+    },
+    {
+      "line": 235,
+      "terms": [
+        "rather than"
+      ],
+      "text": "Kleinberg and Raghavan's work on \\term{algorithmic monoculture} examines the correlated signals, rankings, or decisions that arise when multiple decision-makers use the same algorithm \\cite{kleinberg2021}. Its theoretical value lies in evaluating system-level outcomes when multiple decision-makers share an algorithm, rather than evaluating only the accuracy of an individual algorithm. This paper derives a proposition to be tested: use of the same LLM may increase the correlation of members' information exposure and error structures, and member diffusion may further amplify this correlation."
+    },
+    {
+      "line": 402,
+      "terms": [
+        "therefore"
+      ],
+      "text": "The integration of LLMs and the ABM therefore occurs at the implementation layer of the agent behavioral functions. The opinion-update function is the primary point of integration for opinion evolution; the message function handles natural-language expression and transmission; and the selection function remains explicit and controllable in the main model. The state variables, network structure, and update sequence form the common ABM environment in which both types of agents operate."
+    },
+    {
+      "line": 629,
+      "terms": [
+        "therefore"
+      ],
+      "text": "The selection-function layer therefore compares $C^{E}_{\\text{shared LLM}}-C^{E}_{\\text{human information}}$ and $\\beta_d^{\\text{shared LLM}}-\\beta_d^{\\text{human information}}$. The first comparison tests whether members actually receive more similar information; the second tests whether the LLM condition changes the extent to which members select information according to opinion distance."
+    },
+    {
+      "line": 759,
+      "terms": [
+        "therefore"
+      ],
+      "text": "The main parameter comparison for rule-based agents is therefore:"
+    },
+    {
+      "line": 888,
+      "terms": [
+        "therefore"
+      ],
+      "text": "This paper further explains how such group outcomes arise. When members interact separately with LLMs, model-generated information enters their information exposure, passes through active sharing and network diffusion, and then affects other members' opinion updating. Individually occurring member-LLM interactions may therefore change the statistical distributions of both information and opinions across the group."
+    },
+    {
+      "line": 904,
+      "terms": [
+        "therefore"
+      ],
+      "text": "The introduction of LLMs adds a natural-language information layer that can vary independently within the opinion-formation process. The same opinion position can be expressed through different arguments, and different members may receive similar or different information from the same model. The paper therefore separates message generation, information selection, and opinion updating:"
+    },
+    {
+      "line": 911,
+      "terms": [
+        "thereby"
+      ],
+      "text": "This decomposition distinguishes three explanations: group opinions may become closer because the model generated similar information, because members encountered and diffused similar information, or because members applied similar update weights to information. The paper thereby incorporates natural-language messages and their diffusion into a model of opinion evolution and tests how information content is translated into individual opinion trajectories and group-level distributions."
+    },
+    {
+      "line": 919,
+      "terms": [
+        "unified"
+      ],
+      "text": "Different combinations of shared generative tendencies, user-conditioned generation, information selection, and opinion-update rules can produce convergence, persistent disagreement, clustering, or no measurable change. The paper thus offers a unified conditional explanation for the homogenization and differentiation that may both occur in human-LLM interaction."
+    },
+    {
+      "line": 933,
+      "terms": [
+        "therefore"
+      ],
+      "text": "Rule-based agents and LLM agents share three functional interfaces: message, selection, and update. The model preserves the natural-language messages generated by agents, the stances and factual claims contained in those messages, the information actually encountered by members, the sharing and diffusion paths, and agents' round-by-round opinion states. The study can therefore trace group-level opinion outcomes through their information pathways and distinguish similarity in message generation, similarity in actual exposure, selective diffusion, and similarity in opinion-update rules."
+    }
+  ]
+}
