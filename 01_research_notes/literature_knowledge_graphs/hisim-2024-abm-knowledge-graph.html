@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HiSim 2024 混合 ABM 论文知识图谱</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f5f7fb;
+      --panel: #ffffff;
+      --text: #172033;
+      --muted: #5d687a;
+      --line: #d7deea;
+      --accent: #2457c5;
+      --accent-soft: #e9effd;
+      --warn: #9a4b00;
+      --danger: #a52a2a;
+      --shadow: 0 8px 24px rgba(32, 54, 86, .08);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #101521;
+        --panel: #171e2d;
+        --text: #edf2fb;
+        --muted: #aeb8ca;
+        --line: #344055;
+        --accent: #8fb0ff;
+        --accent-soft: #202e4f;
+        --warn: #ffba72;
+        --danger: #ff9999;
+        --shadow: 0 8px 24px rgba(0, 0, 0, .28);
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, "Segoe UI", "Microsoft YaHei", system-ui, sans-serif;
+      line-height: 1.55;
+    }
+    a { color: var(--accent); }
+    .page { max-width: 1580px; margin: 0 auto; padding: 28px; }
+    header { margin-bottom: 18px; }
+    h1 { margin: 0 0 8px; font-size: clamp(24px, 3vw, 38px); line-height: 1.2; }
+    h2 { margin: 0 0 12px; font-size: 20px; }
+    h3 { margin: 0 0 8px; font-size: 16px; }
+    p { margin: 7px 0; }
+    .subtitle { max-width: 1080px; color: var(--muted); }
+    .meta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 3px 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--panel);
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .notice {
+      margin: 16px 0;
+      padding: 12px 14px;
+      border-left: 4px solid var(--warn);
+      background: color-mix(in srgb, var(--warn) 9%, var(--panel));
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: end;
+      gap: 10px;
+      margin: 14px 0;
+      padding: 12px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+    label { display: grid; gap: 4px; color: var(--muted); font-size: 12px; }
+    input, select, button {
+      min-height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      color: var(--text);
+      font: inherit;
+      padding: 7px 10px;
+    }
+    input { min-width: min(330px, 72vw); }
+    button { cursor: pointer; }
+    button:hover, button[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); }
+    button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 35%, transparent); outline-offset: 2px; }
+    .view-group { display: flex; flex-wrap: wrap; gap: 6px; }
+    .workspace { display: grid; grid-template-columns: minmax(0, 2.3fr) minmax(320px, 1fr); gap: 16px; align-items: start; }
+    .graph-shell, .detail, .section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+    }
+    .graph-shell { position: relative; overflow: hidden; min-height: 750px; }
+    .graph-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+    }
+    .graph-head p { margin: 0; color: var(--muted); font-size: 12px; }
+    #graph { display: block; width: 100%; height: 700px; touch-action: none; cursor: grab; }
+    #graph.dragging { cursor: grabbing; }
+    .detail { position: sticky; top: 14px; min-height: 520px; overflow: hidden; }
+    .detail-head { padding: 16px; border-bottom: 1px solid var(--line); }
+    .detail-head .eyebrow { color: var(--muted); font-size: 12px; }
+    .detail-body { padding: 16px; }
+    .fact { padding: 9px 0; border-bottom: 1px solid var(--line); }
+    .fact:last-child { border-bottom: 0; }
+    .fact dt { color: var(--muted); font-size: 12px; }
+    .fact dd { margin: 3px 0 0; white-space: pre-line; }
+    .status { font-size: 12px; color: var(--muted); }
+    .legend { display: flex; flex-wrap: wrap; gap: 7px 12px; margin-top: 8px; }
+    .legend-item { display: inline-flex; align-items: center; gap: 5px; color: var(--muted); font-size: 12px; }
+    .swatch { width: 12px; height: 12px; border-radius: 4px; }
+    .section { margin-top: 18px; padding: 18px; min-width: 0; overflow: hidden; }
+    .section > p { color: var(--muted); }
+    .table-wrap {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      overflow-x: auto;
+      overscroll-behavior-inline: contain;
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { text-align: left; vertical-align: top; padding: 9px 10px; border-bottom: 1px solid var(--line); }
+    th { color: var(--muted); font-weight: 600; }
+    code { font-family: "Cascadia Code", Consolas, monospace; font-size: .94em; }
+    details { margin-top: 12px; max-width: 100%; min-width: 0; overflow: hidden; }
+    details:not([open]) > :not(summary) { display: none; }
+    summary { cursor: pointer; color: var(--accent); }
+    .footer { margin: 18px 0 6px; color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
+    .cluster-label { font-size: 16px; font-weight: 600; fill: var(--muted); opacity: .62; pointer-events: none; }
+    .edge { stroke: #8c98aa; stroke-width: 1.2; opacity: .28; fill: none; }
+    .edge.flow { stroke: #2b69c9; }
+    .edge.evaluate { stroke: #2d8a57; }
+    .edge.risk { stroke: #b24a4a; stroke-dasharray: 5 4; }
+    .edge.code { stroke: #7653b5; }
+    .edge.transfer { stroke: #c46d16; stroke-width: 1.6; }
+    .edge.active { opacity: .94; stroke-width: 2.2; }
+    .edge-label { font-size: 11px; fill: var(--muted); paint-order: stroke; stroke: var(--panel); stroke-width: 4px; stroke-linejoin: round; }
+    .node { cursor: pointer; transition: opacity .16s ease; }
+    .node rect { stroke: color-mix(in srgb, var(--text) 28%, transparent); stroke-width: 1px; rx: 9; ry: 9; }
+    .node text { fill: #172033; font-size: 11px; font-weight: 600; text-anchor: middle; pointer-events: none; }
+    .node.selected rect { stroke: var(--text); stroke-width: 3px; }
+    .node.search-hit rect { stroke: var(--accent); stroke-width: 3px; }
+    .node.dimmed, .edge.dimmed { opacity: .06; pointer-events: none; }
+    .node.hidden, .edge.hidden { display: none; }
+    @media (prefers-color-scheme: dark) {
+      .node text { fill: #edf2fb; }
+      .node rect { filter: saturate(.8) brightness(.7); }
+    }
+    @media (max-width: 980px) {
+      .page { padding: 16px; }
+      .workspace { grid-template-columns: 1fr; }
+      .detail { position: static; }
+      .graph-shell { min-height: 640px; }
+      #graph { height: 590px; }
+    }
+    @media (max-width: 520px) {
+      .page { padding: 10px; }
+      .toolbar { align-items: stretch; }
+      input, select { width: 100%; min-width: 0; }
+      .graph-head { align-items: flex-start; flex-direction: column; }
+      .graph-shell { min-height: 580px; }
+      #graph { height: 530px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <h1>HiSim 2024：混合 ABM 论文与程序架构知识图谱</h1>
+      <p class="subtitle">Mou, Wei, &amp; Huang (2024), <em>Unveiling the Truth and Facilitating Change: Towards Agent-based Large-scale Social Movement Simulation</em>. 图谱按论文证据、公开代码审计和 ABM_INFO 的边界化参考三层组织。</p>
+      <div class="meta">
+        <span class="chip">ACL Findings 2024</span>
+        <span class="chip">PDF 21 页</span>
+        <span class="chip">样例架构，不是现行方案</span>
+        <span class="chip">页面号均指 PDF 文件页序</span>
+        <a class="chip" href="https://doi.org/10.18653/v1/2024.findings-acl.285">DOI</a>
+        <a class="chip" href="https://aclanthology.org/2024.findings-acl.285.pdf">论文 PDF</a>
+      </div>
+    </header>
+
+    <div class="notice"><strong>解释边界：</strong>论文模拟的是社会运动中的公开表达、传播行为与连续 <code>attitude score</code>。它没有证明文本表达等于潜在意见，也没有证明“核心用户/普通用户”是稳定的人类心理类型。橙色节点是对 ABM_INFO 的候选参考，未经用户确认不得写入现行基准。</div>
+
+    <div class="toolbar" aria-label="知识图谱控制">
+      <label>搜索节点
+        <input id="search" type="search" placeholder="例如：f_update、校准、记忆、单向耦合" autocomplete="off">
+      </label>
+      <label>节点类别
+        <select id="category"><option value="all">全部类别</option></select>
+      </label>
+      <div>
+        <div class="status">视图</div>
+        <div class="view-group" id="views">
+          <button type="button" data-view="all" aria-pressed="true">全图</button>
+          <button type="button" data-view="architecture" aria-pressed="false">论文架构</button>
+          <button type="button" data-view="evidence" aria-pressed="false">数据与验证</button>
+          <button type="button" data-view="code" aria-pressed="false">代码审计</button>
+          <button type="button" data-view="transfer" aria-pressed="false">对本项目的参考</button>
+        </div>
+      </div>
+      <button id="reset" type="button">重置视图</button>
+    </div>
+
+    <div class="workspace">
+      <section class="graph-shell" aria-labelledby="graph-title">
+        <div class="graph-head">
+          <div>
+            <h2 id="graph-title">关系网络</h2>
+            <p>点击节点查看七项概念检查；拖动节点或画布，滚轮缩放。选择节点后仅突出其直接关系。</p>
+          </div>
+          <div id="count" class="status" aria-live="polite"></div>
+        </div>
+        <svg id="graph" role="img" aria-labelledby="graph-title graph-desc" viewBox="0 0 1800 1180">
+          <desc id="graph-desc">HiSim 论文研究问题、混合代理架构、数据、评估、代码映射、限制与 ABM_INFO 参考边界的可交互知识图谱。</desc>
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#8792a4"></path>
+            </marker>
+          </defs>
+          <g id="viewport"><g id="cluster-layer"></g><g id="edge-layer"></g><g id="label-layer"></g><g id="node-layer"></g></g>
+        </svg>
+      </section>
+
+      <aside class="detail" aria-live="polite" aria-label="节点详情">
+        <div class="detail-head">
+          <div class="eyebrow" id="detail-category">论文总览</div>
+          <h2 id="detail-title">选择任一节点</h2>
+          <div class="status" id="detail-status">每个核心节点均给出原始术语、定义边界、分析层级、模型位置、经验对应、证据位置和项目含义。</div>
+        </div>
+        <div class="detail-body"><dl id="detail-fields"></dl></div>
+      </aside>
+    </div>
+
+    <section class="section">
+      <h2>论文层与代码层的关键不一致</h2>
+      <p>这些不是一般性批评，而是会改变模拟结果的复现风险。</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>对象</th><th>论文叙述</th><th>公开代码</th><th>对 ABM_INFO 的处理</th></tr></thead>
+          <tbody id="audit-table"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>五类意见更新模型对照</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>模型</th><th>原始来源与机制</th><th>状态与参数</th><th>能区分的竞争解释</th><th>样例代码风险</th></tr></thead>
+          <tbody id="model-table"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>可检索证据矩阵</h2>
+      <p>这是画布的文字替代视图，便于逐条核对来源和边界。</p>
+      <details>
+        <summary>展开全部节点</summary>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>节点</th><th>类别</th><th>定义/结论</th><th>证据</th><th>证据状态</th></tr></thead>
+            <tbody id="evidence-table"></tbody>
+          </table>
+        </div>
+      </details>
+    </section>
+
+    <p class="footer">证据源：用户提供 PDF（SHA-256: 9F12D10B60D363F79E226D8606516C6BED6AA9DFBA4D7AE67D96BBE50AA681D2）及项目内保留的作者公开代码快照。图谱中的“建议”只表示可讨论的工程迁移路径，不改变 <code>00_current_baseline/Paper1_Formal_RP_EN.tex</code>。</p>
+  </main>
+
+  <script>
+  (() => {
+    'use strict';
+
+    const categoryMeta = {
+      research: {label:'研究问题', color:'#9db9f4'},
+      state: {label:'构念与状态', color:'#b3a7ec'},
+      core: {label:'LLM 核心代理', color:'#79c6bc'},
+      ordinary: {label:'规则普通代理', color:'#9ed28f'},
+      environment: {label:'模拟环境', color:'#f1c77f'},
+      coupling: {label:'跨代理接口', color:'#efa3a3'},
+      data: {label:'数据与抽样', color:'#8fc6e8'},
+      evaluation: {label:'评估与校准', color:'#b7d477'},
+      finding: {label:'发现与分析', color:'#e7af78'},
+      risk: {label:'限制与风险', color:'#e58a8a'},
+      code: {label:'程序架构', color:'#b39ad9'},
+      transfer: {label:'ABM_INFO 候选参考', color:'#f3a65f'}
+    };
+
+    const clusterCenters = {
+      research:[190,160], state:[520,150], core:[900,150], ordinary:[1280,160],
+      environment:[1580,230], coupling:[1110,480], data:[210,540], evaluation:[520,555],
+      finding:[760,780], risk:[1120,800], code:[420,1000], transfer:[1450,990]
+    };
+
+    const defaults = {
+      original:'—', not:'—', level:'—', role:'—', measure:'—', code:'—', transfer:'—', status:'论文直接报告'
+    };
+
+    function N(id, label, category, desc, evidence, extra={}) {
+      return Object.assign({id,label,category,cluster:category,desc,evidence}, defaults, extra);
+    }
+
+    const nodes = [
+      N('paper','HiSim 2024','research','提出面向大规模在线社会运动模拟的混合框架：少量核心用户由 LLM 驱动，大量普通用户由演绎式 ABM 驱动。','PDF p.1 摘要；p.2 贡献；p.3 Fig.2',{original:'hybrid framework for social media user simulation',not:'不是对现实社会长期结果的已验证预测；不是人类心理类型理论。',level:'技术系统 + 群体模拟',role:'研究对象与方法总框架',measure:'微观行为对齐 + 宏观态度分布/轨迹',code:'agentverse/simulation.py；tasks/simulation/*/config.yaml',transfer:'仅作为样例工程骨架。'}),
+      N('problem','目标任务','research','预测社会运动触发事件后，一组用户的意见如何随互动变化，并与真实 Twitter 轨迹比较。','PDF p.3 §2.2',{original:'public opinion dynamics simulation',not:'不等于预测政治判断质量；不等于线下行为。',level:'群体层结果，个体层更新',role:'结果导向任务',measure:'个体行为复现；平均态度时间序列；态度分布'}),
+      N('challenge-fidelity','挑战：行为逼真度','research','如何复现具体用户在社交媒体社区中的表达与行为。','PDF p.2 Introduction',{original:'accurately simulate users',level:'个体代理',role:'方法挑战'}),
+      N('challenge-scale','挑战：计算规模','research','如何避免为数千普通参与者逐一调用昂贵 LLM。','PDF p.2 Introduction',{original:'efficiently simulate a large number of users',level:'技术系统',role:'计算约束'}),
+      N('challenge-evaluation','挑战：综合评估','research','如何同时检验个体行为与群体系统结果。','PDF p.2 Introduction',{original:'comprehensively evaluate the effectiveness',level:'微观 + 宏观',role:'验证挑战'}),
+      N('pareto','Pareto 划分依据','research','以社交媒体参与的长尾分布为工程理由：少量活跃/有影响用户生成大部分内容。','PDF p.2-4',{original:'Pareto distribution in user engagement',not:'不是两种稳定人格，也不是已识别的因果分层。',level:'群体活动分布',role:'代理实现方式的前因',measure:'活动频率、收到转发数、粉丝数'}),
+
+      N('group','用户群体 U','state','由参与同一事件、处于社交网络中的用户构成；每个用户拥有随时间变化的态度。','PDF p.3 §2.2',{original:'a group of users U={1,...,U}',not:'论文语境是 Twitter 用户，不是正式组织团队。',level:'具有网络的统计群体',role:'分析单位',measure:'真实用户子图 + 模拟代理集合'}),
+      N('attitude','态度分数 aᵢ,ₜ','state','连续区间 [-1,1]；符号表示支持/反对方向，绝对值表示强度。','PDF p.2-3 §2.1.1-2.2',{original:'attitude score',not:'不等同于事实信念、准确性、情绪或稳定意识形态。',level:'个体状态',role:'机制状态 + 群体结果的基础',measure:'真实/生成推文经立场与情感标注后的数值'}),
+      N('network','关注网络','state','真实 following relationships 用于构造可见关系；但普通 ABM 代码的选源常从全部代理抽样。','PDF p.3 §2.2；代码审计',{original:'authentic following relationships',not:'网络邻接不等于本轮实际暴露。',level:'关系结构',role:'潜在暴露约束',measure:'follower_info / visible_agents',status:'论文 + 代码审计'}),
+      N('time','离散时间步 t','state','系统按轮次推进；每轮 LLM 核心代理行动、普通代理更新、环境写回。','PDF p.3 Fig.2；p.17 Algorithm 2',{original:'time step / simulation round',level:'技术系统时间',role:'演化索引',measure:'主实验每事件 14 步'}),
+      N('message-set','消息集合 Mᵢ,ₜ','state','目标代理 i 在 t 时点接收的消息集合，由来源集合 Jᵢ,ₜ 及消息函数共同决定。','PDF p.2 Eq.1',{original:'M_i,t={m_j,t | j∈J_i,t}',not:'不应与网络邻居集合或所有可见文本混为一谈。',level:'个体-轮次',role:'f_update 的输入',measure:'实际进入更新的来源/文本/数值'}),
+
+      N('hybrid','两类代理混合','core','300 个 LLM 核心用户负责复杂文本行为；700 个规则代理承担大规模态度动力学。','PDF p.2-5；p.6 Table 1',{original:'LLM-empowered core users + ordinary users supported by deductive ABMs',not:'LLM 代理不天然更接近真实人类。',level:'计算架构',role:'成本-表达能力折中',measure:'核心/普通代理数量与运行成本'}),
+      N('core-user','LLM 核心用户','core','基于真实用户资料、个人历史、事件记忆、时间线、通知和新闻，由 GPT-3.5-Turbo-0613 生成单次行动。','PDF p.4-5 §3.1；p.16-18 Appendix C',{original:'core users',not:'不是被研究的“信息来源 LLM”；它在论文中模拟人类用户。',level:'个体代理',role:'文本生成与高影响节点',measure:'姿态、内容类型与发布/转发行为对齐',code:'agents/simulation_agent/twitter.py'}),
+      N('profile','Profile Module','core','从真实 bio 与历史推文构造人口属性、社会特征和传播角色。','PDF p.4 §3.1.1；p.14-15 Appendix B.2',{original:'profile module',not:'推断属性存在标注误差；资料不是稳定心理构念的直接测量。',level:'个体代理输入',role:'LLM 行动前因',measure:'gender, political leaning, account type, activity, influence, role',code:'role_description in YAML configs'}),
+      N('demographics','人口与账户属性','core','姓名、性别、政治倾向、账户类型；先用严格正则，再由 GPT-3.5 补充推断。','PDF p.4；p.14-15',{original:'demographics',not:'不包括未经验证的人格或价值观诊断。',level:'个体',role:'Profile 的组成',measure:'bio 与历史推文标注'}),
+      N('social-traits','社会特征','core','活动度与影响力分别由发帖频率、粉丝/转发等指标分层，采用 6:3:1 的不均匀等级。','PDF p.4；p.15',{original:'social traits: activity and influence',not:'不是一般社会资本或权力构念。',level:'个体在平台中的行为特征',role:'Profile 的组成',measure:'tweets/followers/received retweets'}),
+      N('communication-role','传播角色','core','Idea Starter、Amplifier、Curator、Commentator、Viewer 五类，用于描述参与传播的方式。','PDF p.4；p.15',{original:'communication roles / topology of influence',not:'是平台传播角色，不是组织角色。',level:'个体传播行为模式',role:'Profile 的组成',measure:'Tinati/Bentwood 指标与角色描述'}),
+      N('memory','Memory Module','core','将事件前个人经历与事件后观察分开；支持写入、检索和反思。','PDF p.4-5 §3.1.2',{original:'personal experience + event memory',not:'不等于人类记忆的认知等价实现。',level:'个体代理内部模块',role:'行动的动态前因',measure:'自然语言记录 + 向量检索',code:'agentverse/memory/*；memory_manipulator/*'}),
+      N('personal-memory','Personal Experience','core','事件发生前的真实历史推文，用于恢复用户过去立场和表达习惯。','PDF p.4 §3.1.2',{original:'personal experience',level:'个体历史',role:'长期记忆输入',measure:'deadline 前用户推文；top-k 检索'}),
+      N('event-memory','Event Memory','core','模拟开始后代理自己的行为及可见代理内容，随轮次写入。','PDF p.4 §3.1.2',{original:'event memory',level:'个体-轮次',role:'短期动态状态',measure:'observations in language and vector forms'}),
+      N('retrieval','记忆检索','core','按 recency、relevance、importance、immediacy 综合排序并取高分记忆进入提示。','PDF p.4 §3.1.2',{original:'memory retrieval',not:'论文未提供这些权重的行为校准。',level:'技术模块',role:'提示上下文选择',measure:'top-ranked memory objects'}),
+      N('reflection','记忆反思','core','周期性提出显著问题，并从相关记忆生成高层 insight。','PDF p.4-5 §3.1.2',{original:'memory reflection',not:'生成的 insight 不是经验证的人类元认知。',level:'技术模块',role:'记忆压缩/抽象',measure:'reflection prompt outputs'}),
+      N('action','Action Module','core','候选动作：Post、Retweet、Reply、Like、Do Nothing；每轮只能调用一个函数。','PDF p.5 §3.1.3；p.17-19 Prompt',{original:'action module',not:'微观评估只观测并检验 post/retweet 两类。',level:'个体行为',role:'输出',measure:'解析后的函数调用',code:'TwitterAgent.step/astep in twitter.py'}),
+
+      N('ordinary-user','规则普通用户','ordinary','初始态度来自真实推文，后续由经典意见动力学公式更新，不生成自然语言。','PDF p.5 §3.2',{original:'ordinary users',not:'不是“低认知能力用户”；只是低成本实现。',level:'个体代理',role:'大规模状态演化',measure:'每轮 attitude score',code:'agentverse/abm_model/*.py'}),
+      N('initial-attitude','真实初始态度','ordinary','不使用均匀随机初始化，而从事件时段真实推文标注方向与强度。','PDF p.5 §3.2',{original:'initial attitudes based on corresponding tweets',not:'推文表达并非潜在态度的无误测量。',level:'个体初始状态',role:'模型初值',measure:'GPT stance + TextBlob intensity'}),
+      N('f-selection','f_selection','ordinary','决定哪些来源 j 进入 Jᵢ,ₜ，回答“本轮谁影响 i”。','PDF p.2-3 §2.1.1；Appendix A',{original:'selection function',not:'不能与网络结构、平台推荐或注意选择合并为一个黑箱。',level:'个体-轮次接口',role:'前因/暴露机制',measure:'实际来源集合 J_i,t',code:'各 abm_model Agent.step 中的 candidate_agents/target_agent',transfer:'可继承接口名，但需改为基于可见邻居和实际暴露。'}),
+      N('f-message','f_message','ordinary','决定来源状态如何形成消息 mⱼ,ₜ；经典数值 ABM 通常直接令 mⱼ,ₜ=aⱼ,ₜ。','PDF p.3 Eq.2；Appendix A',{original:'message function',not:'在 ABM_INFO 中自然语言、分享行为与潜在状态必须分开。',level:'来源个体-轮次接口',role:'信息生成/编码机制',measure:'原始文本 + 结构化编码',code:'论文公式；代码中多为读取 source.att[-1]',transfer:'继承接口，扩展为文本消息与状态的并行日志。'}),
+      N('f-update','f_update','ordinary','目标代理收到消息集合后，从 aᵢ,ₜ 更新到 aᵢ,ₜ₊₁。','PDF p.2 Eq.1；Appendix A',{original:'attitude update function',not:'更新规则不能由宏观拟合优度单独反推为真实心理机制。',level:'个体-轮次',role:'核心机制',measure:'前后态度变化',code:'bcm.py, bcmm.py, ra.py, sj.py, lorenz.py',transfer:'需由人类校准数据选择，不预设某一种。'}),
+      N('bc','BC','ordinary','若意见距离小于置信界限 ε，则以强度 α 向随机来源同化；否则不更新。','PDF p.7；p.12 Appendix A.1',{original:'Bounded Confidence Model (Deffuant et al., 2000)',not:'硬阈值不是论文新理论。',level:'个体更新',role:'候选 f_update',measure:'α、ε；前后态度',code:'agentverse/abm_model/bcm.py',transfer:'适合作透明基线。'}),
+      N('hk','HK / BC-Multiple','ordinary','同时考虑置信范围内多名来源并向其平均位置移动。','PDF p.7；p.12-13 Appendix A.2',{original:'Hegselmann-Krause bounded confidence model',level:'个体更新',role:'多来源 f_update',measure:'ε 与置信范围内来源数量',code:'agentverse/abm_model/bcmm.py',transfer:'可作多暴露基线；先解决公式方向和 alpha 未使用问题。'}),
+      N('ra','RA','ordinary','代理同时持有态度与不确定区间；来源区间与目标区间重叠越大，影响越强。','PDF p.7；p.13 Appendix A.3',{original:'Relative Agreement Model (Deffuant et al., 2002)',not:'需要态度与不确定性两种经验状态。',level:'个体更新',role:'候选 f_update',measure:'a、u、α、区间重叠',code:'agentverse/abm_model/ra.py',transfer:'只有收集置信度/不确定性后才适合。'}),
+      N('sj','SJ','ordinary','相近信息引发同化，远距信息可引发排斥，中间区间不更新。','PDF p.7；p.13 Appendix A.4',{original:'Social Judgment Model (Jager & Amblard, 2005)',not:'“拒绝”不自动等于反向移动。',level:'个体更新',role:'竞争机制 f_update',measure:'接受阈值、拒绝阈值、α',code:'agentverse/abm_model/sj.py',transfer:'需用人类数据识别排斥；公开代码接受区间存在平方项风险。'}),
+      N('lorenz','Lorenz','ordinary','结合同化、立场强化、相似性偏差、极化因子与（论文中）来源可信度。','PDF p.7；p.14 Appendix A.5',{original:'Lorenz et al. (2021) model',not:'参数多且可能不可识别；代码省略论文中的 source credibility。',level:'个体更新',role:'丰富机制/稳健性模型',measure:'α, λ, k, M, ρ/tho, s(i,j)',code:'agentverse/abm_model/lorenz.py',transfer:'适合敏感性分析，不宜无校准直接作主模型。'}),
+
+      N('environment','Twitter-like Environment','environment','维护用户时间线、公共 tweet 数据库、新闻、通知、可见代理和时间。','PDF p.5 §3.4；代码 twitter.py',{original:'Twitter-like simulation platform',not:'不是对平台推荐系统的完整再现。',level:'技术系统',role:'交互情境/调度器',measure:'tweet_db, page, info_box, visible_agents',code:'environments/simulation_env/twitter.py'}),
+      N('timeline','用户时间线','environment','每个用户看到自己及关注者最近发布的推文；每轮作为 LLM 提示上下文。','PDF p.5 §3.4',{original:'Twitter timeline / message feed mechanism',level:'个体暴露界面',role:'LLM 行动前因',measure:'tweet page content',code:'twitter_page.py；rules/updater/twitter.py'}),
+      N('public-timeline','公共时间线','environment','存储所有用户发布的内容，形成平台级 tweet database。','PDF p.5 §3.4',{original:'public timeline',level:'技术系统',role:'消息存储',measure:'tweet_db',code:'TwitterEnvironment.tweet_db'}),
+      N('offline-news','离线新闻','environment','事件触发器，以自然语言新闻进入核心代理上下文。','PDF p.5 §3.4；p.17-18 Prompt',{original:'offline news feed / triggering news',not:'新闻输入会人为驱动时间序列，不是内生传播。',level:'外部情境',role:'外生冲击',measure:'trigger_news keyed by turn',code:'config.yaml environment.trigger_news'}),
+      N('notifications','回复通知','environment','核心代理可见的 replies/notifications，作为下一轮提示的一部分。','PDF p.6；p.17-18',{original:'notifications / info box',level:'个体暴露',role:'行动前因',measure:'InfoBox content',code:'info_box.py；TwitterEnvironment.update_info_box'}),
+      N('single-round','单轮模拟','environment','给定真实上下文，检验核心代理能否复现某一真实用户行为。','PDF p.3 §2.2；p.5 §3.5；p.16 Algorithm 1',{original:'single-round simulation',not:'不检验长期意见更新。',level:'个体',role:'微观验证设计',measure:'stance/content/behavior alignment'}),
+      N('multi-round','多轮模拟','environment','后续上下文包含模拟内容，逐轮观察群体平均态度与分布。','PDF p.5 §3.5；p.17 Algorithm 2',{original:'round-by-round / multi-round simulation',not:'现实外推受初值、新闻与模型误差约束。',level:'群体动态',role:'宏观验证设计',measure:'14 个时间步轨迹'}),
+
+      N('coupling','异质代理耦合','coupling','LLM 核心代理生成文本，经外部标注转为分数，写入规则 ABM 的镜像节点；普通代理以数值更新。','PDF p.5 §3.3；p.3 Fig.2',{original:'interaction between heterogeneous agents',not:'论文明确忽略普通用户对核心用户的影响。',level:'跨代理技术接口',role:'文本系统与数值系统桥接',measure:'generated text → stance/intensity → mirror attitude',code:'TwitterAgent.att2score；TwitterEnvironment.step'}),
+      N('llm-text','LLM 生成文本','coupling','核心代理按资料、记忆、新闻、页面与通知生成 Post/Retweet/Reply/Like 或沉默。','PDF p.3-5；p.17-19',{original:'generated textual responses',not:'公开表达不是潜在态度的直接读数。',level:'个体行为输出',role:'f_message 的自然语言候选',measure:'response + parsed function call'}),
+      N('stance-label','立场标注','coupling','外部 LLM 将生成内容标为 Support、Neutral、Oppose。','PDF p.5；p.15-16',{original:'stance annotation',level:'测量/编码层',role:'文本→方向',measure:'3-class label',code:'agentverse/utils.py label_stance'}),
+      N('sentiment','情感极性强度','coupling','TextBlob polarity 的绝对值作为强度；Oppose 取负号，其他标签取正号。','PDF p.5；代码 TwitterAgent.att2score',{original:'sentiment intensity',not:'政策立场强度不等于一般情感极性。',level:'测量层',role:'文本→数值强度',measure:'abs(TextBlob.sentiment.polarity)',status:'论文 + 代码审计'}),
+      N('mirror','镜像节点覆盖','coupling','规则 ABM 先更新，随后把对应核心用户镜像节点的当前态度覆盖为本轮 LLM 文本分数。','代码 TwitterEnvironment.step；各 ABM update_mirror',{original:'mirror agent / update_mirror',not:'这不是显式潜在状态更新；存在轮次顺序效应。',level:'技术接口',role:'耦合写回',measure:'agents[idx].att[-1] = att',status:'代码直接证据'}),
+      N('one-way','单向影响缺口','coupling','论文认为普通用户对核心用户影响较小，因此不处理 ordinary→core。','PDF p.5 §3.3',{original:'do not address the influence from ordinary users to core users',not:'不能据此研究完整的双向群体传播。',level:'系统结构',role:'边界/缺失机制',measure:'缺少普通状态→可读消息→LLM 上下文路径',status:'论文直接报告'}),
+
+      N('benchmark','SoMoSiMu-Bench','data','包含 Metoo、RoeOverturned、BlackLivesMatter 三类 Twitter 事件及微观/宏观评估。','PDF p.2；p.6 §4',{original:'SoMoSiMu-Bench',not:'不是随机样本人群，也不覆盖一般公共政策议题。',level:'数据与评估系统',role:'验证语境',measure:'3 movements × 2 events/phases'}),
+      N('datasets','三类事件数据','data','每个事件/阶段构造 1,000 用户；事件窗口分别对应运动触发或阶段。','PDF p.6 Table 1',{original:'Metoo, RoeOverturned, BlackLivesMatter datasets',level:'群体/事件',role:'经验约束',measure:'用户、推文、时间窗'}),
+      N('metoo','Metoo','data','E1: 18,638 tweets；E2: 13,291 tweets；每期 1,000 用户。','PDF p.6 Table 1',{level:'事件样本',role:'校准/验证语境'}),
+      N('roe','Roe','data','E1: 61,687 tweets；E2: 59,829 tweets；每期 1,000 用户。','PDF p.6 Table 1',{level:'事件样本',role:'校准/验证语境'}),
+      N('blm','BLM','data','P1: 10,710 tweets；P2: 21,480 tweets；每期 1,000 用户。','PDF p.6 Table 1',{level:'事件样本',role:'校准/验证语境'}),
+      N('sampling','300/700 用户划分','data','先选收到转发最多的 100 名高影响用户，再从其网络中按发帖频率选 200 名活跃用户；另随机抽 700 名普通用户。','PDF p.6 §4.1',{original:'300 core users + 700 ordinary users',not:'没有权威 core-user 定义；这是操作性选择。',level:'个体抽样→群体构造',role:'实现分层',measure:'retweets received + tweet frequency'}),
+      N('annotation','自动标注与人工抽检','data','GPT-3.5 标注 stance/content；TextBlob 算强度。每标签人工抽查 100 样本，一致性 stance=.93、content=.92。','PDF p.6；p.15-16 Appendix B.3-B.4',{original:'annotation consistency',not:'一致性不等同于与真实潜在态度的效度。',level:'测量层',role:'数据构造/验证',measure:'label consistency'}),
+
+      N('micro-eval','微观对齐','evaluation','单轮、真实上下文下评估核心代理的立场、内容类型和行为。','PDF p.6 §4.2',{original:'micro alignment evaluation',not:'不验证多轮潜在意见变化。',level:'个体',role:'验证',measure:'accuracy, macro-F1, MAE, cosine similarity'}),
+      N('stance-eval','Stance Alignment','evaluation','三分类 support/neutral/oppose；另报告 attitude score MAE。','PDF p.6 §4.2；p.7 Table 2',{level:'个体输出',role:'微观结果',measure:'Acc/F1/MAE'}),
+      N('content-eval','Content Alignment','evaluation','五类：call for action、sharing of opinion、reference to third party、testimony、other。','PDF p.6 §4.2',{level:'个体文本',role:'微观结果',measure:'Acc/F1/cosine similarity'}),
+      N('behavior-eval','Behavior Alignment','evaluation','由于数据可见性，评估空间缩小为 post 与 retweet。','PDF p.6 §4.2',{not:'不验证 reply、like、silence。',level:'个体行为',role:'微观结果',measure:'Acc/F1'}),
+      N('macro-eval','宏观系统评估','evaluation','多轮比较模拟与真实的静态态度分布及平均态度时间序列。','PDF p.6-7 §4.3',{original:'macro system evaluation',not:'不能证明个体机制正确。',level:'群体',role:'验证',measure:'ΔBias, ΔDiversity, DTW, Pearson Corr.'}),
+      N('bias','Bias','evaluation','平均态度相对中立点的偏离；报告模拟与真实差值 ΔBias。','PDF p.6-7 §4.3',{original:'Bias',not:'不是统计估计偏差的一般概念。',level:'群体分布',role:'宏观结果',measure:'mean(attitudes)-neutral'}),
+      N('diversity','Diversity','evaluation','论文文字定义为态度标准差；公开代码使用方差 <code>np.var</code>。','PDF p.6-7；代码 get_measures',{original:'Diversity',not:'与信息多样性、观点类别数不同。',level:'群体分布',role:'宏观结果',measure:'SD in paper / variance in code',status:'论文-代码不一致'}),
+      N('timeseries','时间序列相似性','evaluation','平均态度轨迹以 DTW（越低越好）和 Pearson correlation（越高越好）比较。','PDF p.7 §4.3',{not:'高相关不等于水平或机制一致。',level:'群体轨迹',role:'宏观结果',measure:'DTW + Corr.'}),
+      N('calibration','参数校准','evaluation','在 E1/P1 对纯 ABM 做参数遍历，以 ΔBias 与 ΔDiversity 选最优参数。','PDF p.7 §4.3；p.19 Appendix C.4',{original:'calibration',not:'不是用混合系统联合校准；存在参数转移假设。',level:'模型系统',role:'前置估计',measure:'parameter sweep × 5 runs'}),
+      N('validation','跨事件验证','evaluation','将纯 ABM 校准参数带入混合模型，在 E2/P2 上评估。','PDF p.7 §4.3',{original:'validation on E2/P2',not:'同一运动内验证，不是跨议题外部效度。',level:'事件/系统',role:'验证',measure:'Table 3 metrics'}),
+
+      N('micro-results','微观结果','finding','立场 accuracy 很高但 F1 偏低；内容 cosine similarity 约 .81-.84；行为 accuracy 约 .67-.78。类别不平衡使 accuracy 容易乐观。','PDF p.7 Table 2；p.16 Table 5',{original:'micro alignment results',not:'不能据 accuracy 宣称完整人类行为复制。',level:'个体结果',role:'发现',measure:'Metoo/Roe/BLM 三组指标'}),
+      N('macro-results','宏观结果','finding','多数情况下混合模型改善时间序列指标，但并非每个数据集、模型和指标都优于对应纯 ABM；混合模型常有更高正向态度偏差。','PDF p.8 Table 3',{original:'hybrid systems show improvements in the vast majority of cases',not:'不是一致优势，也不识别因果机制。',level:'群体结果',role:'发现',measure:'12 metrics × 5 model families'}),
+      N('scalability','可扩展性','finding','固定 300 核心用户、增加普通用户到 10,000 时，运行时间主要受 LLM 调用支配；普通代理增加成本较小。','PDF p.8 Fig.3',{not:'论文未验证百万级交互准确性；仅讨论工程趋势。',level:'技术系统',role:'效率发现',measure:'runtime ratio + system metrics'}),
+      N('echo','Echo Chamber 复现','finding','生产内容与关注者消费内容的相似度随 epoch 总体上升；Metoo 与 Roe 报告，BLM 因阶段不完整未报告。','PDF p.8-9 §5.5.1 Fig.4',{original:'replication of echo chambers',not:'相似度上升不等于发现新的信息茧房机制。',level:'个体暴露-表达关系/群体趋势',role:'扩展分析',measure:'production-consumption cosine similarity'}),
+      N('interventions','三种干预','finding','S1 输入相反意见；S2 输入中立意见；S3 以公共 hashtag 建立讨论空间。仅在 Metoo 模拟中比较同质性与 toxicity。','PDF p.9 §5.5.2 Table 4',{not:'不是现实政策效果，也不是 ABM_INFO 已确认的 SQ3。',level:'平台情境/技术干预',role:'情景分析',measure:'Avg. Homogeneity + Avg. Toxicity'}),
+      N('s1','S1 相反意见','finding','同质性 .8551（最低），toxicity .1426（最高）。','PDF p.9 Table 4',{original:'feeding opposite opinions',level:'平台输入',role:'干预情景'}),
+      N('s2','S2 中立意见','finding','同质性 .8580，toxicity .1296。','PDF p.9 Table 4',{original:'feeding neutral opinions',level:'平台输入',role:'干预情景'}),
+      N('s3','S3 公共讨论空间','finding','同质性 .8962（最高），toxicity .1163（最低）。论文将其解释为更和平的交流。','PDF p.9 Table 4',{original:'public spaces for debate using hashtags',not:'没有现实参与者验证。',level:'平台环境',role:'干预情景'}),
+      N('temperature','Temperature 敏感性','finding','温度从 0 变为 1 会显著改变多项宏观轨迹指标；SJ/Lorenz 在部分时间序列指标上更稳健。','PDF p.20 Table 8；Appendix D.2',{not:'一次温度比较不足以刻画完整生成不确定性。',level:'技术系统',role:'敏感性分析',measure:'5 hybrid models × 3 datasets × 2 temperatures'}),
+      N('ablation','Profile 消融','finding','移除 social traits 或 communication roles 后，多数微观对齐指标下降；幅度与指标不完全一致。','PDF p.19 Table 7；Appendix D.1',{not:'消融支持预测贡献，不等于这些字段具有因果心理机制。',level:'个体代理模块',role:'组件验证',measure:'w/o soc.; w/o com.'}),
+      N('cost','运行成本','finding','每事件约 20-30 美元；14 个时间步；RTX 4090 + Xeon 6226R。','PDF p.16 Appendix C.2',{not:'价格基于当时 GPT-3.5-Turbo-0613，已可能过时。',level:'技术系统',role:'资源约束',measure:'reported API cost and hardware'}),
+
+      N('limitations','论文限制','risk','作者明确承认规模验证、LLM 礼貌偏差和现实社交媒体复杂性不足。','PDF p.10 Limitations；p.20 Error Analysis',{level:'系统',role:'边界条件'}),
+      N('scale-limit','未验证百万代理','risk','虽然模拟规模大于许多先前研究，但因标注成本没有验证百万级交互。','PDF p.10 Limitations',{not:'不能把运行时间可扩展性当作行为有效性可扩展性。',level:'群体/系统',role:'外部效度限制'}),
+      N('polite-bias','LLM 礼貌/清晰偏差','risk','RL 对齐使 LLM 比真实社交媒体用户更礼貌、清晰、尊重，导致系统性偏差。','PDF p.10 Limitations',{level:'技术模型',role:'测量与生成偏差',measure:'论文未给独立量化估计'}),
+      N('unintended','非预期行为','risk','核心代理会把新闻误当作可转发推文，也会连续重复转发自己；作者归因于 instruction following 与上下文缺失。','PDF p.20 Appendix D.4',{level:'个体代理',role:'实现错误',measure:'qualitative error analysis'}),
+      N('privacy','隐私处理','risk','公开数据仍只发布 tweet IDs，不发布原始内容；模拟中重命名用户。','PDF p.10 Ethics Statement',{original:'Data Collection and Privacy',not:'匿名化名称不自动消除可重识别风险。',level:'数据治理',role:'伦理约束'}),
+      N('misuse','标签化滥用风险','risk','模拟可能被用于给人贴上其不愿接受的标签；作者建议说明不完美并允许 opt-out。','PDF p.10 Ethics Statement',{original:'Simulation for Social Good',level:'个人权益/制度使用',role:'伦理风险'}),
+
+      N('code-root','HiSim 公开代码','code','基于 AgentVerse + Mesa 的混合实现；配置、代理、环境、规则 ABM 分层。','项目内作者代码快照 README/LICENSE',{not:'代码是实现证据，不替代理论定义。',level:'软件系统',role:'复现对象',code:'04_code/third_party_reference/HiSim_source_audit'}),
+      N('simulation-py','Simulation 编排器','code','从 YAML 载入 agents、ABM model 与 environment；循环 environment.step，保存 checkpoint 和指标。','代码 simulation.py',{original:'Simulation.from_task / run',level:'软件系统',role:'生命周期编排',measure:'max_turns, checkpoint',code:'agentverse/simulation.py',status:'代码直接证据'}),
+      N('initialization-py','注册表与依赖装配','code','根据配置构造 LLM、memory、memory manipulator、page、info box、agent、environment 和 ABM model。','代码 initialization.py',{level:'软件系统',role:'依赖注入/工厂',code:'agentverse/initialization.py',status:'代码直接证据'}),
+      N('twitter-agent-py','TwitterAgent','code','填充提示、检索/反思记忆、调用 LLM、解析函数、生成 TwitterMessage，并把文本转为态度分数。','代码 agents/simulation_agent/twitter.py',{level:'个体软件代理',role:'核心代理实现',code:'TwitterAgent.step/astep/att2score',status:'代码直接证据'}),
+      N('twitter-env-py','TwitterEnvironment','code','决定每轮顺序：生成 LLM 行为 → 规则 ABM step → 镜像覆盖 → tweet_db/memory/page/visibility 更新。','代码 environments/simulation_env/twitter.py',{level:'软件系统',role:'调度与耦合',code:'TwitterEnvironment.step',status:'代码直接证据'}),
+      N('yaml-config','YAML 任务配置','code','集中声明提示、时间、新闻、目标议题、可见网络、ABM 参数和代理资料。','代码 tasks/simulation/*/config.yaml',{not:'样例配置中的场景和参数不是 ABM_INFO 已确认选择。',level:'实验配置',role:'可复现输入',status:'代码直接证据'}),
+      N('mesa','Mesa ABM 层','code','五类规则模型继承 mesa.Model，使用 BaseScheduler、SimultaneousActivation 或 RandomActivation。','代码 abm_model/*.py',{level:'软件系统',role:'普通代理调度/更新',code:'agentverse/abm_model/*.py',status:'代码直接证据'}),
+      N('code-audits','复现差异集合','code','公式方向、调度语义、网络选源、Diversity 定义、沉默覆盖、SJ 平方项与 Lorenz source credibility 等差异会改变结果。','项目内代码逐文件核对',{level:'软件/方法',role:'复现风险',status:'代码审计结论'}),
+
+      N('abminfo','ABM_INFO 参考边界','transfer','当前主题是 LLM 如何改变群体的信息获取与意见形成。HiSim 仅提供样例架构，不替代现行 RP。','AGENTS.md 与 00_current_baseline',{not:'不得改写为“发现新信息茧房”；不得把模拟结果直接外推为现实群体。',level:'项目治理',role:'迁移边界',status:'项目规则'}),
+      N('inherit-interfaces','保留三接口','transfer','可继承 <code>f_message</code>、<code>f_selection</code>、<code>f_update</code> 的分解，以连接信息生成/暴露、传播和意见更新。','HiSim PDF p.2-3 + 现行项目边界',{not:'接口名称不是新理论构念。',level:'技术/分析接口',role:'候选实现骨架',measure:'逐轮保存消息、暴露集合、更新前后状态',status:'候选建议，未确认'}),
+      N('separate-state','分离状态、文本与行为','transfer','显式维护潜在数值状态；自然语言用于传播；分享/点赞/沉默单独记录，不从当轮文本反推全部内部状态。','由论文耦合局限与代码 att2score 推导',{level:'个体代理实现',role:'测量修正',measure:'state_before/state_after + message_text + action',status:'分析建议，未确认'}),
+      N('bidirectional','补足双向接口','transfer','规则代理的状态和分享行为需转换为可读暴露包，进入 LLM 人类代理的下一轮上下文；同时保留 LLM→规则编码。','论文 p.5 单向缺口 + 项目研究边界',{level:'跨代理接口',role:'结构修正',measure:'两方向消息日志',status:'分析建议，未确认'}),
+      N('exposure-log','记录实际暴露','transfer','网络只定义可能接触；每轮需记录实际进入成员更新的来源、文本、论据和顺序。','由 f_selection 定义推导',{not:'不能用“关注关系”替代“实际看到”。',level:'个体-轮次',role:'SQ1 可观察量',measure:'realized exposure set',status:'分析建议，未确认'}),
+      N('human-calibration','人类校准优先','transfer','BC/HK/RA/SJ/Lorenz 的主模型选择应由人类前后测、置信度与拒绝/反向移动数据决定，而非只看宏观拟合。','论文校准方法局限 + 项目规则',{level:'个体机制',role:'模型选择原则',measure:'参数恢复 + 留出议题预测',status:'分析建议，未确认'}),
+      N('sync-update','同步更新与顺序敏感性','transfer','主分析应预先固定同步/异步调度；轮次内先后顺序和镜像写回时点进入敏感性分析。','代码 BaseScheduler + mirror overwrite 审计',{level:'技术系统',role:'调度规范',measure:'scheduler type + pre/post state',status:'分析建议，未确认'}),
+      N('role-separation','三种 LLM 角色分离','transfer','被研究的信息来源 LLM、模拟人类的 LLM agent、文本编码器是不同角色，配置与日志必须分开。','项目现行边界 + HiSim 同模型耦合风险',{not:'不得把同一模型的生成-标注一致性当作人类效度。',level:'技术系统',role:'识别与实现边界',status:'项目既定边界'}),
+      N('sensitivity','多层不确定性','transfer','分别重复 LLM 生成种子、网络/规则随机种子、参数抽样与场景；不能固定一次 LLM 内容后只重复规则层。','论文 p.16 运行说明与 p.20 温度结果',{level:'系统',role:'稳健性设计',measure:'分层 seed/run manifest',status:'分析建议，未确认'}),
+      N('no-echo','不沿用“新信息茧房”叙事','transfer','HiSim 的 echo chamber 分析可作为建模参照；ABM_INFO 不将当前研究改写为发现新的信息茧房。','AGENTS.md 固定研究边界',{level:'理论叙事',role:'排除项',status:'项目既定边界'})
+    ];
+
+    function E(source, target, relation, kind='contains') { return {source,target,relation,kind}; }
+    const edges = [
+      E('paper','problem','回答'),E('paper','challenge-fidelity','提出'),E('paper','challenge-scale','提出'),E('paper','challenge-evaluation','提出'),E('challenge-scale','pareto','促成'),E('pareto','hybrid','支持'),
+      E('problem','group','研究主体'),E('group','attitude','包含状态'),E('group','network','由网络连接'),E('group','time','随时间演化'),E('message-set','f-update','输入','flow'),
+      E('hybrid','core-user','包含'),E('hybrid','ordinary-user','包含'),E('core-user','profile','使用'),E('core-user','memory','使用'),E('core-user','action','输出'),E('profile','demographics','包含'),E('profile','social-traits','包含'),E('profile','communication-role','包含'),E('memory','personal-memory','包含'),E('memory','event-memory','包含'),E('memory','retrieval','操作'),E('memory','reflection','操作'),
+      E('ordinary-user','initial-attitude','初始化'),E('ordinary-user','f-selection','执行'),E('ordinary-user','f-message','执行'),E('ordinary-user','f-update','执行'),E('f-selection','message-set','构造','flow'),E('f-message','message-set','生成','flow'),E('f-update','attitude','更新','flow'),E('f-update','bc','实现族'),E('f-update','hk','实现族'),E('f-update','ra','实现族'),E('f-update','sj','实现族'),E('f-update','lorenz','实现族'),
+      E('environment','timeline','维护'),E('environment','public-timeline','维护'),E('environment','offline-news','注入'),E('environment','notifications','维护'),E('environment','single-round','运行模式'),E('environment','multi-round','运行模式'),E('network','timeline','约束可见'),E('offline-news','core-user','触发','flow'),E('timeline','core-user','提供上下文','flow'),E('notifications','core-user','提供上下文','flow'),E('time','environment','调度'),
+      E('core-user','llm-text','生成','flow'),E('llm-text','stance-label','编码','flow'),E('llm-text','sentiment','编码','flow'),E('stance-label','mirror','决定方向','flow'),E('sentiment','mirror','决定强度','flow'),E('mirror','ordinary-user','进入数值系统','flow'),E('coupling','llm-text','包含'),E('coupling','mirror','包含'),E('coupling','one-way','存在限制','risk'),E('one-way','core-user','缺少回路','risk'),
+      E('benchmark','datasets','包含'),E('datasets','metoo','包含'),E('datasets','roe','包含'),E('datasets','blm','包含'),E('datasets','sampling','形成用户集'),E('datasets','annotation','生成标签'),E('benchmark','micro-eval','评估'),E('benchmark','macro-eval','评估'),E('single-round','micro-eval','用于','evaluate'),E('multi-round','macro-eval','用于','evaluate'),E('micro-eval','stance-eval','包含'),E('micro-eval','content-eval','包含'),E('micro-eval','behavior-eval','包含'),E('macro-eval','bias','包含'),E('macro-eval','diversity','包含'),E('macro-eval','timeseries','包含'),E('calibration','validation','先校准后验证','evaluate'),E('datasets','calibration','E1/P1'),E('datasets','validation','E2/P2'),
+      E('micro-eval','micro-results','产生','evaluate'),E('macro-eval','macro-results','产生','evaluate'),E('hybrid','scalability','检验效率','evaluate'),E('multi-round','echo','扩展分析','evaluate'),E('echo','interventions','引出'),E('interventions','s1','包含'),E('interventions','s2','包含'),E('interventions','s3','包含'),E('core-user','ablation','组件检验','evaluate'),E('core-user','temperature','敏感性','evaluate'),E('core-user','cost','产生'),
+      E('paper','limitations','承认','risk'),E('limitations','scale-limit','包含','risk'),E('limitations','polite-bias','包含','risk'),E('limitations','unintended','包含','risk'),E('paper','privacy','伦理约束','risk'),E('paper','misuse','伦理约束','risk'),E('polite-bias','macro-results','可能造成偏差','risk'),E('unintended','llm-text','影响','risk'),
+      E('code-root','simulation-py','包含','code'),E('code-root','initialization-py','包含','code'),E('code-root','twitter-agent-py','包含','code'),E('code-root','twitter-env-py','包含','code'),E('code-root','yaml-config','包含','code'),E('code-root','mesa','依赖','code'),E('initialization-py','yaml-config','读取','code'),E('initialization-py','simulation-py','装配','code'),E('simulation-py','twitter-env-py','驱动','code'),E('twitter-env-py','twitter-agent-py','调度','code'),E('twitter-env-py','mesa','调度','code'),E('twitter-agent-py','llm-text','实现','code'),E('mesa','bc','实现','code'),E('mesa','hk','实现','code'),E('mesa','ra','实现','code'),E('mesa','sj','实现','code'),E('mesa','lorenz','实现','code'),E('code-root','code-audits','审计发现','risk'),E('code-audits','network','选源偏离叙述','risk'),E('code-audits','mirror','顺序效应','risk'),E('code-audits','diversity','SD/方差不一致','risk'),E('code-audits','sj','公式不一致','risk'),E('code-audits','lorenz','遗漏可信度','risk'),
+      E('abminfo','inherit-interfaces','允许候选迁移','transfer'),E('inherit-interfaces','f-selection','映射','transfer'),E('inherit-interfaces','f-message','映射','transfer'),E('inherit-interfaces','f-update','映射','transfer'),E('abminfo','separate-state','要求区分','transfer'),E('separate-state','attitude','显式状态','transfer'),E('separate-state','llm-text','分离表达','transfer'),E('abminfo','bidirectional','要求补足','transfer'),E('bidirectional','one-way','修正','transfer'),E('abminfo','exposure-log','要求记录','transfer'),E('exposure-log','f-selection','操作化','transfer'),E('abminfo','human-calibration','约束模型选择','transfer'),E('human-calibration','bc','校准候选','transfer'),E('human-calibration','ra','校准候选','transfer'),E('human-calibration','sj','校准候选','transfer'),E('abminfo','sync-update','约束调度','transfer'),E('sync-update','mirror','审计顺序','transfer'),E('abminfo','role-separation','既定边界','transfer'),E('role-separation','core-user','区分人类代理 LLM','transfer'),E('role-separation','stance-label','区分编码器','transfer'),E('abminfo','sensitivity','要求稳健性','transfer'),E('sensitivity','temperature','扩展','transfer'),E('abminfo','no-echo','排除叙事','transfer'),E('no-echo','echo','仅作参照','transfer')
+    ];
+
+    const audits = [
+      ['HK 更新方向','附录公式呈现的差值方向与同化定义不一致。','代码使用 <code>(a_j-a_i)</code>，方向符合向来源靠近。','以原始模型与单元测试确定方向；不照抄 PDF 公式。'],
+      ['HK 的 alpha','Table 6 报告 alpha。','<code>bcmm.py</code> 更新没有使用 alpha。','若保留影响强度，必须明确进入更新式并测试。'],
+      ['RA 更新方向','附录文字/公式存在方向歧义。','<code>ra.py</code> 使用 <code>(a_j-a_i)</code> 并同步更新 uncertainty。','与 Deffuant 原始定义、代码和测试三方核对。'],
+      ['SJ 接受区间','论文为指示函数 × 意见差。','<code>sj.py</code> 先令 sim=意见差，再乘一次意见差，形成平方项。','不能复制；按理论式重写并做正负方向测试。'],
+      ['Lorenz source credibility','论文公式包含 <code>s(i,j)</code>。','<code>lorenz.py</code> 实际更新未使用该项。','有经验测量才加入；否则从模型声明删除。'],
+      ['Diversity','正文说明为态度标准差。','各模型 <code>get_measures</code> 使用 <code>np.var</code>。','预注册固定定义；建议同时报告 SD 与 variance。'],
+      ['普通代理选源','叙述强调真实关注网络。','BC/RA/SJ/Lorenz 多从 schedule 全体随机选源；HK 遍历全体。','限定为可见邻居，再保存本轮实际暴露集合。'],
+      ['调度语义','“concurrent”容易被理解为同时更新。','该选项映射到 Mesa <code>BaseScheduler</code>，按顺序调用。','主分析固定同步规则；异步顺序只作敏感性分析。'],
+      ['沉默处理','Do Nothing 是一种行为。','<code>TwitterAgent</code> 将 Silence 写成态度 0/Neutral。','沉默应是缺失表达，保留先前潜在状态。'],
+      ['异质代理反馈','框架名义上是混合互动。','论文与代码均缺 ordinary→core 的等价信息通道。','若研究群体传播，补足双向可读消息接口。'],
+      ['运行重复','Table 3 称 3 次运行均值。','Appendix C.2 称固定一次 LLM 内容后运行规则系统 10 次。','分别报告 LLM 与规则层随机性，保存分层 seeds。'],
+      ['动作执行安全','论文把响应解析为函数调用。','<code>TwitterAgent</code> 对模型输出使用 <code>eval</code>。','新实现改用白名单结构化解析，禁止 eval 执行模型文本。']
+    ];
+
+    const models = [
+      ['BC','Deffuant et al. (2000)：距离小于 ε 时同化，否则不更新。','a；α；ε','相近信息导致更新 vs 超阈值不更新','硬阈值；代码选源不受真实网络约束。'],
+      ['HK','Hegselmann-Krause (2002)：对置信范围内多来源求平均。','a；ε；来源集合','单来源影响 vs 多条相近信息平均化','PDF 差值方向；代码未使用 Table 6 的 alpha。'],
+      ['RA','Deffuant et al. (2002)：态度区间的相对重叠决定影响。','a；uncertainty u；α','确定性/区间重叠是否改变说服','需联合测量 a 与 u；论文/代码方向需核对。'],
+      ['SJ','Jager & Amblard (2005)：接受、非承诺、拒绝三区间。','a；α；接受阈值；拒绝阈值','远距信息是不更新还是反向移动','公开代码接受项出现差值平方，不能直接复用。'],
+      ['Lorenz','Lorenz et al. (2021)：同化 + 强化 + 相似性 + 极化 + 可信度。','a；α；λ；k；M；ρ；s(i,j)','同化与立场强化的相对作用','参数重叠；代码省略 source credibility。']
+    ];
+
+    const nodeById = new Map(nodes.map(n => [n.id,n]));
+    const svg = document.getElementById('graph');
+    const viewport = document.getElementById('viewport');
+    const clusterLayer = document.getElementById('cluster-layer');
+    const edgeLayer = document.getElementById('edge-layer');
+    const labelLayer = document.getElementById('label-layer');
+    const nodeLayer = document.getElementById('node-layer');
+    const detailTitle = document.getElementById('detail-title');
+    const detailCategory = document.getElementById('detail-category');
+    const detailStatus = document.getElementById('detail-status');
+    const detailFields = document.getElementById('detail-fields');
+    const searchInput = document.getElementById('search');
+    const categorySelect = document.getElementById('category');
+    const countEl = document.getElementById('count');
+    let selectedId = 'paper';
+    let activeView = 'all';
+    let transform = {x:0,y:0,k:1};
+    let dragNode = null;
+    let panStart = null;
+
+    const views = {
+      all: new Set(Object.keys(categoryMeta)),
+      architecture: new Set(['research','state','core','ordinary','environment','coupling']),
+      evidence: new Set(['data','evaluation','finding','risk']),
+      code: new Set(['code','coupling','ordinary','risk']),
+      transfer: new Set(['transfer','coupling','state','ordinary','risk'])
+    };
+
+    const hash = s => { let h=2166136261; for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619);} return h>>>0; };
+    const grouped = {};
+    nodes.forEach(n => {
+      (grouped[n.cluster] ||= []).push(n);
+      const [cx,cy] = clusterCenters[n.cluster];
+      const h = hash(n.id);
+      n.x = cx + ((h % 181)-90);
+      n.y = cy + (((h>>8) % 141)-70);
+      n.vx = 0; n.vy = 0;
+    });
+
+    // Deterministic force layout: cluster gravity + link springs + repulsion.
+    for (let tick=0; tick<260; tick++) {
+      const alpha = 1 - tick/270;
+      for (const n of nodes) {
+        const [cx,cy] = clusterCenters[n.cluster];
+        n.vx += (cx-n.x)*0.0028*alpha;
+        n.vy += (cy-n.y)*0.0028*alpha;
+      }
+      for (const e of edges) {
+        const a=nodeById.get(e.source), b=nodeById.get(e.target);
+        const dx=b.x-a.x, dy=b.y-a.y, d=Math.hypot(dx,dy)||1;
+        const target=e.kind==='transfer'?185:150;
+        const f=(d-target)*0.0008*alpha;
+        a.vx+=dx/d*f; a.vy+=dy/d*f; b.vx-=dx/d*f; b.vy-=dy/d*f;
+      }
+      for (let i=0;i<nodes.length;i++) for(let j=i+1;j<nodes.length;j++) {
+        const a=nodes[i],b=nodes[j],dx=b.x-a.x,dy=b.y-a.y,d2=dx*dx+dy*dy;
+        if(d2<15000){const d=Math.sqrt(d2)||1;const f=(15000-d2)/15000*0.55*alpha;a.vx-=dx/d*f;a.vy-=dy/d*f;b.vx+=dx/d*f;b.vy+=dy/d*f;}
+      }
+      for(const n of nodes){n.x+=n.vx;n.y+=n.vy;n.vx*=0.78;n.vy*=0.78;n.x=Math.max(75,Math.min(1725,n.x));n.y=Math.max(70,Math.min(1110,n.y));}
+    }
+
+    for (const [key,meta] of Object.entries(categoryMeta)) {
+      const opt=document.createElement('option'); opt.value=key; opt.textContent=meta.label; categorySelect.appendChild(opt);
+      const [x,y]=clusterCenters[key];
+      const t=document.createElementNS('http://www.w3.org/2000/svg','text');
+      t.setAttribute('class','cluster-label');t.setAttribute('x',x);t.setAttribute('y',y-112);t.setAttribute('text-anchor','middle');t.textContent=meta.label;clusterLayer.appendChild(t);
+    }
+
+    const edgeEls = edges.map(e => {
+      const path=document.createElementNS('http://www.w3.org/2000/svg','path');
+      path.setAttribute('class',`edge ${e.kind}`); path.setAttribute('marker-end','url(#arrow)'); edgeLayer.appendChild(path);
+      const label=document.createElementNS('http://www.w3.org/2000/svg','text');
+      label.setAttribute('class','edge-label'); label.textContent=e.relation; label.style.display='none'; labelLayer.appendChild(label);
+      e.path=path;e.labelEl=label;return e;
+    });
+
+    const nodeEls = new Map();
+    function labelLines(text){ if(text.length<=12)return [text]; const split=Math.ceil(text.length/2); return [text.slice(0,split),text.slice(split)]; }
+    nodes.forEach(n => {
+      const g=document.createElementNS('http://www.w3.org/2000/svg','g'); g.setAttribute('class','node'); g.dataset.id=n.id;
+      const rect=document.createElementNS('http://www.w3.org/2000/svg','rect'); rect.setAttribute('x','-67');rect.setAttribute('y','-23');rect.setAttribute('width','134');rect.setAttribute('height','46');rect.setAttribute('fill',categoryMeta[n.category].color);g.appendChild(rect);
+      const text=document.createElementNS('http://www.w3.org/2000/svg','text');
+      const lines=labelLines(n.label); lines.forEach((line,i)=>{const s=document.createElementNS('http://www.w3.org/2000/svg','tspan');s.setAttribute('x','0');s.setAttribute('dy',i===0?(lines.length===1?'4':'-2'):'14');s.textContent=line;text.appendChild(s);});g.appendChild(text);
+      g.addEventListener('pointerdown',ev=>{ev.stopPropagation();dragNode=n;svg.setPointerCapture(ev.pointerId);});
+      g.addEventListener('click',ev=>{ev.stopPropagation();selectNode(n.id);});
+      nodeLayer.appendChild(g); nodeEls.set(n.id,g);
+    });
+
+    function updateGeometry(){
+      nodes.forEach(n=>nodeEls.get(n.id).setAttribute('transform',`translate(${n.x},${n.y})`));
+      edgeEls.forEach(e=>{const a=nodeById.get(e.source),b=nodeById.get(e.target),dx=b.x-a.x,dy=b.y-a.y,d=Math.hypot(dx,dy)||1;const sx=a.x+dx/d*69,sy=a.y+dy/d*25,tx=b.x-dx/d*72,ty=b.y-dy/d*25;const mx=(sx+tx)/2,my=(sy+ty)/2;const curve=(hash(e.source+e.target)%31)-15;const nx=-dy/d*curve,ny=dx/d*curve;e.path.setAttribute('d',`M ${sx} ${sy} Q ${mx+nx} ${my+ny} ${tx} ${ty}`);e.labelEl.setAttribute('x',mx+nx);e.labelEl.setAttribute('y',my+ny-4);});
+    }
+
+    function escapeHTML(value){return String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+    function field(label,value,allowCode=false){if(!value||value==='—')return '';const safe=allowCode?value:escapeHTML(value);return `<div class="fact"><dt>${label}</dt><dd>${safe}</dd></div>`;}
+    function selectNode(id){
+      selectedId=id; const n=nodeById.get(id); if(!n)return;
+      nodeEls.forEach((el,key)=>el.classList.toggle('selected',key===id));
+      edgeEls.forEach(e=>{const active=e.source===id||e.target===id;e.path.classList.toggle('active',active);e.labelEl.style.display=active?'block':'none';});
+      detailCategory.textContent=categoryMeta[n.category].label; detailTitle.textContent=n.label; detailStatus.textContent=n.status;
+      detailFields.innerHTML=field('原始术语',n.original)+field('理论定义 / 论文结论',n.desc,true)+field('不包括什么',n.not,true)+field('分析层级',n.level)+field('模型位置',n.role)+field('经验对应 / 测量',n.measure,true)+field('证据位置',n.evidence)+field('程序对应',n.code,true)+field('对 ABM_INFO 的含义',n.transfer,true);
+      applyFilters();
+    }
+
+    function matchesSearch(n,q){return !q || [n.label,n.original,n.desc,n.evidence,n.code,n.transfer].join(' ').toLowerCase().includes(q);}
+    function applyFilters(){
+      const q=searchInput.value.trim().toLowerCase(); const category=categorySelect.value; const allowed=views[activeView];
+      let visible=0;
+      nodes.forEach(n=>{const inView=allowed.has(n.category)&&(category==='all'||n.category===category);const hit=matchesSearch(n,q);const el=nodeEls.get(n.id);el.classList.toggle('hidden',!inView);el.classList.toggle('search-hit',!!q&&hit);const related=!selectedId||n.id===selectedId||edges.some(e=>(e.source===selectedId&&e.target===n.id)||(e.target===selectedId&&e.source===n.id));el.classList.toggle('dimmed',inView&&((q&&!hit)||(!q&&selectedId&&!related)));if(inView)visible++;});
+      edgeEls.forEach(e=>{const a=nodeById.get(e.source),b=nodeById.get(e.target);const inView=allowed.has(a.category)&&allowed.has(b.category)&&(category==='all'||a.category===category||b.category===category);e.path.classList.toggle('hidden',!inView);e.labelEl.style.display=(inView&&(e.source===selectedId||e.target===selectedId))?'block':'none';const dim=selectedId&&e.source!==selectedId&&e.target!==selectedId;e.path.classList.toggle('dimmed',!!dim);});
+      countEl.textContent=`显示 ${visible} / ${nodes.length} 个节点，${edges.length} 条关系`;
+    }
+
+    function setTransform(){viewport.setAttribute('transform',`translate(${transform.x} ${transform.y}) scale(${transform.k})`);}
+    function resetView(){transform={x:0,y:0,k:1};setTransform();searchInput.value='';categorySelect.value='all';activeView='all';document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.view==='all'?'true':'false'));selectNode('paper');}
+
+    svg.addEventListener('wheel',ev=>{ev.preventDefault();const rect=svg.getBoundingClientRect();const px=(ev.clientX-rect.left)/rect.width*1800,py=(ev.clientY-rect.top)/rect.height*1180;const next=Math.max(.45,Math.min(2.8,transform.k*(ev.deltaY<0?1.12:.89)));transform.x=px-(px-transform.x)*next/transform.k;transform.y=py-(py-transform.y)*next/transform.k;transform.k=next;setTransform();},{passive:false});
+    svg.addEventListener('pointerdown',ev=>{if(ev.target.closest('.node'))return;panStart={x:ev.clientX,y:ev.clientY,tx:transform.x,ty:transform.y};svg.setPointerCapture(ev.pointerId);svg.classList.add('dragging');});
+    svg.addEventListener('pointermove',ev=>{if(dragNode){const pt=svg.createSVGPoint();pt.x=ev.clientX;pt.y=ev.clientY;const p=pt.matrixTransform(viewport.getScreenCTM().inverse());dragNode.x=Math.max(70,Math.min(1730,p.x));dragNode.y=Math.max(55,Math.min(1120,p.y));updateGeometry();return;}if(panStart){const rect=svg.getBoundingClientRect();transform.x=panStart.tx+(ev.clientX-panStart.x)*1800/rect.width;transform.y=panStart.ty+(ev.clientY-panStart.y)*1180/rect.height;setTransform();}});
+    svg.addEventListener('pointerup',()=>{dragNode=null;panStart=null;svg.classList.remove('dragging');});
+    svg.addEventListener('pointercancel',()=>{dragNode=null;panStart=null;svg.classList.remove('dragging');});
+    searchInput.addEventListener('input',applyFilters);
+    searchInput.addEventListener('keydown',ev=>{if(ev.key==='Enter'){const q=searchInput.value.trim().toLowerCase();const n=nodes.find(n=>matchesSearch(n,q)&&views[activeView].has(n.category));if(n)selectNode(n.id);}});
+    categorySelect.addEventListener('change',applyFilters);
+    document.getElementById('reset').addEventListener('click',resetView);
+    document.getElementById('views').addEventListener('click',ev=>{const b=ev.target.closest('[data-view]');if(!b)return;activeView=b.dataset.view;document.querySelectorAll('[data-view]').forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));categorySelect.value='all';searchInput.value='';selectedId=null;nodeEls.forEach(el=>el.classList.remove('selected'));edgeEls.forEach(e=>{e.path.classList.remove('active');e.labelEl.style.display='none';});applyFilters();});
+
+    document.getElementById('audit-table').innerHTML=audits.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('');
+    document.getElementById('model-table').innerHTML=models.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('');
+    document.getElementById('evidence-table').innerHTML=nodes.map(n=>`<tr data-evidence-id="${n.id}"><td><button type="button" data-open-node="${n.id}">${escapeHTML(n.label)}</button></td><td>${escapeHTML(categoryMeta[n.category].label)}</td><td>${n.desc}</td><td>${escapeHTML(n.evidence)}</td><td>${escapeHTML(n.status)}</td></tr>`).join('');
+    document.getElementById('evidence-table').addEventListener('click',ev=>{const b=ev.target.closest('[data-open-node]');if(!b)return;selectNode(b.dataset.openNode);document.querySelector('.workspace').scrollIntoView({behavior:'smooth',block:'start'});});
+
+    updateGeometry(); setTransform(); selectNode('paper');
+  })();
+  </script>
+</body>
+</html>

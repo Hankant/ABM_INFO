@@ -1,0 +1,47 @@
+name: Deploy HiSim knowledge graph
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "01_research_notes/literature_knowledge_graphs/hisim-2024-abm-knowledge-graph.html"
+      - ".github/workflows/deploy-hisim-knowledge-graph.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Prepare static site
+        run: |
+          mkdir -p _site
+          cp "01_research_notes/literature_knowledge_graphs/hisim-2024-abm-knowledge-graph.html" _site/index.html
+          touch _site/.nojekyll
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
