@@ -1,7 +1,7 @@
 ---
 document_id: ABM-ARCH
 title: ABM_INFO 混合 ABM 架构设计与版本记录
-version: 0.1.0
+version: 0.2.0
 status: DRAFT
 created: 2026-09-03
 last_updated: 2026-09-03
@@ -293,31 +293,132 @@ RunManifest
 
 第三方 HiSim 源码继续保存在 `../third_party_reference/`，不得移除其许可证或作者信息。
 
-## 12. 仿真引擎策略
+## 12. 仿真引擎策略与 AnyLogic（analogic）备选架构
 
-### 12.1 当前建议
+### 12.1 名称与决策状态
 
-采用引擎无关的数据契约和行为接口：
+本节将讨论中提到的 “analogic” 暂按 **AnyLogic** 仿真引擎处理。若后续确认是另一款同名或近似名称的软件，必须建立新的备选条目，不得把本节的能力、许可或接口假设直接移用。
+
+AnyLogic 是技术实现选择，不是理论构念、研究处理或因果机制。更换引擎不能改变第 4–5 节已经固定的研究对象、`f_message`、`f_selection`、`f_update` 的边界，或把技术差异解释为群体意见变化。
+
+**当前决定：`PROVISIONAL`。** 保持 Python 参考内核为唯一权威的科学实现；AnyLogic 是可选的执行、实验和可视化后端，是否进入主执行链仍由 D-013 决定。
+
+### 12.2 三种可选部署方式
+
+| 方案 | 结构 | 适合什么 | 主要优点 | 主要风险 | 当前判断 |
+| --- | --- | --- | --- | --- | --- |
+| A. Python 参考引擎 | 全部 13 个模块在 Python 实现 | 开放复现、Git 审计、批量实验、CI 测试 | 数据契约、日志、缓存和单元测试最直接 | 动态展示需另建界面 | `FIXED` 为最小科学内核 |
+| B. AnyLogic 单体引擎 | 图形模型同时处理代理、LLM、日志和实验 | 快速演示或教学原型 | 网络、状态图、动画和参数实验集中 | GUI 规则难以充分审计；在线 LLM 调用会扰乱时序；输出缓存和版本管理脆弱 | `REJECTED` 作为正式主架构 |
+| C. Python–AnyLogic 协同 | Python 维护科学内核；AnyLogic 调度／网络／可视化通过契约调用或回放 | 需要可视化网络传播、多方法扩展或面向非技术受众展示 | 保留可审计内核，同时获得图形实验界面 | 增加跨引擎一致性与部署成本 | `PROVISIONAL` 备选方案 |
+
+### 12.3 13 个模块的归属
+
+| 模块 | Python 参考内核职责 | AnyLogic（analogic）可承担职责 | 规则 |
+| --- | --- | --- | --- |
+| M01 场景与运行配置 | 保存版本化配置和 `RunManifest` | 读取经解析的参数 | Python 配置为唯一真源 |
+| M02 人口初始化 | 联合抽样、输入数据审计 | 创建可视代理实例 | 不在 GUI 中手动改写样本 |
+| M03 代理状态 | 定义状态 schema 与校验 | 显示或镜像状态 | 不以 AnyLogic 内部变量作为唯一记录 |
+| M04 环境与网络 | 生成、导入和统计网络 | 可视化网络、维护连接对象、发送消息 | 潜在网络与实际暴露仍分开记录 |
+| M05 `f_message` | LLM 调用、规则消息模板和原始输出保存 | 显示规则消息或转发已生成消息 | LLM 生成不在 GUI 事件中逐代理在线调用 |
+| M06 `f_selection` | 声明和测试选择规则 | 按规则执行可见性／消息投递 | 每次选择写入 `ExposureRecord` |
+| M07 `f_sharing` | 参数化和行为审计 | 显示传播边与事件动画 | 分享不可覆盖选择或更新规则 |
+| M08 `f_update` | 规则函数、LLM 结构化转移和单元测试 | 执行已验证的状态提交 | 同步快照语义必须与 Python 一致 |
+| M09 代理内核与角色路由 | 三种 LLM 角色分离、模型调用和 schema 校验 | RuleAgent／LLMAgent 的可视代理壳 | 角色、提示与模型版本由 Python 记录 |
+| M10 调度与轮次 | 参考调度器与回放 | 同步轮次、状态图和事件动画 | 两端需通过同一缓存输入一致性测试 |
+| M11 文本编码与测量 | 人工标注、编码器、置信度和分歧记录 | 只展示编码结果 | 不在 AnyLogic 中以情感值替代立场测量 |
+| M12 校准与验证 | 参数恢复、保留样本验证和统计报告 | 参数扫描与可视展示 | AnyLogic 扫描不替代人类数据验证 |
+| M13 日志、回放与评估 | 权威事件日志、快照、指标和回放 | 导出运行显示数据 | 结果必须回写至统一事件格式 |
+
+### 12.4 协同架构与数据流
 
 ```text
-ABM_INFO domain and interfaces
-        ├── Python reference engine
-        └── Optional AnyLogic adapter
+版本化 ScenarioConfig + RunManifest
+                │
+                ▼
+        Python reference core
+  初始化／规则函数／LLM缓存／文本编码
+                │
+        versioned JSON contract
+                │
+                ▼
+  AnyLogic adapter（可选）
+  网络、同步轮次、动画、参数实验
+                │
+                ▼
+  EventRecord + Snapshot + Evaluation
+                │
+                ▼
+  Python replay and cross-engine comparison
 ```
 
-Python 参考引擎作为可审计、可测试和 Git 友好的科学内核；AnyLogic 可作为后续调度、实验与可视化后端，但不能成为唯一的数据和规则来源。
+AnyLogic 与 Python 不直接共享可变内存状态。每次跨边界都使用版本化、可存档的 JSON 契约，至少包含：
 
-### 12.2 AnyLogic 可承担的模块
+```text
+ExposureRequest
+  run_id, round_id, receiver_id, state_before,
+  candidate_message_ids, selected_message_ids,
+  exposure_order, contract_version
 
-- 人口和代理实例化；
-- 潜在网络与消息传递；
-- 同步轮次调度；
-- 参数变化和重复运行；
-- 网络传播和群体状态可视化。
+TransitionResponse
+  run_id, round_id, agent_id, proposed_state_after,
+  action, message_refs, kernel_id,
+  raw_response_ref, validation_status, contract_version
+```
 
-LLM 信息源、模拟人类的 LLM 调用、文本编码、提示版本、调用缓存、校准和最终验证建议保留在外部 Python 服务。两边通过版本化 JSON 契约交换暴露包和状态转移。
+`round_id`、`agent_id` 或 `contract_version` 缺失时，响应不得写入模拟状态；任何声明生成或分享消息的响应还必须包含相应的 `message_id` 或 `message_refs`。
 
-官方能力参考：
+### 12.5 AnyLogic 运行方式
+
+AnyLogic 支持代理、网络连接、代理通信、同步 agent step、参数变化、重复运行和多方法仿真。这些能力适合 M02、M04、M06、M07、M10 的执行与展示，但不自动提供本项目所需的测量、识别或 LLM 复现能力。
+
+建议的单轮执行是批处理而非逐代理阻塞调用：
+
+```text
+1. AnyLogic 或 Python 参考引擎冻结 t 时点快照
+2. 生成所有候选消息并完成 f_selection
+3. 将本轮所有需要 LLM 计算的 ExposureRequest 批量交给 Python 服务
+4. Python 返回经过 schema 校验的 TransitionResponse，或命中已缓存响应
+5. 引擎统一校验并同时提交 t+1
+6. 写入事件日志和可视化数据
+```
+
+禁止在 AnyLogic 图形事件中对每一个代理同步等待在线 LLM 响应。网络延迟、失败重试和供应商限流会改变代理执行顺序，进而混入本不属于理论机制的差异。
+
+### 12.6 LLM 与 Python 集成方式
+
+| 接口选择 | 用途 | 当前判断 |
+| --- | --- | --- |
+| 本地版本化 JSON 服务 | 发送暴露包、调用 LLM、校验 schema、读取缓存和返回状态转移 | `PROVISIONAL`；正式优先方案 |
+| 离线回放文件 | 用固定 LLM 输出重复规则层、调度和网络实验 | `FIXED`；复现与跨引擎比较必需 |
+| AnyLogic Pypeline | 本地 Python 原型、低风险探索 | `PROVISIONAL`；不可作为唯一正式接口 |
+| GUI 内嵌 API key 或在线模型调用 | 便利性尝试 | `REJECTED`；不得把凭据写入模型文件或公开仓库 |
+
+Pypeline 是 AnyLogic 文档中列出的可选 Python 连接工具，但其文档也声明它是第三方库，不承诺官方支持或兼容性。因此，即使试用 Pypeline，正式结果仍必须通过独立日志和离线回放复现。
+
+### 12.7 适用情境、非适用情境与许可门槛
+
+| 情境 | AnyLogic 价值 | 采用条件 |
+| --- | --- | --- |
+| 网络扩散动画和组会展示 | 高 | 使用 Python 事件日志驱动可视化，动画不作为证据 |
+| 多方法扩展，例如将外部过程与群体代理耦合 | 中到高 | 额外过程有明确理论来源、分析层级和可测量对象 |
+| 参数扫描与敏感性展示 | 中 | 与 Python 输出使用同一参数集、随机种子和重复策略 |
+| 大规模 LLM 在线仿真 | 低 | 必须先有缓存、预算、超时、失败日志和回放方案 |
+| 开放代码复现与自动测试 | 低到中 | Python 参考引擎仍须完整可运行 |
+
+AnyLogic 的版本和许可可能影响可用实验类型、批处理方式、导出和模型规模；采用前必须记录实际软件版本、许可类型、运行环境和限制。任何免费／教育许可的限制都不得在论文或公开仓库中被隐去。
+
+### 12.8 采纳 AnyLogic 作为 P6 后端的门槛
+
+P6 只有在以下全部满足后才能开始：
+
+1. Python 参考引擎已通过 P1–P5 的质量门槛；
+2. 已有固定的 `ScenarioConfig`、`RunManifest`、事件日志和缓存 LLM 输出；
+3. 同一网络、初始状态、参数和缓存输入下，AnyLogic 与 Python 的规则层结果逐轮一致；
+4. 跨引擎差异被记录为实现差异，不用于支持研究假设；
+5. 许可证、模型文件、接口代码、环境版本和可公开资产边界已经记录；
+6. 未把 API key、参与者资料、受限数据或本地缓存写入 AnyLogic 模型或 Git 仓库。
+
+### 12.9 官方能力参考
 
 - AnyLogic Agent-Based Modeling: <https://anylogic.help/anylogic/agentbased/index.html>
 - Agent networks: <https://anylogic.help/anylogic/agentbased/connections-and-networks.html>
@@ -325,8 +426,6 @@ LLM 信息源、模拟人类的 LLM 调用、文本编码、提示版本、调�
 - Parameter variation: <https://anylogic.help/anylogic/experiments/parameter-variation.html>
 - Python/Pypeline integration: <https://anylogic.help/advanced/code/pypeline.html>
 - Editions and PLE limitations: <https://anylogic.help/anylogic/ui/editions.html>
-
-Pypeline 是可选连接工具，官方文档不承诺持续兼容。正式接口优先采用可测试的本地服务协议；不得在 GUI 事件中逐代理同步调用在线模型并让网络延迟改变模拟时序。
 
 ## 13. 日志、目录和数据边界
 
@@ -393,6 +492,7 @@ Pypeline 是可选连接工具，官方文档不承诺持续兼容。正式接�
 
 | 版本 | 日期 | 状态 | 变更 | 研究基准是否改变 |
 | --- | --- | --- | --- | --- |
+| 0.2.0 | 2026-09-03 | DRAFT | 将 AnyLogic（用户称 analogic）扩展为独立技术架构备选：三种部署方案、13 模块归属、跨引擎 JSON 契约、批处理轮次、接口风险、采用门槛和许可记录要求 | 否 |
 | 0.1.0 | 2026-09-03 | DRAFT | 首次汇总 HiSim 架构拆解、5 层 13 模块、数据契约、双向同步轮次、引擎策略、质量门槛和待决策表 | 否 |
 
 ## 17. 后续变更记录模板
