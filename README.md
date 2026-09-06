@@ -45,7 +45,7 @@ ABM_INFO/
 ├── 01_research_notes/                # 当前研究方向的理论、方法与文献笔记
 ├── 02_literature/                    # 文献索引、BibTeX 与本地论文
 ├── 03_presentations/                 # 原始 PPT、英文稿与历史展示版本
-├── 04_code/                          # dashboard 源码、HiSim 参考源码与辅助脚本
+├── 04_code/                          # 架构设计、实现目录、dashboard 与 HiSim 参考源码
 ├── 05_reviews_and_revision_history/  # 对齐审查、diff 与历史快照
 ├── 99_historical_directions/         # 已退出当前主线的旧 Paper 1 方向
 ├── tools/                            # 资料收集脚本
@@ -53,7 +53,15 @@ ABM_INFO/
 └── PROJECT_INVENTORY.csv              # 目标目录的文件清单与哈希
 ```
 
-## 使用边界
+## 文档与在线入口
+
+- [架构设计与版本记录](04_code/implementation/ARCHITECTURE_DESIGN.md)：混合 ABM 模块、接口与 AnyLogic 技术备选。
+- [AnyLogic 研究与 LLM 集成笔记](01_research_notes/current_direction/AnyLogic_studies_and_LLM_integration.md)：四项社会模拟研究的实现摘录、复现缺口，以及 Pypeline、Alpyne 和 LLM 场景生成路线；v0.1.0，尚未执行集成实验。
+- [HiSim 文献知识图谱说明](01_research_notes/literature_knowledge_graphs/README.md)：图谱文件与发布说明。
+- [GitHub Pages 在线图谱](https://hankant.github.io/ABM_INFO/)。
+- [当前研究笔记目录](01_research_notes/current_direction/README.md)与[代码目录说明](04_code/README.md)。
+
+## 研究使用边界
 
 - `99_historical_directions` 中的算法权威、搜索停止和群体智慧稿均为历史材料，不是现行 RP。
 - `01_research_notes/current_direction` 中仍可能包含候选设计。候选不因迁移而自动变成已确认方案。
@@ -66,4 +74,6 @@ ABM_INFO/
 
 已纳入正式稿、研究笔记、相关文献、PPT、方法审查、修订记录、dashboard 源码和 HiSim 参考源码。没有迁移 `node_modules`、Git 内部目录、构建输出、LaTeX 编译中间文件、Python 缓存、Office 临时锁文件或 PPT 渲染缓存。这些文件均可由源代码或正式文件重新生成。
 
-本目录尚未初始化为 Git 仓库。
+本目录已初始化为 Git 仓库，远程仓库为 [Hankant/ABM_INFO](https://github.com/Hankant/ABM_INFO)，主分支为 `main`。
+
+目录说明更新：2026-09-06。`SOURCE_MANIFEST.csv` 记录迁移来源，`PROJECT_INVENTORY.csv` 为已有清单快照；新增研究笔记通过 Git 记录，不将其伪记为迁移来源。

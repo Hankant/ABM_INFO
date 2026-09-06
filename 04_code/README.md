@@ -14,4 +14,6 @@ HiSim/AgentVerse 的本地参考源码，用于检查混合 LLM-agent/规则-age
 
 ## 后续实现
 
-Paper 1 的正式模拟器尚未在本次迁移中创建。后续代码应放入新的 `implementation` 子目录，并保持三函数接口、两类 LLM 角色、人类校准数据与模拟输出的分离。
+`implementation` 已包含 [ARCHITECTURE_DESIGN.md](implementation/ARCHITECTURE_DESIGN.md)，用于记录混合 ABM 的模块、接口、AnyLogic 备选方案与架构版本。正式模拟器实现应放在该目录，并保持三函数接口、两类 LLM 角色、人类校准数据与模拟输出的分离。
+
+相关文献与工具证据见 [AnyLogic 研究与 LLM 集成笔记](../01_research_notes/current_direction/AnyLogic_studies_and_LLM_integration.md)（v0.1.0，2026-09-06）。Pypeline、Alpyne 等方案目前处于技术探索阶段，尚未执行集成实验。
