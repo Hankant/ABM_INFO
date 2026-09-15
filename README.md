@@ -47,6 +47,7 @@ ABM_INFO/
 ├── 03_presentations/                 # 原始 PPT、英文稿与历史展示版本
 ├── 04_code/                          # 架构设计、实现目录、dashboard 与 HiSim 参考源码
 ├── 05_reviews_and_revision_history/  # 对齐审查、diff 与历史快照
+├── 07_example_projects/             # 样例文献、工程设计、源码入口与复现记录
 ├── 99_historical_directions/         # 已退出当前主线的旧 Paper 1 方向
 ├── tools/                            # 资料收集脚本
 ├── SOURCE_MANIFEST.csv               # 每个复制文件的原始路径与哈希
@@ -55,6 +56,7 @@ ABM_INFO/
 
 ## 文档与在线入口
 
+- [样例工程库](07_example_projects/README.md)：HiSim 样例、AnyLogic/LLM 集成候选及新增样例模板。
 - [架构设计与版本记录](04_code/implementation/ARCHITECTURE_DESIGN.md)：混合 ABM 模块、接口与 AnyLogic 技术备选。
 - [AnyLogic 研究与 LLM 集成笔记](01_research_notes/current_direction/AnyLogic_studies_and_LLM_integration.md)：四项社会模拟研究的实现摘录、复现缺口，以及 Pypeline、Alpyne 和 LLM 场景生成路线；v0.1.0，尚未执行集成实验。
 - [HiSim 文献知识图谱说明](01_research_notes/literature_knowledge_graphs/README.md)：图谱文件与发布说明。
