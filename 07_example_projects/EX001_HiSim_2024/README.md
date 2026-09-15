@@ -1,11 +1,11 @@
 # EX001 · HiSim 2024
 
-版本：0.1.0；更新：2026-09-15。
+版本：0.1.1；更新：2026-09-15。
 
 ## 文献与材料入口
 
 - 文献标识：2024.findings-acl.285；[出版页面](https://aclanthology.org/2024.findings-acl.285/)（公开入口，本次目录整理未重新联网核验）。
-- [本地 PDF 原文](../../02_literature/user_supplied_originals/MouEtAl2024_HiSim_2024.findings-acl.285.pdf)：仅本地保存，不随公开库同步。
+- [PDF 原文](../../02_literature/user_supplied_originals/MouEtAl2024_HiSim_2024.findings-acl.285.pdf)：按用户要求纳入 Git，本地和 GitHub 均可访问。
 - [方法拆解](../../01_research_notes/current_direction/Paper1_HiSim混合ABM方法拆解_2026-08-25.md)。
 - [交互知识图谱](../../01_research_notes/literature_knowledge_graphs/hisim-2024-abm-knowledge-graph.html) · [在线图谱](https://hankant.github.io/ABM_INFO/)。
 - [第三方参考源码](../../04_code/third_party_reference/HiSim_source_audit/)：原 README、作者与许可证保留在该目录。
@@ -22,7 +22,7 @@
 9F12D10B60D363F79E226D8606516C6BED6AA9DFBA4D7AE67D96BBE50AA681D2
 ```
 
-因此使用已有归档文件作为本地阅读入口；根目录副本保持原样，未删除或移动。
+因此使用已有归档文件作为统一阅读入口并纳入 Git；根目录副本保持原样，未删除、移动或重复上传。
 
 ## 工程设计与复现任务
 
@@ -42,4 +42,5 @@
 
 ## 版本记录
 
+- 0.1.1（2026-09-15）：按用户要求将归档 PDF 纳入 Git，更新阅读说明。
 - 0.1.0（2026-09-15）：登记现有材料、PDF 重复核对结果和复现待办。

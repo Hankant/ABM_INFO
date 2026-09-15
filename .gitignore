@@ -45,3 +45,5 @@ rendered/
 # Public metadata, BibTeX, notes, and verified links remain tracked.
 /02_literature/papers/**/*.pdf
 /02_literature/user_supplied_originals/**/*.pdf
+# Explicitly included sample paper at the user's request.
+!/02_literature/user_supplied_originals/MouEtAl2024_HiSim_2024.findings-acl.285.pdf

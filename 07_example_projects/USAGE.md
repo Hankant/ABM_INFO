@@ -1,6 +1,6 @@
 # 样例工程库使用说明
 
-版本：0.1.0；更新：2026-09-15。
+版本：0.1.1；更新：2026-09-15。此版将 HiSim PDF 更新为 Git 跟踪文件。
 
 ## 1. 从哪里开始
 
@@ -52,9 +52,9 @@
 
 ## 6. PDF 和 Git 如何管理
 
-当前 `.gitignore` 排除了 `02_literature/papers` 和 `02_literature/user_supplied_originals` 下的 PDF。因此推送文献笔记和样例档案不会自动上传这些全文。
+当前 `.gitignore` 默认排除 `02_literature/papers` 和 `02_literature/user_supplied_originals` 下的 PDF；HiSim 归档 PDF 已按用户要求添加单文件例外，纳入 Git。可通过 EX001 的 PDF 链接在线阅读或下载。
 
-截至本次核对，HiSim 归档 PDF 未被 Git 跟踪；根目录 `2024.findings-acl.285 (1).pdf` 是未跟踪副本，也未随上次提交上传。两份文件已核验内容相同，哈希见 EX001 档案。
+根目录 `2024.findings-acl.285 (1).pdf` 保留为未跟踪副本，不重复上传。两份文件已核验内容相同，哈希见 EX001 档案。
 
 若后续决定把某篇可共享全文纳入 Git，应明确选择该文件、核验共享条件，并同步修改该文件的忽略规则及在线链接；不要通过全目录强制添加上传所有本地文献。
 
