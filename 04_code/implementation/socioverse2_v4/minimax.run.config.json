@@ -1,0 +1,12 @@
+{
+  "base_url": "https://api.minimax.cn/v1",
+  "model": "MiniMax-M3",
+  "api_profile": "minimax_m3",
+  "contract_status": "authorized_engineering_run",
+  "pbd": 0.0,
+  "gt": 0.6,
+  "rf": 0.6,
+  "strategy": "inside",
+  "behavior_seed": 20261020,
+  "max_requests": 12200
+}

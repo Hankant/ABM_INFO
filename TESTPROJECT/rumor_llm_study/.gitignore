@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.env
+.env.*
+.venv/
+.deps/
+outputs/
+private_data/
+data_inventory.json
+*.lock
+_private/
+.audit_dependencies/
+audit_*.py
+deliverables/

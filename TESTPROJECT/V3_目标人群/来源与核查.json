@@ -1,0 +1,38 @@
+{
+  "created_date": "2026-10-18",
+  "classification": "derived_identity_table_not_observed_population",
+  "sources": [
+    {
+      "path": "../同模型双框架_最小共同输入包/inputs/population_identity.jsonl",
+      "sha256": "ed807d89da5e1a400929c6ee6afd157228f5243986b6ccd9d6cd1c1e1ddc8108",
+      "role": "identity_and_group_authority"
+    },
+    {
+      "path": "../SocioVerse2_完整交接包_20261017/90_旧交接内容_非原始数据_不作比较输入/data/population/population_roster_draft.jsonl",
+      "sha256": "a1c68a3724985babd763a843b54405850a1770689eb51740b0fe4ba46d4c5492",
+      "role": "cross_check_only_no_profile_import"
+    }
+  ],
+  "output": {
+    "path": "用户身份表.csv",
+    "sha256": "a88d9a7e5767e8b6a3d7013eb191ccea736816b3fcdbd00d599ef728d58e3daa"
+  },
+  "checks": {
+    "rows": 582,
+    "unique_agent_ids": 582,
+    "inside": 82,
+    "outside": 500,
+    "all_identity_fields_match_source": true,
+    "legacy_identity_match": true,
+    "non_null_legacy_donor_ids": 0,
+    "source_account_ids_missing": 582,
+    "initial_states_unresolved": 582
+  },
+  "processing": [
+    "Preserved row order, IDs, groups and follows_source; no resampling.",
+    "Added blank source_account_id because no per-agent account mapping exists in audited roster.",
+    "identity_source_record is the key in the source identity file, not a real account identifier.",
+    "Omitted initial_state from identity CSV; all 582 source nulls remain unresolved, not defaulted.",
+    "No profile donor records, network edges, behavioral probabilities or generated simulation outputs imported."
+  ]
+}

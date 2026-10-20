@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "base_url": "https://api.zetatechs.com/v1",
+  "requested_model": "deepseek-v4-flash",
+  "actual_model": "deepseek-v4-flash",
+  "decision": {
+    "belief_score": 50,
+    "action": "silent",
+    "target_post_id": null,
+    "public_stance": "none",
+    "comment": "",
+    "reason": "信息缺乏可靠来源，暂不判断。"
+  },
+  "usage": {
+    "completion_tokens": 56,
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 391,
+    "prompt_tokens": 391,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 447
+  },
+  "requests_used": 4,
+  "requests_this_probe": 1,
+  "allowed_total": 20,
+  "cache_hit": false,
+  "scope": "synthetic single-decision protocol probe; not a full study trajectory"
+}

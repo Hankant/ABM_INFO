@@ -1,0 +1,43 @@
+{
+  "started_at_unix": 1791802034.152385,
+  "code_hash": "261c6e1f64f504961ba158b6bded6c1c83e0dd45bf9f44076ad1ea657cc5ae22",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "provider_mode": "mock",
+  "real_llm_success": true,
+  "import": {
+    "total_events": 125,
+    "nonempty_source_events": 75,
+    "missing_source_events": 50
+  },
+  "full_population_check": {
+    "agents": 582,
+    "last_round": 80,
+    "parent_and_policy_runs": 2,
+    "policy_tg": 50,
+    "states_rows": 46560,
+    "unique_direct_recipients": 40,
+    "exact_export_after_resume": true,
+    "http_requests": 0
+  },
+  "grid_check": {
+    "agents": 10,
+    "policy_branches": 45,
+    "parent_trajectories": 1,
+    "tg": [
+      10,
+      20,
+      30,
+      40,
+      50
+    ],
+    "last_round": 80,
+    "same_recipients_across_gt": true,
+    "shared_baseline_pbd": true,
+    "http_requests": 0
+  },
+  "real_api_probe_requests": 4,
+  "real_api_probe_scope": "single-decision interface check; full trajectories above are mock",
+  "finished_at_unix": 1791802139.090779,
+  "elapsed_seconds": 104.94,
+  "offline_verification_passed": true
+}

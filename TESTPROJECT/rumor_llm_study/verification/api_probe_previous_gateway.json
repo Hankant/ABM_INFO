@@ -1,0 +1,8 @@
+{
+  "success": false,
+  "http_status": 403,
+  "server_response": "{\"error\":{\"message\":\"User disabled.\",\"type\":\"bad_response_status_code\",\"param\":\"\",\"code\":\"bad_response_status_code\"}}",
+  "requests_used": 1,
+  "allowed_total": 20,
+  "note": "No successful model decision; no mock result substituted."
+}

@@ -1,0 +1,19 @@
+{
+  "status": "plan_only_shared_model_and_adapters_pending",
+  "raw_excel_is_not_prerequisite": true,
+  "historical_content_excluded": true,
+  "files": [
+    {
+      "name": "00_先读_原始数据与交接状态.md",
+      "sha256": "354616e92960835477561da7d8a19797e34adaf9646e7c4be1369853de4f795d"
+    },
+    {
+      "name": "01_共同起点与比较规则.md",
+      "sha256": "7a9a91c13c85fe8e11243eec5a9ac1aa6ae52587710e4dbb972c86eb7904889a"
+    },
+    {
+      "name": "02_数据来源分级表.json",
+      "sha256": "e57fdfccc3808f872b3669027a7a4b55a0bfe15183deb878d4e2c082d41f663c"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "status": "historical_reference_only_do_not_use_as_migration_defaults",
+  "transformation": "llm service configuration omitted; remaining values copied",
+  "configuration": {
+    "belief": {
+      "accept_min": 60,
+      "reject_max": 40
+    },
+    "feed": {
+      "direct_extra_slots": 1,
+      "following_slots": 1,
+      "max_reads_per_post": 3,
+      "max_reposts_per_content": 1,
+      "memory_decision_rounds": 5,
+      "new_user_post_delay": 1,
+      "post_ttl_rounds": 40,
+      "recency_half_life_rounds": 5,
+      "recommendation_probability": 0.1,
+      "recommendation_slots": 1,
+      "repeat_gap_rounds": 5
+    },
+    "grid": {
+      "credibility": [
+        0.2,
+        0.6,
+        1.0
+      ],
+      "d_seed": [
+        0.0,
+        0.2,
+        0.4
+      ],
+      "government_round": [
+        10,
+        20,
+        30,
+        40,
+        50
+      ],
+      "seeds": [
+        1,
+        2,
+        3
+      ],
+      "targeting": [
+        "inside",
+        "random",
+        "outside"
+      ]
+    },
+    "label": "single_event_social_582_v2",
+    "network": {
+      "cross_group_follows": 2,
+      "directed": true,
+      "inside_follow_source": true,
+      "outside_follow_source": false,
+      "pre_follow_government": false,
+      "same_group_follows": 8
+    },
+    "policy": {
+      "direct_delivery_rounds": 1,
+      "direct_unique_users": 40
+    },
+    "population": {
+      "activity_levels": [
+        0.1,
+        0.2,
+        0.3
+      ],
+      "inside_counts": [
+        27,
+        28,
+        27
+      ],
+      "n_inside": 82,
+      "n_outside": 500,
+      "outside_counts": [
+        167,
+        166,
+        167
+      ],
+      "sharing_styles": [
+        "rare",
+        "sometimes",
+        "often"
+      ],
+      "trust_levels": [
+        0.25,
+        0.5,
+        0.75
+      ],
+      "willing_inside": 49,
+      "willing_outside": 300
+    },
+    "prior": {
+      "overall_mean": 0.579,
+      "within_group_offset": 0.05
+    },
+    "schema_version": "1.0",
+    "social": {
+      "enabled": true,
+      "protocol": "single_event_social_v1",
+      "thread_comment_slots": 2,
+      "thread_repost_slots": 1
+    },
+    "time": {
+      "first_decision_round": 1,
+      "followup_include_both_endpoints": true,
+      "followup_max_elapsed": 30,
+      "last_round": 80,
+      "pb_checkpoint_round": 5,
+      "source_round": 0
+    }
+  }
+}

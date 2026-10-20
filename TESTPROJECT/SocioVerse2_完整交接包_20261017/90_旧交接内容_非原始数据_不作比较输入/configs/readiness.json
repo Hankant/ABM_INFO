@@ -1,0 +1,72 @@
+{
+  "stage": "handoff_data_and_configuration",
+  "data_files_validated": true,
+  "runtime_ready": false,
+  "provider_registered": false,
+  "schema_validated_in_socioverse": false,
+  "blockers": [
+    {
+      "id": "contact_mode",
+      "description": "Final spatial versus network contact implementation",
+      "status": "pending"
+    },
+    {
+      "id": "world_geometry",
+      "description": "World extent and initial position distribution",
+      "status": "pending"
+    },
+    {
+      "id": "motion_boundary",
+      "description": "Direction sampling, distance units and boundary handling",
+      "status": "pending"
+    },
+    {
+      "id": "contact_threshold",
+      "description": "Effective encounter criterion",
+      "status": "pending"
+    },
+    {
+      "id": "circle_update",
+      "description": "Initial circle and resizing function",
+      "status": "pending"
+    },
+    {
+      "id": "lifetime",
+      "description": "LC clock origin, affected object and expiry behavior",
+      "status": "pending"
+    },
+    {
+      "id": "initial_states",
+      "description": "Initial ordinary-user states and initial spreaders",
+      "status": "pending"
+    },
+    {
+      "id": "tick_conflicts",
+      "description": "Tick order, multiple contacts, repeated belief updates and reversal",
+      "status": "pending"
+    },
+    {
+      "id": "peer_correction",
+      "description": "Acceptance rule for correction from ordinary users",
+      "status": "pending"
+    },
+    {
+      "id": "probability_precision",
+      "description": "Rounded manuscript table versus exact proportional computation",
+      "status": "pending"
+    },
+    {
+      "id": "experiment_selection",
+      "description": "Selected first conditions, formal seeds and repetition count",
+      "status": "pending"
+    }
+  ],
+  "downstream_open_items": [
+    {
+      "id": "conversion_fraction_denominator",
+      "status": "pending",
+      "blocks": "that_metric_only"
+    }
+  ],
+  "simulation_executed": false
+}

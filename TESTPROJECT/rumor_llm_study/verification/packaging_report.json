@@ -1,0 +1,11 @@
+{
+  "archive": "LLM_Agent_代码与数据_ZetaTechs.zip",
+  "file_count_before_manifest": 294,
+  "extracted_unit_tests_passed": true,
+  "extracted_event_check_passed": true,
+  "extracted_estimate_passed": true,
+  "ready_event_paths": 75,
+  "private_archives_included": false,
+  "credential_pattern_scan_passed": true,
+  "http_requests_during_packaging": 0
+}

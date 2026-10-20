@@ -1,0 +1,6 @@
+{
+  "base_url": "https://api.minimax.cn/v1",
+  "model": "MiniMax-M3",
+  "api_profile": "minimax_m3",
+  "contract_status": "engineering_only_pending_confirmation"
+}

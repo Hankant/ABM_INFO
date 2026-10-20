@@ -1,0 +1,63 @@
+{
+  "study_id": "rumor_refutation_migration",
+  "layers": [
+    {
+      "name": "world_geometry",
+      "modality": "physical",
+      "scope": "macro",
+      "dynamics": "static",
+      "description": "Abstract simulation geometry; no real map assumed"
+    },
+    {
+      "name": "circle_state",
+      "modality": "physical",
+      "scope": "macro",
+      "dynamics": "endogenous",
+      "description": "Current circle geometry"
+    },
+    {
+      "name": "contact_state",
+      "modality": "physical",
+      "scope": "local",
+      "dynamics": "endogenous",
+      "description": "Effective contacts projected to recipients"
+    },
+    {
+      "name": "government_policy",
+      "modality": "physical",
+      "scope": "macro",
+      "dynamics": "scheduled",
+      "description": "Internal government activation and policy parameters"
+    },
+    {
+      "name": "rumor_content",
+      "modality": "information",
+      "scope": "local",
+      "dynamics": "static",
+      "description": "Rumor available only through valid contact"
+    },
+    {
+      "name": "correction_content",
+      "modality": "information",
+      "scope": "local",
+      "dynamics": "scheduled",
+      "description": "Correction available only after activation and valid contact"
+    }
+  ],
+  "scheduled_events": [],
+  "information_program": {
+    "broadcasts": []
+  },
+  "provider_ref": "rumor_refutation.environment",
+  "provider_args": {
+    "contact_mode": null,
+    "world_geometry_spec": null,
+    "motion_spec": null,
+    "contact_spec": null,
+    "circle_update_spec": null,
+    "lifetime_spec": null,
+    "tick_order_spec": null,
+    "government_initially_enabled": false,
+    "source_record": "event_052"
+  }
+}

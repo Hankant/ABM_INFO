@@ -1,0 +1,23 @@
+{
+  "parent_run": "government-rumor-v4-openai-20261019-231951-698018",
+  "parent_code_sha256": {
+    "check_minimax.py": "8fceb57bd82cf86e30d7b9081e91456101199d2ba07ce9a02a611d812817ac54",
+    "check_minimax_key.py": "f1a1332a58e2e85c53bac32bd1ac71aa26c631e1bf15bfde8930f6dcc437be63",
+    "llm_client.py": "5f328c8a8730f18e11e3c6e95ac1c4779c171d3737995fc0025cfe453129fdfd",
+    "model.py": "55f946927b9148dcd4f70b871281831a3ad437f1d6562b143cd59dda333bf634",
+    "run.py": "40f3edf8e652a4150399e41c440f0354efe097a4731ab952ddcdb032721068d4",
+    "test_model.py": "4673210bfba9ca71a64bd50b236842b3ed45973997f47be25fe9375112f5f3ab",
+    "test_recovery.py": "73d1b91b2814e8cb69ca0738ec7b95aae61d0ae805940284461f1a09c8996aa2",
+    "verify_run.py": "090e4e377cd4c732432d2c50e61faf0e59a906e54f206e46baf03f8478e68e0d"
+  },
+  "target_code_sha256": {
+    "check_minimax.py": "8fceb57bd82cf86e30d7b9081e91456101199d2ba07ce9a02a611d812817ac54",
+    "check_minimax_key.py": "f1a1332a58e2e85c53bac32bd1ac71aa26c631e1bf15bfde8930f6dcc437be63",
+    "llm_client.py": "c5035e8ecff0c6749be61337dcbdf05b443249f0be062a048d91f5b8f3b2cdd5",
+    "model.py": "139375902e540de982e6f717f377318d846f0c462dfb6a9f369d12b37b381d95",
+    "run.py": "98112a7b8b451b397ddf8c9a261b798c7fe2809007bc4e003a08a7fad6e8cf4f",
+    "test_model.py": "4673210bfba9ca71a64bd50b236842b3ed45973997f47be25fe9375112f5f3ab",
+    "test_recovery.py": "d1069b2420f2394545e7d4e255a2cc8206657800d7d651db789ab8a72aa2d3b1",
+    "verify_run.py": "090e4e377cd4c732432d2c50e61faf0e59a906e54f206e46baf03f8478e68e0d"
+  }
+}

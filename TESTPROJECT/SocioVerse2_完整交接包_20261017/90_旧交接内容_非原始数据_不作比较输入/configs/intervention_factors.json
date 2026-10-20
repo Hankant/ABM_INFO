@@ -1,0 +1,44 @@
+{
+  "factors": {
+    "PBd": [
+      0,
+      0.2,
+      0.4
+    ],
+    "T_G": [
+      20,
+      40,
+      60,
+      80,
+      100,
+      120,
+      140,
+      160,
+      180
+    ],
+    "In_out": [
+      0,
+      1,
+      2
+    ],
+    "GT": [
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1
+    ]
+  },
+  "In_out_labels": {
+    "0": "outside",
+    "1": "random",
+    "2": "inside"
+  },
+  "RF": 0.6,
+  "n_steps": 400,
+  "cartesian_condition_count": 405,
+  "execution_authorized": false,
+  "formal_seeds": null,
+  "repetitions_per_condition": null,
+  "selected_conditions": []
+}

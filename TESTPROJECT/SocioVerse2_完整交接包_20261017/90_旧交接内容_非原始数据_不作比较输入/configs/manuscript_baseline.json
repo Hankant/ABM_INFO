@@ -1,0 +1,30 @@
+{
+  "status": "source_parameter_extract_not_runnable_config",
+  "source": "Manuscripts: section_3.2 and tables_1_3",
+  "time": {
+    "n_steps": 400,
+    "unit": "abstract_tick",
+    "tick_mapping_status": "pending"
+  },
+  "population": {
+    "inside": 82,
+    "outside": 500,
+    "ordinary_total": 582,
+    "special_roles_excluded": [
+      "SOURCE",
+      "GOVERNMENT"
+    ]
+  },
+  "parameters": {
+    "NF": 82,
+    "RI": 1,
+    "LC": 250,
+    "UA": 2,
+    "RC": 0.1,
+    "PR": 11.7,
+    "PB": 0.579,
+    "RF": 0.6
+  },
+  "units_note": "Do not interpret RI or PR as a geometric radius; motion, lifetime, contact and geometry semantics remain incomplete.",
+  "source_evidence_status": "manuscript_reports_calibration_not_independently_reestimated"
+}

@@ -1,0 +1,25 @@
+{
+  "status": "draft",
+  "n_inside": 82,
+  "n_outside": 500,
+  "id_range": [
+    "A0001",
+    "A0582"
+  ],
+  "group_assignment": "A0001-A0082 inside; remainder outside",
+  "initial_state": null,
+  "default_mode": "rule_defined_without_profiles",
+  "optional_profile_mode": "public_counts_only",
+  "profile_pool_count": 305,
+  "profile_sampling": {
+    "method": "without_replacement_then_replacement_if_needed_then_shuffle",
+    "first_unique_draw_count": 305,
+    "additional_draw_count": 277,
+    "population_seed": null,
+    "seed_status": "not_selected",
+    "stream": "isolated_from_motion_and_behavior"
+  },
+  "probability_source": "group_probability_table.json",
+  "profile_fields_affect_probabilities": false,
+  "formal_run_ready": false
+}

@@ -1,0 +1,20 @@
+{
+  "parent_run": "government-rumor-v5-openai-20261020-020101-641582",
+  "parent_code_sha256": {
+    "llm_client.py": "b2cf9f8124e1dcd041271bc0a579299cc789487282abfe2ab326288ca5f7bbb1",
+    "model.py": "cab66fb645ad754ff8fcf3986b916ad1916492178f41b9715bc23b1b21452179",
+    "run.py": "ea9536e3e5d537e7bbfc55861a9467e0c64b45256331fe6f69507e9642a5a48b",
+    "test_exposure.py": "3e7c959a5b22545791a785173134d8fd36fd878f9060259a1e3c391134a645cc",
+    "test_model.py": "081782014aff56e7dcf2b2b0cc307551ffb741084d77b8de3d5590115d7e2c90",
+    "test_recovery.py": "e2ad54b9ae59d704001ea0cbb6a90d62254237992a9ddd702f5e583e89dc9c5b"
+  },
+  "target_code_sha256": {
+    "llm_client.py": "7b665f03dc9a2aa2597c0d4ad29981e19c5c0f4c4f1c296edfbd93261d3799fe",
+    "model.py": "a99986980ae30648734588e24a6ee83e348c0c136769188b72dddf8249b0ab60",
+    "run.py": "0f2e2d33b085265f7991073bbe0a501319baa24c3ee963e3cfae32b306adcf3f",
+    "test_dropout.py": "b92af0b8208d15a5b20356bd235308beef56e049d90e63637d98694fb13e7723",
+    "test_exposure.py": "3e7c959a5b22545791a785173134d8fd36fd878f9060259a1e3c391134a645cc",
+    "test_model.py": "081782014aff56e7dcf2b2b0cc307551ffb741084d77b8de3d5590115d7e2c90",
+    "test_recovery.py": "e2ad54b9ae59d704001ea0cbb6a90d62254237992a9ddd702f5e583e89dc9c5b"
+  }
+}

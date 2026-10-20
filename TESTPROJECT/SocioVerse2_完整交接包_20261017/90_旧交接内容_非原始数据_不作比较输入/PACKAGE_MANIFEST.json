@@ -1,0 +1,171 @@
+{
+  "package_version": "2026-10-17-data-added",
+  "simulation_executed": false,
+  "files": [
+    {
+      "file": "00_整套交接方案与上传清单.md",
+      "bytes": 8909,
+      "sha256": "07300c731ee9331a8b8fb22a5c78806e7861431e0d4f29c0822c81b87c24b0cd",
+      "source": "handoff_specification_or_derived_export",
+      "operation": "generated_or_curated"
+    },
+    {
+      "file": "01_环境搭建指令.md",
+      "bytes": 36236,
+      "sha256": "7cc93e92c16563f8f4b421e3f632d3cdfa0b9eb4525e417f36129693cd0fa733",
+      "source": "handoff_specification_or_derived_export",
+      "operation": "generated_or_curated"
+    },
+    {
+      "file": "02_目标人群抽样生成指令.md",
+      "bytes": 12075,
+      "sha256": "5854e424106eea9e821e8c5bf09639c525798e9c613ea97a97ac15c55479aba1",
+      "source": "handoff_specification_or_derived_export",
+      "operation": "generated_or_curated"
+    },
+    {
+      "file": "03_推演与实验配置指令.md",
+      "bytes": 6272,
+      "sha256": "cc2936601532798bafdc88fb9b7fee0657b63fc3d833c7689a932295d05dbb20",
+      "source": "handoff_specification_or_derived_export",
+      "operation": "generated_or_curated"
+    },
+    {
+      "file": "04_报告与验收指令.md",
+      "bytes": 5072,
+      "sha256": "d5d060b8824aad06663798265e829faf891491aa53c894745cbdbbae277a2009",
+      "source": "handoff_specification_or_derived_export",
+      "operation": "generated_or_curated"
+    },
+    {
+      "file": "05_数据与配置文件说明.md",
+      "bytes": 3275,
+      "sha256": "7e99954bed1ac57a6a1f9f668ce21bdd2ee6f6a9be9473cd478373ee31d77b32",
+      "source": "handoff_specification_or_derived_export",
+      "operation": "generated_or_curated"
+    },
+    {
+      "file": "configs/candidate_conditions_405.json",
+      "bytes": 81273,
+      "sha256": "81916e70423b051a1859874a3bbc6b71204dfeef345302d63c76d3421fbf904b",
+      "source": "handoff_specification_or_derived_export",
+      "operation": "generated_or_curated"
+    },
+    {
+      "file": "configs/environment_draft.json",
+      "bytes": 1754,
+      "sha256": "012b9b64be933bf03eecd1b1167dd1612c584ebebae15118117baf1c5232b479",
+      "source": "handoff_specification_or_derived_export",
+      "operation": "generated_or_curated"
+    },
+    {
+      "file": "configs/group_probability_table.json",
+      "bytes": 880,
+      "sha256": "e50b45a7c18769a72e39d49beb44820ef8e8081289842f4fac641d65541c9339",
+      "source": "handoff_specification_or_derived_export",
+      "operation": "generated_or_curated"
+    },
+    {
+      "file": "configs/intervention_factors.json",
+      "bytes": 623,
+      "sha256": "a8b3245dad8d37fd9e531332f7fdbd2a7e9e084851c6c11397b9de029414de23",
+      "source": "handoff_specification_or_derived_export",
+      "operation": "generated_or_curated"
+    },
+    {
+      "file": "configs/manuscript_baseline.json",
+      "bytes": 780,
+      "sha256": "c58f1d17133f683abe3e65a1db18255c0ac105a40e9730a01f0e0fe36864a112",
+      "source": "handoff_specification_or_derived_export",
+      "operation": "generated_or_curated"
+    },
+    {
+      "file": "configs/population_generation.json",
+      "bytes": 773,
+      "sha256": "1e54d0e9c812951b4493dd8c02b44104c901dae2cbc15a283fa1c88af395ce12",
+      "source": "handoff_specification_or_derived_export",
+      "operation": "generated_or_curated"
+    },
+    {
+      "file": "configs/readiness.json",
+      "bytes": 2062,
+      "sha256": "d6314df0f67c2ed78fe7a8edcced554dbf1dbafd356937f048ebc65b42ebe79e",
+      "source": "handoff_specification_or_derived_export",
+      "operation": "generated_or_curated"
+    },
+    {
+      "file": "data/event_052/behavior_summary.json",
+      "bytes": 1607,
+      "sha256": "f96c9fce22ffff928699c45bd906f62b772957916d640e63a2b33b7b291bad21",
+      "source": "existing_single_event_dataset:behavior_summary.json",
+      "operation": "byte_identical_copy",
+      "source_sha256": "f96c9fce22ffff928699c45bd906f62b772957916d640e63a2b33b7b291bad21"
+    },
+    {
+      "file": "data/event_052/data_scope.json",
+      "bytes": 898,
+      "sha256": "5245184324674bcacc1cbb4d3d975bda68348ee965388a34695699fab13816ba",
+      "source": "handoff_specification_or_derived_export",
+      "operation": "generated_or_curated"
+    },
+    {
+      "file": "data/event_052/event.json",
+      "bytes": 3555,
+      "sha256": "e647f95701d27de13ee32be7544d6005d23a462da3c1f4932d71d9da1a91b691",
+      "source": "existing_single_event_dataset:event.json",
+      "operation": "byte_identical_copy",
+      "source_sha256": "e647f95701d27de13ee32be7544d6005d23a462da3c1f4932d71d9da1a91b691"
+    },
+    {
+      "file": "data/event_052/profiles.jsonl",
+      "bytes": 264580,
+      "sha256": "0d5afcd7bb2b4cf95d3e296e7eae17bc5dd4f7e6e38663449352db2cfa6f19e9",
+      "source": "existing_single_event_dataset:profiles.jsonl",
+      "operation": "byte_identical_copy",
+      "source_sha256": "0d5afcd7bb2b4cf95d3e296e7eae17bc5dd4f7e6e38663449352db2cfa6f19e9"
+    },
+    {
+      "file": "data/population/population_roster_draft.jsonl",
+      "bytes": 122056,
+      "sha256": "a1c68a3724985babd763a843b54405850a1770689eb51740b0fe4ba46d4c5492",
+      "source": "handoff_specification_or_derived_export",
+      "operation": "generated_or_curated"
+    },
+    {
+      "file": "data/population/profile_donors.jsonl",
+      "bytes": 76641,
+      "sha256": "53341663e57422dddfd4375590ef7d5596f5c865e98c3dd0f5989414021f9ab3",
+      "source": "handoff_specification_or_derived_export",
+      "operation": "generated_or_curated"
+    },
+    {
+      "file": "data/population/roles.json",
+      "bytes": 296,
+      "sha256": "d62747a32871212c198bbdcc09396405f9cb5d6175b13e1e8ee587673290fc66",
+      "source": "handoff_specification_or_derived_export",
+      "operation": "generated_or_curated"
+    },
+    {
+      "file": "reference/legacy_single_event_config.json",
+      "bytes": 2490,
+      "sha256": "1f5ce72e63dcf235d9ece085a499fa09ffb213a504bd21d0c2fbbf9f09f39e91",
+      "source": "handoff_specification_or_derived_export",
+      "operation": "generated_or_curated"
+    },
+    {
+      "file": "配置表速查.md",
+      "bytes": 705,
+      "sha256": "f1df6d06b6101257ff24b43ca3c7cfc1e7814a2cef75fa785517ecfd0cabb9b6",
+      "source": "handoff_specification_or_derived_export",
+      "operation": "generated_or_curated"
+    }
+  ],
+  "validation": {
+    "profile_donors": 305,
+    "ordinary_agents_draft": 582,
+    "inside": 82,
+    "outside": 500,
+    "candidate_conditions_not_executed": 405,
+    "json_and_jsonl_parsed": true
+  }
+}

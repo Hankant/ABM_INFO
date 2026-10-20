@@ -1,0 +1,81 @@
+{
+  "event_id": "event_052",
+  "source_workbook_candidate": "32.weibotest-fupin2_new.xls",
+  "locator_basis": "existing_event_index_csv_row_for_event_052",
+  "raw_file_present": false,
+  "earliest_collection_provenance_verified": false,
+  "comparison_ready": false,
+  "items": [
+    {
+      "name": "event.json",
+      "class": "mixed_derived_and_experimental",
+      "transformations": [
+        "source text extraction",
+        "normalization into event schema",
+        "experimental correction template insertion"
+      ],
+      "raw_eligible": false
+    },
+    {
+      "name": "profiles.jsonl",
+      "class": "derived",
+      "transformations": [
+        "user ID normalization",
+        "user deduplication",
+        "anonymous donor identifiers",
+        "public count parsing",
+        "retrospective behavior features in newer version"
+      ],
+      "raw_eligible": false
+    },
+    {
+      "name": "behavior_summary.json",
+      "class": "aggregate_derived",
+      "raw_eligible": false
+    },
+    {
+      "name": "profile_donors.jsonl",
+      "class": "derived_field_subset",
+      "raw_eligible": false
+    },
+    {
+      "name": "population_roster_draft.jsonl",
+      "class": "generated_synthetic_model_input",
+      "raw_eligible": false
+    },
+    {
+      "name": "candidate_conditions_405.json",
+      "class": "generated_experimental_design",
+      "raw_eligible": false
+    },
+    {
+      "name": "group_probability_table.json",
+      "class": "manuscript_parameter_transcription",
+      "raw_eligible": false,
+      "usage": "possible_shared_research_setting_not_observational_data"
+    },
+    {
+      "name": "environment_draft.json",
+      "class": "framework_specific_configuration",
+      "raw_eligible": false
+    },
+    {
+      "name": "legacy_single_event_config.json",
+      "class": "historical_model_configuration",
+      "raw_eligible": false
+    }
+  ],
+  "archive_usage": "candidate_common_inputs_and_provenance; not raw; not automatically approved baseline",
+  "searched_scope": [
+    "current_ABM_INFO_workspace_excel_filenames",
+    "two_original_code_zip_contents"
+  ],
+  "needed_material": "Existing processed inputs may be frozen for both frameworks; raw workbook optional for later provenance audit.",
+  "comparison_scope": "same_model_framework_hosting",
+  "raw_file_required_for_current_scope": false,
+  "current_blockers": [
+    "complete_shared_model_contract",
+    "freeze_shared_input_and_initial_state",
+    "implement_and_validate_two_framework_adapters"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "agent_options": 582,
+  "government_direct_at_20": 40,
+  "no_government_at_19": true,
+  "round_slider": true,
+  "agent_selection": true,
+  "source_cue_visible": true,
+  "autoplay": true,
+  "mobile_overflow": false,
+  "javascript_errors": [],
+  "external_requests": []
+}

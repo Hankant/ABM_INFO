@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "event_id": "event_033",
+  "claim_id": "claim_event_033",
+  "original_claim": "",
+  "rumor_text": "",
+  "is_synthetic": false,
+  "rumor_origin": "source_workbook_post_text",
+  "claim_origin": "source_post_verbatim_requires_content_review",
+  "correction_text": "",
+  "correction_mode": "scripted_no_evidence",
+  "correction_origin": "experimental_script",
+  "correction_status": "experimental_script_not_verified_official",
+  "evidence_text": "",
+  "evidence_status": "not_provided",
+  "source_profile": {
+    "followers_count": 28000,
+    "following_count": 830,
+    "statuses_count": 2108
+  },
+  "profiles_file": "profiles.jsonl",
+  "import_status": "missing_rumor_text",
+  "metadata": {
+    "counts": {
+      "comments_records": 49,
+      "reposts_records": 2,
+      "reposts_excluded_no_user_id": 1,
+      "unique_profile_donors": 51,
+      "missing_rumor_text": 1,
+      "headerless_repost_sheet": 0,
+      "profile_donors_below_582": 1
+    },
+    "empirical_follow_source_available": false,
+    "network_group_origin": "experimental_assignment",
+    "profile_sampling": "without_replacement_then_replacement_if_needed",
+    "initial_memory": "empty_no_historical_comments",
+    "trust_and_private_belief_origin": "experimental_not_inferred_from_comments",
+    "official_correction_supplied": false,
+    "content_review_required_before_external_API": true
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0",
+  "label": "engineering_smoke_10",
+  "population": {
+    "n_inside": 4,
+    "n_outside": 6,
+    "activity_levels": [
+      0.1,
+      0.2,
+      0.3
+    ],
+    "inside_counts": [
+      1,
+      2,
+      1
+    ],
+    "outside_counts": [
+      2,
+      2,
+      2
+    ],
+    "trust_levels": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "sharing_styles": [
+      "rare",
+      "sometimes",
+      "often"
+    ],
+    "willing_inside": 2,
+    "willing_outside": 4
+  },
+  "prior": {
+    "overall_mean": 0.579,
+    "within_group_offset": 0.05
+  },
+  "network": {
+    "directed": true,
+    "same_group_follows": 2,
+    "cross_group_follows": 1,
+    "inside_follow_source": true,
+    "outside_follow_source": false,
+    "pre_follow_government": false
+  },
+  "feed": {
+    "following_slots": 1,
+    "recommendation_probability": 0.1,
+    "recommendation_slots": 1,
+    "direct_extra_slots": 1,
+    "post_ttl_rounds": 40,
+    "recency_half_life_rounds": 5,
+    "max_reads_per_post": 3,
+    "repeat_gap_rounds": 5,
+    "max_reposts_per_content": 1,
+    "new_user_post_delay": 1,
+    "memory_decision_rounds": 5
+  },
+  "time": {
+    "source_round": 0,
+    "first_decision_round": 1,
+    "last_round": 80,
+    "pb_checkpoint_round": 5,
+    "followup_max_elapsed": 30,
+    "followup_include_both_endpoints": true
+  },
+  "policy": {
+    "direct_unique_users": 2,
+    "direct_delivery_rounds": 1
+  },
+  "belief": {
+    "accept_min": 60,
+    "reject_max": 40
+  },
+  "grid": {
+    "d_seed": [
+      0.2
+    ],
+    "government_round": [
+      10,
+      20,
+      30,
+      40,
+      50
+    ],
+    "targeting": [
+      "inside",
+      "random",
+      "outside"
+    ],
+    "credibility": [
+      0.2,
+      0.6,
+      1.0
+    ],
+    "seeds": [
+      1
+    ]
+  },
+  "llm": {
+    "base_url": "https://api.zetatechs.com/v1",
+    "model": "deepseek-v4-flash",
+    "api_key_env": "RUMOR_LLM_API_KEY",
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "max_output_tokens": 384,
+    "max_retries": 2,
+    "comment_max_characters": 80,
+    "reason_max_characters": 40,
+    "json_mode": true,
+    "extra_body": {
+      "thinking": {
+        "type": "disabled"
+      }
+    },
+    "timeout_seconds": 90,
+    "max_api_requests": 20
+  }
+}

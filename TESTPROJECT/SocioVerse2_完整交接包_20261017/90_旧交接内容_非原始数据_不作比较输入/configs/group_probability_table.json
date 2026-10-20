@@ -1,0 +1,32 @@
+[
+  {
+    "scenario_id": "pbd_0",
+    "PBd": 0,
+    "PB_inside": 0.579,
+    "PB_outside": 0.579,
+    "RC_inside": 0.1,
+    "RC_outside": 0.1,
+    "basis": "manuscript_table_1_rounded_values",
+    "precision_status": "draft_table_values_formula_rounding_difference_recorded"
+  },
+  {
+    "scenario_id": "pbd_02",
+    "PBd": 0.2,
+    "PB_inside": 0.679,
+    "PB_outside": 0.479,
+    "RC_inside": 0.117,
+    "RC_outside": 0.083,
+    "basis": "manuscript_table_1_rounded_values",
+    "precision_status": "draft_table_values_formula_rounding_difference_recorded"
+  },
+  {
+    "scenario_id": "pbd_04",
+    "PBd": 0.4,
+    "PB_inside": 0.779,
+    "PB_outside": 0.379,
+    "RC_inside": 0.135,
+    "RC_outside": 0.065,
+    "basis": "manuscript_table_1_rounded_values",
+    "precision_status": "draft_table_values_formula_rounding_difference_recorded"
+  }
+]

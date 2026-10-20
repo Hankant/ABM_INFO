@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1810" viewBox="0 0 2400 1810">
+<title>单事件LLM社交传播模型框架</title>
+<desc>左侧为实验社交网络及默认圈内定向示意，右侧为真实事件输入与行为特征提取、初始化、逐轮信息浏览与模型决策、政府干预及结果统计。</desc>
+<rect width="100%" height="100%" fill="white"/>
+<text x="65" y="47" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="55" font-weight="700" fill="#173344" text-anchor="start" dominant-baseline="text-before-edge">单事件 LLM 社交传播模型</text>
+<text x="67" y="124" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#526773" text-anchor="start" dominant-baseline="text-before-edge">真实事件行为特征提取  ·  582 名独立 Agent  ·  政府纠正干预  ·  80 轮同步演化</text>
+<rect x="60" y="205" width="715" height="1435" rx="24" fill="#FFFFFF" stroke="#CAD6DC" stroke-width="2"/>
+<rect x="815" y="205" width="1525" height="1435" rx="24" fill="#FFFFFF" stroke="#CAD6DC" stroke-width="2"/>
+<text x="95" y="232" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="35" font-weight="700" fill="#173344" text-anchor="start" dominant-baseline="text-before-edge">A  实体与实验网络</text>
+<text x="850" y="232" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="35" font-weight="700" fill="#173344" text-anchor="start" dominant-baseline="text-before-edge">B  一个事件的时间流程</text>
+<ellipse cx="225.5" cy="621.0" rx="134.5" ry="156.0" fill="#F0F6FA" stroke="#D1E2EC" stroke-width="2"/>
+<ellipse cx="595.5" cy="621.0" rx="143.5" ry="156.0" fill="#EFF8F5" stroke="#CAE4DC" stroke-width="2"/>
+<text x="225" y="414" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" font-weight="700" fill="#26739D" text-anchor="middle" dominant-baseline="text-before-edge">圈内用户</text>
+<text x="595" y="414" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" font-weight="700" fill="#248979" text-anchor="middle" dominant-baseline="text-before-edge">圈外用户</text>
+<polyline points="143,547 240,502" fill="none" stroke="#CDDAE0" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="143,547 153,692" fill="none" stroke="#CDDAE0" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="240,502 313,576" fill="none" stroke="#CDDAE0" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="240,502 222,600" fill="none" stroke="#CDDAE0" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="313,576 274,689" fill="none" stroke="#CDDAE0" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="313,576 222,600" fill="none" stroke="#CDDAE0" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="274,689 153,692" fill="none" stroke="#CDDAE0" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="274,689 222,600" fill="none" stroke="#CDDAE0" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="153,692 222,600" fill="none" stroke="#CDDAE0" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="143,547 222,600" fill="none" stroke="#CDDAE0" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="532,506 647,529" fill="none" stroke="#CDDAE0" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="532,506 518,692" fill="none" stroke="#CDDAE0" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="647,529 707,615" fill="none" stroke="#CDDAE0" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="647,529 588,604" fill="none" stroke="#CDDAE0" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="707,615 644,708" fill="none" stroke="#CDDAE0" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="707,615 588,604" fill="none" stroke="#CDDAE0" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="644,708 518,692" fill="none" stroke="#CDDAE0" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="644,708 588,604" fill="none" stroke="#CDDAE0" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="518,692 588,604" fill="none" stroke="#CDDAE0" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="532,506 588,604" fill="none" stroke="#CDDAE0" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="240,502 532,506" fill="none" stroke="#DAE2E5" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="313,576 588,604" fill="none" stroke="#DAE2E5" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="274,689 518,692" fill="none" stroke="#DAE2E5" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="165,544 211,514" fill="none" stroke="#26739D" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="211.00,514.00 196.42,515.44 203.80,526.76" fill="#26739D"/>
+<polyline points="329,578 557,597" fill="none" stroke="#248979" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="557.00,597.00 544.61,589.18 543.48,602.66" fill="#248979"/>
+<polyline points="610,607 680,614" fill="none" stroke="#248979" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="680.00,614.00 667.74,605.98 666.39,619.43" fill="#248979"/>
+<ellipse cx="143.0" cy="547.0" rx="20.0" ry="20.0" fill="white" stroke="#26739D" stroke-width="3"/>
+<ellipse cx="143.0" cy="542.0" rx="5.0" ry="5.0" fill="#26739D" stroke="#26739D" stroke-width="1"/>
+<ellipse cx="143.0" cy="555.0" rx="10.0" ry="5.0" fill="#26739D" stroke="#26739D" stroke-width="1"/>
+<ellipse cx="240.0" cy="502.0" rx="20.0" ry="20.0" fill="white" stroke="#26739D" stroke-width="3"/>
+<ellipse cx="240.0" cy="497.0" rx="5.0" ry="5.0" fill="#26739D" stroke="#26739D" stroke-width="1"/>
+<ellipse cx="240.0" cy="510.0" rx="10.0" ry="5.0" fill="#26739D" stroke="#26739D" stroke-width="1"/>
+<ellipse cx="313.0" cy="576.0" rx="20.0" ry="20.0" fill="white" stroke="#26739D" stroke-width="3"/>
+<ellipse cx="313.0" cy="571.0" rx="5.0" ry="5.0" fill="#26739D" stroke="#26739D" stroke-width="1"/>
+<ellipse cx="313.0" cy="584.0" rx="10.0" ry="5.0" fill="#26739D" stroke="#26739D" stroke-width="1"/>
+<ellipse cx="274.0" cy="689.0" rx="27.0" ry="27.0" fill="#FFF9F7" stroke="#BF6255" stroke-width="3"/>
+<ellipse cx="274.0" cy="689.0" rx="20.0" ry="20.0" fill="white" stroke="#26739D" stroke-width="3"/>
+<ellipse cx="274.0" cy="684.0" rx="5.0" ry="5.0" fill="#26739D" stroke="#26739D" stroke-width="1"/>
+<ellipse cx="274.0" cy="697.0" rx="10.0" ry="5.0" fill="#26739D" stroke="#26739D" stroke-width="1"/>
+<ellipse cx="153.0" cy="692.0" rx="20.0" ry="20.0" fill="white" stroke="#26739D" stroke-width="3"/>
+<ellipse cx="153.0" cy="687.0" rx="5.0" ry="5.0" fill="#26739D" stroke="#26739D" stroke-width="1"/>
+<ellipse cx="153.0" cy="700.0" rx="10.0" ry="5.0" fill="#26739D" stroke="#26739D" stroke-width="1"/>
+<ellipse cx="222.0" cy="600.0" rx="20.0" ry="20.0" fill="white" stroke="#26739D" stroke-width="3"/>
+<ellipse cx="222.0" cy="595.0" rx="5.0" ry="5.0" fill="#26739D" stroke="#26739D" stroke-width="1"/>
+<ellipse cx="222.0" cy="608.0" rx="10.0" ry="5.0" fill="#26739D" stroke="#26739D" stroke-width="1"/>
+<ellipse cx="532.0" cy="506.0" rx="20.0" ry="20.0" fill="white" stroke="#248979" stroke-width="3"/>
+<ellipse cx="532.0" cy="501.0" rx="5.0" ry="5.0" fill="#248979" stroke="#248979" stroke-width="1"/>
+<ellipse cx="532.0" cy="514.0" rx="10.0" ry="5.0" fill="#248979" stroke="#248979" stroke-width="1"/>
+<ellipse cx="647.0" cy="529.0" rx="20.0" ry="20.0" fill="white" stroke="#248979" stroke-width="3"/>
+<ellipse cx="647.0" cy="524.0" rx="5.0" ry="5.0" fill="#248979" stroke="#248979" stroke-width="1"/>
+<ellipse cx="647.0" cy="537.0" rx="10.0" ry="5.0" fill="#248979" stroke="#248979" stroke-width="1"/>
+<ellipse cx="707.0" cy="615.0" rx="20.0" ry="20.0" fill="white" stroke="#248979" stroke-width="3"/>
+<ellipse cx="707.0" cy="610.0" rx="5.0" ry="5.0" fill="#248979" stroke="#248979" stroke-width="1"/>
+<ellipse cx="707.0" cy="623.0" rx="10.0" ry="5.0" fill="#248979" stroke="#248979" stroke-width="1"/>
+<ellipse cx="644.0" cy="708.0" rx="20.0" ry="20.0" fill="white" stroke="#248979" stroke-width="3"/>
+<ellipse cx="644.0" cy="703.0" rx="5.0" ry="5.0" fill="#248979" stroke="#248979" stroke-width="1"/>
+<ellipse cx="644.0" cy="716.0" rx="10.0" ry="5.0" fill="#248979" stroke="#248979" stroke-width="1"/>
+<ellipse cx="518.0" cy="692.0" rx="20.0" ry="20.0" fill="white" stroke="#248979" stroke-width="3"/>
+<ellipse cx="518.0" cy="687.0" rx="5.0" ry="5.0" fill="#248979" stroke="#248979" stroke-width="1"/>
+<ellipse cx="518.0" cy="700.0" rx="10.0" ry="5.0" fill="#248979" stroke="#248979" stroke-width="1"/>
+<ellipse cx="588.0" cy="604.0" rx="20.0" ry="20.0" fill="white" stroke="#248979" stroke-width="3"/>
+<ellipse cx="588.0" cy="599.0" rx="5.0" ry="5.0" fill="#248979" stroke="#248979" stroke-width="1"/>
+<ellipse cx="588.0" cy="612.0" rx="10.0" ry="5.0" fill="#248979" stroke="#248979" stroke-width="1"/>
+<text x="225" y="802" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#26739D" text-anchor="middle" dominant-baseline="text-before-edge">82 人</text>
+<text x="595" y="802" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="32" font-weight="700" fill="#248979" text-anchor="middle" dominant-baseline="text-before-edge">500 人</text>
+<text x="420" y="560" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#248979" text-anchor="middle" dominant-baseline="text-before-edge">跨圈传播</text>
+<ellipse cx="412.0" cy="344.0" rx="31.0" ry="31.0" fill="#FBF5E8" stroke="#B68A35" stroke-width="3"/>
+<text x="412" y="323" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#B68A35" text-anchor="middle" dominant-baseline="text-before-edge">S</text>
+<text x="463" y="322" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#B68A35" text-anchor="start" dominant-baseline="text-before-edge">事件源帖</text>
+<polyline points="391,369 260,480" fill="none" stroke="#B68A35" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="260.00,480.00 274.29,476.75 265.55,466.44" fill="#B68A35"/>
+<text x="267" y="363" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#B68A35" text-anchor="middle" dominant-baseline="text-before-edge">第 0 轮</text>
+<ellipse cx="411.0" cy="938.0" rx="31.0" ry="31.0" fill="#FFF2EE" stroke="#BF6255" stroke-width="3"/>
+<text x="411" y="917" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="34" font-weight="700" fill="#BF6255" text-anchor="middle" dominant-baseline="text-before-edge">G</text>
+<text x="461" y="918" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#BF6255" text-anchor="start" dominant-baseline="text-before-edge">政府纠正</text>
+<polyline points="394,911 284,716" fill="none" stroke="#BF6255" stroke-width="3" stroke-linejoin="round" stroke-dasharray="9 7"/>
+<polygon points="284.00,716.00 284.50,730.64 296.27,724.00" fill="#BF6255"/>
+<text x="411" y="989" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#BF6255" text-anchor="middle" dominant-baseline="text-before-edge">T_G 时一次投送：默认圈内 40 人</text>
+<text x="411" y="1025" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#BF6255" text-anchor="middle" dominant-baseline="text-before-edge">定向可选：圈内 / 随机 / 圈外</text>
+<polyline points="108,1084 145,1084" fill="none" stroke="#CDDAE0" stroke-width="3" stroke-linejoin="round"/>
+<text x="158" y="1067" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#526773" text-anchor="start" dominant-baseline="text-before-edge">关注关系</text>
+<polyline points="306,1084 344,1084" fill="none" stroke="#248979" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="344.00,1084.00 334.00,1078.80 334.00,1089.20" fill="#248979"/>
+<text x="355" y="1067" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#526773" text-anchor="start" dominant-baseline="text-before-edge">信息传播</text>
+<ellipse cx="533.0" cy="1084.0" rx="11.0" ry="11.0" fill="white" stroke="#BF6255" stroke-width="2"/>
+<text x="554" y="1067" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#526773" text-anchor="start" dominant-baseline="text-before-edge">直接接收者</text>
+<text x="107" y="1110" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#526773" text-anchor="start" dominant-baseline="text-before-edge">图中仅画部分用户；节点与边不是实测关系。</text>
+<rect x="95" y="1150" width="645" height="175" rx="16" fill="#F8FAFB" stroke="#E0E7EB" stroke-width="2"/>
+<text x="120" y="1176" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#173344" text-anchor="start" dominant-baseline="text-before-edge">每人关注：8 名同圈 + 2 名跨圈用户</text>
+<text x="120" y="1224" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#526773" text-anchor="start" dominant-baseline="text-before-edge">圈内 / 圈外划分与关注边属于实验设定。</text>
+<text x="120" y="1266" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#526773" text-anchor="start" dominant-baseline="text-before-edge">信息沿关注关系传播，并有推荐曝光。</text>
+<rect x="95" y="1355" width="645" height="232" rx="16" fill="#F8FAFB" stroke="#E0E7EB" stroke-width="2"/>
+<text x="120" y="1381" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="30" font-weight="700" fill="#173344" text-anchor="start" dominant-baseline="text-before-edge">独立主体，不共享内心状态</text>
+<text x="120" y="1436" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#526773" text-anchor="start" dominant-baseline="text-before-edge">每人各自维护信念、记忆与互动记录。</text>
+<text x="120" y="1480" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#526773" text-anchor="start" dominant-baseline="text-before-edge">他人观点仅通过亲眼可见的公开表达进入。</text>
+<text x="120" y="1524" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#526773" text-anchor="start" dominant-baseline="text-before-edge">历史评论内容不预装为初始立场。</text>
+<rect x="855" y="300" width="950" height="207" rx="18" fill="#F7FAFC" stroke="#C9DCE6" stroke-width="2"/>
+<ellipse cx="894.0" cy="339.0" rx="20.0" ry="20.0" fill="#26739D" stroke="#26739D" stroke-width="1"/>
+<text x="894" y="323" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="white" text-anchor="middle" dominant-baseline="text-before-edge">1</text>
+<text x="932" y="322" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" font-weight="700" fill="#26739D" text-anchor="start" dominant-baseline="text-before-edge">真实事件输入与行为画像</text>
+<text x="887" y="377" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#173344" text-anchor="start" dominant-baseline="text-before-edge">事件源帖 + 250 条评论 + 72 条非空转发</text>
+<text x="887" y="418" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#173344" text-anchor="start" dominant-baseline="text-before-edge">画像：公开计数；逐人发言 / 转发 / 长度 / 问句统计</text>
+<text x="887" y="459" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#173344" text-anchor="start" dominant-baseline="text-before-edge">行为统计仅作参考，不拟合参数；不训练、不预装立场。</text>
+<polyline points="1330,507 1330,542" fill="none" stroke="#26739D" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="1330.00,542.00 1336.76,529.00 1323.24,529.00" fill="#26739D"/>
+<rect x="855" y="542" width="950" height="115" rx="18" fill="#F7FAFC" stroke="#C9DCE6" stroke-width="2"/>
+<ellipse cx="894.0" cy="581.0" rx="20.0" ry="20.0" fill="#26739D" stroke="#26739D" stroke-width="1"/>
+<text x="894" y="565" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="white" text-anchor="middle" dominant-baseline="text-before-edge">2</text>
+<text x="932" y="564" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" font-weight="700" fill="#26739D" text-anchor="start" dominant-baseline="text-before-edge">初始化 582 人与实验网络</text>
+<text x="887" y="619" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#173344" text-anchor="start" dominant-baseline="text-before-edge">82 人圈内 + 500 人圈外；每人 8 同圈关注 + 2 跨圈关注</text>
+<polyline points="1330,657 1330,692" fill="none" stroke="#26739D" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="1330.00,692.00 1336.76,679.00 1323.24,679.00" fill="#26739D"/>
+<rect x="855" y="692" width="950" height="70" rx="16" fill="#FBF7ED" stroke="#E5D8B9" stroke-width="2"/>
+<text x="1330" y="708" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" font-weight="700" fill="#B68A35" text-anchor="middle" dominant-baseline="text-before-edge">第 0 轮：事件源帖进入网络</text>
+<polyline points="1330,762 1330,807" fill="none" stroke="#26739D" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="1330.00,807.00 1336.76,794.00 1323.24,794.00" fill="#26739D"/>
+<rect x="855" y="807" width="950" height="174" rx="18" fill="#F7FAFC" stroke="#C9DCE6" stroke-width="2"/>
+<ellipse cx="894.0" cy="846.0" rx="20.0" ry="20.0" fill="#26739D" stroke="#26739D" stroke-width="1"/>
+<text x="894" y="830" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="white" text-anchor="middle" dominant-baseline="text-before-edge">3</text>
+<text x="932" y="829" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" font-weight="700" fill="#26739D" text-anchor="start" dominant-baseline="text-before-edge">每轮 t：浏览信息与接收政府直投</text>
+<text x="887" y="884" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#173344" text-anchor="start" dominant-baseline="text-before-edge">活跃浏览：关注流 / 推荐 + 至多 2 条评论、1 条转发</text>
+<text x="887" y="915" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#173344" text-anchor="start" dominant-baseline="text-before-edge">槽位内优先读取自己帖的回复。</text>
+<text x="887" y="946" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#173344" text-anchor="start" dominant-baseline="text-before-edge">政府直投额外到达：接收者不活跃也读取。</text>
+<polyline points="1330,981 1330,1016" fill="none" stroke="#26739D" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="1330.00,1016.00 1336.76,1003.00 1323.24,1003.00" fill="#26739D"/>
+<rect x="855" y="1016" width="950" height="179" rx="18" fill="#F7FAFC" stroke="#C9DCE6" stroke-width="2"/>
+<ellipse cx="894.0" cy="1055.0" rx="20.0" ry="20.0" fill="#26739D" stroke="#26739D" stroke-width="1"/>
+<text x="894" y="1039" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="white" text-anchor="middle" dominant-baseline="text-before-edge">4</text>
+<text x="932" y="1038" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" font-weight="700" fill="#26739D" text-anchor="start" dominant-baseline="text-before-edge">LLM 独立判断与行动</text>
+<text x="887" y="1093" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#173344" text-anchor="start" dominant-baseline="text-before-edge">当前内容 + 可见的他人表达 + 个人画像 + 最近记忆</text>
+<text x="887" y="1135" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#173344" text-anchor="start" dominant-baseline="text-before-edge">输出信念分 0–100，并选择：沉默 / 评论 / 转发</text>
+<polyline points="1330,1195 1330,1230" fill="none" stroke="#26739D" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="1330.00,1230.00 1336.76,1217.00 1323.24,1217.00" fill="#26739D"/>
+<rect x="855" y="1230" width="950" height="128" rx="18" fill="#F2F9F6" stroke="#C9DCE6" stroke-width="2"/>
+<ellipse cx="894.0" cy="1269.0" rx="20.0" ry="20.0" fill="#248979" stroke="#248979" stroke-width="1"/>
+<text x="894" y="1253" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="white" text-anchor="middle" dominant-baseline="text-before-edge">5</text>
+<text x="932" y="1252" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" font-weight="700" fill="#248979" text-anchor="start" dominant-baseline="text-before-edge">同步提交，本轮新帖下一轮可见</text>
+<text x="887" y="1307" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="400" fill="#173344" text-anchor="start" dominant-baseline="text-before-edge">保留传播链；沿圈内及跨圈关注关系继续扩散。</text>
+<rect x="1870" y="577" width="430" height="397" rx="18" fill="#FFF7F4" stroke="#E6C8C0" stroke-width="2"/>
+<text x="1898" y="602" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="700" fill="#BF6255" text-anchor="start" dominant-baseline="text-before-edge">政府纠正：一次外部干预</text>
+<text x="1898" y="656" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#173344" text-anchor="start" dominant-baseline="text-before-edge">T_G = 20（默认）</text>
+<text x="1898" y="699" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#173344" text-anchor="start" dominant-baseline="text-before-edge">可选 10 / 20 / 30 / 40 / 50</text>
+<text x="1898" y="742" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#173344" text-anchor="start" dominant-baseline="text-before-edge">一次 40 人；默认圈内</text>
+<text x="1898" y="785" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#173344" text-anchor="start" dominant-baseline="text-before-edge">定向另可选：随机 / 圈外</text>
+<text x="1898" y="828" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#173344" text-anchor="start" dominant-baseline="text-before-edge">GT = 0.6（默认）</text>
+<polyline points="1898,869 2272,869" fill="none" stroke="#E6C8C0" stroke-width="2" stroke-linejoin="round"/>
+<text x="1898" y="890" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#BF6255" text-anchor="start" dominant-baseline="text-before-edge">后续由用户转发扩散，</text>
+<text x="1898" y="929" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#BF6255" text-anchor="start" dominant-baseline="text-before-edge">与原话题信息并存。</text>
+<polyline points="1870,889 1805,889" fill="none" stroke="#BF6255" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="1805.00,889.00 1818.00,895.76 1818.00,882.24" fill="#BF6255"/>
+<polyline points="1805,1294 1838,1294 1838,951 1805,951" fill="none" stroke="#248979" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="1805.00,951.00 1818.00,957.76 1818.00,944.24" fill="#248979"/>
+<rect x="1870" y="1075" width="430" height="213" rx="18" fill="#F3F9F6" stroke="#CCE2D9" stroke-width="2"/>
+<text x="1898" y="1103" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#248979" text-anchor="start" dominant-baseline="text-before-edge">下一轮传播反馈</text>
+<text x="1898" y="1159" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#248979" text-anchor="start" dominant-baseline="text-before-edge">t &lt; 80：重复浏览与决策</text>
+<text x="1898" y="1205" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="26" font-weight="400" fill="#248979" text-anchor="start" dominant-baseline="text-before-edge">形成圈内 / 跨圈互动链。</text>
+<polyline points="1330,1358 1330,1418" fill="none" stroke="#26739D" stroke-width="4" stroke-linejoin="round"/>
+<polygon points="1330.00,1418.00 1336.76,1405.00 1323.24,1405.00" fill="#26739D"/>
+<text x="1357" y="1368" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="24" font-weight="400" fill="#526773" text-anchor="start" dominant-baseline="text-before-edge">t = 80</text>
+<rect x="855" y="1418" width="1445" height="181" rx="18" fill="#F4F7F9" stroke="#C9DCE6" stroke-width="2"/>
+<ellipse cx="894.0" cy="1457.0" rx="20.0" ry="20.0" fill="#173344" stroke="#173344" stroke-width="1"/>
+<text x="894" y="1441" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="white" text-anchor="middle" dominant-baseline="text-before-edge">6</text>
+<text x="932" y="1440" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="31" font-weight="700" fill="#173344" text-anchor="start" dominant-baseline="text-before-edge">80 轮终点：状态、传播与转变时间</text>
+<text x="887" y="1495" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#173344" text-anchor="start" dominant-baseline="text-before-edge">四种状态曲线：未接触 / 接受 / 不确定 / 拒绝；圈内外对比与传播链</text>
+<text x="887" y="1540" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#173344" text-anchor="start" dominant-baseline="text-before-edge">TBU：T_G 前为 accept → 首次 reject；30 轮内未转变者按右删失记录。</text>
+<polyline points="65,1681 2335,1681" fill="none" stroke="#D7E0E5" stroke-width="2" stroke-linejoin="round"/>
+<text x="66" y="1710" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="28" font-weight="400" fill="#526773" text-anchor="start" dominant-baseline="text-before-edge">说明：政府纠正使用实验澄清文本，无实证官方证据；离线 Mock 仅检验流程，不构成真实 LLM 研究结果。</text>
+<text x="66" y="1754" font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" font-size="25" font-weight="400" fill="#526773" text-anchor="start" dominant-baseline="text-before-edge">状态依据对原始主张的信念评分；发言行为与内心信念分开记录。</text>
+</svg>

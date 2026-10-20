@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "event_id": "event_113",
+  "claim_id": "claim_event_113",
+  "original_claim": "【“王凤雅去世”事件进展：父母被指拿着捐款治疗儿子兔唇放弃女儿】近日，一篇名为“王凤雅小朋友之死”的文章在网上热传，文中称河南太康县一2岁半女童被诊断出患有视网膜母细胞瘤，其母杨美芹在获得15万捐款后却未救治眼球已脱出眼眶的女儿，反而去北京高端民营医院为儿子治疗兔唇。5月4日，不到3岁的女童离开人世。目前家属并未透露筹款金额和剩余资金，并拒绝退还。via看看新闻KNEWS",
+  "rumor_text": "【“王凤雅去世”事件进展：父母被指拿着捐款治疗儿子兔唇放弃女儿】近日，一篇名为“王凤雅小朋友之死”的文章在网上热传，文中称河南太康县一2岁半女童被诊断出患有视网膜母细胞瘤，其母杨美芹在获得15万捐款后却未救治眼球已脱出眼眶的女儿，反而去北京高端民营医院为儿子治疗兔唇。5月4日，不到3岁的女童离开人世。目前家属并未透露筹款金额和剩余资金，并拒绝退还。via看看新闻KNEWS",
+  "is_synthetic": false,
+  "rumor_origin": "source_workbook_post_text",
+  "claim_origin": "source_post_verbatim_requires_content_review",
+  "correction_text": "针对网上流传的“【“王凤雅去世”事件进展：父母被指拿着捐款治疗儿子兔唇放弃女儿】近日，一篇名为“王凤雅小朋友之死”的文章在网上热传，文中称河南太康县一2岁半女童被诊断出患有视网膜母细胞瘤，其母杨美芹在获得15万捐款后却未救治眼球已脱出眼眶的女儿，反而去北京高端民营医院为儿子治疗兔唇。5月4日，不到3岁的女童离开人世。目前家属并未透露筹款金额和剩余资金，并拒绝退还。via看看新闻KNEWS”，本账号澄清：这一说法不属实。请勿继续传播未经核实的信息。",
+  "correction_mode": "scripted_no_evidence",
+  "correction_origin": "experimental_script",
+  "correction_status": "experimental_script_not_verified_official",
+  "evidence_text": "",
+  "evidence_status": "not_provided",
+  "source_profile": {
+    "followers_count": 105000000,
+    "following_count": 1683,
+    "statuses_count": 223339
+  },
+  "profiles_file": "profiles.jsonl",
+  "import_status": "ready_for_content_review",
+  "metadata": {
+    "counts": {
+      "comments_records": 697,
+      "source_account_engagement_rows_excluded": 3,
+      "duplicate_engagement_rows_collapsed": 90,
+      "reposts_records": 758,
+      "reposts_excluded_no_user_id": 1,
+      "unique_profile_donors": 1362,
+      "missing_rumor_text": 0,
+      "headerless_repost_sheet": 1,
+      "profile_donors_below_582": 0
+    },
+    "empirical_follow_source_available": false,
+    "network_group_origin": "experimental_assignment",
+    "profile_sampling": "without_replacement_then_replacement_if_needed",
+    "initial_memory": "empty_no_historical_comments",
+    "trust_and_private_belief_origin": "experimental_not_inferred_from_comments",
+    "official_correction_supplied": false,
+    "content_review_required_before_external_API": true
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "model": "MiniMax-M3",
+  "contract_status": "authorized_engineering_run",
+  "base_url": "https://api.minimax.cn/v1",
+  "max_requests": 12200,
+  "api_profile": "minimax_m3",
+  "government_tick": 2,
+  "government_reach": 40,
+  "targeting_inside_ratio": null,
+  "government_trust_mean": null,
+  "government_trust_sd": 0.1,
+  "government_target_seed": 20261019,
+  "government_trust_seed": 20261022,
+  "max_concurrency": 10
+}

@@ -47,3 +47,44 @@ rendered/
 /02_literature/user_supplied_originals/**/*.pdf
 # Explicitly included sample paper at the user's request.
 !/02_literature/user_supplied_originals/MouEtAl2024_HiSim_2024.findings-acl.285.pdf
+
+# Local SocioVerse2 checkout; reproducible origin/commit recorded by the study runner.
+/04_code/third_party_reference/SocioVerse2/
+
+# Local analysis scratch; never commit.
+/tmp/
+
+# Nested independent contest repo (own .git history; holds restricted inputs/outputs).
+/04_code/implementation/socioverse2-contest/
+
+# Experiment configs/results/logs embed restricted population data and per-agent traces.
+# Covers all versions (v4/v5/v6/...), not only v4.
+/06_experiments/
+
+# Pseudonymized participant account data and population identity files.
+# Restricted per AGENTS.md: share only through authorized private channels.
+01_Agent基础信息表.csv
+账户资料_*.jsonl
+用户与资料分配*.jsonl
+混合Agent总表_*.json
+混合总表预览.md
+profiles.jsonl
+profile_donors.jsonl
+population_roster*.jsonl
+population_identity.jsonl
+
+# Archived handoff bundles containing source data or population identity.
+/TESTPROJECT/V3_Agent整合包/
+/TESTPROJECT/原项目规则核查与数据_20261017.zip
+/TESTPROJECT/原项目规则核查与数据_20261017/
+/TESTPROJECT/同模型双框架_最小共同输入包.zip
+/TESTPROJECT/同模型双框架_最小共同输入包/
+/TESTPROJECT/LLM_Agent_代码与数据_ZetaTechs.zip
+/TESTPROJECT/LLM_Agent_单事件社交模型_代码与演示(1).zip
+/TESTPROJECT/LLM_Agent_single_event/data/
+/TESTPROJECT/LLM_Agent_single_event/outputs/
+/TESTPROJECT/SocioVerse2_完整交接包_20261017.zip
+/TESTPROJECT/SocioVerse2_完整交接包_20261017/90_旧交接内容_非原始数据_不作比较输入/data/
+
+# Runtime lock/state files from local runs.
+.simulation.lock
