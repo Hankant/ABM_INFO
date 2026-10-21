@@ -63,6 +63,28 @@ ABM_INFO/
 - [GitHub Pages 在线图谱](https://hankant.github.io/ABM_INFO/)。
 - [当前研究笔记目录](01_research_notes/current_direction/README.md)与[代码目录说明](04_code/README.md)。
 
+## 克隆与协作
+
+**先装 Git LFS 再克隆。** 仓库中的大文件（`*.duckdb`，单个最大 113MB）通过 Git LFS 存储。未安装 LFS 直接 clone 时，这些文件只有指针文本、没有真实内容。正确做法：
+
+```bash
+# 任选其一：先装 LFS 再克隆
+git lfs install
+git clone https://github.com/Hankant/ABM_INFO.git
+
+# 或者已经克隆了，再补拉真实内容
+git lfs install
+git lfs pull
+```
+
+Windows 可用 `winget install GitHub.GitLFS` 安装。除 `.duckdb` 外的所有文件（代码、CSV、文档、panel 数据）不经过 LFS，直接可用。
+
+其他运行前提：
+
+- `04_code/third_party_reference/SocioVerse2/` 与 `04_code/implementation/socioverse2-contest/` 是各自独立的 git 仓库，不在本仓库内，需要单独获取。
+- 真实 LLM 运行需要环境变量 `RUMOR_LLM_API_KEY`，凭据不进入版本库；离线固定回答模式不需要密钥。
+- 实验人群输入 `TESTPROJECT/V6_四份交付文件/01_Agent基础信息表.csv` 已随仓库提供。
+
 ## 研究使用边界
 
 - `99_historical_directions` 中的算法权威、搜索停止和群体智慧稿均为历史材料，不是现行 RP。
