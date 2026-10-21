@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "单凭一段视频和描述很难判断全貌——拍摄时间、地点、是否有前因后果、当地是否已通报，这些信息目前都不清楚。求证之前先不下结论，也不想给当事人贴标签。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP01-A0023",
+      "text": "转发求证：原始视频的完整版、拍摄时间地点、当事人和当地官方是否有通报？这种话题容易被剪辑断章取义，建议先核实再讨论。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0023"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0255",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 140,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "e29ba0057012c64df84436de45e62a6d3193a7174461b5b56d42a6490b3b1d78",
+    "input_reserved_units": 2435,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1533,
+    "actual_output_tokens": 159,
+    "elapsed_seconds": 3.078
+  },
+  "validation_status": "valid"
+}

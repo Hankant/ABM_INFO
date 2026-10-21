@@ -1,0 +1,21 @@
+{
+  "source_sha256": "b37ef99ec289197e1ed0ee9fb37569fb5a551a142130875abaa6b779a470b491",
+  "seed": 20261021,
+  "synthetic": true,
+  "n_llm": 305,
+  "n_rule": 277,
+  "distribution": "stratified quantiles of truncated N(.5,.18^2), [.05,.95]",
+  "traits": [
+    "sharing_propensity",
+    "verification_preference",
+    "source_prior",
+    "government_prior",
+    "repetition_sensitivity"
+  ],
+  "not_inferred": [
+    "real personal history",
+    "true belief",
+    "real sharing rate"
+  ],
+  "assignment": "sharing: 25% account statuses rank + 75% seeded noise; others independent permutations"
+}

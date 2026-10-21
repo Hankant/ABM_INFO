@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前看到的仍主要是原帖转述，没有完整视频、事发地点或后续回应。垃圾遍地、睡到自然醒等画面即便属实，也不能直接证明长期不干活以及牛确实被饿死，还是先核实上下文更稳妥。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "P001",
+      "text": "求证一下：原视频能否确认“扶贫干部怒斥”、父子长期不干活及牛被饿死的事实？目前只有概括性转述，结论宜暂缓。"
+    },
+    "evidence_ids": [
+      "P001",
+      "C01-A0005",
+      "C01-A0006"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0055",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 76,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "d81336c58b4e6e8cb3efe3d009b2a5bc296c0be5fac50c8834068d18ce829b84",
+    "input_reserved_units": 3027,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      1
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1906,
+    "actual_output_tokens": 135,
+    "elapsed_seconds": 5.468
+  },
+  "validation_status": "valid"
+}

@@ -1,0 +1,48 @@
+{
+  "answer": {
+    "belief": "believe",
+    "comment": {
+      "enabled": true,
+      "text": "视频内容听起来确实是让人无语，这样等靠要的贫困户，扶贫干部再努力也扶不起来。不过还是想多了解一下，这对父子具体是什么情况，是不是有特殊原因？"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "RP01-A0020"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0478",
+    "tick": 2,
+    "attempt": 1,
+    "request_number": 74,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "620a1a3c21858e6e4fca0625a4ac9042460de29856dee65bfa1fd70452bfdcfb",
+    "input_reserved_units": 1313,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 860,
+    "actual_output_tokens": 107,
+    "elapsed_seconds": 8.797
+  },
+  "validation_status": "valid"
+}

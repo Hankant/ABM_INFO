@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频内容看起来挺震撼，但目前只是片段截图和转述，事件全貌、是否有前因后果、当地官方有没有回应都不清楚。希望能看到完整视频和可靠报道再判断。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0158",
+      "RP02-A0262",
+      "RP02-A0274"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0412",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 436,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "f35c3727e48c340f61e4b64a15c2f779e9073702b0100e78462218277db592bf",
+    "input_reserved_units": 2992,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1883,
+    "actual_output_tokens": 129,
+    "elapsed_seconds": 7.453
+  },
+  "validation_status": "valid"
+}

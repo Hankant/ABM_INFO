@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "原帖描述的画面确实让人难以接受，但仅凭一段视频就定性父子俩\"懒惰\"、把原因全归到扶贫或个人品行上可能过于草率。希望看到完整视频、当地官方通报，以及是否存在健康、债务或其他生活失序的具体背景，再判断谁该为这种状况负责。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0034"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0558",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 225,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "fe39e6fb5248ebae04fac32c69ccea13d09d501da4ed4fa8f503a878fa850f36",
+    "input_reserved_units": 2408,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1520,
+    "actual_output_tokens": 138,
+    "elapsed_seconds": 2.953
+  },
+  "validation_status": "valid"
+}

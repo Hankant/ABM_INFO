@@ -31,7 +31,7 @@
 
 - 新实现代码放入 `04_code/implementation`。
 - 新实验配置、模拟输出和运行日志分别放入 `06_experiments/configs`、`06_experiments/results` 和 `06_experiments/logs`；首次使用时再创建。
-- 新的人类数据不得与公开代码或可共享输出混放。先建立数据使用、伦理和匿名化说明。
+- 人类数据与研究数据可以随仓库提交，供授权合作者分析使用；公开可见性带来的暴露风险由项目所有者确认承担（2026-10-21 规则变更，见 `05_reviews_and_revision_history`）。
 - 第三方 HiSim 源码位于 `04_code/third_party_reference`，其许可证与作者身份必须保留。
 - `SOURCE_MANIFEST.csv` 用于追溯原始来源；不要手工伪造来源记录。
-- 不提交 API key、模型服务凭据、参与者身份信息、受限数据或本地缓存。
+- 不提交 API key 或任何模型服务凭据；凭据只走环境变量或本机加密存储。

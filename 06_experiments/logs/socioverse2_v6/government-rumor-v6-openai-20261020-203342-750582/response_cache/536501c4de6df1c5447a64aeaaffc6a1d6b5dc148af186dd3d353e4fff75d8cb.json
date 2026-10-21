@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "评论区也都在说目前只有转述没有完整视频和可靠信源，重复看到几次说法本身不等于证实。等官方或主流媒体核实再说，转发也不必急。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "RP02-A0361",
+      "C03-A0006",
+      "C03-A0352",
+      "RP03-A0412",
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0394",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 646,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "536501c4de6df1c5447a64aeaaffc6a1d6b5dc148af186dd3d353e4fff75d8cb",
+    "input_reserved_units": 3600,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      3
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2235,
+    "actual_output_tokens": 115,
+    "elapsed_seconds": 3.0
+  },
+  "validation_status": "valid"
+}

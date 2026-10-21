@@ -1,0 +1,54 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前只有转述和现场片段，无法核实扶贫干部身份、事件地点及牛的实际情况，还是等完整视频和后续报道。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP01-A0024",
+      "text": "仅凭转述还不能确认事件全貌，先等完整视频或当事人回应。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0024",
+      "C01-A0005",
+      "C01-A0006"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0063",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 82,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "ff4da687cd678218f2bd39b06beceda8e3329804015538c114d0dfc997c53b15",
+    "input_reserved_units": 3822,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      1
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2410,
+    "actual_output_tokens": 104,
+    "elapsed_seconds": 1.25
+  },
+  "validation_status": "valid"
+}

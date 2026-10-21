@@ -1,0 +1,49 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "只有视频描述还不足以核实完整情况，尤其“扶贫干部怒斥”和父子是否确实懒惰、不干活等说法，建议先看看原视频及后续通报。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "P001",
+      "text": "暂不确定事件全貌，先转出来求证；希望能看到原视频和当地回应。"
+    },
+    "evidence_ids": [
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0028",
+    "tick": 1,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 17,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "4f519d5a49c63e6efdc1e9c69723c95ef743e22649cf7a9f709980ca0d1cb443",
+    "input_reserved_units": 2340,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1491,
+    "actual_output_tokens": 91,
+    "elapsed_seconds": 1.547
+  },
+  "validation_status": "valid"
+}

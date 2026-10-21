@@ -1,0 +1,56 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "看了几条转发都只是同一段文字转述，没有完整视频、具体地点、扶贫干部身份或官方通报，暂不下结论。希望有当地媒体或官方核实后再看。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0013",
+      "RP02-A0312",
+      "RP03-A0028",
+      "RP03-A0228",
+      "RP03-A0574",
+      "C03-A0002",
+      "C03-A0017"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0442",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 679,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "ed80f851babb35e39334dc49800670733e21a325154c9c146661cb85fe7d55c7",
+    "input_reserved_units": 3988,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 1,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 1,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2479,
+    "actual_output_tokens": 137,
+    "elapsed_seconds": 2.328
+  },
+  "validation_status": "valid"
+}

@@ -1,0 +1,6 @@
+{
+  "status": "interrupted",
+  "last_completed_tick": 22,
+  "dry_run": false,
+  "error_type": "RuntimeError"
+}

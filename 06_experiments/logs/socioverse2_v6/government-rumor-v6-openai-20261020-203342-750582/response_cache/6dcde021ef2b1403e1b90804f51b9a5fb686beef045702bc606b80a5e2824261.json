@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前只有转述，没有完整视频或可核实来源，干部身份、父子情况及“牛被饿死”等细节都还无法确认，先存疑。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP01-A0061",
+      "text": "先求证：这段内容细节很具体，但目前只有转述，不能据此确认事件全貌；请补充完整视频或可靠来源。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0061"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0137",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 95,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "6dcde021ef2b1403e1b90804f51b9a5fb686beef045702bc606b80a5e2824261",
+    "input_reserved_units": 2408,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1534,
+    "actual_output_tokens": 110,
+    "elapsed_seconds": 1.297
+  },
+  "validation_status": "valid"
+}

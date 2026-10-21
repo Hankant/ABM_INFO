@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "官方已明确否认这则网传内容，原视频的完整语境和核查材料也未展示，因此不宜继续传播“懒惰父子”等未经证实的具体指控。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "G001",
+      "RP07-A0489",
+      "C04-A0032",
+      "C04-A0058",
+      "RP04-A0179"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0518",
+    "tick": 8,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 2055,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "0a2ea879fc237d39d6d2c76f1e051d96ca57ff4f61f4eba37584e419fed45600",
+    "input_reserved_units": 3969,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 5,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 1,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2533,
+    "actual_output_tokens": 135,
+    "elapsed_seconds": 1.219
+  },
+  "validation_status": "valid"
+}

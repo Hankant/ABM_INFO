@@ -1,0 +1,12 @@
+{
+  "tick": 40,
+  "remaining_agents": 581,
+  "remaining_llm": 304,
+  "technical_dropout_count": 1,
+  "offline_agents": {
+    "A0018": {
+      "tick": 22,
+      "reason": "AgentRequestFailure"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "同一段转述反复出现只能说明传播较多，不能算独立证实。目前仍缺完整视频、当事人和扶贫干部身份、官方通报及牛的死亡原因等材料，“懒惰”“不干活”等说法也不宜据此直接定性，先等核实。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "RP04-A0180",
+      "C03-A0140",
+      "C04-A0026",
+      "C04-A0287",
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0160",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 828,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "8aab2ec8133fe8fb826a21df2f4179e698605a01ac2e9ffc1a7af0be19514cec",
+    "input_reserved_units": 4026,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 2,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 1,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2468,
+    "actual_output_tokens": 114,
+    "elapsed_seconds": 2.453
+  },
+  "validation_status": "valid"
+}

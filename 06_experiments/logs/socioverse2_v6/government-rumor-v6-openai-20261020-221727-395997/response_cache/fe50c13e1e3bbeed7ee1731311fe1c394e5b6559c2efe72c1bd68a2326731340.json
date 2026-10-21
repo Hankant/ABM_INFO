@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": false,
+      "text": ""
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP02-A0024",
+      "text": "已有官方账号明确称网传情况不属实，先停止传播此前对父子“懒惰”等细节的描述；具体后续仍以核实信息为准。"
+    },
+    "evidence_ids": [
+      "RP02-A0024",
+      "RP01-A0024",
+      "RP01-A0028",
+      "C02-A0041",
+      "C02-A0105"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0205",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 332,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "fe50c13e1e3bbeed7ee1731311fe1c394e5b6559c2efe72c1bd68a2326731340",
+    "input_reserved_units": 3876,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 1,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2435,
+    "actual_output_tokens": 102,
+    "elapsed_seconds": 1.765
+  },
+  "validation_status": "valid"
+}

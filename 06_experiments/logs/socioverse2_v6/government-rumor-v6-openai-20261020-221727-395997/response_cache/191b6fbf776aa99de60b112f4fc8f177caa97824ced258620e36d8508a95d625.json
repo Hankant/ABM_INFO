@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "官方回应已明确称网传情况不属实，原始视频背景、涉事干部身份及“懒惰”等具体细节也缺少可核验材料，建议先不要再把这段内容当作事实传播，等待后续完整核查。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "G001",
+      "P001",
+      "RP05-A0043",
+      "RP05-A0283",
+      "RP05-A0529",
+      "C05-A0239",
+      "C05-A0354"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0354",
+    "tick": 6,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 1338,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "191b6fbf776aa99de60b112f4fc8f177caa97824ced258620e36d8508a95d625",
+    "input_reserved_units": 4002,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 3,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2551,
+    "actual_output_tokens": 118,
+    "elapsed_seconds": 1.453
+  },
+  "validation_status": "valid"
+}

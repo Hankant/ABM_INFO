@@ -1,0 +1,54 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": false,
+      "text": ""
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP04-A0190",
+      "text": "重复出现≠证实。扶贫干部身份、父子情况及'牛被饿死'等具体说法目前没有官方通报或原始视频佐证，先等完整信息和当事方回应再说。"
+    },
+    "evidence_ids": [
+      "RP04-A0176",
+      "RP04-A0190",
+      "C04-A0007",
+      "RP03-A0080"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0122",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 810,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "6c3130362c778248d2bc47f7b50bb8710b88851b73605198edbea0b22172f100",
+    "input_reserved_units": 4064,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 2,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      4
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2495,
+    "actual_output_tokens": 118,
+    "elapsed_seconds": 2.859
+  },
+  "validation_status": "valid"
+}

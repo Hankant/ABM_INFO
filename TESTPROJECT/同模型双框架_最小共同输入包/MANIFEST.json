@@ -1,0 +1,48 @@
+{
+  "package_version": "shared_model_inputs_v1_draft",
+  "path_base": "package_root",
+  "runtime_ready": false,
+  "files": [
+    {
+      "path": "inputs/comparison_contract.json",
+      "sha256": "84b7b899bf0eff880c3661ba8655e46eabda0408b9c58451cc52dcac143fec4a",
+      "bytes": 3130
+    },
+    {
+      "path": "inputs/event_input.json",
+      "sha256": "d54e0ad65c831cc00b43c288a8e20ecd1871b76dbc0174e532a598149fa512f5",
+      "bytes": 1581
+    },
+    {
+      "path": "inputs/model_parameters.json",
+      "sha256": "c8273c928736b9c2a8f8b3750c8f2b0cc786a942ccdd0971b6249586ab5ae161",
+      "bytes": 2649
+    },
+    {
+      "path": "inputs/population_identity.jsonl",
+      "sha256": "ed807d89da5e1a400929c6ee6afd157228f5243986b6ccd9d6cd1c1e1ddc8108",
+      "bytes": 111580
+    },
+    {
+      "path": "PROVENANCE.json",
+      "sha256": "fe3b021e9675d7f74677f04fb5d38dfb2515f76d23f7122506abc08f5e506330",
+      "bytes": 2000
+    },
+    {
+      "path": "README.md",
+      "sha256": "4c2912a55fa5bdcf9343c08fbe882f321b56ff2487847fbf576bff005869e27f",
+      "bytes": 5027
+    }
+  ],
+  "verified": {
+    "event_text_preserved": true,
+    "ordinary_identity_count": 582,
+    "inside_count": 82,
+    "outside_count": 500,
+    "initial_states_complete": false,
+    "all_input_references_resolve": true,
+    "absolute_paths_present": false,
+    "json_and_jsonl_parsed": true
+  },
+  "simulation_executed": false
+}

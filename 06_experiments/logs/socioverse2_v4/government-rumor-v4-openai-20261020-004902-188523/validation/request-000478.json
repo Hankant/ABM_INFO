@@ -1,0 +1,6 @@
+{
+  "status": "format_error",
+  "error_type": "ValueError",
+  "generation_attempt": 1,
+  "prompt_sha256": "63903eb9644c20e036d4cede3dc8c1fcda15295f2a131418c05ad5e459387ce9"
+}

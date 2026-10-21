@@ -1,0 +1,80 @@
+{
+  "study_id": "government-rumor-v6-openai-20261020-221727-395997",
+  "title": "V6 政府谣言辟谣：本地混合模型（真实调用）",
+  "research_question": "在既定关注网络与展示规则下，不同目标范围的政府回应伴随怎样的信念与传播轨迹？本次仅构建inside首跑。",
+  "hypothesis": "",
+  "title_i18n": {},
+  "research_question_i18n": {},
+  "hypothesis_i18n": {},
+  "study_type": "longitudinal",
+  "n_steps": 10,
+  "seed": 20261020,
+  "time_unit": "abstract",
+  "step_meaning": "一轮同步观察与决策，无现实分钟映射",
+  "key_attributes": [
+    "current_belief",
+    "decision_mode",
+    "group"
+  ],
+  "metrics": [
+    "remaining_agents",
+    "remaining_llm",
+    "technical_dropout_count",
+    "all_believe",
+    "all_uncertain",
+    "all_reject",
+    "comments",
+    "posts"
+  ],
+  "metric_descriptions": {
+    "all_believe": "当前相信人数",
+    "all_uncertain": "当前不确定人数",
+    "all_reject": "当前不相信人数",
+    "comments": "累计公开评论数",
+    "posts": "累计帖子数（含原帖与转发）"
+  },
+  "display_metrics": [
+    "remaining_agents",
+    "remaining_llm",
+    "technical_dropout_count"
+  ],
+  "run_note": {},
+  "environment_ref": "environment/environment.json",
+  "population_ref": "population/population.json",
+  "simulation_ref": "simulation/simulation.json",
+  "resources_ref": null,
+  "domain": "rumor",
+  "tags": [
+    "V6",
+    "hybrid",
+    "local"
+  ],
+  "legacy_simulator": "from_scratch",
+  "provider_refs": [
+    "rumor_v6.population",
+    "rumor_v6.environment",
+    "rumor_v6.decision",
+    "rumor_v6.metrics"
+  ],
+  "adjustable_params": [
+    "pbd",
+    "gt",
+    "rf",
+    "strategy",
+    "government_tick",
+    "government_reach",
+    "targeting_inside_ratio",
+    "government_trust_mean",
+    "government_trust_sd",
+    "model",
+    "base_url"
+  ],
+  "status": "engineering-only",
+  "maintainer": "",
+  "demonstrates": [],
+  "teaches": "",
+  "reference": false,
+  "requires": null,
+  "rerunnable": true,
+  "created_by": "sv-init"
+}

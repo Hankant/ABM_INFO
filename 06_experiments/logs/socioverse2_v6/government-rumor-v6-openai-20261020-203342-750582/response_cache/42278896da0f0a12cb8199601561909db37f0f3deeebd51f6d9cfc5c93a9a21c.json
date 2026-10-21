@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前看到的都是对同一段帖子的重复转述，仍缺完整视频、地点、当事人回应及可靠核实材料。环境卫生问题值得关注，但仅凭片段还不足以确认“懒惰”、牛被饿死等具体说法，也应避免据此给当事人贴标签。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0104",
+      "RP03-A0183",
+      "RP03-A0209",
+      "RP03-A0429",
+      "C03-A0012",
+      "C03-A0429"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0465",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 692,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "42278896da0f0a12cb8199601561909db37f0f3deeebd51f6d9cfc5c93a9a21c",
+    "input_reserved_units": 3809,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 1,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2327,
+    "actual_output_tokens": 159,
+    "elapsed_seconds": 1.328
+  },
+  "validation_status": "valid"
+}

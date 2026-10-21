@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前仍无法确认完整经过。片段似乎能显示生活环境脏乱，但“扶贫干部怒斥”、父子是否属于贫困户以及牛被饿死的具体原因都缺少可靠佐证，建议等完整视频、当事人回应和当地通报后再判断，也先不要给他们贴上“懒惰”的标签。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0022",
+      "RP01-A0064",
+      "RP01-A0065",
+      "C02-A0021",
+      "C02-A0023",
+      "C02-A0034"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0023",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 187,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "fa3009f5bc3e73cb520e75cb26257321883f37a02f003520c7bb4e347edc83f7",
+    "input_reserved_units": 4078,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 2,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 3,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2517,
+    "actual_output_tokens": 137,
+    "elapsed_seconds": 1.281
+  },
+  "validation_status": "valid"
+}

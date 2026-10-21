@@ -1,0 +1,56 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "连续看到好几条几乎一样的转述，没有新的原始视频、当地官方说明或当事人回应。环境卫生状况可以关注，但\"懒惰\"\"牛被饿死都不知道\"\"扶贫干部怒斥\"这些定性目前仍缺证据，先不下结论，等更完整的材料。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "C04-A0005",
+      "C04-A0009",
+      "C04-A0302",
+      "RP02-A0022",
+      "RP04-A0021",
+      "RP04-A0076",
+      "RP04-A0470"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0060",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 785,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "8fc2a611a92fc84dc4c838f7830355cb4c79e54248d2870b8c8da863333a2a80",
+    "input_reserved_units": 4056,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 4,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 1,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2495,
+    "actual_output_tokens": 154,
+    "elapsed_seconds": 4.282
+  },
+  "validation_status": "valid"
+}

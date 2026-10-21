@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前只有重复转述，仍缺完整视频、当事人回应和官方说明。环境卫生问题可以关注，但“懒惰”“扶贫失败”以及“牛被饿死都不知道”等说法不宜仅凭片段定性，最好先核实背景和帮扶经过。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "C02-A0261",
+      "C04-A0005",
+      "C04-A0077",
+      "P001",
+      "RP01-A0065"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0035",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 771,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "e09b87beac4915599c83e807fa4c77cf2cd1dae5bd87304dbaebb7a19ac42cf2",
+    "input_reserved_units": 4015,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 4,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 5,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2480,
+    "actual_output_tokens": 149,
+    "elapsed_seconds": 1.25
+  },
+  "validation_status": "valid"
+}

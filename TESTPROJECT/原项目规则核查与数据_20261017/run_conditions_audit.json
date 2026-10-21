@@ -1,0 +1,74 @@
+{
+  "existing_code_defaults": {
+    "event_id": "event_052",
+    "d_seed": 0.2,
+    "seed": 1,
+    "T_G": 20,
+    "targeting": "inside",
+    "GT": 0.6,
+    "last_round": 80,
+    "default_mode": "single-event timeline",
+    "one_timeline_by_default": true,
+    "seeds_in_candidate_grid": [
+      1,
+      2,
+      3
+    ],
+    "d_seed_is_not_PBd": true
+  },
+  "manuscript_candidates": {
+    "PBd": [
+      0,
+      0.2,
+      0.4
+    ],
+    "T_G": [
+      20,
+      40,
+      60,
+      80,
+      100,
+      120,
+      140,
+      160,
+      180
+    ],
+    "In_out": [
+      0,
+      1,
+      2
+    ],
+    "GT": [
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1
+    ],
+    "RF": 0.6,
+    "n_steps": 400
+  },
+  "proposed_first_probability_test": {
+    "status": "proposal_not_user_confirmed",
+    "PBd": 0.2,
+    "T_G": 20,
+    "In_out": 2,
+    "GT": 0.6,
+    "RF": 0.6,
+    "n_steps": 400,
+    "seed": 1,
+    "replications": 1,
+    "purpose": "engineering_equivalence_check_not_scientific_inference",
+    "basis": "PBd=0.2 is manuscript middle condition; not translated from old d_seed; TG/target/GT borrow old smoke-test values where domains overlap"
+  },
+  "proposed_followup_branch": {
+    "status": "proposal_not_user_confirmed",
+    "change_only": {
+      "GT": 1.0
+    },
+    "same_population_and_preintervention_history": true
+  },
+  "formal_replication_count": null,
+  "formal_seed_list": null,
+  "conversion_fraction": "defer_per_prior_boundary; retain original TBU; do not reopen unified-window design"
+}

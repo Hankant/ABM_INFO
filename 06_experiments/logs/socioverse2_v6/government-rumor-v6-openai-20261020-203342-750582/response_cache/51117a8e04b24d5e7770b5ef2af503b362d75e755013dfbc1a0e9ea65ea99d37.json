@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频片段看着确实触目，但只有转述没看到原始视频和官方通报，地点、时间、父子身份都没法确认。懒汉扶贫是个老话题，这类视频容易被剪辑或嫁接，先别急着下结论，等完整视频和当地调查出来再说。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0058",
+      "RP02-A0090",
+      "RP02-A0193"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0481",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 394,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "51117a8e04b24d5e7770b5ef2af503b362d75e755013dfbc1a0e9ea65ea99d37",
+    "input_reserved_units": 3069,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1913,
+    "actual_output_tokens": 144,
+    "elapsed_seconds": 1.563
+  },
+  "validation_status": "valid"
+}

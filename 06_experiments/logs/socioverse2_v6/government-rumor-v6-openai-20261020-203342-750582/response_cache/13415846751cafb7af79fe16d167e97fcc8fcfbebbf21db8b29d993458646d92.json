@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "这次仍是同一段视频的重复转述，没有新增完整视频、事发地点或官方回应；因此“扶贫干部怒斥”“牛被饿死”等具体细节仍无法确认，建议先等原始视频和相关部门说明。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "RP03-A0428",
+      "RP01-A0030",
+      "C03-A0406",
+      "C03-A0297",
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0297",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 594,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "13415846751cafb7af79fe16d167e97fcc8fcfbebbf21db8b29d993458646d92",
+    "input_reserved_units": 3813,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 1,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      3
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2387,
+    "actual_output_tokens": 109,
+    "elapsed_seconds": 0.984
+  },
+  "validation_status": "valid"
+}

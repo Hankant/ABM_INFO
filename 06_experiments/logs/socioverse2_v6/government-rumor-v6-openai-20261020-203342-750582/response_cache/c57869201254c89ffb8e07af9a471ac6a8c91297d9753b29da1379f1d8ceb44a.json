@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前看到的多条内容仍是同一段转述，没有增加独立证据。完整视频、原始来源和当事方回应都未见，“懒惰”又是评价性说法，因此事件全貌及牛死亡原因暂不能确认。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP03-A0111",
+      "RP03-A0426",
+      "C03-A0298",
+      "C03-A0252"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0232",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 558,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "c57869201254c89ffb8e07af9a471ac6a8c91297d9753b29da1379f1d8ceb44a",
+    "input_reserved_units": 4046,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 2,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2503,
+    "actual_output_tokens": 109,
+    "elapsed_seconds": 1.344
+  },
+  "validation_status": "valid"
+}

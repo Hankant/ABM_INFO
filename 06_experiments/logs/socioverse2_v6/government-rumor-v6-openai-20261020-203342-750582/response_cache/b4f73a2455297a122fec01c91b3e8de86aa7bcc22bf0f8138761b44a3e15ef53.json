@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "看了好几轮转发的都是同一段文字描述，没有看到完整视频、干部身份核实、当地官方通报或当事人回应。环境卫生状况可能属实，但给父子贴“懒惰”标签、断言牛是饿死，仅凭片段还不足以确认。希望能看到原始视频或权威信源的佐证。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP03-A0417",
+      "RP04-A0158",
+      "C04-A0038"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0222",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 862,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "b4f73a2455297a122fec01c91b3e8de86aa7bcc22bf0f8138761b44a3e15ef53",
+    "input_reserved_units": 2974,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 3,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1834,
+    "actual_output_tokens": 150,
+    "elapsed_seconds": 2.516
+  },
+  "validation_status": "valid"
+}

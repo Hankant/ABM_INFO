@@ -1,0 +1,49 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频中的场景看起来很严重，但目前只有发布者的文字描述，无法确认父子是否确实长期不干活、牛是否因此饿死。是否有完整视频或其他可核实信息？"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "P001",
+      "text": "先求证：目前只有这段描述，尚不足以确认事情全貌。请补充完整视频或可靠来源。"
+    },
+    "evidence_ids": [
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0061",
+    "tick": 1,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 37,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "22d3d9a79fc061168732c7923bbea05ab87d35efdd2ba96e77b9f98a4c6d0fb9",
+    "input_reserved_units": 2344,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1491,
+    "actual_output_tokens": 124,
+    "elapsed_seconds": 2.547
+  },
+  "validation_status": "valid"
+}

@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "看到多个官方账号都明确辟谣了，说不属实，还是不要轻易相信这种未经核实的内容。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "G001",
+      "RP21-A0082",
+      "RP21-A0250",
+      "RP21-A0419"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0170",
+    "tick": 22,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 314,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "63d634f32dfb981f446e2021249ebfa0a51f0be4d4d6e5159142015579cbc176",
+    "input_reserved_units": 1883,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1235,
+    "actual_output_tokens": 111,
+    "elapsed_seconds": 2.157
+  },
+  "validation_status": "valid"
+}

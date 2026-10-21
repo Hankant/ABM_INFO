@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "仅凭这段描述还无法核实事件全貌。建议补充完整视频、发布时间地点、涉事人员身份及官方通报，再判断干部做法是否恰当；“懒惰”等评价也应避免仅凭画面下结论。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP01-A0034",
+      "text": "先求证完整视频、事发背景和官方通报。现有描述呈现出强烈的生活失序，但不能据此直接确认人物身份、行为原因或干部处置是否合理。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0034"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0204",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 124,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "b941e4c213d6b54e81a8da71b657db55bbc2fe8be3b3d4d249539450f6e7efa0",
+    "input_reserved_units": 2412,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1537,
+    "actual_output_tokens": 126,
+    "elapsed_seconds": 1.953
+  },
+  "validation_status": "valid"
+}

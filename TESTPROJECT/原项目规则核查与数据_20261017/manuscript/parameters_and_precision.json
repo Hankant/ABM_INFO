@@ -1,0 +1,144 @@
+{
+  "source": "Manuscripts tables 1 and 3; P75 and P173",
+  "population": {
+    "inside": 82,
+    "outside": 500
+  },
+  "time": {
+    "n_steps": 400,
+    "unit": "abstract_tick"
+  },
+  "baseline": {
+    "NF": 82,
+    "RI": 1,
+    "LC": 250,
+    "UA": 2,
+    "RC": 0.1,
+    "PR": 11.7,
+    "PB": 0.579,
+    "RF": 0.6
+  },
+  "factors": {
+    "PBd": [
+      0,
+      0.2,
+      0.4
+    ],
+    "T_G": [
+      20,
+      40,
+      60,
+      80,
+      100,
+      120,
+      140,
+      160,
+      180
+    ],
+    "In_out": [
+      0,
+      1,
+      2
+    ],
+    "GT": [
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1
+    ]
+  },
+  "group_probability_table": [
+    {
+      "PBd": 0,
+      "PB_inside": 0.579,
+      "PB_outside": 0.579,
+      "RC_inside": 0.1,
+      "RC_outside": 0.1
+    },
+    {
+      "PBd": 0.2,
+      "PB_inside": 0.679,
+      "PB_outside": 0.479,
+      "RC_inside": 0.117,
+      "RC_outside": 0.083
+    },
+    {
+      "PBd": 0.4,
+      "PB_inside": 0.779,
+      "PB_outside": 0.379,
+      "RC_inside": 0.135,
+      "RC_outside": 0.065
+    }
+  ],
+  "probability_precision": {
+    "P_printed_approximation": 0.172,
+    "P_exact_ratio": 0.17271157167530227,
+    "table_rounding_final_choice": null,
+    "comparison": [
+      {
+        "PBd": 0,
+        "group": "inside",
+        "PB": 0.579,
+        "RC_table": 0.1,
+        "RC_using_exact_0_1_over_0_579": 0.1,
+        "RC_using_P_0_172": 0.09958799999999998
+      },
+      {
+        "PBd": 0,
+        "group": "outside",
+        "PB": 0.579,
+        "RC_table": 0.1,
+        "RC_using_exact_0_1_over_0_579": 0.1,
+        "RC_using_P_0_172": 0.09958799999999998
+      },
+      {
+        "PBd": 0.2,
+        "group": "inside",
+        "PB": 0.679,
+        "RC_table": 0.117,
+        "RC_using_exact_0_1_over_0_579": 0.11727115716753024,
+        "RC_using_P_0_172": 0.116788
+      },
+      {
+        "PBd": 0.2,
+        "group": "outside",
+        "PB": 0.479,
+        "RC_table": 0.083,
+        "RC_using_exact_0_1_over_0_579": 0.08272884283246978,
+        "RC_using_P_0_172": 0.08238799999999999
+      },
+      {
+        "PBd": 0.4,
+        "group": "inside",
+        "PB": 0.779,
+        "RC_table": 0.135,
+        "RC_using_exact_0_1_over_0_579": 0.13454231433506048,
+        "RC_using_P_0_172": 0.133988
+      },
+      {
+        "PBd": 0.4,
+        "group": "outside",
+        "PB": 0.379,
+        "RC_table": 0.065,
+        "RC_using_exact_0_1_over_0_579": 0.06545768566493956,
+        "RC_using_P_0_172": 0.065188
+      }
+    ]
+  },
+  "reported_experiment": {
+    "total_replicates": 81000,
+    "unique_conditions": 405,
+    "arithmetic_average_replicates_per_condition": 200,
+    "balanced_200_each_verified": false,
+    "seed_values_reported": null,
+    "not_current_execution_order": true
+  },
+  "LC": {
+    "definition": "last_observed_comment_time - first_observed_comment_time",
+    "reference_value": 250,
+    "used_in_horizon_discussion": true,
+    "forced_expiry_at_tick250_specified": false
+  },
+  "PR_geometric_radius_verified": false
+}

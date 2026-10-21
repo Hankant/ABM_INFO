@@ -1,0 +1,49 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "官方已经辟谣说不属实了，但具体核实情况是什么样的？有没有后续的调查结果说明实际情况？"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "RP20-A0066"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0461",
+    "tick": 21,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 224,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "9043f5c9bcc7e986c1ccd8756dc05761b771be9512effd1a59c1aa138cb7ea2d",
+    "input_reserved_units": 1290,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 857,
+    "actual_output_tokens": 93,
+    "elapsed_seconds": 43.969
+  },
+  "validation_status": "valid"
+}

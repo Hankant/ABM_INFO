@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "看到官方账号已明确回应网传情况不属实，原视频及转述中的具体描述不宜再当作事实传播；具体身份和完整前因后果仍应以后续调查材料为准。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "G001",
+      "RP03-A0475",
+      "RP03-A0507",
+      "RP04-A0419",
+      "RP02-A0114",
+      "RP02-A0158",
+      "C03-A0412"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0298",
+    "tick": 6,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 1310,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "3dcf676ba8731bcd12f8866a5e2b43737fc02777466d77dc2e9a0cbdf968f4ce",
+    "input_reserved_units": 3986,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 4,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2530,
+    "actual_output_tokens": 157,
+    "elapsed_seconds": 7.046
+  },
+  "validation_status": "valid"
+}

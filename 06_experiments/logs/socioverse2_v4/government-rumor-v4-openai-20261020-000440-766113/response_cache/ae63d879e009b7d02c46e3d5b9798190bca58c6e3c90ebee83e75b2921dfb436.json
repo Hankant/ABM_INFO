@@ -1,0 +1,49 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": false,
+      "text": ""
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP20-A0038",
+      "text": "官方已澄清，请勿传播未经核实的信息。"
+    },
+    "evidence_ids": [
+      "RP20-A0038"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0209",
+    "tick": 21,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 180,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "ae63d879e009b7d02c46e3d5b9798190bca58c6e3c90ebee83e75b2921dfb436",
+    "input_reserved_units": 1326,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 873,
+    "actual_output_tokens": 87,
+    "elapsed_seconds": 47.14
+  },
+  "validation_status": "valid"
+}

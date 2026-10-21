@@ -1,0 +1,51 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前只有转述和争议性描述，无法确认视频真伪、人物身份及“牛被饿死”等细节；建议先看完整视频、原始报道和当事人回应。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP02-A0041",
+      "text": "转述暂不足以核实视频和后续细节，建议等完整视频、原始报道或当事人回应后再判断，避免把未经证实的说法当成事实。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0041",
+      "RP02-A0251"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0414",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 354,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "24dc84b3064547d3a8f2f2f82f6ef38d326f7be8a1a38977626d48b08ce77c25",
+    "input_reserved_units": 2737,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1731,
+    "actual_output_tokens": 121,
+    "elapsed_seconds": 1.468
+  },
+  "validation_status": "valid"
+}

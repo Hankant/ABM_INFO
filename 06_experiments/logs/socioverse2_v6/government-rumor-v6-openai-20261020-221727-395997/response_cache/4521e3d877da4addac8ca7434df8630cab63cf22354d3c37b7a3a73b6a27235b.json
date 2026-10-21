@@ -1,0 +1,54 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "和之前几位看法差不多，到现在看到的都是同一段文字转述，没看到完整视频、当事人身份信息或当地官方回应，所以关键细节（父子是否长期不干活、牛是否真的饿死）都没法独立确认。希望有原始视频或权威渠道的报道出来。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "C02-A0035",
+      "C02-A0136",
+      "RP01-A0020",
+      "RP02-A0509"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0315",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 386,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "4521e3d877da4addac8ca7434df8630cab63cf22354d3c37b7a3a73b6a27235b",
+    "input_reserved_units": 3485,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      2
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2171,
+    "actual_output_tokens": 147,
+    "elapsed_seconds": 2.922
+  },
+  "validation_status": "valid"
+}

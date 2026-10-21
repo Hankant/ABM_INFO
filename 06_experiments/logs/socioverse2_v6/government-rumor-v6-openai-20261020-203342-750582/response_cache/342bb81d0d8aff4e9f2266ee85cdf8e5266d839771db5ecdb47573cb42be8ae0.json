@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "看了几篇转述都提醒说需要原始视频和完整上下文，目前我也没看到能确认“扶贫干部怒斥”、父子懒惰和牛被饿死的直接证据，先不下结论。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0055",
+      "RP02-A0250",
+      "RP02-A0441"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0474",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 390,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "342bb81d0d8aff4e9f2266ee85cdf8e5266d839771db5ecdb47573cb42be8ae0",
+    "input_reserved_units": 3089,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1920,
+    "actual_output_tokens": 128,
+    "elapsed_seconds": 1.265
+  },
+  "validation_status": "valid"
+}

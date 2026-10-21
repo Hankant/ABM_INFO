@@ -1,0 +1,22 @@
+{
+  "contract_status": "authorized_engineering_run",
+  "pbd": 0.0,
+  "gt": 0.6,
+  "rf": 0.6,
+  "behavior_seed": 20261020,
+  "strategy": "inside",
+  "base_url": "https://api.minimax.cn/v1",
+  "model": "MiniMax-M3",
+  "max_requests": 12200,
+  "tbu_definition": "end19_believers_first_reject_at_or_after20_mean_wait_completers",
+  "probability_precision": "table_values",
+  "contact_rule": "once_per_tick_correction_priority",
+  "rule_rebelief": false,
+  "direct_relay_same_gt": true,
+  "comment_target": "first_displayed_post",
+  "token_guard": "cl100k_base_estimate_15percent_plus64",
+  "runtime_version": "v5-dropout-1",
+  "format_max_attempts": 4,
+  "rule_reconsider_rumor": true,
+  "api_profile": "minimax_m3"
+}

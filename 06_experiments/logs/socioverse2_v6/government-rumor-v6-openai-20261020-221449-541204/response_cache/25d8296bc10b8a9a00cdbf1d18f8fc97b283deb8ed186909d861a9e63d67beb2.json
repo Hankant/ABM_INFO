@@ -1,0 +1,49 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频中的场景看起来很严重，但仅凭这段转述还无法确认所谓扶贫干部身份、父子是否确实长期不劳动，以及牛是否因此饿死。期待原始视频和后续核实。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "P001",
+      "text": "先存疑求证：需要原始视频、涉事干部身份及官方回应，才能判断帖中描述是否完整。"
+    },
+    "evidence_ids": [
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0059",
+    "tick": 1,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 35,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "25d8296bc10b8a9a00cdbf1d18f8fc97b283deb8ed186909d861a9e63d67beb2",
+    "input_reserved_units": 2335,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1485,
+    "actual_output_tokens": 104,
+    "elapsed_seconds": 2.234
+  },
+  "validation_status": "valid"
+}

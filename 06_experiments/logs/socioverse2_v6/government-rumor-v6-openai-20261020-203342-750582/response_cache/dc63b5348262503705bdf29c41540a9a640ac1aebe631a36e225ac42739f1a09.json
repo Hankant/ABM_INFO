@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "看了几条转述内容仍缺乏原始视频和当地回应，无法确认“懒惰”定性是否准确，也不清楚扶贫干部的具体说法。建议先核实完整信息再下结论。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "C03-A0084",
+      "C03-A0141",
+      "C03-A0183",
+      "RP02-A0085",
+      "RP02-A0250"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0084",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 486,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "dc63b5348262503705bdf29c41540a9a640ac1aebe631a36e225ac42739f1a09",
+    "input_reserved_units": 3080,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 1,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1941,
+    "actual_output_tokens": 135,
+    "elapsed_seconds": 2.735
+  },
+  "validation_status": "valid"
+}

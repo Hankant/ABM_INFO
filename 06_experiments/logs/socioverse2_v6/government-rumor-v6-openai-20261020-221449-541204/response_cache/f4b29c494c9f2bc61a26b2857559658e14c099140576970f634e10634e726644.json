@@ -1,0 +1,49 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频看着确实让人无语，但不知道完整前后语境，扶贫干部的反应是否合适也不好说。求证一下：这视频是哪天、哪家媒体首发？"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0002",
+    "tick": 1,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 1,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "f4b29c494c9f2bc61a26b2857559658e14c099140576970f634e10634e726644",
+    "input_reserved_units": 2328,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1470,
+    "actual_output_tokens": 101,
+    "elapsed_seconds": 4.156
+  },
+  "validation_status": "valid"
+}

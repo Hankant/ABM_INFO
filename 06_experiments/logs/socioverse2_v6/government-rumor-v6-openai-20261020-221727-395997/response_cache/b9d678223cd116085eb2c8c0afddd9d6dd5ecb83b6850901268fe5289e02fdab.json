@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "已有相关账号明确称网传说法不属实，但未附详细核查依据。原视频目前也只有片段化转述，缺完整时间、地点及独立信源，因此暂不相信“懒惰父子”和扶贫干部所述细节。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "G001",
+      "P001",
+      "RP02-A0041",
+      "RP03-A0041",
+      "RP03-A0175",
+      "RP03-A0319",
+      "RP03-A0438"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0351",
+    "tick": 10,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 2576,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "b9d678223cd116085eb2c8c0afddd9d6dd5ecb83b6850901268fe5289e02fdab",
+    "input_reserved_units": 3950,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 5,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 5,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2484,
+    "actual_output_tokens": 118,
+    "elapsed_seconds": 1.563
+  },
+  "validation_status": "valid"
+}

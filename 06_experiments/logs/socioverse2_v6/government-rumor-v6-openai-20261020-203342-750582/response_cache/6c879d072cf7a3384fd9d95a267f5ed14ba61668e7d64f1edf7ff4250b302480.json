@@ -1,0 +1,51 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": false,
+      "text": ""
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP02-A0044",
+      "text": "先存疑求证：这段视频或描述能呈现部分生活细节，但不足以确认事件地点、父子身份，以及“长期不干活、牛被饿死”等说法；建议等完整视频和当地通报。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0044",
+      "RP02-A0318"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0102",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 225,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "6c879d072cf7a3384fd9d95a267f5ed14ba61668e7d64f1edf7ff4250b302480",
+    "input_reserved_units": 2785,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1748,
+    "actual_output_tokens": 98,
+    "elapsed_seconds": 1.047
+  },
+  "validation_status": "valid"
+}

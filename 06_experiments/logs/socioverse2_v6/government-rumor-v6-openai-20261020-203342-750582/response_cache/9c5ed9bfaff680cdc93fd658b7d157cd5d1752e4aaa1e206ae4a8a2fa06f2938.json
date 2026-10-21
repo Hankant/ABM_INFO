@@ -1,0 +1,56 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "看了好几条转发都是同一段描述，完整视频、扶贫干部身份、牛死因这些关键细节都没法核实。支持先求证，不要急着给这家人贴标签或据此评判扶贫成效。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP03-A0146",
+      "RP03-A0405",
+      "RP04-A0168",
+      "RP04-A0462",
+      "C04-A0161",
+      "C04-A0353",
+      "C04-A0423"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0136",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 813,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "9c5ed9bfaff680cdc93fd658b7d157cd5d1752e4aaa1e206ae4a8a2fa06f2938",
+    "input_reserved_units": 3833,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 3,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2366,
+    "actual_output_tokens": 159,
+    "elapsed_seconds": 3.968
+  },
+  "validation_status": "valid"
+}

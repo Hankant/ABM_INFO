@@ -1,0 +1,56 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "多个政府账号都已澄清原帖情况不属实，建议别再传播“懒惰父子”这类未经核实的标签，等完整调查结果。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "G001",
+      "RP02-A0069",
+      "RP03-A0542",
+      "RP04-A0342",
+      "RP04-A0466",
+      "RP05-A0273",
+      "C06-A0434",
+      "C08-A0183"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0149",
+    "tick": 9,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 2156,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "c38d5cff9948e6eec901202d82a752825a7000f2f5e9882d9729cc7904ee3c0d",
+    "input_reserved_units": 3991,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 5,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 2,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2542,
+    "actual_output_tokens": 145,
+    "elapsed_seconds": 2.797
+  },
+  "validation_status": "valid"
+}

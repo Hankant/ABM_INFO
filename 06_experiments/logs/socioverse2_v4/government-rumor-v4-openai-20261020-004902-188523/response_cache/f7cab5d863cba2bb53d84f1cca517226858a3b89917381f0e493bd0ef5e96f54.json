@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "官方已经否谣了，但网上这类消息真真假假太多，还是等后续核实结果再下结论吧。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "G001",
+      "RP22-A0325"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0111",
+    "tick": 23,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 554,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "f7cab5d863cba2bb53d84f1cca517226858a3b89917381f0e493bd0ef5e96f54",
+    "input_reserved_units": 1327,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 885,
+    "actual_output_tokens": 99,
+    "elapsed_seconds": 2.641
+  },
+  "validation_status": "valid"
+}

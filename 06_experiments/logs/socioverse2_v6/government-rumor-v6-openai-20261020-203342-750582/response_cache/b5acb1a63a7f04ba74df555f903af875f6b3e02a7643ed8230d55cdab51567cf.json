@@ -1,0 +1,54 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "看到不少人都在讨论这件事，评论区也有朋友提到需要原始视频和后续报道核实。细节虽然听起来很具体（牛饿死、尿桶放床边），但一段视频容易被断章取义，我还是先持观望态度，等有更完整的信息再下结论。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "C01-A0005",
+      "C01-A0006",
+      "P001",
+      "RP01-A0009"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0080",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 86,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "b5acb1a63a7f04ba74df555f903af875f6b3e02a7643ed8230d55cdab51567cf",
+    "input_reserved_units": 3375,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      1
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2088,
+    "actual_output_tokens": 143,
+    "elapsed_seconds": 2.094
+  },
+  "validation_status": "valid"
+}

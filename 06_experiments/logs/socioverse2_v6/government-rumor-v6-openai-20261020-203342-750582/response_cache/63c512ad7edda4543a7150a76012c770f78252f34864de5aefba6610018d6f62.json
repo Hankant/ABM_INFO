@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "多次看到这条转述，内容基本一致，但目前没有看到完整视频或当地官方通报，暂时不下结论。希望能看到更多一手信息再判断。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0050",
+      "RP02-A0105",
+      "RP02-A0298",
+      "RP02-A0443"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0237",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 281,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "63c512ad7edda4543a7150a76012c770f78252f34864de5aefba6610018d6f62",
+    "input_reserved_units": 3393,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2111,
+    "actual_output_tokens": 126,
+    "elapsed_seconds": 2.735
+  },
+  "validation_status": "valid"
+}

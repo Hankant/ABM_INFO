@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "重复看到同一转述仍未增加可核实证据；完整视频、当事人回应和官方通报都未见，“懒惰”及牛死亡原因等说法暂不能确认。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP02-A0025",
+      "text": "同源内容重复出现不等于独立证实，建议先核实完整视频与当事人回应，避免仅凭片段给当事人定性。"
+    },
+    "evidence_ids": [
+      "C02-A0060",
+      "C02-A0080",
+      "P001",
+      "RP01-A0009",
+      "RP02-A0025"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0490",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 397,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "4c40a6b3eb338ae50dc05ab5590a852f7b59d8e5481bae5aa1fbf0855ad44adb",
+    "input_reserved_units": 3547,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      2
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2204,
+    "actual_output_tokens": 163,
+    "elapsed_seconds": 5.282
+  },
+  "validation_status": "valid"
+}

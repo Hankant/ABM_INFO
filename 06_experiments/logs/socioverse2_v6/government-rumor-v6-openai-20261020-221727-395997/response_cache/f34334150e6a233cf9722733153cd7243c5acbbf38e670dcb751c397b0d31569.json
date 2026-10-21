@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "看了官方回应和多条求证评论，原帖这种带具体细节的描述缺乏完整视频支撑，而且官方已经明确说情况不属实，我也倾向于不信了。等后续完整通报再说。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "G001",
+      "P001",
+      "C06-A0010",
+      "C06-A0017",
+      "RP02-A0054"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0005",
+    "tick": 10,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 2392,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "f34334150e6a233cf9722733153cd7243c5acbbf38e670dcb751c397b0d31569",
+    "input_reserved_units": 4012,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 5,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 8,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2525,
+    "actual_output_tokens": 132,
+    "elapsed_seconds": 2.844
+  },
+  "validation_status": "valid"
+}

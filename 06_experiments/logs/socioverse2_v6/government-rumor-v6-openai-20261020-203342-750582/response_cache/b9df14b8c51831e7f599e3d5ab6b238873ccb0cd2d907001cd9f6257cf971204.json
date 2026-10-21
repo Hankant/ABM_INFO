@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前看到的还是同一段文字描述和有限画面，缺少完整视频、具体地点及当地回应。“懒惰”“牛被饿死”“扶贫失败”等定性暂时不能据此确认，建议先核实上下文。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP03-A0018",
+      "RP03-A0080",
+      "C03-A0025",
+      "C03-A0035"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0017",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 450,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "b9df14b8c51831e7f599e3d5ab6b238873ccb0cd2d907001cd9f6257cf971204",
+    "input_reserved_units": 4069,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 3,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 4,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2482,
+    "actual_output_tokens": 104,
+    "elapsed_seconds": 1.156
+  },
+  "validation_status": "valid"
+}

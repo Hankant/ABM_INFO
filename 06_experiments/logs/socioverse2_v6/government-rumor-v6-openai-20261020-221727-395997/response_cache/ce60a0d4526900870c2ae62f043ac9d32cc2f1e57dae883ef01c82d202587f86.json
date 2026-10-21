@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "已经有账号明确称网传情况不属实，原帖缺少完整视频和上下文，父子长期懒惰、牛被饿死等细节目前不宜当真传播，等待后续核查。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "G001",
+      "RP05-A0429",
+      "RP02-A0025",
+      "RP03-A0025"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0267",
+    "tick": 6,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 1295,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "ce60a0d4526900870c2ae62f043ac9d32cc2f1e57dae883ef01c82d202587f86",
+    "input_reserved_units": 3940,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 3,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 6,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2468,
+    "actual_output_tokens": 91,
+    "elapsed_seconds": 1.453
+  },
+  "validation_status": "valid"
+}

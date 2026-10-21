@@ -1,0 +1,54 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "重复看到后仍觉得应先核实原视频和完整前后语境。描述中的生活细节不能直接证明父子“懒惰”，也需了解扶贫干部当时的处置是否合适；如有当地回应或后续通报，最好一并看看。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0049",
+      "C01-A0002",
+      "C01-A0007"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0028",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 64,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "605c8150cd8b0135f69c33def4b687dd6906888c3dbf4ac96486cdff9fd71705",
+    "input_reserved_units": 3290,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      1
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2078,
+    "actual_output_tokens": 139,
+    "elapsed_seconds": 6.156
+  },
+  "validation_status": "valid"
+}

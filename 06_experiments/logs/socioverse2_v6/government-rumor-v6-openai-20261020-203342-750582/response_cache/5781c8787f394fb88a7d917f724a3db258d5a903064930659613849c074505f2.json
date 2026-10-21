@@ -1,0 +1,58 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前看到的多条内容都是同一段文字的重复转述，仍缺完整视频、具体地点、当事人回应和当地权威说明。环境卫生问题值得关注，但“懒惰”“牛被饿死”等具体说法以及扶贫干部身份尚不能确认，不宜先给当事人贴标签。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "RP03-A0028",
+      "C04-A0030",
+      "C04-A0051",
+      "RP03-A0183",
+      "C04-A0437",
+      "C04-A0465",
+      "RP03-A0357",
+      "C04-A0291",
+      "C04-A0399",
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0205",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 855,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "5781c8787f394fb88a7d917f724a3db258d5a903064930659613849c074505f2",
+    "input_reserved_units": 4089,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 3,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2513,
+    "actual_output_tokens": 150,
+    "elapsed_seconds": 1.438
+  },
+  "validation_status": "valid"
+}

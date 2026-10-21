@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "看了多个账号和官方回应都明确说该帖情况不属实，原始视频的具体情节也还没有完整核实。我之前倾向相信这类叙事，但既然已有澄清，就不应继续把\"懒惰\"\"牛被饿死\"这些细节当作事实传播，转发时附上提醒更稳妥。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP05-A0058",
+      "text": "已有账号和官方回应称原帖情况不属实，具体细节仍未核实，先不要当作事实传播。"
+    },
+    "evidence_ids": [
+      "RP05-A0058",
+      "RP05-A0259",
+      "RP04-A0520",
+      "RP05-A0169",
+      "C02-A0204",
+      "P001",
+      "G001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0558",
+    "tick": 6,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 1457,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "f7399452e4b022b3bb357cdf49e4786d0fee9840bb3bed9d4f4248cbc71b6fb4",
+    "input_reserved_units": 4001,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 4,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 1,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2511,
+    "actual_output_tokens": 193,
+    "elapsed_seconds": 6.172
+  },
+  "validation_status": "valid"
+}

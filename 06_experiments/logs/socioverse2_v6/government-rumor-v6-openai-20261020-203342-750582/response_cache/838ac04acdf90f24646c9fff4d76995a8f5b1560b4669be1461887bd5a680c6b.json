@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频画面看着挺震撼，但\"懒汉\"这种标签容易引发偏见，扶贫干部的具体说法和完整视频我没看到，暂不下结论。有后续报道或官方通报我再看看。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0010"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0482",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 395,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "838ac04acdf90f24646c9fff4d76995a8f5b1560b4669be1461887bd5a680c6b",
+    "input_reserved_units": 2420,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1525,
+    "actual_output_tokens": 114,
+    "elapsed_seconds": 7.844
+  },
+  "validation_status": "valid"
+}

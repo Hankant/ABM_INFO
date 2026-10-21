@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频中的现场情况可以作为质疑和核实的依据，但“扶贫干部怒斥”“父子每天睡到自然醒、不干活”以及“牛被饿死都不知道”等说法，目前没有看到完整视频、时间地点或独立信源佐证，先不把转述当成已核实事实。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP02-A0013",
+      "text": "先转出来求证：视频若确为当地拍摄，叙述中的具体身份和因果仍需完整视频及多方信源核实。"
+    },
+    "evidence_ids": [
+      "RP02-A0013",
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0506",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 495,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "13c20fa937614b18c5a3388ddbb863ce32a2d7f2d4808d414a80d48afc1b204f",
+    "input_reserved_units": 2370,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1515,
+    "actual_output_tokens": 135,
+    "elapsed_seconds": 2.828
+  },
+  "validation_status": "valid"
+}

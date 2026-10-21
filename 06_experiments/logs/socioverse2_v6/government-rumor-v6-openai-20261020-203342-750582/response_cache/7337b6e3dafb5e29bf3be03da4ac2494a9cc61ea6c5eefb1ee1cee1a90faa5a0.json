@@ -1,0 +1,51 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频画面看起来挺有冲击力，但转述里还是希望能看到原始视频或者当事人的回应再下结论，光凭描述很难判断全貌。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0013",
+      "RP02-A0041"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0525",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 414,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "7337b6e3dafb5e29bf3be03da4ac2494a9cc61ea6c5eefb1ee1cee1a90faa5a0",
+    "input_reserved_units": 2703,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1700,
+    "actual_output_tokens": 112,
+    "elapsed_seconds": 1.453
+  },
+  "validation_status": "valid"
+}

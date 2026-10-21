@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "光凭这段文字描述没法判断真假，视频本身的完整版和当地通报都还没看到，先不下结论。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0058",
+      "RP02-A0149",
+      "RP02-A0360"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0464",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 384,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "479876de97f0f672f2027fde2649a7409319686d6692fbe1f72ff1c6536f9097",
+    "input_reserved_units": 3068,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1916,
+    "actual_output_tokens": 112,
+    "elapsed_seconds": 1.922
+  },
+  "validation_status": "valid"
+}

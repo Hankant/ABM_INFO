@@ -1,0 +1,57 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "看了几轮，基本都是转述，没人拿出完整视频或权威通报；多个官方账号明确说网传情况不属实，没有相反证据。我倾向于不信，建议先别传播那些带标签的细节。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "G001",
+      "RP01-A0036",
+      "RP02-A0352",
+      "RP03-A0205",
+      "RP04-A0038",
+      "RP04-A0146",
+      "C02-A0122",
+      "C02-A0230"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0161",
+    "tick": 6,
+    "attempt": 2,
+    "format_max_attempts": 4,
+    "request_number": 1234,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "ab1d960bea41f128b2f20b832bc53dba819fe3cc3640bf875fbe765175f0892e",
+    "input_reserved_units": 4079,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 4,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 5,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2589,
+    "actual_output_tokens": 163,
+    "elapsed_seconds": 2.5
+  },
+  "validation_status": "valid"
+}

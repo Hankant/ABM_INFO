@@ -1,0 +1,49 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频中的生活场景值得讨论，但仅凭这段描述，无法判断父子是否真被认定为懒惰，也无法核实干部扶贫与家中情况。是否有完整视频或当地回应？"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "P001",
+      "text": "转出来求证：希望能有完整视频和扶贫干部身份、当地回应，避免仅凭片段给这对父子贴标签。"
+    },
+    "evidence_ids": [
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0035",
+    "tick": 1,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 21,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "b003524351a9f91d64c5fc8b51194ec7fa26b791073de96cb8aa16175a4e0d70",
+    "input_reserved_units": 2333,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1486,
+    "actual_output_tokens": 132,
+    "elapsed_seconds": 1.437
+  },
+  "validation_status": "valid"
+}

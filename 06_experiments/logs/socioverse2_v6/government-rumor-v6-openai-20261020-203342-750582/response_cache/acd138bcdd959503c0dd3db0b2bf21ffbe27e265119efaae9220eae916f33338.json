@@ -1,0 +1,56 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "多个账号转述了相似内容，但仍缺少完整视频、事发时间地点和可靠核实材料，无法确认涉事人员身份、现场全貌及牛死亡原因；仅凭片段也不宜给父子直接定性。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP03-A0574",
+      "text": "先求证：重复转述不等于独立证实，希望补充完整视频、时间地点、当事双方回应及牛的死亡原因等信息。"
+    },
+    "evidence_ids": [
+      "RP03-A0574",
+      "RP02-A0032",
+      "RP02-A0038",
+      "RP02-A0297",
+      "RP02-A0395",
+      "C03-A0160",
+      "C03-A0200",
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0200",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 544,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "acd138bcdd959503c0dd3db0b2bf21ffbe27e265119efaae9220eae916f33338",
+    "input_reserved_units": 4093,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 1,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 5,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2525,
+    "actual_output_tokens": 199,
+    "elapsed_seconds": 1.906
+  },
+  "validation_status": "valid"
+}

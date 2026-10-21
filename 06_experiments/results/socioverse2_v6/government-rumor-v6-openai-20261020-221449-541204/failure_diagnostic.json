@@ -1,0 +1,54 @@
+{
+  "type": "RuntimeError",
+  "filename": null,
+  "filename2": null,
+  "errno": null,
+  "winerror": null,
+  "frames": [
+    {
+      "file": "G:\\ABM_INFO\\04_code\\implementation\\socioverse2_v6\\run.py",
+      "line": 224,
+      "function": "execute"
+    },
+    {
+      "file": "G:\\ABM_INFO\\04_code\\implementation\\socioverse2-contest\\.venv\\Lib\\site-packages\\socioverse\\engine\\loop.py",
+      "line": 133,
+      "function": "run"
+    },
+    {
+      "file": "G:\\ABM_INFO\\04_code\\implementation\\socioverse2_v6\\model.py",
+      "line": 446,
+      "function": "decide_batch"
+    },
+    {
+      "file": "G:\\ABM_INFO\\04_code\\implementation\\socioverse2_v6\\model.py",
+      "line": 439,
+      "function": "decide_batch"
+    },
+    {
+      "file": "C:\\Users\\69596\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\concurrent\\futures\\_base.py",
+      "line": 449,
+      "function": "result"
+    },
+    {
+      "file": "C:\\Users\\69596\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\concurrent\\futures\\_base.py",
+      "line": 401,
+      "function": "__get_result"
+    },
+    {
+      "file": "C:\\Users\\69596\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\concurrent\\futures\\thread.py",
+      "line": 58,
+      "function": "run"
+    },
+    {
+      "file": "G:\\ABM_INFO\\04_code\\implementation\\socioverse2_v6\\model.py",
+      "line": 467,
+      "function": "_decide_serial"
+    },
+    {
+      "file": "G:\\ABM_INFO\\04_code\\implementation\\socioverse2_v6\\llm_client.py",
+      "line": 381,
+      "function": "decide"
+    }
+  ]
+}

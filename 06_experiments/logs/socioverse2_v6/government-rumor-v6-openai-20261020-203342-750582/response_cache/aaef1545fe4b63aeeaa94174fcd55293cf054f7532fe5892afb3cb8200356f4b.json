@@ -1,0 +1,51 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前只有转述和片段描述，无法确认干部身份、父子是否确实长期不劳动，以及牛为何死亡。建议先核对完整视频、当地通报等可靠材料，再判断。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP02-A0010",
+      "text": "转出来求证：现有内容不足以确认视频现场及牛的死亡原因，先看完整视频和可靠报道。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0010",
+      "RP02-A0458"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0199",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 268,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "aaef1545fe4b63aeeaa94174fcd55293cf054f7532fe5892afb3cb8200356f4b",
+    "input_reserved_units": 2764,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1742,
+    "actual_output_tokens": 114,
+    "elapsed_seconds": 1.375
+  },
+  "validation_status": "valid"
+}

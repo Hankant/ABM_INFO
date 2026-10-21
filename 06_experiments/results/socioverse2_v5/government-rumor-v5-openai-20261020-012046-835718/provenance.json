@@ -1,0 +1,45 @@
+{
+  "input_sha256": {
+    "01_Agent基础信息表.csv": "b37ef99ec289197e1ed0ee9fb37569fb5a551a142130875abaa6b779a470b491",
+    "02_Prompt固定提示词.md": "b8424d68a2e9aef72926db7bee987795d1b5c45cf23618724b3ea920259e7361",
+    "03_新环境设定.md": "ae072703340c86895dd4714f522087f1c635b8c37eeaac37811803d8d3b6901c",
+    "04_新版本操作指南.md": "c9e6cf99575a2c494b0d788d4952760ad4419bcbcd4576890e8072e3ddcd38ab"
+  },
+  "code_sha256": {
+    "llm_client.py": "b2cf9f8124e1dcd041271bc0a579299cc789487282abfe2ab326288ca5f7bbb1",
+    "model.py": "cab66fb645ad754ff8fcf3986b916ad1916492178f41b9715bc23b1b21452179",
+    "run.py": "ea9536e3e5d537e7bbfc55861a9467e0c64b45256331fe6f69507e9642a5a48b",
+    "test_exposure.py": "3e7c959a5b22545791a785173134d8fd36fd878f9060259a1e3c391134a645cc",
+    "test_model.py": "081782014aff56e7dcf2b2b0cc307551ffb741084d77b8de3d5590115d7e2c90",
+    "test_recovery.py": "e2ad54b9ae59d704001ea0cbb6a90d62254237992a9ddd702f5e583e89dc9c5b"
+  },
+  "numpy_version": "2.5.4",
+  "upstream_url": "https://github.com/sii-research/SocioVerse2",
+  "upstream_commit": "9c3ac774816511c121184ca11f539dc398ba1544",
+  "mode": "openai",
+  "dry_run": false,
+  "config": {
+    "contract_status": "authorized_engineering_run",
+    "pbd": 0.0,
+    "gt": 0.6,
+    "rf": 0.6,
+    "behavior_seed": 20261020,
+    "strategy": "inside",
+    "base_url": "https://api.minimax.cn/v1",
+    "model": "MiniMax-M3",
+    "max_requests": 12200,
+    "tbu_definition": "end19_believers_first_reject_at_or_after20_mean_wait_completers",
+    "probability_precision": "table_values",
+    "contact_rule": "once_per_tick_correction_priority",
+    "rule_rebelief": false,
+    "direct_relay_same_gt": true,
+    "comment_target": "first_displayed_post",
+    "token_guard": "cl100k_base_estimate_15percent_plus64",
+    "runtime_version": "v5-exposure-1",
+    "format_max_attempts": 4,
+    "rule_reconsider_rumor": true,
+    "api_profile": "minimax_m3"
+  },
+  "audit_dir": "G:\\ABM_INFO\\06_experiments\\logs\\socioverse2_v5\\government-rumor-v5-openai-20261020-012046-835718",
+  "config_dir": "G:\\ABM_INFO\\06_experiments\\configs\\socioverse2_v5\\government-rumor-v5-openai-20261020-012046-835718"
+}

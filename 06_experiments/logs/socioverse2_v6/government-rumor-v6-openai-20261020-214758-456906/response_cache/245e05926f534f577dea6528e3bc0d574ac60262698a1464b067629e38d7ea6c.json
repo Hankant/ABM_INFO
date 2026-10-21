@@ -1,0 +1,49 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频真伪暂时没法确定，这种涉及扶贫干部和贫困户的争议内容经常容易被断章取义，蹲一个完整原始视频和官方回应再说。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0018",
+    "tick": 1,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 8,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "245e05926f534f577dea6528e3bc0d574ac60262698a1464b067629e38d7ea6c",
+    "input_reserved_units": 2340,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1476,
+    "actual_output_tokens": 101,
+    "elapsed_seconds": 2.578
+  },
+  "validation_status": "valid"
+}

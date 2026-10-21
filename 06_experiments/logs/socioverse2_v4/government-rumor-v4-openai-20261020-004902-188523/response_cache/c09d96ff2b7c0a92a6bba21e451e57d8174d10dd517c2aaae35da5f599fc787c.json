@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "官方已经澄清说不属实了，那就不应该再继续传播，原帖内容与官方通报不符，谢谢发布者告知真相。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP21-A0430",
+      "text": "官方账号已发声明确认原帖情况不属实，大家别再转未经核实的内容了，以官方信息为准。"
+    },
+    "evidence_ids": [
+      "RP01-A0064",
+      "RP21-A0430"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0318",
+    "tick": 22,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 378,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "c09d96ff2b7c0a92a6bba21e451e57d8174d10dd517c2aaae35da5f599fc787c",
+    "input_reserved_units": 1664,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      2
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1109,
+    "actual_output_tokens": 115,
+    "elapsed_seconds": 4.188
+  },
+  "validation_status": "valid"
+}

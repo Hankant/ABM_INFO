@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "看了下评论区，多数也是先求证的态度。目前仍只有转述，没有原始视频或官方通报，扶贫干部身份、父子家庭状况、'牛被饿死'等细节都还无法核实，继续保留判断更稳妥。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "RP01-A0061",
+      "C02-A0137",
+      "C02-A0143"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0276",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 301,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "8c401b944174ec2df39974dc140f924adbce93326a4933be20dd431051ba9701",
+    "input_reserved_units": 3503,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      2
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2194,
+    "actual_output_tokens": 132,
+    "elapsed_seconds": 2.969
+  },
+  "validation_status": "valid"
+}

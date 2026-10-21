@@ -1,0 +1,44 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": false,
+      "text": ""
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "G001",
+      "text": "官方已澄清该消息不属实，转发提醒大家不要传播未经核实的信息。"
+    },
+    "evidence_ids": [
+      "G001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0032",
+    "tick": 20,
+    "attempt": 1,
+    "request_number": 109,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "4154a2db15ef3362a5121648c487f980a4c7a9a7f5ef788dfa04f05392a6303e",
+    "input_reserved_units": 3500,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "utf8_bytes_plus_256_proxy_not_actual_tokens",
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 842,
+    "actual_output_tokens": 88,
+    "elapsed_seconds": 2.453
+  }
+}

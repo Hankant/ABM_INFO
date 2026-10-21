@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "我也留意到这个视频的转发了，好几个账号描述基本一致，但大多是同一段文字的转述，没有看到完整视频和后续官方/当事人回应。既然还没出新的独立信源，先不下定论，附议等核查结果再判断。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "RP01-A0034",
+      "C02-A0024",
+      "C02-A0036"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0238",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 282,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "eb859cb654284bbef4c9814e25785a5ee09a15d0d2afd525ea295dd67ef8f44b",
+    "input_reserved_units": 3186,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      2
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1991,
+    "actual_output_tokens": 119,
+    "elapsed_seconds": 2.578
+  },
+  "validation_status": "valid"
+}

@@ -1,0 +1,49 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "这种事如果是真的话确实让人无语，但扶贫干部直接上门的视频是怎么流出来的？有没有更完整的上下文，比如这对父子是不是有特殊情况。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0012",
+    "tick": 1,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 7,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "59b1f59af22eb55ca2d78eca9612d11a928d4c4436dfca5473d129c7fc076569",
+    "input_reserved_units": 2332,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1472,
+    "actual_output_tokens": 98,
+    "elapsed_seconds": 2.797
+  },
+  "validation_status": "valid"
+}

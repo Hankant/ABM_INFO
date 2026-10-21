@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": false,
+      "text": ""
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP03-A0379",
+      "text": "目前只是多方重复同一段单方转述，并不能算独立核实。希望先看到完整视频、发布时间与地点信息，以及当地回应，再判断具体情况。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP03-A0375",
+      "RP03-A0379",
+      "RP03-A0571"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0386",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 641,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "8c503f9535908f3e6917220bbbff680c66dfd8ac560d713740eb7185828da516",
+    "input_reserved_units": 2948,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1871,
+    "actual_output_tokens": 94,
+    "elapsed_seconds": 2.547
+  },
+  "validation_status": "valid"
+}

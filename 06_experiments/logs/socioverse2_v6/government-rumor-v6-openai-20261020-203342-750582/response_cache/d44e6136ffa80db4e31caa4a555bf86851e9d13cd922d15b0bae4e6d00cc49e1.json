@@ -1,0 +1,54 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "转述里“父子懒惰到牛饿死”这种细节比较具体，光靠文字描述我没法判断真伪，希望能看到原视频或当地官方通报再下结论。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0013",
+      "RP02-A0017",
+      "RP02-A0232",
+      "RP02-A0441",
+      "RP02-A0447"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0437",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 369,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "d44e6136ffa80db4e31caa4a555bf86851e9d13cd922d15b0bae4e6d00cc49e1",
+    "input_reserved_units": 3639,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2263,
+    "actual_output_tokens": 139,
+    "elapsed_seconds": 2.718
+  },
+  "validation_status": "valid"
+}

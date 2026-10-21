@@ -1,0 +1,51 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": false,
+      "text": ""
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP01-A0034",
+      "text": "只有二手转述，完整视频、干部身份及当地通报都未见，暂无法确认这对父子的生活状况和“不干活”等具体归因。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0034",
+      "RP01-A0064"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0318",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 160,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "9cb3e65616a4b1cf8ab9ab586f74f292c1d9b04efd94ec223db50c181dcc9a2a",
+    "input_reserved_units": 2684,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1702,
+    "actual_output_tokens": 88,
+    "elapsed_seconds": 1.422
+  },
+  "validation_status": "valid"
+}

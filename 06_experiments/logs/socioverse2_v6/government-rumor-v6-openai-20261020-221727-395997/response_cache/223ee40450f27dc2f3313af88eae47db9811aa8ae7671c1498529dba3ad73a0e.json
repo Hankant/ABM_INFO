@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前只有转述，身份、现场情况和“牛被饿死”等细节都缺少完整来源，建议先核实再下结论。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP01-A0036",
+      "text": "先存疑求证：这段描述缺少完整来源，人物身份及“牛被饿死”等细节暂无法确认。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0036"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0122",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 99,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "223ee40450f27dc2f3313af88eae47db9811aa8ae7671c1498529dba3ad73a0e",
+    "input_reserved_units": 2414,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1540,
+    "actual_output_tokens": 99,
+    "elapsed_seconds": 1.547
+  },
+  "validation_status": "valid"
+}

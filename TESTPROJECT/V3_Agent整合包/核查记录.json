@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-18",
+  "source_file_name": "32.weibotest-fupin2_new(1).xls",
+  "source_sha256": "6f62c06d0d496e164f314c9ccd5e515236bfc5afa4f0af117a2147e1b9bd8e90",
+  "identity_source": "../V3_目标人群/用户身份表.csv",
+  "identity_sha256": "a88d9a7e5767e8b6a3d7013eb191ccea736816b3fcdbd00d599ef728d58e3daa",
+  "counts": {
+    "accounts": 305,
+    "observed_actions": 322,
+    "agents": 582,
+    "inside": 82,
+    "outside": 500,
+    "profiles_used_once": 28,
+    "profiles_used_twice": 277,
+    "profiles_with_conflicts": 1,
+    "profiles_with_repeated_attributes": 6
+  },
+  "assignment": {
+    "status": "draft_not_approved_for_formal_runs",
+    "method": "sort profiles by SHA256(salt|profile_id); append first 277 profiles; sort agent IDs by SHA256(salt|agent_id); zip; restore identity source order",
+    "salt": "v3-profile-assignment-draft-v1",
+    "group_used_in_assignment": false,
+    "behavior_used_in_assignment": false
+  },
+  "checks": {
+    "unique_agents": 582,
+    "all_profile_refs_valid": true,
+    "no_unfilled_persona_placeholders": true,
+    "no_event_comments_in_initial_personas": true,
+    "no_real_account_ids_or_names_exported": true
+  },
+  "outputs": {
+    "prompt模板.md": "eeac5120d944474c628e711bb55850a7cf2164fa0a2001406a3fbed835350693",
+    "从这里开始_构建方案.md": "c6ab77f93dd84578d51e6f0f9562180d1378f16eb4246562e254c5f96df1feb5",
+    "完整prompt示例.md": "b8e93285636624e3fc62851aec9d84fa822057053f8fa04afa0a30550f29ec29",
+    "数据使用与来源边界.md": "1f1838f428e835ac29876a337b41a7683a4d93363ce74d22c3c4154165f3486e",
+    "用户与资料分配草案_582.jsonl": "97641ca66805e0f35274a2538299f87ee668237541080ac3969e215fc988d0a2",
+    "账户资料_305.jsonl": "ece16bc5fe2971b09b16329c03b621b465f03fc1f980ab99a21dab8af5e20d4b"
+  }
+}

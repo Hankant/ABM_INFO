@@ -1,0 +1,16 @@
+{
+  "event_id": "event_052",
+  "copied_files": [
+    "event.json",
+    "profiles.jsonl",
+    "behavior_summary.json"
+  ],
+  "correction_status": "experimental_script_not_verified_official",
+  "empirical_follow_graph_available": false,
+  "profile_observation_time": "not_verified_as_pre_event",
+  "behavior_scope": "retrospective_public_expressions_not_browsing_opportunities",
+  "historical_comment_examples_included": false,
+  "historical_comment_examples_reason": "not needed for probability baseline; source marks local_review_only and never_send_to_model",
+  "old_event_metadata_reference_note": "local_comment_examples and original workbook descriptions are historical provenance, not required package dependencies",
+  "preferred_population_input": "profile_donors.jsonl (counts only); full profiles retained for provenance, behavior summaries must not modify probabilities"
+}

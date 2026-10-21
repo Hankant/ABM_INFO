@@ -1,0 +1,51 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "看了两条转发都说要等完整视频和核实材料再判断，我同意。扶贫干部怒斥对象这种内容容易被剪辑断章取义，希望能有原始报道或当事人回应。单凭这段文字描述还不能下结论。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0041",
+      "RP02-A0297"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0319",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 318,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "7017237b2c16496809cb0be65582a1fb5ef1fb78ce726d31b26efebec09507da",
+    "input_reserved_units": 2762,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1727,
+    "actual_output_tokens": 128,
+    "elapsed_seconds": 3.359
+  },
+  "validation_status": "valid"
+}

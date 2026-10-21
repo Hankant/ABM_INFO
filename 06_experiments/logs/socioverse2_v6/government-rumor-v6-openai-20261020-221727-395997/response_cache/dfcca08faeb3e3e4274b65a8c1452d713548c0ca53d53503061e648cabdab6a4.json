@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "目前可见的是多账号重复转述同一则政府账号回帖，并非多份独立调查材料。该回帖明确称网传情况不属实，但在缺少完整视频、事发背景和调查依据的情况下，原始帖子关于干部身份、扶贫对象身份及“懒惰”等细节不宜继续当作事实传播。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP03-A0213",
+      "text": "已有账号回应称网传情况不属实，但当前只见转述，未见完整调查材料。原始视频情节仍无法独立确认，暂停扩散，等待后续证据。"
+    },
+    "evidence_ids": [
+      "G001",
+      "RP02-A0213",
+      "RP03-A0213",
+      "RP03-A0254",
+      "RP03-A0327",
+      "C03-A0365",
+      "C03-A0394"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0394",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 737,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "dfcca08faeb3e3e4274b65a8c1452d713548c0ca53d53503061e648cabdab6a4",
+    "input_reserved_units": 3877,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 1,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2447,
+    "actual_output_tokens": 218,
+    "elapsed_seconds": 2.282
+  },
+  "validation_status": "valid"
+}

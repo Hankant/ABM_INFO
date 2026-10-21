@@ -1,0 +1,39 @@
+{
+  "source_files": [
+    {
+      "label": "existing_single_event_event.json",
+      "sha256": "e647f95701d27de13ee32be7544d6005d23a462da3c1f4932d71d9da1a91b691",
+      "target": "inputs/event_input.json",
+      "processing": "field subset; original text and correction text copied verbatim; unused profile/summary paths removed; derived-data classification added"
+    },
+    {
+      "label": "previous_generated_population_roster_draft.jsonl",
+      "sha256": "a1c68a3724985babd763a843b54405850a1770689eb51740b0fe4ba46d4c5492",
+      "target": "inputs/population_identity.jsonl",
+      "processing": "reused existing generated identities and groups; no resampling; removed unused donor_id; null initial_state retained"
+    },
+    {
+      "label": "manuscript_baseline.json",
+      "sha256": "c58f1d17133f683abe3e65a1db18255c0ac105a40e9730a01f0e0fe36864a112",
+      "target": "inputs/model_parameters.json",
+      "processing": "existing manuscript transcription retained; not independently reestimated"
+    },
+    {
+      "label": "group_probability_table.json",
+      "sha256": "e50b45a7c18769a72e39d49beb44820ef8e8081289842f4fac641d65541c9339",
+      "target": "inputs/model_parameters.json",
+      "processing": "all three rows retained; precision uncertainty preserved"
+    }
+  ],
+  "raw_collection_files_included": false,
+  "simulation_results_included": false,
+  "excluded_inputs": [
+    "305 donor profiles: no effect on agreed probability baseline",
+    "retrospective behavior summaries and historical comments: not model inputs",
+    "generated 405-condition enumeration: unnecessary before condition selection",
+    "old LLM/feed config: different model, not a shared default",
+    "framework-specific environment bundle: adapter output, not common domain data"
+  ],
+  "original_workbook_candidate": "32.weibotest-fupin2_new.xls",
+  "original_workbook_status": "not_found_in_checked_project_or_original_code_archives; not required for this scope"
+}

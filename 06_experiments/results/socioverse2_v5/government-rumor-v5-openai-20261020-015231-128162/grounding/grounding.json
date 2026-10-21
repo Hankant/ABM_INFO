@@ -1,0 +1,9 @@
+{
+  "method_notes": "V4用户指定工程模型，合成网络；实验性纠正文本。",
+  "assumptions": [
+    {
+      "id": "pending-rule-contract",
+      "claim": "authorized_engineering_run"
+    }
+  ]
+}

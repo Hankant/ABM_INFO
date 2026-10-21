@@ -1,0 +1,15 @@
+{
+  "roles": [
+    {
+      "role_id": "SOURCE",
+      "role": "rumor_source",
+      "counts_toward_582": false
+    },
+    {
+      "role_id": "GOVERNMENT",
+      "role": "government",
+      "counts_toward_582": false
+    }
+  ],
+  "status": "role_definition_not_initialized_world"
+}

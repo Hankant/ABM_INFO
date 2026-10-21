@@ -1,0 +1,54 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "看到多个官方账号都已明确回应网传情况不属实，而且评论区也指出原始视频的完整语境、当事人身份和核查材料都没有展示。一段剪辑视频加上“懒惰”等标签性描述，不足以构成事实，我不会把原帖内容和这些细节描述当作事实传播，也不打算继续转发了。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "C03-A0018",
+      "C07-A0126",
+      "G001",
+      "P001",
+      "RP02-A0007",
+      "RP03-A0419"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0428",
+    "tick": 10,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 2617,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "85647beb84edb51833cb6a3ebad4f63fe93e1aef455880646abc0cdcb7dbf815",
+    "input_reserved_units": 4043,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 5,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 2,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2565,
+    "actual_output_tokens": 162,
+    "elapsed_seconds": 3.656
+  },
+  "validation_status": "valid"
+}

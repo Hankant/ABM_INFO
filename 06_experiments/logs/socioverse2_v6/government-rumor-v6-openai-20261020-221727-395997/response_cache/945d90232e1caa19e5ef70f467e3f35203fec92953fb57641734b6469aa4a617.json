@@ -1,0 +1,54 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "已有相关账号明确回应称该帖情况不属实；目前又缺少完整视频、背景及调查报告，无法核实干部身份、父子是否长期不劳动和牛的死亡原因。建议停止扩散“懒惰父子”等定性表述，等待完整证据。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "G001",
+      "P001",
+      "RP03-A0011",
+      "RP02-A0047",
+      "C03-A0112",
+      "C03-A0476"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0081",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 573,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "945d90232e1caa19e5ef70f467e3f35203fec92953fb57641734b6469aa4a617",
+    "input_reserved_units": 4075,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 3,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 2,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2596,
+    "actual_output_tokens": 115,
+    "elapsed_seconds": 1.281
+  },
+  "validation_status": "valid"
+}

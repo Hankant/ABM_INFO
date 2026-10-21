@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频片段看着确实令人不适，但只凭一段剪辑就定性这对父子的全部情况还是太单薄了。转发的求证思路是对的：希望看到完整视频、扶贫干部身份核实、当地官方回应，再判断也不迟。贴标签之前，让子弹飞一会儿。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP01-A0035",
+      "text": "转出来也存个疑：完整视频和当事人身份、当地回应都没见到，仅凭片段就给这对父子贴标签太草率了。欢迎有信息的朋友补充或纠正。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0035"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0509",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 206,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "302d7640aa105ef6ca25742f1418d2bf116d42d1560b35c813d46b9c8890838b",
+    "input_reserved_units": 2421,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1522,
+    "actual_output_tokens": 175,
+    "elapsed_seconds": 3.969
+  },
+  "validation_status": "valid"
+}

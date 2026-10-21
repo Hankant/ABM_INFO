@@ -1,0 +1,24 @@
+{
+  "agent_id": "A0018",
+  "tick": 22,
+  "decision_status": "error",
+  "error_type": "RuntimeError",
+  "observed_posts": [
+    {
+      "content_id": "RP21-A0002",
+      "root_content_id": "G001",
+      "author_id": "A0002",
+      "original_author_id": "GOVERNMENT",
+      "published_tick": 21,
+      "available_tick": 22,
+      "text": "关于网上流传的“辽宁一名扶贫干部怒斥一对懒惰父子”的相关消息，本账号作出如下回应：该帖所述情况不属实，请勿继续将其作为事实传播。请关注后续核实信息，避免转发未经核实的内容。",
+      "repost_text": "转发官方澄清：原帖所述情况不属实，请勿继续传播未经核实的内容。",
+      "parent_content_id": "RP20-A0059",
+      "comments": [],
+      "delivery": "followee",
+      "can_repost": true,
+      "block_reason": null
+    }
+  ],
+  "note": "batch not committed; see safe request diagnostics; no fallback"
+}

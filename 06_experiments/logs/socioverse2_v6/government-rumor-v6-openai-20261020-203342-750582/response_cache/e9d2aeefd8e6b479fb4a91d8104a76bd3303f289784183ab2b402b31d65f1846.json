@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "这段内容重复出现多次，但目前仍只有文字描述，没有完整视频、官方通报或当事人回应。环境卫生等细节是否有画面依据尚不能确认，“懒惰”也是主观标签，牛为何死亡及事件全貌还需核实，不宜直接给当事人定性。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "C03-A0061",
+      "C03-A0443",
+      "RP03-A0435"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0343",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 617,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "e9d2aeefd8e6b479fb4a91d8104a76bd3303f289784183ab2b402b31d65f1846",
+    "input_reserved_units": 4075,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 1,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 3,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2536,
+    "actual_output_tokens": 138,
+    "elapsed_seconds": 1.578
+  },
+  "validation_status": "valid"
+}

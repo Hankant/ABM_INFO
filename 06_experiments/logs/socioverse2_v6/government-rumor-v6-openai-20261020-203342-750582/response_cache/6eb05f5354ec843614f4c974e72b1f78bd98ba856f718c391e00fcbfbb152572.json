@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "我也看到好几个账号在转同一段描述，但目前都没有放出完整视频或当地官方通报。在有更多可靠信息之前，我也只能保持观望，不太好对当事人下结论。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0020",
+      "RP03-A0302",
+      "RP03-A0323",
+      "RP03-A0472",
+      "C03-A0193",
+      "C03-A0275"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0496",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 705,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "6eb05f5354ec843614f4c974e72b1f78bd98ba856f718c391e00fcbfbb152572",
+    "input_reserved_units": 3680,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 2,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2263,
+    "actual_output_tokens": 147,
+    "elapsed_seconds": 2.281
+  },
+  "validation_status": "valid"
+}

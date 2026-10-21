@@ -1,0 +1,11 @@
+{
+  "stdout": "G:\\ABM_INFO\\06_experiments\\logs\\socioverse2_v6\\rate529-resume-20261020-221724.stdout.log",
+  "stderr": "G:\\ABM_INFO\\06_experiments\\logs\\socioverse2_v6\\rate529-resume-20261020-221724.stderr.log",
+  "migration_manifest": "G:\\ABM_INFO\\06_experiments\\configs\\socioverse2_v6\\rate-migration-221449.json",
+  "steps": 10,
+  "runtime": "C:\\Users\\69596\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.exe",
+  "government_tick": 2,
+  "pid": 928368,
+  "parent_run": "G:\\ABM_INFO\\06_experiments\\results\\socioverse2_v6\\government-rumor-v6-openai-20261020-221449-541204",
+  "started": "2026-10-20T22:17:24.6095199+08:00"
+}

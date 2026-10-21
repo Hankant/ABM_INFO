@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "画面或许能说明居住环境脏乱，但目前看到的多是同一段转述，不能确认干部身份、父子是否属于贫困户，也无法确认牛是否真是被饿死。先别用“懒惰”给他们贴标签，等完整视频、当事人说法和当地回应吧。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "RP04-A0310",
+      "C04-A0302",
+      "C04-A0316",
+      "C04-A0332",
+      "RP02-A0022",
+      "RP02-A0149",
+      "RP03-A0528"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0230",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 865,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "ff7f9db3722dcc54e1eec5e3fe2d930fadc4346ac77e9ef535e242d4ee914a29",
+    "input_reserved_units": 3986,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 3,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 1,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2470,
+    "actual_output_tokens": 132,
+    "elapsed_seconds": 3.969
+  },
+  "validation_status": "valid"
+}

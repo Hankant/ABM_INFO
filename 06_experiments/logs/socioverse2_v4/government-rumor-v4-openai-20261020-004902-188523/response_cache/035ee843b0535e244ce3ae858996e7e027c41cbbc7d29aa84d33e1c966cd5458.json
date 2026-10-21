@@ -1,0 +1,49 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "政府官方已澄清该帖内容不属实，大家别再传播未经核实的信息了，等后续官方核实结果。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP20-A0078",
+      "text": "转发官方辟谣：网传辽宁扶贫干部怒斥懒惰父子一事不属实，请勿传播未经核实内容。"
+    },
+    "evidence_ids": [
+      "RP20-A0078"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0543",
+    "tick": 21,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 237,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "035ee843b0535e244ce3ae858996e7e027c41cbbc7d29aa84d33e1c966cd5458",
+    "input_reserved_units": 1298,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 861,
+    "actual_output_tokens": 124,
+    "elapsed_seconds": 5.375
+  },
+  "validation_status": "valid"
+}

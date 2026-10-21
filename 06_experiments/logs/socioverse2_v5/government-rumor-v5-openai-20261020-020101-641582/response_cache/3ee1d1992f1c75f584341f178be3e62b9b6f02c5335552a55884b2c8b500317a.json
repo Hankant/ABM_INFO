@@ -1,0 +1,49 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频里看着确实挺让人无语的，不过这种扶贫领域的故事容易被加工放大的，官方通报或者更多一手信息能贴一下吗？"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0036",
+    "tick": 1,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 22,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "3ee1d1992f1c75f584341f178be3e62b9b6f02c5335552a55884b2c8b500317a",
+    "input_reserved_units": 1543,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 985,
+    "actual_output_tokens": 99,
+    "elapsed_seconds": 2.469
+  },
+  "validation_status": "valid"
+}

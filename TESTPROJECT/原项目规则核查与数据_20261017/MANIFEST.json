@@ -1,0 +1,89 @@
+{
+  "status": "source_audit_and_base_initialization_verified",
+  "runtime_ready_for_original_spatial_model": false,
+  "simulation_ticks_executed": 0,
+  "llm_calls": 0,
+  "files": [
+    {
+      "path": "evidence/code_excerpt.md",
+      "bytes": 44495,
+      "sha256": "f4b0bc78167504febf2c958bb422ecd872cfadd1489680dcc829e3bfd0236e4a"
+    },
+    {
+      "path": "evidence/guide_excerpt.md",
+      "bytes": 3085,
+      "sha256": "ca2bf3ba0cc26178590aae995e9a544e8438d05049ffa00d5b7da3c09bfc380b"
+    },
+    {
+      "path": "evidence/manuscript_excerpt.md",
+      "bytes": 18023,
+      "sha256": "0f8a5824d48fecb3f9144558e754020f53f240d4ba67b26979e94c831029be87"
+    },
+    {
+      "path": "evidence/source_manifest.json",
+      "bytes": 1515,
+      "sha256": "11b84a30a2ddbf7bc49106818a328b34f0be78754fb13a762f077aef4e718516"
+    },
+    {
+      "path": "legacy_reference/config_without_llm_service.json",
+      "bytes": 2439,
+      "sha256": "cc948eb7cb6f310692c844678a5b17cf0954424b817b867c7d17b09b6bf66a2f"
+    },
+    {
+      "path": "legacy_reference/default_direct_recipients_seed1.json",
+      "bytes": 716,
+      "sha256": "1644549b74f3d261f27408e7ee1f68cf20b6facf8bf4d2cdb4a8e0229fb260e5"
+    },
+    {
+      "path": "legacy_reference/extraction_info.json",
+      "bytes": 1030,
+      "sha256": "8aa9119ae0b50e3d092327cf7260e577c28f6ecab02a42c34391b296fc5d23c2"
+    },
+    {
+      "path": "legacy_reference/follow_edges_seed1.json",
+      "bytes": 437138,
+      "sha256": "3ca9f836b4d7dc37334ce0dd682433eceda01fe27f6e0ae3e485b2b4d52274b9"
+    },
+    {
+      "path": "legacy_reference/initial_state_network_seed1.json",
+      "bytes": 444906,
+      "sha256": "928c8ac1d7eaa4c47137bf71b72ace453a83639152c5b03432f5639579ed24f4"
+    },
+    {
+      "path": "manuscript/confirmed_state_rules.json",
+      "bytes": 2089,
+      "sha256": "59dd65c865709f3ae5762d6245bc3e11ea961601bf0b0ec14b19c77df90ae27b"
+    },
+    {
+      "path": "manuscript/parameters_and_precision.json",
+      "bytes": 3162,
+      "sha256": "01e8ff2f9ef592050af332cedbfb04cbedfb4ac3c43947d156abece87a1d930c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7849,
+      "sha256": "b41dd79a4020f57dcbdaddbcf346b3b6f2778eee5a354c802f210cfa9e0df918"
+    },
+    {
+      "path": "rule_audit.json",
+      "bytes": 8242,
+      "sha256": "9c9c62797104f9cd52a8b92cccf102820bf49025773bdd3061ec152badeb3c25"
+    },
+    {
+      "path": "run_conditions_audit.json",
+      "bytes": 1590,
+      "sha256": "9ea38ab9dac35d20378a11ccd064e62dd7624a3c76e8fad366446988541bb24f"
+    }
+  ],
+  "path_base": "package_root",
+  "checks": {
+    "ordinary_users": 582,
+    "inside": 82,
+    "outside": 500,
+    "unique_directed_edges": 5902,
+    "unique_inside_direct_recipients": 40,
+    "base_initialization_repeated_equal": true,
+    "json_parse": true,
+    "absolute_paths_present": false
+  }
+}

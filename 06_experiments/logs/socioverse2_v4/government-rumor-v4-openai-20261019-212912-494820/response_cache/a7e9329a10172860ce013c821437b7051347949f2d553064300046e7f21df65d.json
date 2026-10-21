@@ -1,0 +1,44 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "扶贫干部的做法可以理解，但光凭一段剪辑过的视频很难判断真实情况。父子俩的具体困难、村里之前是否有过帮扶、扶贫干部的处理方式是否过激，这些都需要更多信息才能下定论。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0032",
+    "tick": 1,
+    "attempt": 1,
+    "request_number": 19,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "a7e9329a10172860ce013c821437b7051347949f2d553064300046e7f21df65d",
+    "input_reserved_units": 3480,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "utf8_bytes_plus_256_proxy_not_actual_tokens",
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 842,
+    "actual_output_tokens": 111,
+    "elapsed_seconds": 2.468
+  }
+}

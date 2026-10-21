@@ -1,0 +1,49 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频里这父子俩的情况看着确实让人来气，不过这种扶贫干部骂人的视频容易被掐头去尾，建议找下完整原视频和官方通报再下结论。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0050",
+    "tick": 1,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 29,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "ff193da08a8d7e72cbcec7b725ed8d78ec8aa9a5ab46acda7e4bc166f2d53c47",
+    "input_reserved_units": 2341,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1478,
+    "actual_output_tokens": 105,
+    "elapsed_seconds": 2.5
+  },
+  "validation_status": "valid"
+}

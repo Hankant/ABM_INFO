@@ -1,0 +1,56 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "看到好几个账号转的都是同一段描述，还没有完整视频、时间和当地官方说明。环境卫生看着确实差，但\"扶贫干部怒斥\"\"牛被饿死都不知道\"这种定性还是先等核实再说吧。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "C03-A0006",
+      "C03-A0352",
+      "C04-A0005",
+      "P001",
+      "RP02-A0022",
+      "RP02-A0361",
+      "RP04-A0001",
+      "RP04-A0066"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0059",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 784,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "99f028fd2b9c49d1d79a0fcd0c4742581a84883d9b7562ce73fcc40e3579ad08",
+    "input_reserved_units": 4077,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 4,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 3,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2501,
+    "actual_output_tokens": 161,
+    "elapsed_seconds": 2.625
+  },
+  "validation_status": "valid"
+}

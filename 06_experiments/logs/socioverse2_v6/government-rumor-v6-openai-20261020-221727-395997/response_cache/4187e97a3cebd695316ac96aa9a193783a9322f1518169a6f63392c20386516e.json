@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前只有转述和疑似视频片段，地点、时间及完整经过都未核实，暂不能断定父子确实长期不干活。求证时应同时留意是否还有上下文被剪掉。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP02-A0114",
+      "text": "先求证，不把剪辑片段直接当完整事实，也避免仅凭一段视频给当事人贴标签。希望能看到原始视频、时间地点和当地回应。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0013",
+      "RP02-A0114",
+      "RP02-A0158"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0419",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 443,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "4187e97a3cebd695316ac96aa9a193783a9322f1518169a6f63392c20386516e",
+    "input_reserved_units": 3038,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1912,
+    "actual_output_tokens": 168,
+    "elapsed_seconds": 1.828
+  },
+  "validation_status": "valid"
+}

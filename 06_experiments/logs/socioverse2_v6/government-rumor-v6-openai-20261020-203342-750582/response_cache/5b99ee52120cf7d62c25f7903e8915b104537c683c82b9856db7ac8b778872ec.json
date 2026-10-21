@@ -1,0 +1,51 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "光看这段文字描述还无法判断真伪，希望能看到原始视频出处和完整经过。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0059",
+      "RP02-A0173"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0534",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 423,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "5b99ee52120cf7d62c25f7903e8915b104537c683c82b9856db7ac8b778872ec",
+    "input_reserved_units": 2732,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1715,
+    "actual_output_tokens": 102,
+    "elapsed_seconds": 8.203
+  },
+  "validation_status": "valid"
+}

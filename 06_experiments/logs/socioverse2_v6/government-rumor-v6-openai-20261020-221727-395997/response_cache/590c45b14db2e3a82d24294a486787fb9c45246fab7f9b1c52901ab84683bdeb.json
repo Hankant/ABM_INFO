@@ -1,0 +1,57 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "现有回应已明确称网传情节“不属实”，而原帖缺少完整视频、时间地点及调查材料。“懒惰”“牛被饿死也不知道”等细节不宜继续当作事实传播，建议以正式调查结果为准。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP03-A0168",
+      "text": "相关账号已回应网传情节“不属实”。先暂停扩散，待完整视频和正式调查结果公布后再判断。"
+    },
+    "evidence_ids": [
+      "RP01-A0020",
+      "C02-A0035",
+      "C03-A0478",
+      "RP03-A0068",
+      "RP03-A0168",
+      "RP03-A0327",
+      "RP03-A0380",
+      "G001",
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0136",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 597,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "590c45b14db2e3a82d24294a486787fb9c45246fab7f9b1c52901ab84683bdeb",
+    "input_reserved_units": 3945,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 2,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2536,
+    "actual_output_tokens": 153,
+    "elapsed_seconds": 6.078
+  },
+  "validation_status": "valid"
+}

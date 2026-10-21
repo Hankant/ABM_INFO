@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前看到的都是同一段转述，仍缺完整视频、事发地点、干部身份和当地回应，不能据此确认“懒惰”或“牛被饿死”。环境卫生状况即使值得关心，也先别急着给当事人定性。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP04-A0370",
+      "text": "转出求证：多个账号重复发布不等于独立证实。现有片段无法确认地点、人员身份及牛的死亡原因，建议等完整视频或当地回应后再判断。"
+    },
+    "evidence_ids": [
+      "RP04-A0370",
+      "RP04-A0449",
+      "RP03-A0302",
+      "RP03-A0416",
+      "C04-A0023",
+      "C04-A0237",
+      "C04-A0469"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0345",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 926,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "919cf6b89ba7e627107d47fcdfe57c85c29c3564ad8396de49ce7a4e5ec13fc8",
+    "input_reserved_units": 3958,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 3,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 1,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2444,
+    "actual_output_tokens": 160,
+    "elapsed_seconds": 1.344
+  },
+  "validation_status": "valid"
+}

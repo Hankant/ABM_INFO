@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "看了几轮转发，原始视频、当事人回应和官方说明都还没出现，'扶贫干部怒斥'的具体语境以及父子是否真如描述那样也不能凭片段确认，建议先不传播未经核实的负面标签，等完整视频或权威通报出来再判断。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "RP03-A0455",
+      "RP02-A0063",
+      "RP02-A0374",
+      "C03-A0028",
+      "C03-A0111",
+      "C03-A0186",
+      "C03-A0508"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0265",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 579,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "1787ae8a027c26e793bcad52f3e3b7cfdce28677b8319685fbcb2567bd635a21",
+    "input_reserved_units": 3779,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 1,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2330,
+    "actual_output_tokens": 151,
+    "elapsed_seconds": 2.672
+  },
+  "validation_status": "valid"
+}

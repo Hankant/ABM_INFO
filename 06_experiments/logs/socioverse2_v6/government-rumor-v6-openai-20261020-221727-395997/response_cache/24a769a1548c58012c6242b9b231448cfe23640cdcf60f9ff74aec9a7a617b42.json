@@ -1,0 +1,49 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": false,
+      "text": ""
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP01-A0036",
+      "text": "先存疑求证：目前只有转述，无法确认视频人物身份及“牛被饿死”等细节。求更完整来源。"
+    },
+    "evidence_ids": [
+      "RP01-A0036"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0161",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 108,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "24a769a1548c58012c6242b9b231448cfe23640cdcf60f9ff74aec9a7a617b42",
+    "input_reserved_units": 2420,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1543,
+    "actual_output_tokens": 75,
+    "elapsed_seconds": 0.922
+  },
+  "validation_status": "valid"
+}

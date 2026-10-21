@@ -1,0 +1,51 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前只有转述，无法确认视频真伪、人物身份及“牛被饿死”等细节；建议先核实完整视频、时间地点和官方回应。扶贫干部的话也不能直接替代事实证据。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP02-A0136",
+      "text": "先求证，不把转述当定论。需要完整视频、时间地点、官方回应及“牛被饿死”的证据；扶贫干部评价也不等于客观事实。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0136",
+      "RP02-A0478"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0337",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 327,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "693c4f4928ff71f7067a574cacafedaa1c9825be56c6825f57614b0e3da9b78a",
+    "input_reserved_units": 2742,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1734,
+    "actual_output_tokens": 129,
+    "elapsed_seconds": 3.281
+  },
+  "validation_status": "valid"
+}

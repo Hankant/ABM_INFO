@@ -1,0 +1,56 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "目前看到多名账号重复发布同一声明，但这不构成多个独立来源的证实。现有帖子只有笼统的“不属实”回应，缺少完整视频、原始出处及具体核查依据，因此我暂不相信网传细节，也建议等待可核验材料。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP04-A0116",
+      "text": "暂不采信这起“懒惰父子”事件的网传叙述。重复出现的回应不是独立佐证，而“不属实”的具体依据、原始视频和完整上下文仍未展示，先等更完整的核查信息。"
+    },
+    "evidence_ids": [
+      "G001",
+      "P001",
+      "RP04-A0116",
+      "RP04-A0158",
+      "RP04-A0317",
+      "RP04-A0326",
+      "RP02-A0158",
+      "C03-A0412"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0222",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 957,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "ca048a9074ced0fb6ef1e539a555672cf57fac2d99f970199e0c38e06c0c1770",
+    "input_reserved_units": 3932,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 3,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2509,
+    "actual_output_tokens": 224,
+    "elapsed_seconds": 2.25
+  },
+  "validation_status": "valid"
+}

@@ -1,0 +1,217 @@
+{
+  "status": "source_audit_and_initialization_verified_not_full_model_reproduced",
+  "items": [
+    {
+      "id": "R01",
+      "question": "接触模式",
+      "finding": "原稿二维随机移动相遇；现有两版Python为网络信息流",
+      "status": "source_conflict",
+      "evidence": [
+        "manuscript P162",
+        "core.py initialize/build_feed"
+      ],
+      "application_to_target": "现有资料可描述两者，最终共同模型不能混用"
+    },
+    {
+      "id": "R02",
+      "question": "世界尺寸、距离阈值、方向分布、外边界",
+      "finding": "未定位到可执行空间定义；现有代码没有坐标",
+      "status": "not_found_in_checked_materials",
+      "evidence": [
+        "manuscript P108-P115,P162,P172-P173",
+        "core.py initialize"
+      ],
+      "application_to_target": "保持未定，不以网络参数填入"
+    },
+    {
+      "id": "R03",
+      "question": "初始位置",
+      "finding": "用户和政府每次运行随机初始化，源在圈层中心",
+      "status": "manuscript_partial",
+      "evidence": [
+        "manuscript P115,P173"
+      ],
+      "application_to_target": "随机初始化原则可填；分布范围、种子与坐标仍缺"
+    },
+    {
+      "id": "R04",
+      "question": "圈层函数",
+      "finding": "随相信比例扩大／纠正后缩小，未给精确函数",
+      "status": "manuscript_partial",
+      "evidence": [
+        "manuscript P108-P111"
+      ],
+      "application_to_target": "不能把PR=11.7直接设半径"
+    },
+    {
+      "id": "R05",
+      "question": "LC=250",
+      "finding": "首末评论时间差的校准值，用于讨论400ticks终点；没有明确第250步删除或转状态",
+      "status": "manuscript_partial",
+      "evidence": [
+        "manuscript P47-P49,P115"
+      ],
+      "application_to_target": "不能默认250步强制失效；先区分是否仅背景校准参数"
+    },
+    {
+      "id": "R06",
+      "question": "政府移动与目标",
+      "finding": "启用后每tick随机方向一步；2圈内/1随机/0圈外；区域算法未明确",
+      "status": "manuscript_partial",
+      "evidence": [
+        "manuscript P104,P172"
+      ],
+      "application_to_target": "可填政策含义，不能填未知几何算法"
+    },
+    {
+      "id": "R07",
+      "question": "现有用户初态",
+      "finding": "582人score=null,state=unaware,memory=[]；ID为C001-C082/O001-O500",
+      "status": "verified_code_and_initialization",
+      "evidence": [
+        "core.py L149-L185",
+        "legacy_reference/initial_state_network_seed1.json"
+      ],
+      "application_to_target": "属于旧模型；不是原稿S/E/I/R的直接证据"
+    },
+    {
+      "id": "R08",
+      "question": "原稿普通用户初态",
+      "finding": "S为易感；传播曲线描述从0开始；未找到明确完整初始状态向量",
+      "status": "supported_inference_not_explicit_initialization",
+      "evidence": [
+        "manuscript P100,P163-P169"
+      ],
+      "application_to_target": "全S可作为有依据的候选，不能标成已经读到赋值代码"
+    },
+    {
+      "id": "R09",
+      "question": "源与政府初态",
+      "finding": "旧代码SOURCE在round0发帖，round1可见；GOV为特殊发布ID，不是移动用户；原稿源位于中心",
+      "status": "verified_code_manuscript_partial",
+      "evidence": [
+        "core.py L79-L94,L149-L201",
+        "manuscript P115"
+      ],
+      "application_to_target": "不要把旧GOV角色当作已知空间位置"
+    },
+    {
+      "id": "R10",
+      "question": "单tick顺序",
+      "finding": "旧代码先冻结全部输入，每个有曝光用户一次综合decide，全部成功后统一提交，新用户帖下一轮可见",
+      "status": "verified_code",
+      "evidence": [
+        "core.py L594-L722"
+      ],
+      "application_to_target": "该顺序存在，但不是原稿顺序已证实"
+    },
+    {
+      "id": "R11",
+      "question": "多次接触",
+      "finding": "旧代码同轮同帖去重，多帖合并一次决策；同帖最多3次且间隔>=5，帖龄<40",
+      "status": "verified_code",
+      "evidence": [
+        "core.py L281-L308,L369-L408,L594-L722"
+      ],
+      "application_to_target": "不能把综合LLM决策等同逐接触PB/RC抽样"
+    },
+    {
+      "id": "R12",
+      "question": "重新相信",
+      "finding": "旧代码对所有有曝光用户可更新score，没有reject吸收态拦截；原稿未完整给微观逆转规则",
+      "status": "verified_code_target_partial",
+      "evidence": [
+        "core.py L632-L680",
+        "manuscript P165-P172"
+      ],
+      "application_to_target": "旧版允许不意味着目标概率模型应允许"
+    },
+    {
+      "id": "R13",
+      "question": "PB失败状态",
+      "finding": "原稿公式12明确有效接触后以1-PB进入R",
+      "status": "manuscript_explicit",
+      "evidence": [
+        "manuscript P165-P169"
+      ],
+      "application_to_target": "修正之前文档中的未定标记，仅适用于公式中的S接触分支"
+    },
+    {
+      "id": "R14",
+      "question": "政府与同伴纠正GT",
+      "finding": "原稿仅明确与政府相遇的GT；旧代码GT是提示线索",
+      "status": "not_fully_specified",
+      "evidence": [
+        "manuscript P172",
+        "core.py _official_post"
+      ],
+      "application_to_target": "普通用户传来的纠正接受率仍无明确依据"
+    },
+    {
+      "id": "R15",
+      "question": "T_i选择",
+      "finding": "旧代码固定TG-1相信者，TG..TG+30含端点内第一次reject；以后重信不重置；原稿未定义重复转换选哪一次",
+      "status": "verified_code_target_partial",
+      "evidence": [
+        "core.py L620-L622,L713-L742",
+        "manuscript P68-P69"
+      ],
+      "application_to_target": "不把旧窗口／第一次逻辑静默写为原稿规则"
+    },
+    {
+      "id": "R16",
+      "question": "概率精度",
+      "finding": "表1三组值存在；正文P约.172，精确.1/.579约.17271157",
+      "status": "source_rounding_difference",
+      "evidence": [
+        "manuscript P75/table1",
+        "manuscript/parameters_and_precision.json"
+      ],
+      "application_to_target": "两方案数值已提供，最终冻结口径需记录"
+    },
+    {
+      "id": "R17",
+      "question": "首次运行参数",
+      "finding": "旧代码默认d_seed=.2,TG20,inside,GT.6,seed1,80轮；不是PBd=.2的原稿实验",
+      "status": "verified_code",
+      "evidence": [
+        "runner.py L132-L164",
+        "cli.py L56-L60"
+      ],
+      "application_to_target": "可提取测试候选，不把d_seed改名PBd"
+    },
+    {
+      "id": "R18",
+      "question": "重复数与seed",
+      "finding": "原稿81000次/405条件，算术平均200次；未给seed及逐条件分配；旧种子网格1/2/3",
+      "status": "manuscript_partial_code_explicit",
+      "evidence": [
+        "manuscript P173",
+        "legacy_reference/config_without_llm_service.json"
+      ],
+      "application_to_target": "不宣称每条件200次已逐项验证，不自动执行"
+    },
+    {
+      "id": "R19",
+      "question": "转变比例与窗口",
+      "finding": "旧代码update_rate=updated_n/risk_n；用户此前要求原稿TBU边界且不新增统一观察窗",
+      "status": "verified_code_and_user_boundary",
+      "evidence": [
+        "core.py summarize",
+        "prior_user_decisions"
+      ],
+      "application_to_target": "新增比例暂缓；不再把统一窗口当作必须重选项"
+    },
+    {
+      "id": "R20",
+      "question": "SocioVerse2已完成状态",
+      "finding": "用户转述已有study与环境层，本地核查未定位到对应study.yaml或provider实现",
+      "status": "external_status_not_locally_verified",
+      "evidence": [
+        "provided_user_status",
+        "workspace_file_inventory"
+      ],
+      "application_to_target": "保留为对方报告，不冒称本轮验证过"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "panel_rows": 23862,
+  "unique_agents": 582,
+  "completed_ticks": 40,
+  "direct_government_recipients": 40,
+  "successful_unique_root_reposts": 894,
+  "partial_actions": 1402,
+  "audited_probability_draws": 2115,
+  "api_requests": 0,
+  "conclusion": "工程不变量通过；固定回答不能作为研究结果"
+}

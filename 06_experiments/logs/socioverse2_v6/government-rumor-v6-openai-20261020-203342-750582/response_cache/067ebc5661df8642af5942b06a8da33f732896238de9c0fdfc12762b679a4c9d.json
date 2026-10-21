@@ -1,0 +1,54 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "这段文字是重复转述，现有内容不能确认视频是否完整、当事人身份和牛的死亡原因，也看不出生活困难的具体成因。求证时最好补充完整视频、时间地点及当地回应，也别先用“懒惰”给他们贴标签。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "RP03-A0084",
+      "RP03-A0087",
+      "RP02-A0032",
+      "C03-A0160",
+      "C03-A0200",
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0491",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 704,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "067ebc5661df8642af5942b06a8da33f732896238de9c0fdfc12762b679a4c9d",
+    "input_reserved_units": 3473,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 1,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2142,
+    "actual_output_tokens": 119,
+    "elapsed_seconds": 1.219
+  },
+  "validation_status": "valid"
+}

@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前看到的都是同一段视频及近似文字描述，并不能构成多方独立证实。环境画面或许真实，但“扶贫干部怒斥”“牛被饿死都不知道”以及“懒惰”等定性仍缺少完整上下文、可靠信源和当事方回应，暂不宜直接下结论。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "C03-A0025",
+      "C03-A0035",
+      "RP03-A0018"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0061",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 478,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "ca6be4fd1d2ec21516e8461cdf2458666b136d99b678526fb9e9062e497915e0",
+    "input_reserved_units": 3997,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 3,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 3,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2455,
+    "actual_output_tokens": 115,
+    "elapsed_seconds": 1.484
+  },
+  "validation_status": "valid"
+}

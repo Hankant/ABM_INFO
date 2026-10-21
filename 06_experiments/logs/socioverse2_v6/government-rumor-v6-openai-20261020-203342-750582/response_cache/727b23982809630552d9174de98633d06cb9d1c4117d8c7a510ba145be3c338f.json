@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "这段内容已经反复出现，但仍只是同一转述和片段描述；目前无法确认干部身份、现场全貌、父子实际处境以及牛的死亡原因。建议先等完整视频、当地部门或当事人回应，也别据此直接给当事人贴标签。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0038",
+      "C03-A0209",
+      "C03-A0248",
+      "C04-A0209"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0002",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 751,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "727b23982809630552d9174de98633d06cb9d1c4117d8c7a510ba145be3c338f",
+    "input_reserved_units": 4001,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 4,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 5,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2477,
+    "actual_output_tokens": 143,
+    "elapsed_seconds": 1.625
+  },
+  "validation_status": "valid"
+}

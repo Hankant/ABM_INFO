@@ -1,0 +1,54 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "多个政府账号已明确回应称网传说法不属实。现有材料也不足以核实干部身份、现场语境以及“懒惰”“牛被饿死”等细节，因此不宜继续把这段转述当作事实传播。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP03-A0364",
+      "text": "官方已否认该网传说法，相关视频情节和人物背景仍应以可靠核实为准，请勿继续当作事实传播。"
+    },
+    "evidence_ids": [
+      "RP03-A0031",
+      "RP03-A0282",
+      "RP03-A0364",
+      "RP02-A0274",
+      "C03-A0334",
+      "C03-A0528"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0412",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 748,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "ec1a0e25ec5a8a24cf69eb7c2d489aab58b25fbc41f7d5388165ce027991fdbb",
+    "input_reserved_units": 3763,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 1,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2398,
+    "actual_output_tokens": 184,
+    "elapsed_seconds": 2.75
+  },
+  "validation_status": "valid"
+}

@@ -1,0 +1,56 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "官方核查已明确称原帖情况不属实，我也倾向于不信这条。提醒一下，转述里那些“垃圾遍地”“牛被饿死”的细节挺具体的，反而让人更该怀疑——有完整视频或权威通报吗？没有就先别传了。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "G001",
+      "P001",
+      "RP02-A0075",
+      "RP03-A0277",
+      "RP03-A0392",
+      "RP04-A0237",
+      "RP04-A0392",
+      "C03-A0092"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0112",
+    "tick": 8,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 1834,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "fdc4bc143aab36cd95c8aacb994f379526761a9c8e049794e7e3e1ccd6028545",
+    "input_reserved_units": 4008,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 5,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 3,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2526,
+    "actual_output_tokens": 166,
+    "elapsed_seconds": 3.219
+  },
+  "validation_status": "valid"
+}

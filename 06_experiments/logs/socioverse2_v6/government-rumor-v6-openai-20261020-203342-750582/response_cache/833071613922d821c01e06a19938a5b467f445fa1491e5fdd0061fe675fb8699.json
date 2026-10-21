@@ -1,0 +1,51 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "这段转述缺少完整视频、当事人和干部身份核实，也没有当地回应；“懒惰”和“牛被饿死”等说法目前都不能仅凭片段确认。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "RP03-A0060",
+      "C03-A0209",
+      "C03-A0211"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0455",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 687,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "833071613922d821c01e06a19938a5b467f445fa1491e5fdd0061fe675fb8699",
+    "input_reserved_units": 3744,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 1,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2310,
+    "actual_output_tokens": 86,
+    "elapsed_seconds": 1.078
+  },
+  "validation_status": "valid"
+}

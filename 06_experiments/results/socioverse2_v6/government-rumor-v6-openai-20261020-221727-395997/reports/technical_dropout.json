@@ -1,0 +1,7 @@
+{
+  "tick": 10,
+  "remaining_agents": 582,
+  "remaining_llm": 305,
+  "technical_dropout_count": 0,
+  "offline_agents": {}
+}

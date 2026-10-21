@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前只有转述，没有完整视频或可靠来源，父子的实际情况及干部身份都还无法核实，先不把描述当成定论。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP01-A0061",
+      "text": "先求证：目前只有这段描述，尚不足以确认事情全貌。请补充完整视频或可靠来源。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0061"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0276",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 127,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "56e8c3998bc7b3a9db93d81ca8195f66749c13ef9937e5c5176b9d7bfd28d150",
+    "input_reserved_units": 2413,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1536,
+    "actual_output_tokens": 100,
+    "elapsed_seconds": 1.266
+  },
+  "validation_status": "valid"
+}

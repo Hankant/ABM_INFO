@@ -1,0 +1,56 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前看到的仍是同一段文字转述，且没有完整视频、明确时间地点或官方回应；几个账号重复发布也不构成独立核实，所以暂时无法确认这些具体情节。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP02-A0376",
+      "text": "转出来继续求证：现有内容只是重复转述，尚不能确认人物身份及“牛被饿死”等细节，期待完整视频和权威回应。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0065",
+      "RP02-A0351",
+      "RP02-A0376",
+      "C02-A0110",
+      "C02-A0261"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0520",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 500,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "38080e5f44111b748856073c9a35f01c499074e27106b0d1911332ac55ec778f",
+    "input_reserved_units": 3792,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      2
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2379,
+    "actual_output_tokens": 140,
+    "elapsed_seconds": 1.329
+  },
+  "validation_status": "valid"
+}

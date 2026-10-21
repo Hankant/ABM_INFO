@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频片段最多能说明部分生活状态，但“扶贫干部怒斥”“父子懒惰”“牛被饿死”等身份、评价和细节仍缺乏完整视频或权威通报佐证。先不据此给当事人定性，建议核实地点、人物身份及事件经过。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP03-A0037",
+      "RP03-A0357",
+      "RP02-A0395",
+      "C03-A0532"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0546",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 736,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "31db1449822b3b42baff2211b735f970b04f12548ffa3813b7a97046228d72de",
+    "input_reserved_units": 3263,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 1,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2031,
+    "actual_output_tokens": 116,
+    "elapsed_seconds": 1.297
+  },
+  "validation_status": "valid"
+}

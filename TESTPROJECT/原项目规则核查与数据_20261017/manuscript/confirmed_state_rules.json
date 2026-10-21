@@ -1,0 +1,44 @@
+{
+  "evidence": "./evidence/manuscript_excerpt.md; P163-P169, P172",
+  "contact_mode_in_manuscript": "two_dimensional_random_movement_and_encounters",
+  "states": {
+    "S": "susceptible",
+    "E": "rumor_trust_only",
+    "I": "rumor_disseminator",
+    "R": "rumor_not_trust"
+  },
+  "rumor_exposure": {
+    "eligible_state_explicit_in_equations": "S",
+    "PB_failure_next_state": "R",
+    "PB_success_RC_failure_next_state": "E",
+    "PB_success_RC_success_next_state": "I",
+    "probabilities": {
+      "S_to_R": "1-PB",
+      "S_to_E": "PB*(1-RC)",
+      "S_to_I": "PB*RC"
+    },
+    "contact_intensity_role": "lambda represents effective contact; do not add extra gate without definition"
+  },
+  "government_contact": {
+    "reject_correction": "preserve prior belief",
+    "accept_correction": "reject rumor; next conditional draw RF controls correction forwarding",
+    "acceptance_probability": "GT",
+    "forward_probability": 0.6,
+    "government_motion": "one step in a random direction each tick after activation",
+    "direction_distribution": null,
+    "step_length_in_world_units": null
+  },
+  "initialization": {
+    "user_positions": "randomly initialized per run",
+    "government_position": "randomly initialized per run",
+    "source_position": "circle center",
+    "ordinary_initial_state_explicit_vector": null,
+    "ordinary_initial_S_support": "susceptible-based equations and narrative 0-percent initial diffusion; supports proposed S initialization but no explicit full initial-state specification",
+    "initial_circle_supported_by_description": true,
+    "circle_radius_formula": null
+  },
+  "absorbing_R_micro_rule_verified": false,
+  "note_on_R": "aggregate rumor equations have no R outflow; do not assert complete absorbing micro-rule for all correction/repeated-contact cases without source code",
+  "fixed_group_user_requirement": true,
+  "manuscript_tension": "P72 discusses unfollowing/exit in conceptual text; no operational group-update algorithm established; do not introduce dynamic regrouping silently"
+}

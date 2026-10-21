@@ -1,0 +1,51 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "这种扶贫视频传播挺广的，但仅凭文字描述看不到完整视频和当事方回应，希望有当地官方或权威媒体核实一下情况再讨论。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0047",
+      "RP02-A0075"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0112",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 230,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "caf208cea015692f47361ae81e61603d0fe3ee11401e9ab4259017cb75c93f60",
+    "input_reserved_units": 2698,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1698,
+    "actual_output_tokens": 115,
+    "elapsed_seconds": 1.297
+  },
+  "validation_status": "valid"
+}

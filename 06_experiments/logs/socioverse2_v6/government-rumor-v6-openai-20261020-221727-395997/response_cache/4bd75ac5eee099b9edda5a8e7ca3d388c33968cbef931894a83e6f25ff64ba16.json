@@ -1,0 +1,49 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频里的生活场景很容易引发反感，但仅凭这段转述还无法核实干部身份、父子是否确实长期不劳动，以及牛的死亡原因。建议先看完整视频和当地通报。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP01-A0049",
+      "text": "先转出来讨论：若视频和通报属实，扶贫先扶志的做法可以理解；但现有转述不足以核实具体情节，希望附完整视频或官方回应。"
+    },
+    "evidence_ids": [
+      "RP01-A0049"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0578",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 227,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "4bd75ac5eee099b9edda5a8e7ca3d388c33968cbef931894a83e6f25ff64ba16",
+    "input_reserved_units": 2361,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1511,
+    "actual_output_tokens": 118,
+    "elapsed_seconds": 1.953
+  },
+  "validation_status": "valid"
+}

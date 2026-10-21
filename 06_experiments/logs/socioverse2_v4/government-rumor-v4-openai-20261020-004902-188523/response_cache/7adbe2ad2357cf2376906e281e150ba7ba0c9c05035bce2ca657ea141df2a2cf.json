@@ -1,0 +1,48 @@
+{
+  "answer": {
+    "belief": "believe",
+    "comment": {
+      "enabled": true,
+      "text": "这种扶贫对象确实让人又气又无奈，扶贫先扶志的思路是对的。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0027",
+    "tick": 1,
+    "attempt": 1,
+    "request_number": 16,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "7adbe2ad2357cf2376906e281e150ba7ba0c9c05035bce2ca657ea141df2a2cf",
+    "input_reserved_units": 1292,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 843,
+    "actual_output_tokens": 87,
+    "elapsed_seconds": 2.094
+  },
+  "validation_status": "valid"
+}

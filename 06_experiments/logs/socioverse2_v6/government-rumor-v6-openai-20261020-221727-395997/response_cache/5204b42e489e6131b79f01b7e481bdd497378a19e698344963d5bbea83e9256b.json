@@ -1,0 +1,54 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "看到官方账号已回应称网传情况不属实，而且手头也没有完整视频和当事人的说法，这样带有强烈负面指控的细节（尿桶放床边、牛被饿死）不该当作事实传播，也不该给当事人贴标签，建议等待后续核实再讨论。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "G001",
+      "RP03-A0337",
+      "RP04-A0044",
+      "C04-A0211",
+      "C05-A0007",
+      "C05-A0063"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0387",
+    "tick": 6,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 1355,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "5204b42e489e6131b79f01b7e481bdd497378a19e698344963d5bbea83e9256b",
+    "input_reserved_units": 4094,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 2,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2554,
+    "actual_output_tokens": 123,
+    "elapsed_seconds": 2.453
+  },
+  "validation_status": "valid"
+}

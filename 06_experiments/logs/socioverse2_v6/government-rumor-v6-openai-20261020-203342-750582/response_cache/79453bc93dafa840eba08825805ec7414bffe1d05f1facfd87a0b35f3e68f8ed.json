@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "转述的细节听起来很具体（尿桶放床边、牛被饿死等），但目前我看到的都是同一段视频的不同转述，没有完整视频、扶贫部门回应、当事人说法，也没法核实地点是否真的是辽宁。继续观望，希望看到更多独立来源再下结论。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0030",
+      "RP02-A0204",
+      "C02-A0023",
+      "C02-A0051",
+      "C02-A0062",
+      "C02-A0201"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0499",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 401,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "79453bc93dafa840eba08825805ec7414bffe1d05f1facfd87a0b35f3e68f8ed",
+    "input_reserved_units": 3578,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 1,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2234,
+    "actual_output_tokens": 167,
+    "elapsed_seconds": 1.922
+  },
+  "validation_status": "valid"
+}

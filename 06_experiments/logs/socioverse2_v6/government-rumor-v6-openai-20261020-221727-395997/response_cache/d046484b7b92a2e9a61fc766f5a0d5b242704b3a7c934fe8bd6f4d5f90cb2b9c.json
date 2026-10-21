@@ -1,0 +1,51 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前只有两名账号发了相同描述，不能算相互独立核实。完整视频、事发背景、扶贫对象身份以及“牛被饿死”等细节都需要进一步确认，先不把“懒惰”当作已经证实的事实。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP02-A0238",
+      "text": "先求证完整视频、事发背景和官方通报；两处相同文字也可能源自同一素材，不能视为交叉证实。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0213",
+      "RP02-A0238"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0365",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 415,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "d046484b7b92a2e9a61fc766f5a0d5b242704b3a7c934fe8bd6f4d5f90cb2b9c",
+    "input_reserved_units": 2787,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1747,
+    "actual_output_tokens": 123,
+    "elapsed_seconds": 1.703
+  },
+  "validation_status": "valid"
+}

@@ -1,0 +1,8 @@
+{
+  "agent_id": "A0018",
+  "tick": 22,
+  "decision_status": "technical_dropout",
+  "failure_reason": "AgentRequestFailure",
+  "dry_run": false,
+  "note": "proposed dropout; effective only after complete tick commit"
+}

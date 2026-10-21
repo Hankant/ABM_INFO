@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "仅凭短视频片段和重复转述，无法核实完整背景；卫生状况也不能直接等同于“懒惰”，牛为何死亡及扶贫干部说法是否准确，仍需完整视频和当地通报佐证。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "RP03-A0357",
+      "RP03-A0369",
+      "C03-A0160",
+      "C03-A0200"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0408",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 653,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "da04d31677b47b18c5031bd22600e49318b89670cbd67254d47b9fce6c655ac0",
+    "input_reserved_units": 3949,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 1,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 1,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2455,
+    "actual_output_tokens": 101,
+    "elapsed_seconds": 1.203
+  },
+  "validation_status": "valid"
+}

@@ -1,0 +1,57 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "这已经是多次看到同一段转述，但仍没有新增的完整视频、时间地点或当地回应。扶贫干部身份、父子实际生活状态以及牛的死亡原因都未核实，“懒惰”等评价性标签也先不要采信。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP04-A0093",
+      "RP02-A0038",
+      "RP02-A0189",
+      "C03-A0209",
+      "C03-A0211",
+      "C03-A0574"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0209",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 857,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "1954a31200cf15ba9d29bda233b740872c6c00bbcd0d7ae6edbbf67c34086f2d",
+    "input_reserved_units": 3707,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 1,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      4
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2304,
+    "actual_output_tokens": 123,
+    "elapsed_seconds": 1.984
+  },
+  "validation_status": "valid"
+}

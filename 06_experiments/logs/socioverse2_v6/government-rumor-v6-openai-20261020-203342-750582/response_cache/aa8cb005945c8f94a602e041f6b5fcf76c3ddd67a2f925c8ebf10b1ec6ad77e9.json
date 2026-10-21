@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": false,
+      "text": ""
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP01-A0062",
+      "text": "先转出来求证：目前只有转述，完整视频、发布来源及“懒惰”等评价性说法都有待核实。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0062"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0427",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 147,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "aa8cb005945c8f94a602e041f6b5fcf76c3ddd67a2f925c8ebf10b1ec6ad77e9",
+    "input_reserved_units": 2407,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1538,
+    "actual_output_tokens": 77,
+    "elapsed_seconds": 1.187
+  },
+  "validation_status": "valid"
+}

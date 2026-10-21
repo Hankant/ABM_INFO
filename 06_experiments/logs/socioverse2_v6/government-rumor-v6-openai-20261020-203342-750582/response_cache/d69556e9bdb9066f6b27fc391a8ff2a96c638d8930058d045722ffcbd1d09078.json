@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "生活邋遢或作息懒散不能直接等同于懒惰，更不足以确认视频中的人物身份及“扶贫干部怒斥”等细节。建议等完整视频、当地通报和当事人回应，不要先给父子定性。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0034",
+      "RP01-A0036",
+      "C01-A0005",
+      "C01-A0006"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0065",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 83,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "d69556e9bdb9066f6b27fc391a8ff2a96c638d8930058d045722ffcbd1d09078",
+    "input_reserved_units": 3766,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      1
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2325,
+    "actual_output_tokens": 108,
+    "elapsed_seconds": 1.313
+  },
+  "validation_status": "valid"
+}

@@ -1,0 +1,8 @@
+{
+  "requests": 2700,
+  "input_reserved_units": 10338769,
+  "output_reserved_tokens": 1382400,
+  "actual_input_tokens": 6547384,
+  "actual_output_tokens": 307003,
+  "usage_unknown_requests": 4
+}

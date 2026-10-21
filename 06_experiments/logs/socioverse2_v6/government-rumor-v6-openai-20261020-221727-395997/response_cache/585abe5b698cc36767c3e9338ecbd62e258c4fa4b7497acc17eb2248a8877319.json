@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前只有转述，没有完整视频或官方通报，暂时无法确认父子是否真如描述，以及“扶贫干部怒斥”等细节；最好先核实时间、地点和来源。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP02-A0081",
+      "text": "先保留疑问：这段视频的完整来源、事件时间地点及官方回应都未核实，不宜仅凭转述认定父子懒惰或扶贫干部行为。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0081"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0235",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 344,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "585abe5b698cc36767c3e9338ecbd62e258c4fa4b7497acc17eb2248a8877319",
+    "input_reserved_units": 2422,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1542,
+    "actual_output_tokens": 117,
+    "elapsed_seconds": 1.609
+  },
+  "validation_status": "valid"
+}

@@ -1,0 +1,57 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "看到不少人和我一样在等更完整的信源，目前转发的基本都是同一段视频描述的不同版本，没有当地官方通报、具体地点或当事人回应。环境卫生差值得社会关注，但'懒惰''牛被饿死''扶贫失败'这些定性在没有多方说法之前不宜直接接受，希望大家先让子弹飞一会儿。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "C02-A0021",
+      "C02-A0025",
+      "C02-A0028",
+      "C02-A0034",
+      "C02-A0261",
+      "C02-A0520",
+      "RP01-A0049",
+      "RP01-A0065"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0025",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 189,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "078bf6c48ab30a6fab25dca73a1f42dec2a241421bda5b5577be789c0463dbb5",
+    "input_reserved_units": 3909,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 2,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2397,
+    "actual_output_tokens": 188,
+    "elapsed_seconds": 3.266
+  },
+  "validation_status": "valid"
+}

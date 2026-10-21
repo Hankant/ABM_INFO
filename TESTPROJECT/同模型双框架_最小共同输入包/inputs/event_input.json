@@ -1,0 +1,18 @@
+{
+  "event_id": "event_052",
+  "claim_id": "claim_event_052",
+  "original_claim": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+  "rumor_text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+  "rumor_origin": "source_workbook_post_text",
+  "claim_origin": "source_post_verbatim_requires_content_review",
+  "correction_text": "针对网上流传的“近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。”，本账号澄清：这一说法不属实。请勿继续传播未经核实的信息。",
+  "correction_mode": "scripted_no_evidence",
+  "correction_origin": "experimental_script",
+  "correction_status": "experimental_script_not_verified_official",
+  "evidence_text": "",
+  "evidence_status": "not_provided",
+  "schema_version": "shared_input_v1",
+  "data_class": "derived_event_content_and_experimental_stimulus",
+  "text_role": "shared_context_only_not_probability_predictor",
+  "official_correction_verified": false
+}

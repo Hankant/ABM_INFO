@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前看到的都是同一段转述的不同版本，现有材料不足以确认地点、父子身份及“牛被饿死”等细节。环境卫生问题可以关注，但不宜先给当事人贴“懒惰”或“扶贫失败”的标签，建议等完整视频、当地通报或当事人回应。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "C03-A0025",
+      "C03-A0035",
+      "RP01-A0024",
+      "RP02-A0044"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0050",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 470,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "ea6be724c5f00e0e0534e6bfba41cadef98e08bd8d5f922210b2c73f4c46d665",
+    "input_reserved_units": 4010,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 3,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 8,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2462,
+    "actual_output_tokens": 118,
+    "elapsed_seconds": 1.157
+  },
+  "validation_status": "valid"
+}

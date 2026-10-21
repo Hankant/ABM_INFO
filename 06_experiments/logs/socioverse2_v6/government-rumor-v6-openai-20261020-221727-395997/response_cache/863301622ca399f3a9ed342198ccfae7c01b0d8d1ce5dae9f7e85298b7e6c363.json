@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "片段描述冲击力大，但目前只有转述文字，没有完整视频或官方通报。懒汉扶贫这类事件在网络上真假掺半的情况不少，希望看到原始视频和权威媒体的核实再下定论，也想知道这对父子后续是否得到了帮扶。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP01-A0030",
+      "text": "转述者本身也在求完整视频和核查，暂不轻信全部指控。看到完整视频或官方通报再判断。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0030"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0533",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 216,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "863301622ca399f3a9ed342198ccfae7c01b0d8d1ce5dae9f7e85298b7e6c363",
+    "input_reserved_units": 2413,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1523,
+    "actual_output_tokens": 156,
+    "elapsed_seconds": 6.281
+  },
+  "validation_status": "valid"
+}

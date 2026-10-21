@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前只有截取式描述，无法确认视频是否完整、父子是否确实长期不劳动，以及牛被饿死与视频情节之间的因果关系。先存疑，建议看看完整视频和可靠报道。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP02-A0189",
+      "text": "先存疑：仅有截取式描述，希望能看到完整视频或可靠报道，核实事件背景后再判断。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0189"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0209",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 334,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "eae9fc39f06bc10ab178f77f4a0cec711bea09e98ad23bfb49723978778a533b",
+    "input_reserved_units": 2423,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1541,
+    "actual_output_tokens": 111,
+    "elapsed_seconds": 2.36
+  },
+  "validation_status": "valid"
+}

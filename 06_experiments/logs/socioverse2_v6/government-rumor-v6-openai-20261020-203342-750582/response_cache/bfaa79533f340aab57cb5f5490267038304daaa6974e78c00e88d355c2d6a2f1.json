@@ -1,0 +1,56 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "看了几轮讨论，原始视频目前还只是转述和片段，\"扶贫干部怒斥\"、\"牛被饿死\"这类具体细节缺乏完整视频和当地官方/主流媒体核实。和我之前的态度一样，在看到更完整的材料之前，我不下结论，建议大家也别急着对这对父子或当事干部下定性。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0030",
+      "RP02-A0055",
+      "RP02-A0059",
+      "C02-A0021",
+      "C02-A0034",
+      "C02-A0062",
+      "C02-A0201"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0032",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 194,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "bfaa79533f340aab57cb5f5490267038304daaa6974e78c00e88d355c2d6a2f1",
+    "input_reserved_units": 3934,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 2,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2423,
+    "actual_output_tokens": 185,
+    "elapsed_seconds": 3.235
+  },
+  "validation_status": "valid"
+}

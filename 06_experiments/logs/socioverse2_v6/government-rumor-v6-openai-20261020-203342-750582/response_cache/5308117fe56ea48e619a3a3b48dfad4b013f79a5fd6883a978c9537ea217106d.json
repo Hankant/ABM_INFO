@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前仍是同一段描述被重复转述，并没有新增的完整视频、事发地点或官方回应。垃圾和尿桶等画面即便属实，也不能直接证明父子长期不劳动或牛是被饿死的；建议先核实完整语境和后续调查。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP02-A0318",
+      "text": "重复出现不等于得到证实。现阶段只能确认网上有一段相关描述，劳动情况、牛的死因及干部身份仍需完整视频和当地回应核实。"
+    },
+    "evidence_ids": [
+      "RP02-A0318",
+      "RP01-A0014",
+      "C02-A0038",
+      "C02-A0054",
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0258",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 294,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "5308117fe56ea48e619a3a3b48dfad4b013f79a5fd6883a978c9537ea217106d",
+    "input_reserved_units": 3427,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      2
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2155,
+    "actual_output_tokens": 149,
+    "elapsed_seconds": 1.938
+  },
+  "validation_status": "valid"
+}

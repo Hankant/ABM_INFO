@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "已有多个官方账号明确回应称网传情况不属实，原帖关于扶贫干部怒斥父子、父亲每天睡到自然醒及牛被饿死等具体情节不应继续当作事实传播；完整视频和前后语境仍可关注后续核实。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "RP08-A0118",
+      "RP02-A0024",
+      "RP05-A0383",
+      "RP05-A0458",
+      "RP05-A0175",
+      "C03-A0063",
+      "C07-A0190"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0351",
+    "tick": 9,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 2267,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "d7fb0047f85f1971a8038282b990d5dd6ea5aff5eb123666ae427fa4dc695ee4",
+    "input_reserved_units": 4011,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 5,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 5,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2559,
+    "actual_output_tokens": 130,
+    "elapsed_seconds": 6.234
+  },
+  "validation_status": "valid"
+}

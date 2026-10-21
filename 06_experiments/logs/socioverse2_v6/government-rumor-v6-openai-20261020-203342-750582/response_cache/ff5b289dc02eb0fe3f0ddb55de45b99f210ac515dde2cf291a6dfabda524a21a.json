@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "看到好几个账号发同一段文字，但还没有看到完整视频、当事人回应或当地部门通报。在看到原视频和权威说明之前，我对\"扶贫干部怒斥懒惰父子\"\"牛被饿死都不知道\"这些具体说法先持保留态度，不轻易给当事人定性。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "C04-A0316",
+      "C04-A0411",
+      "RP03-A0528",
+      "RP04-A0533"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0092",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 796,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "ff5b289dc02eb0fe3f0ddb55de45b99f210ac515dde2cf291a6dfabda524a21a",
+    "input_reserved_units": 3402,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 2,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2091,
+    "actual_output_tokens": 148,
+    "elapsed_seconds": 3.453
+  },
+  "validation_status": "valid"
+}

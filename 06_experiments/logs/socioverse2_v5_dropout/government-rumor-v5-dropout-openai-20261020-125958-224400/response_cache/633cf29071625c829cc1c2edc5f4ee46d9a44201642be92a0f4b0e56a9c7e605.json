@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": false,
+      "text": ""
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "G001",
+      "RP21-A0020",
+      "RP21-A0046"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0035",
+    "tick": 22,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 290,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "633cf29071625c829cc1c2edc5f4ee46d9a44201642be92a0f4b0e56a9c7e605",
+    "input_reserved_units": 2807,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      1,
+      2,
+      21
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1859,
+    "actual_output_tokens": 65,
+    "elapsed_seconds": 1.078
+  },
+  "validation_status": "valid"
+}

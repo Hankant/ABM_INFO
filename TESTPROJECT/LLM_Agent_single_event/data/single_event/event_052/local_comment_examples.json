@@ -1,0 +1,494 @@
+{
+  "event_id": "event_052",
+  "local_review_only": true,
+  "never_send_to_model": true,
+  "redaction": "known_account_identifiers_urls_handles_emails_phone_numbers_removed; unrecognized personal references require human review",
+  "correction_flag_meaning": "keyword-based audit aid, neither truth classification nor permission for pre-intervention exposure",
+  "examples": [
+    {
+      "sample_id": "comments_00002",
+      "sheet_role": "comments",
+      "source_excel_row": 2,
+      "observed_at": "2021-2-3 10:08",
+      "text": "：这种生物叫蛆",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "comments_00003",
+      "sheet_role": "comments",
+      "source_excel_row": 3,
+      "observed_at": "2021-2-3 10:09",
+      "text": "：扶贫先扶志志扶不起来说其他的都是白瞎",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "comments_00004",
+      "sheet_role": "comments",
+      "source_excel_row": 4,
+      "observed_at": "2021-2-3 10:12",
+      "text": "：好多这种被中国旧式扶贫惯的越来越懒的，扶贫给的牛羊兔子什么的，转眼就给你吃了，反正饿不死，搁旧社会早他妈饿死这种残渣了",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "comments_00005",
+      "sheet_role": "comments",
+      "source_excel_row": 5,
+      "observed_at": "2021-2-3 10:09",
+      "text": "：可怜之人必有可恨之处，扶不起的阿斗",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "comments_00006",
+      "sheet_role": "comments",
+      "source_excel_row": 6,
+      "observed_at": "2021-2-3 10:50",
+      "text": "：扶贫干部如果建个超话，把扶贫遇到的各种人才故事都写出来，你就会觉得，有的穷就穷吧，真的，活着浪费粮食和空气",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "comments_00007",
+      "sheet_role": "comments",
+      "source_excel_row": 7,
+      "observed_at": "2021-2-3 10:10",
+      "text": "：这种人不值得被扶贫，因为永远也不可能扶起来，还会浪费国家资源！",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "comments_00008",
+      "sheet_role": "comments",
+      "source_excel_row": 8,
+      "observed_at": "2021-2-3 10:24",
+      "text": "：最后一句扎心了，扶贫干部都太不容易了",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "comments_00009",
+      "sheet_role": "comments",
+      "source_excel_row": 9,
+      "observed_at": "2021-2-3 10:10",
+      "text": "：就这样的别扶了，已经无可救药了。",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "comments_00010",
+      "sheet_role": "comments",
+      "source_excel_row": 10,
+      "observed_at": "2021-2-3 10:44",
+      "text": "：想起郭德纲相声里说的，大致是：要饭的没有起早要的，因为他早上要起得来不至于去要饭去。",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "comments_00011",
+      "sheet_role": "comments",
+      "source_excel_row": 11,
+      "observed_at": "2021-2-3 10:08",
+      "text": "：恶心吐了……牛老了就死了，你老了不活得挺好",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "comments_00012",
+      "sheet_role": "comments",
+      "source_excel_row": 12,
+      "observed_at": "2021-2-3 10:08",
+      "text": "：据说是在内蒙古通辽，不是辽宁",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "comments_00013",
+      "sheet_role": "comments",
+      "source_excel_row": 13,
+      "observed_at": "2021-2-3 10:17",
+      "text": "：烂泥扶不上墙啊！",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "comments_00014",
+      "sheet_role": "comments",
+      "source_excel_row": 14,
+      "observed_at": "2021-2-3 10:08",
+      "text": "：太恶心了",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "comments_00015",
+      "sheet_role": "comments",
+      "source_excel_row": 15,
+      "observed_at": "2021-2-3 10:09",
+      "text": "：这种就应该拉入扶贫黑名单，让他们自生自灭好了",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "comments_00016",
+      "sheet_role": "comments",
+      "source_excel_row": 16,
+      "observed_at": "2021-2-3 10:12",
+      "text": "：可怜的牛",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "comments_00017",
+      "sheet_role": "comments",
+      "source_excel_row": 17,
+      "observed_at": "2021-2-3 10:12",
+      "text": "：这种人真的就别扶了，没意义",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "comments_00018",
+      "sheet_role": "comments",
+      "source_excel_row": 18,
+      "observed_at": "2021-2-3 10:10",
+      "text": "：这种生物应该自生自灭",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "comments_00019",
+      "sheet_role": "comments",
+      "source_excel_row": 19,
+      "observed_at": "2021-2-3 10:34",
+      "text": "：这要是饿死了，又有无数网友阴阳怪气说“扶贫就是个笑话”，原话。巨婴只要是国家没养他一辈子让他不愁吃喝，就是国家的错，这次直接告诉你，就是你懒，这回没法黑国家了吧",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "comments_00020",
+      "sheet_role": "comments",
+      "source_excel_row": 20,
+      "observed_at": "2021-2-3 10:09",
+      "text": "：牛上了保险，死了有赔偿",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "comments_00021",
+      "sheet_role": "comments",
+      "source_excel_row": 21,
+      "observed_at": "2021-2-3 10:12",
+      "text": "：扶病，扶残，扶老。不扶懒",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "comments_00026",
+      "sheet_role": "comments",
+      "source_excel_row": 26,
+      "observed_at": "2021-2-3 16:09",
+      "text": "：辽宁不背锅，大V建议核实后再发。官方已经辟谣，视频发生在内蒙通辽。。。。。",
+      "correction_related_keyword_flag": true,
+      "correction_related_keywords": [
+        "辟谣",
+        "官方"
+      ],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "comments_00181",
+      "sheet_role": "comments",
+      "source_excel_row": 181,
+      "observed_at": "2021-2-3 12:27",
+      "text": "：假的吧",
+      "correction_related_keyword_flag": true,
+      "correction_related_keywords": [
+        "假的"
+      ],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "comments_00183",
+      "sheet_role": "comments",
+      "source_excel_row": 183,
+      "observed_at": "2021-2-3 12:32",
+      "text": "：辟谣了，非辽宁的，是通辽的。",
+      "correction_related_keyword_flag": true,
+      "correction_related_keywords": [
+        "辟谣"
+      ],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "comments_00184",
+      "sheet_role": "comments",
+      "source_excel_row": 184,
+      "observed_at": "2021-2-3 12:34",
+      "text": "：早都辟谣了是吉林的",
+      "correction_related_keyword_flag": true,
+      "correction_related_keywords": [
+        "辟谣"
+      ],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "comments_00199",
+      "sheet_role": "comments",
+      "source_excel_row": 199,
+      "observed_at": "2021-2-3 13:18",
+      "text": "：辟谣了，非辽宁。",
+      "correction_related_keyword_flag": true,
+      "correction_related_keywords": [
+        "辟谣"
+      ],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "comments_00208",
+      "sheet_role": "comments",
+      "source_excel_row": 208,
+      "observed_at": "2021-2-3 14:06",
+      "text": "：我国已经全面脱贫，全面步入小康社会了，这些都是假的，都是不存在的！",
+      "correction_related_keyword_flag": true,
+      "correction_related_keywords": [
+        "假的"
+      ],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "comments_00233",
+      "sheet_role": "comments",
+      "source_excel_row": 233,
+      "observed_at": "2021-2-3 22:05",
+      "text": "：辟谣了，不是辽宁",
+      "correction_related_keyword_flag": true,
+      "correction_related_keywords": [
+        "辟谣"
+      ],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "reposts_00002",
+      "sheet_role": "reposts",
+      "source_excel_row": 2,
+      "observed_at": "2021-02-03 10:08",
+      "text": "转发微博",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "reposts_00003",
+      "sheet_role": "reposts",
+      "source_excel_row": 3,
+      "observed_at": "2021-02-03 10:11",
+      "text": "浪费国家资源",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "reposts_00004",
+      "sheet_role": "reposts",
+      "source_excel_row": 4,
+      "observed_at": "2021-02-03 10:13",
+      "text": "转发微博",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "reposts_00005",
+      "sheet_role": "reposts",
+      "source_excel_row": 5,
+      "observed_at": "2021-02-03 10:13",
+      "text": "他们也想要一份儿有尊严的工作，他们也想娶个打理家的媳妇。",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "reposts_00006",
+      "sheet_role": "reposts",
+      "source_excel_row": 6,
+      "observed_at": "2021-02-03 10:15",
+      "text": "农村男人没有女人基本生活就不能自理啦……",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "reposts_00007",
+      "sheet_role": "reposts",
+      "source_excel_row": 7,
+      "observed_at": "2021-02-03 10:15",
+      "text": "烂泥扶不上墙，这样的人穷，活该！",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "reposts_00008",
+      "sheet_role": "reposts",
+      "source_excel_row": 8,
+      "observed_at": "2021-02-03 10:16",
+      "text": "转发微博",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "reposts_00009",
+      "sheet_role": "reposts",
+      "source_excel_row": 9,
+      "observed_at": "2021-02-03 10:18",
+      "text": "转发微博",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "reposts_00010",
+      "sheet_role": "reposts",
+      "source_excel_row": 10,
+      "observed_at": "2021-02-03 10:20",
+      "text": "精准扶贫十几年，为什么越扶越穷？包括凉山地区，几百亿扶贫款扔进去了依旧穷，很多孩子父母拿着扶贫款买毒品买酒...因为懒惰，躺着领扶贫款比出去劳动挣得多，加上一些自媒体公知雇他们表演为\"慈善基金\"筹款...",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "reposts_00011",
+      "sheet_role": "reposts",
+      "source_excel_row": 11,
+      "observed_at": "2021-02-03 10:22",
+      "text": "快转微博",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "reposts_00012",
+      "sheet_role": "reposts",
+      "source_excel_row": 12,
+      "observed_at": "2021-02-03 10:24",
+      "text": "确有其人啊！无语😓",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "reposts_00013",
+      "sheet_role": "reposts",
+      "source_excel_row": 13,
+      "observed_at": "2021-02-03 10:25",
+      "text": "老男人快点死//",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "reposts_00014",
+      "sheet_role": "reposts",
+      "source_excel_row": 14,
+      "observed_at": "2021-02-03 10:25",
+      "text": "竟然生活在这种环境里，不觉得恶心……",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "reposts_00015",
+      "sheet_role": "reposts",
+      "source_excel_row": 15,
+      "observed_at": "2021-02-03 10:26",
+      "text": "肯定不是懒惰的问题，估计还是有智力或精神方面的问题",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "reposts_00016",
+      "sheet_role": "reposts",
+      "source_excel_row": 16,
+      "observed_at": "2021-02-03 10:27",
+      "text": "转发微博",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "reposts_00017",
+      "sheet_role": "reposts",
+      "source_excel_row": 17,
+      "observed_at": "2021-02-03 10:31",
+      "text": "快转微博",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "reposts_00018",
+      "sheet_role": "reposts",
+      "source_excel_row": 18,
+      "observed_at": "2021-02-03 10:31",
+      "text": "转发微博",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "reposts_00019",
+      "sheet_role": "reposts",
+      "source_excel_row": 19,
+      "observed_at": "2021-02-03 10:33",
+      "text": "快转微博",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "reposts_00020",
+      "sheet_role": "reposts",
+      "source_excel_row": 20,
+      "observed_at": "2021-02-03 10:34",
+      "text": "快转微博",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    },
+    {
+      "sample_id": "reposts_00021",
+      "sheet_role": "reposts",
+      "source_excel_row": 21,
+      "observed_at": "2021-02-03 10:39",
+      "text": "转发微博",
+      "correction_related_keyword_flag": false,
+      "correction_related_keywords": [],
+      "truth_status": "not_assessed_keyword_flag_is_not_verification"
+    }
+  ]
+}

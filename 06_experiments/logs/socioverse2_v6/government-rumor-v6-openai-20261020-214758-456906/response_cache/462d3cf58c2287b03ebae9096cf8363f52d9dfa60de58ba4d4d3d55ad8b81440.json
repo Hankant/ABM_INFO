@@ -1,0 +1,49 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频里的场景看起来很极端，但仅凭这段转述，无法核实父子是否真如描述，以及干部是否确有扶贫背景。希望先看完整视频和当地回应。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "P001",
+      "text": "转出来求证：完整视频、事件时间地点和官方回应是否已核实？描述性很强，不能仅凭一段转述判断当事人情况。"
+    },
+    "evidence_ids": [
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0024",
+    "tick": 1,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 12,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "462d3cf58c2287b03ebae9096cf8363f52d9dfa60de58ba4d4d3d55ad8b81440",
+    "input_reserved_units": 2339,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1488,
+    "actual_output_tokens": 105,
+    "elapsed_seconds": 1.813
+  },
+  "validation_status": "valid"
+}

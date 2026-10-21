@@ -1,0 +1,54 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "同意楼上几位的看法，目前证据只有片段和转述，完整视频、当事人说法和当地通报都没看到，暂不下结论。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "C03-A0023",
+      "C03-A0059",
+      "RP02-A0022",
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0302",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 597,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "dbdbd694d06f3cb4bdf112e535eb89b7eefb7111dbba130293a2743e6a7bf8d0",
+    "input_reserved_units": 3403,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      3
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2071,
+    "actual_output_tokens": 118,
+    "elapsed_seconds": 2.593
+  },
+  "validation_status": "valid"
+}

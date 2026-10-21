@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前只有视频描述，无法核实父子是否属于扶贫对象，也无法确认干部身份和现场背景。即便画面属实，也应先核实事件来源，不宜直接把当事人定性为“懒惰”。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0532"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0146",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 301,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "91b45cb96ef8ab62448112de474a0fcd66b36eca14b7137b4faaea5839471ba1",
+    "input_reserved_units": 2462,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1552,
+    "actual_output_tokens": 82,
+    "elapsed_seconds": 1.328
+  },
+  "validation_status": "valid"
+}

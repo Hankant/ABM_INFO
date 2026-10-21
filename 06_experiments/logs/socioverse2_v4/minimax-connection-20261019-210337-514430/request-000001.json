@@ -1,0 +1,31 @@
+{
+  "agent_id": "TEST",
+  "tick": 0,
+  "attempt": 1,
+  "request_number": 1,
+  "requested_model": "MiniMax-M3",
+  "prompt_sha256": "845647aa2aff2f19020060e8c60d67d529dfae3ccc942572ad7ac7ff7ea8da65",
+  "input_reserved_units": 686,
+  "request_options": {
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "max_tokens": 512,
+    "extra_body": {
+      "thinking": {
+        "type": "disabled"
+      },
+      "reasoning_split": true
+    }
+  },
+  "input_count_method": "utf8_bytes_plus_256_proxy_not_actual_tokens",
+  "used_memory_ticks": [],
+  "cached": false,
+  "status": "request_error",
+  "diagnostic": {
+    "exception_type": "AuthenticationError",
+    "status_code": 401,
+    "error_code": null,
+    "elapsed_seconds": 0.672
+  },
+  "prompt": "This is an API connectivity test. Return exactly this JSON object: {\"ok\":true}.\n{\"posts\": [{\"content_id\": \"TEST001\", \"root_content_id\": \"TEST001\", \"text\": \"This is a synthetic API connection test.\", \"comments\": [], \"can_repost\": false}], \"eligible_repost_content_ids\": []}\n同一root_content_id全程最多转发一次；can_repost=false时不得再次转发，但仍可判断和评论。评论默认针对本轮第一条帖子。"
+}

@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前看到的多是同一内容的重复转述，尚不足以核实“扶贫干部怒斥”、父子长期不干活以及牛被饿死等细节。等完整视频、当事人说法或当地回应后，再判断更稳妥。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "C04-A0302",
+      "RP02-A0022",
+      "RP03-A0246",
+      "RP04-A0190"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0328",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 917,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "319c6bfc2380fd143210d113d47227dc73ed4ef2e7b1e67b8404e715588eb80d",
+    "input_reserved_units": 4008,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 2,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 6,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2450,
+    "actual_output_tokens": 107,
+    "elapsed_seconds": 2.187
+  },
+  "validation_status": "valid"
+}

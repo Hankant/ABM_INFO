@@ -1,0 +1,7 @@
+{
+  "run_dir": "G:\\ABM_INFO\\06_experiments\\results\\socioverse2_v4\\government-rumor-v4-openai-20261020-004902-188523",
+  "status": "interrupted",
+  "last_completed_tick": 22,
+  "dry_run": false,
+  "error_type": "RuntimeError"
+}

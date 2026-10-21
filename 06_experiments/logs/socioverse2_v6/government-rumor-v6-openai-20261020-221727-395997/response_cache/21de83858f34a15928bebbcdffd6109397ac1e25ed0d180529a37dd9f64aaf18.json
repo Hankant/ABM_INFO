@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "目前只有网传转述和“情况不属实”的回应，完整视频、背景及调查材料都没见到。“懒惰”和“牛被饿死”等说法不足以核实，建议先等正式调查结论。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "G001",
+      "P001",
+      "RP03-A0528",
+      "RP03-A0554",
+      "C08-A0411"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0326",
+    "tick": 10,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 2561,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "21de83858f34a15928bebbcdffd6109397ac1e25ed0d180529a37dd9f64aaf18",
+    "input_reserved_units": 4042,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 5,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 4,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2553,
+    "actual_output_tokens": 102,
+    "elapsed_seconds": 1.109
+  },
+  "validation_status": "valid"
+}

@@ -1,0 +1,54 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": false,
+      "text": ""
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP02-A0553",
+      "text": "同一段转述被多次转发不等于得到独立证实。先等完整视频、当地通报和当事人回应，也请别仅凭生活片段给父子贴上“懒惰”的标签。"
+    },
+    "evidence_ids": [
+      "RP02-A0553",
+      "C02-A0025",
+      "C02-A0028",
+      "RP01-A0049"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0476",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 391,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "0e879862482af964a73cddd0b61df9842ac039efd2e28957d49a058805b00cf4",
+    "input_reserved_units": 4017,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      2
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2517,
+    "actual_output_tokens": 102,
+    "elapsed_seconds": 3.797
+  },
+  "validation_status": "valid"
+}

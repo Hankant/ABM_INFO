@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前看到的都是同一段网传描述的不同转述，仍缺完整视频、事件时间地点、当事人回应和当地通报。环境卫生状况即便值得关注，也不足以证明父子“懒惰”、牛因无人照料饿死，以及扶贫干部的真实身份；先等可靠材料，不急着给当事人定性。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "C03-A0007",
+      "C03-A0025",
+      "C03-A0035"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0055",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 474,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "2e92017b50ca894cbca55c46042a67f55cb14bc9045d4ff6ce78ea12ac3d819a",
+    "input_reserved_units": 3949,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 3,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 3,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2413,
+    "actual_output_tokens": 116,
+    "elapsed_seconds": 2.0
+  },
+  "validation_status": "valid"
+}

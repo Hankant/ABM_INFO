@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前只有转述，缺少完整视频、原始发布源和后续核查，父子是否确实长期不干活等情况还不能确认，先求证。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP02-A0361",
+      "text": "先求证：这段描述涉及具体家庭和扶贫干部，但目前缺少完整视频及可靠来源，暂不能确认事情全貌。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0361"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0394",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 346,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "460fc816ab046623f805681a6506082b22892bc6927bd88be9dc7e86c95d3270",
+    "input_reserved_units": 2429,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1547,
+    "actual_output_tokens": 106,
+    "elapsed_seconds": 2.688
+  },
+  "validation_status": "valid"
+}

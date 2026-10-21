@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频片段能看出这对父子生活比较邋遢，但“扶贫干部怒斥”和“牛被饿死都不知道”等细节仍缺完整来源或后续核实。转发了，求有完整视频或当地通报的网友补充一下，也想了解是否存在无法劳动的特殊情况。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "P001",
+      "text": "片段不足以核实全部说法，先求证完整视频、时间地点及后续通报。"
+    },
+    "evidence_ids": [
+      "C01-A0005",
+      "C01-A0006",
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0058",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 77,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "19d1d36f1ed920ed1ef314e3d2f49d99119f280708e4fad3361b90fafcd903a4",
+    "input_reserved_units": 3030,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      1
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1906,
+    "actual_output_tokens": 124,
+    "elapsed_seconds": 1.704
+  },
+  "validation_status": "valid"
+}

@@ -1,0 +1,46 @@
+{
+  "input_sha256": {
+    "01_Agent基础信息表.csv": "d0b947ff43f4172a050df27c18d511cbd6b3107cdf904322c84dbdfd761e6c5c",
+    "02_Prompt固定提示词.md": "db2032c19e17d90cec34847c4acdb73a6081809aa4d609fe650112286375555e",
+    "03_新环境设定.md": "e8198c789ad47ff77e8a88be78147d95441616fde6e86f3cec4fa9361d70d3ed",
+    "04_新版本操作指南.md": "4bc3f325c7c90abf833678d227551394c3192dd63d619da2fea3938df6d3850b"
+  },
+  "code_sha256": {
+    "build_personas.py": "1ee4c42a4adf13103b5271e7e5f5fff76a79015684df319043e67dea4feed59f",
+    "llm_client.py": "418acaabf904c7da689f44c6bae2de66b822e72a5b7e8f687a218e0b361f77d4",
+    "model.py": "6f50885d9d79a5d272186d1e171b963a9046e6be44b760aa832fd1d584ce19a4",
+    "run.py": "b900f830564a62ddf88578b4b7e2d8002471a7ee75f527dfca0ea6c58acd7b16",
+    "test_dropout.py": "b92af0b8208d15a5b20356bd235308beef56e049d90e63637d98694fb13e7723",
+    "test_model.py": "081782014aff56e7dcf2b2b0cc307551ffb741084d77b8de3d5590115d7e2c90",
+    "test_recovery.py": "e2ad54b9ae59d704001ea0cbb6a90d62254237992a9ddd702f5e583e89dc9c5b",
+    "test_v6.py": "77e6e83467041cf3ac49cf749aa7ef0443ba5718b46fe966b30be4505638a1c3"
+  },
+  "numpy_version": "2.5.4",
+  "upstream_url": "https://github.com/sii-research/SocioVerse2",
+  "upstream_commit": "9c3ac774816511c121184ca11f539dc398ba1544",
+  "mode": "scripted",
+  "dry_run": true,
+  "config": {
+    "contract_status": "engineering_only_pending_confirmation",
+    "pbd": 0.0,
+    "gt": 0.6,
+    "rf": 0.6,
+    "behavior_seed": 20261020,
+    "strategy": "inside",
+    "base_url": "https://api.zetatechs.com/v1",
+    "model": "deepseek-v4-flash",
+    "max_requests": 12200,
+    "tbu_definition": "end19_believers_first_reject_at_or_after20_mean_wait_completers",
+    "probability_precision": "table_values",
+    "contact_rule": "once_per_tick_correction_priority",
+    "rule_rebelief": false,
+    "direct_relay_same_gt": true,
+    "comment_target": "first_displayed_post",
+    "token_guard": "cl100k_base_estimate_15percent_plus64",
+    "runtime_version": "v6-persona-repeat-1",
+    "format_max_attempts": 4,
+    "rule_reconsider_rumor": true
+  },
+  "audit_dir": "G:\\ABM_INFO\\06_experiments\\logs\\socioverse2_v6\\government-rumor-v6-scripted-20261020-161544-021528",
+  "config_dir": "G:\\ABM_INFO\\06_experiments\\configs\\socioverse2_v6\\government-rumor-v6-scripted-20261020-161544-021528"
+}

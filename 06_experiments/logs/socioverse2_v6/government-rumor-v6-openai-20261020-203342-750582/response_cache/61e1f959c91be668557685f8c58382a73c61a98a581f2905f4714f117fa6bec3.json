@@ -1,0 +1,54 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前看到的仍是同一段描述的重复转发，尚缺完整视频、明确时间地点、扶贫干部身份及可靠信源核实。环境卫生问题值得关注，但“懒惰”“牛被饿死都不知道”等说法不能仅凭片段确认。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP04-A0073",
+      "C04-A0005",
+      "C04-A0009",
+      "RP02-A0010",
+      "RP02-A0038"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0009",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 755,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "61e1f959c91be668557685f8c58382a73c61a98a581f2905f4714f117fa6bec3",
+    "input_reserved_units": 4042,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 4,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 5,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2493,
+    "actual_output_tokens": 155,
+    "elapsed_seconds": 5.297
+  },
+  "validation_status": "valid"
+}

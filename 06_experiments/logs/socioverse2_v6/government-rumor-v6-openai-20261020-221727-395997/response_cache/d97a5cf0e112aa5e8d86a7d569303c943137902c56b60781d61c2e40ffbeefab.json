@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "仅凭这段描述还无法核实视频真伪及干部说法，建议先看看完整视频、发布时间和当地官方通报。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP01-A0014",
+      "text": "先求证：需要完整视频及当地官方通报，不能仅凭转述就对当事人下结论。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0014"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0352",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 165,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "d97a5cf0e112aa5e8d86a7d569303c943137902c56b60781d61c2e40ffbeefab",
+    "input_reserved_units": 2368,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1514,
+    "actual_output_tokens": 95,
+    "elapsed_seconds": 1.438
+  },
+  "validation_status": "valid"
+}

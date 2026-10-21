@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "看了几条转述，大家都在求证。说实话，仅凭文字描述我没法判断视频真伪——拍摄时间地点、父子身份、当事人回应都缺，扶贫干部怒斥是出于关心还是另有目的也看不出来。希望看到原视频和当地官方说明再下结论。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP02-A0490",
+      "text": "存疑转发。目前只有文字转述，没有原视频、没有拍摄时间和地点确认，也没有当地或当事人回应。在核实之前不下结论，更不应凭一段描述给当事人贴标签。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0374",
+      "RP02-A0442",
+      "RP02-A0490"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0508",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 493,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "14a21303e518367989df986230a14396061393cb355aff76da8ede411c1e4907",
+    "input_reserved_units": 3063,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1922,
+    "actual_output_tokens": 189,
+    "elapsed_seconds": 4.062
+  },
+  "validation_status": "valid"
+}

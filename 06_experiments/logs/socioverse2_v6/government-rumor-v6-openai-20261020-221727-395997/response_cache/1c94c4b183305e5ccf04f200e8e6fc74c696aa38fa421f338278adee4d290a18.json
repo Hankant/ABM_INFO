@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "相关账号已明确称网传说法不属实，但目前展示内容没有完整核查依据；即使视频中的生活场景真实，也不能据此认定父子“懒惰”及扶贫干部所述细节成立，建议等待完整视频和可核验通报。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "G001",
+      "P001",
+      "C07-A0351",
+      "RP03-A0041",
+      "RP03-A0055"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0036",
+    "tick": 8,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 1797,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "1c94c4b183305e5ccf04f200e8e6fc74c696aa38fa421f338278adee4d290a18",
+    "input_reserved_units": 4033,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 5,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 5,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2548,
+    "actual_output_tokens": 145,
+    "elapsed_seconds": 3.313
+  },
+  "validation_status": "valid"
+}

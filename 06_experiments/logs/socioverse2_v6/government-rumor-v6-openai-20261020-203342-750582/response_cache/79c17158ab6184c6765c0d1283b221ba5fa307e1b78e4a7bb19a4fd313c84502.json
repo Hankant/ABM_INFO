@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前看到的都是同一段概括性转述，还缺完整视频、事发地点、干部身份和当事人回应。画面即便属实，也不足以直接证明“长期懒惰”或牛因未喂食而死，先求证再判断。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "RP04-A0539",
+      "C04-A0102",
+      "C04-A0140",
+      "C04-A0189",
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0250",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 877,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "79c17158ab6184c6765c0d1283b221ba5fa307e1b78e4a7bb19a4fd313c84502",
+    "input_reserved_units": 3723,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 3,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2299,
+    "actual_output_tokens": 110,
+    "elapsed_seconds": 1.422
+  },
+  "validation_status": "valid"
+}

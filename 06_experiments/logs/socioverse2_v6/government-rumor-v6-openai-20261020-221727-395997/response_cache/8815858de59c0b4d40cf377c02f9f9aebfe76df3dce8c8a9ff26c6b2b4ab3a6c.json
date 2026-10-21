@@ -1,0 +1,56 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "已经有官方账号明确回应说该帖情况不属实，评论区也有人指出缺少完整调查材料。我个人对\"懒惰父子\"、\"牛被饿死\"等具体描述持怀疑态度，不会把这些当作已证实事实，也建议暂时别继续传播原帖细节，等待后续完整核实信息。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "G001",
+      "RP03-A0011",
+      "RP04-A0100",
+      "RP04-A0172",
+      "RP04-A0379",
+      "RP04-A0397",
+      "C04-A0021",
+      "C04-A0081"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0386",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 1046,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "8815858de59c0b4d40cf377c02f9f9aebfe76df3dce8c8a9ff26c6b2b4ab3a6c",
+    "input_reserved_units": 4064,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 2,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2572,
+    "actual_output_tokens": 159,
+    "elapsed_seconds": 3.234
+  },
+  "validation_status": "valid"
+}

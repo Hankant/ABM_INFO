@@ -1,0 +1,51 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": false,
+      "text": ""
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP02-A0018",
+      "text": "视频片段看着挺震撼，但只有片段式描述没法判断全貌——这种扶贫场景容易被剪辑带节奏，先看看原视频和当地官方回应再说，转出来提醒大家别急着下结论。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0018",
+      "RP02-A0555"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0172",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 314,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "934780afe6d491105aa75e9e953ead7152bfbeeda937c8aed86f127eabd44cbd",
+    "input_reserved_units": 2734,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1722,
+    "actual_output_tokens": 128,
+    "elapsed_seconds": 2.141
+  },
+  "validation_status": "valid"
+}

@@ -1,0 +1,51 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": false,
+      "text": ""
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "G001",
+      "text": "官方已澄清此帖内容不属实，请勿传播。"
+    },
+    "evidence_ids": [
+      "G001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0038",
+    "tick": 20,
+    "attempt": 1,
+    "request_number": 112,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "88e451223ad68b729a0022044d20f7f4f285e2bc13a53a869ae56bc24496120b",
+    "input_reserved_units": 1906,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      1,
+      2
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1256,
+    "actual_output_tokens": 74,
+    "elapsed_seconds": 1.171
+  },
+  "validation_status": "valid"
+}

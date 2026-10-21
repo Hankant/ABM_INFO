@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前看到的仍是同一段概括性描述，缺少完整视频、可靠来源或当事人回应，无法确认干部身份以及父子长期不干活、牛被饿死等细节。建议先核实全貌，也应区分生活环境问题与扶贫成效。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP03-A0179",
+      "text": "先求证完整视频和当事人回应。环境卫生问题值得关注，但仅凭片段不能认定当事人“懒惰”，更不能直接下结论说扶贫失败。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0061",
+      "RP03-A0179",
+      "C03-A0173",
+      "C03-A0194"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0143",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 512,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "5d5ba0ed4eedc93c3972dc699076ea5f3c81a30a6d1b56e709062d1599b9d879",
+    "input_reserved_units": 3403,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 2,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2118,
+    "actual_output_tokens": 145,
+    "elapsed_seconds": 1.485
+  },
+  "validation_status": "valid"
+}

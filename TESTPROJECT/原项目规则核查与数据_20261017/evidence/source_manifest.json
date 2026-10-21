@@ -1,0 +1,46 @@
+{
+  "sources": [
+    {
+      "source_label": "Manuscripts.docx",
+      "sha256": "6ee56af83658fce877c8766768852153245a38f7fcc8a72f69c142131c494dbb"
+    },
+    {
+      "source_label": "LLM_Agent_具体模型设置与编程指南.docx",
+      "sha256": "e64b0e5bf687e5b8386bda3f35ac7d6ad9d4f60708806ff85993184c48627ccd"
+    },
+    {
+      "source_label": "single_event.json",
+      "sha256": "13e94022363e4fb46ab0c06a0e961c5e9646cc1100bb415cc0ff465dafbf8680"
+    },
+    {
+      "source_label": "core.py",
+      "sha256": "1ccf1cf870eb3d3cd1cce94bd1a529a3cc4e7aa0ae59f08de9a7469f793a7534"
+    },
+    {
+      "source_label": "runner.py",
+      "sha256": "e58c6ea52e2169e83a5e3433ce8b6a2e1f4941f0ef88bd851822c00caca6dd27"
+    },
+    {
+      "source_label": "cli.py",
+      "sha256": "24930bccced3feca43120ea834aac2e181683d0d427bcc51f13f124a80919d5c"
+    },
+    {
+      "source_label": "storage.py",
+      "sha256": "722f8252dad8c5276231a3bad16021e1db11e90ad36e7adefce863d239c4b51b"
+    }
+  ],
+  "source_labels_not_external_dependencies": true,
+  "paragraph_indexing": "zero_based_w_p_in_document_xml",
+  "checked_scope": [
+    "Manuscripts.docx",
+    "model programming guide",
+    "single_event core runner cli storage config",
+    "older project core",
+    "local study and simulation-source filename inventory"
+  ],
+  "unverified": [
+    "uploaded_remote_SocioVerse2_study",
+    "original_spatial_simulator_full_implementation",
+    "full_400_tick_probability_run"
+  ]
+}

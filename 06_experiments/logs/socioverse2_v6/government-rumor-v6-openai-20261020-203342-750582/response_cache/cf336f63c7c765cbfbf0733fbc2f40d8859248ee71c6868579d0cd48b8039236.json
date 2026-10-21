@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "这种视频容易掐头去尾，扶贫干部怒斥的画面本身可能是真的，但“父子懒惰到牛饿死”这种结论还是应该看到完整视频和当地核实再下判断。环境卫生差确实值得帮扶介入，但不能凭一段剪辑就贴标签。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP02-A0274",
+      "text": "转出来是想提醒一下：这种短视频常被剪过，先求证完整内容和当事人回应再判断，别被情绪带着走。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0274"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0528",
+    "tick": 3,
+    "attempt": 3,
+    "format_max_attempts": 4,
+    "request_number": 420,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "cf336f63c7c765cbfbf0733fbc2f40d8859248ee71c6868579d0cd48b8039236",
+    "input_reserved_units": 2433,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1533,
+    "actual_output_tokens": 160,
+    "elapsed_seconds": 3.141
+  },
+  "validation_status": "valid"
+}

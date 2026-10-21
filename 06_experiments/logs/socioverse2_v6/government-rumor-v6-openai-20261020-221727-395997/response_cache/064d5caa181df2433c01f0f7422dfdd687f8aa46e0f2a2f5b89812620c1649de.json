@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "已有多个官方账号明确回应称网传情节不属实，因此这段关于扶贫干部怒斥“懒惰父子”的转述不宜继续当作事实传播。视频里的标签化描述和后续辱骂也应以完整调查结论为准。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "G001",
+      "RP02-A0029",
+      "RP03-A0194",
+      "RP03-A0395"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0175",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 619,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "064d5caa181df2433c01f0f7422dfdd687f8aa46e0f2a2f5b89812620c1649de",
+    "input_reserved_units": 3956,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 1,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 3,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2522,
+    "actual_output_tokens": 140,
+    "elapsed_seconds": 1.718
+  },
+  "validation_status": "valid"
+}

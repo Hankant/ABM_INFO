@@ -1,0 +1,45 @@
+{
+  "study_id": "government-rumor-v4-openai-20261019-231951-698018",
+  "n_steps": 40,
+  "seed": 20261020,
+  "warm_start": {
+    "source_version": "government-rumor-v4-openai-20261019-223648-884905",
+    "source_trajectory": "G:\\ABM_INFO\\06_experiments\\results\\socioverse2_v4\\government-rumor-v4-openai-20261019-231951-698018\\recovery_actions.jsonl",
+    "resume_from": 19
+  },
+  "decision_ref": "rumor_v4.decision",
+  "decision_args": {
+    "config": {
+      "contract_status": "authorized_engineering_run",
+      "pbd": 0.0,
+      "gt": 0.6,
+      "rf": 0.6,
+      "behavior_seed": 20261020,
+      "strategy": "inside",
+      "base_url": "https://api.minimax.cn/v1",
+      "model": "MiniMax-M3",
+      "max_requests": 12200,
+      "tbu_definition": "end19_believers_first_reject_at_or_after20_mean_wait_completers",
+      "probability_precision": "table_values",
+      "contact_rule": "once_per_tick_correction_priority",
+      "rule_rebelief": false,
+      "direct_relay_same_gt": true,
+      "comment_target": "first_displayed_post",
+      "token_guard": "cl100k_base_estimate_15percent_plus64",
+      "runtime_version": "v4-recovery-2",
+      "format_max_attempts": 4,
+      "api_profile": "minimax_m3"
+    },
+    "prompt_file": "G:\\ABM_INFO\\06_experiments\\configs\\socioverse2_v4\\government-rumor-v4-openai-20261019-231951-698018\\02_Prompt固定提示词.md",
+    "audit_dir": "G:\\ABM_INFO\\06_experiments\\logs\\socioverse2_v4\\government-rumor-v4-openai-20261019-231951-698018",
+    "llm_kind": "openai"
+  },
+  "collector_ref": "rumor_v4.metrics",
+  "collector_args": {},
+  "interaction_rounds": 1,
+  "engine_args": {
+    "memory_window": 5
+  },
+  "store_ref": "duckdb",
+  "store_args": {}
+}

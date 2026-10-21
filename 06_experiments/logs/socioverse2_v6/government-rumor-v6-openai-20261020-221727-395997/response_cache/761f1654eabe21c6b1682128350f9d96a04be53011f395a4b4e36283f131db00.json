@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "已有政府账号明确回应网传情况不属实，而且目前缺少完整视频和背景，无法支撑“懒惰”、不干活及牛被饿死等具体指控。等待正式核查结果，不宜继续扩散。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "C06-A0007",
+      "G001",
+      "P001",
+      "RP02-A0029",
+      "RP05-A0376"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0175",
+    "tick": 10,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 2480,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "761f1654eabe21c6b1682128350f9d96a04be53011f395a4b4e36283f131db00",
+    "input_reserved_units": 4068,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 5,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 8,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2548,
+    "actual_output_tokens": 102,
+    "elapsed_seconds": 1.328
+  },
+  "validation_status": "valid"
+}

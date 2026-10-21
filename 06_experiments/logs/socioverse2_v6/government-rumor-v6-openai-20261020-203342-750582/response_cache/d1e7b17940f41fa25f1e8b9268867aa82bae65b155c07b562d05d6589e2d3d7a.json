@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "看了好几条都是同一段文字转来转去，没有看到完整视频或者当地官方说法，干部是谁、父子俩什么情况、\"牛被饿死\"是不是真的都没法确认，先不下结论，等后续核实。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "C04-A0445",
+      "RP03-A0332",
+      "RP04-A0311",
+      "RP04-A0485"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0361",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 937,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "d1e7b17940f41fa25f1e8b9268867aa82bae65b155c07b562d05d6589e2d3d7a",
+    "input_reserved_units": 3111,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 3,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1952,
+    "actual_output_tokens": 138,
+    "elapsed_seconds": 2.719
+  },
+  "validation_status": "valid"
+}

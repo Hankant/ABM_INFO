@@ -1,0 +1,57 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "看到政府账号澄清该帖情节不属实，但还是想等完整调查通报出来再说。目前我持保留态度，转发澄清时也想提醒一下身边关注的人先别下结论。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "G001",
+      "P001",
+      "RP03-A0068",
+      "RP03-A0194",
+      "RP03-A0282",
+      "RP02-A0189",
+      "RP02-A0194",
+      "C03-A0209",
+      "C03-A0435"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0574",
+    "tick": 4,
+    "attempt": 2,
+    "format_max_attempts": 4,
+    "request_number": 843,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "d230e11d35b8f1fe9fa75fd198a7996506f0865ac0c3b93a5b6c5cd12330ffd0",
+    "input_reserved_units": 4024,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 1,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 2,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2561,
+    "actual_output_tokens": 159,
+    "elapsed_seconds": 2.781
+  },
+  "validation_status": "valid"
+}

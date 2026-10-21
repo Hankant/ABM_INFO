@@ -1,0 +1,87 @@
+{
+  "schema_version": "shared_comparison_contract_v1",
+  "status": "specification_incomplete_not_runnable",
+  "runtime_ready": false,
+  "path_base": "package_root",
+  "input_files": {
+    "event": "inputs/event_input.json",
+    "population_identity": "inputs/population_identity.jsonl",
+    "parameters": "inputs/model_parameters.json"
+  },
+  "comparison": {
+    "A": "existing_python_host_with_shared_probability_core",
+    "B": "socioverse2_host_with_same_probability_core",
+    "scope": "framework_hosting_same_model",
+    "raw_excel_required": false,
+    "initialize_once_then_load_identical_snapshot_in_both": true,
+    "resample_population_per_framework": false,
+    "same_seed_alone_is_sufficient": false
+  },
+  "selected_run": {
+    "event_id": "event_052",
+    "n_steps": 400,
+    "PBd": null,
+    "T_G": null,
+    "In_out": null,
+    "GT": null,
+    "RF": 0.6,
+    "replicate_seeds": null,
+    "replications": null
+  },
+  "shared_initialization": {
+    "population_identities_provided": true,
+    "ordinary_initial_states": null,
+    "source_initial_state": null,
+    "government_initial_state": null,
+    "positions_or_network": null,
+    "contact_mode": null,
+    "initial_circle": null
+  },
+  "shared_rules": {
+    "rumor": "effective_eligible_contact -> Bernoulli(PB) -> if believed Bernoulli(RC)",
+    "government_correction": "effective_eligible_contact -> Bernoulli(GT) -> if accepted reject rumor and Bernoulli(RF)",
+    "no_contact": "no new belief or sharing draw",
+    "government_rejection": "preserve belief",
+    "TBU": "mean(T_i - T_G) over eligible completed transitions with T_i > T_G; no completers -> missing",
+    "probability_precision": null,
+    "world_geometry": null,
+    "motion_and_boundary": null,
+    "effective_contact_criterion": null,
+    "circle_update": null,
+    "LC_semantics": null,
+    "initialization_and_tick_mapping": null,
+    "within_tick_order": null,
+    "multiple_or_repeated_contact_and_rebelief": null,
+    "peer_correction_acceptance": null,
+    "T_i_selection_if_multiple_transitions": null,
+    "rumor_susceptible_transition": {
+      "eligible_state": "S",
+      "PB_failure": "R",
+      "PB_success_RC_failure": "E",
+      "PB_success_RC_success": "I",
+      "basis": "Manuscripts equations 9-12; newly audited",
+      "not_resolved": "repeat contact and R reversal micro-rules"
+    },
+    "LC_definition": {
+      "source": "last observed comment time minus first observed comment time",
+      "forced_expiry_verified": false
+    }
+  },
+  "randomness": {
+    "algorithm_and_version": null,
+    "draw_allocation": null,
+    "require_matching_draw_per_semantic_event": true,
+    "exclude_framework_run_name_from_randomness": true
+  },
+  "comparison_checks": [
+    "same_input_hashes",
+    "same_complete_initial_snapshot",
+    "same_contacts_and_order",
+    "same_random_values_per_decision",
+    "same_actions_and_states",
+    "same_metric_results",
+    "resume_matches_uninterrupted",
+    "performance_only_after_equivalence"
+  ],
+  "new_conversion_fraction_denominator": null
+}

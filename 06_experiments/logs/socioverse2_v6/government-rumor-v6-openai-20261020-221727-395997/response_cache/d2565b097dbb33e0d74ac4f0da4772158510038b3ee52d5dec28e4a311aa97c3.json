@@ -1,0 +1,57 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "已有政府账号明确称网传情况不属实，而原始转述缺少完整视频和调查材料；继续使用“懒惰父子”“牛被饿死”等标签既缺乏依据，也可能给当事人造成伤害。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "G001",
+      "P001",
+      "RP03-A0528",
+      "RP04-A0151",
+      "RP03-A0156",
+      "C04-A0437",
+      "RP05-A0486",
+      "C06-A0110",
+      "RP08-A0371"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0323",
+    "tick": 9,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 2251,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "d2565b097dbb33e0d74ac4f0da4772158510038b3ee52d5dec28e4a311aa97c3",
+    "input_reserved_units": 4018,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 5,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 4,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2562,
+    "actual_output_tokens": 126,
+    "elapsed_seconds": 1.156
+  },
+  "validation_status": "valid"
+}

@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频片段最多能说明拍摄时的情况，无法仅凭转述确认父子是否确实长期不干活、牛是否因此饿死，以及扶贫干部此前是否多次帮扶。事件细节仍需核实。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "RP01-A0014",
+      "RP01-A0064"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0426",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 146,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "3b30ab597b2899b051d3f1d384712163a3cf56d03546a5f1e7d6027cd5e39acd",
+    "input_reserved_units": 2623,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1673,
+    "actual_output_tokens": 87,
+    "elapsed_seconds": 1.547
+  },
+  "validation_status": "valid"
+}

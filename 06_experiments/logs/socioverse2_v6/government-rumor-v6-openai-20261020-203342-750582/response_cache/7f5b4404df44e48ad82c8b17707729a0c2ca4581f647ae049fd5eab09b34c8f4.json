@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频画面描述确实令人震惊，但仅凭一段剪辑就定性为'懒惰'和扶贫失败有些仓促。父子俩是否有过病史、就业障碍、家庭变故等背景？扶贫干部的具体帮扶措施和沟通过程如何？希望能听到更多方的声音再下判断。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0065"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0520",
+    "tick": 2,
+    "attempt": 2,
+    "format_max_attempts": 4,
+    "request_number": 166,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "7f5b4404df44e48ad82c8b17707729a0c2ca4581f647ae049fd5eab09b34c8f4",
+    "input_reserved_units": 2428,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1527,
+    "actual_output_tokens": 131,
+    "elapsed_seconds": 1.406
+  },
+  "validation_status": "valid"
+}

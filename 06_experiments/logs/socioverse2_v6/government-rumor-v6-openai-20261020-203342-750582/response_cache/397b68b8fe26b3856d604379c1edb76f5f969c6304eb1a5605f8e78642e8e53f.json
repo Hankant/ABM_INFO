@@ -1,0 +1,54 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前看到的多是同一段单方转述，尚不能核实干部身份、父子实际处境及牛的结局；生活状态也不能直接等同于“懒惰”。建议等完整视频和当地调查回应后再判断。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "C04-A0567",
+      "P001",
+      "RP04-A0073",
+      "RP04-A0316",
+      "RP04-A0386",
+      "RP03-A0372"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0263",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 886,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "397b68b8fe26b3856d604379c1edb76f5f969c6304eb1a5605f8e78642e8e53f",
+    "input_reserved_units": 3560,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 1,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2223,
+    "actual_output_tokens": 112,
+    "elapsed_seconds": 1.156
+  },
+  "validation_status": "valid"
+}

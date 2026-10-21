@@ -1,0 +1,51 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "已有官方账号明确回应称网传情况不属实，而且目前缺少完整视频和背景材料。“懒惰父子”“牛被饿死”等细节不宜据此当事实传播，等后续完整核查结果吧。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "RP09-A0359",
+      "RP09-A0479",
+      "C06-A0010"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0462",
+    "tick": 10,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 2640,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "c6d128da2c9a55000fdf668e69e6fc1c98fc11a6e0d07c092918cb8b02e386e5",
+    "input_reserved_units": 4041,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 5,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 2,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2546,
+    "actual_output_tokens": 95,
+    "elapsed_seconds": 1.172
+  },
+  "validation_status": "valid"
+}

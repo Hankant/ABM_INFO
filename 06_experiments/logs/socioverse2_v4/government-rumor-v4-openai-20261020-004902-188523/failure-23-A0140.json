@@ -1,0 +1,54 @@
+{
+  "agent_id": "A0140",
+  "tick": 23,
+  "decision_status": "error",
+  "error_type": "RuntimeError",
+  "observed_posts": [
+    {
+      "content_id": "RP22-A0344",
+      "root_content_id": "G001",
+      "author_id": "A0344",
+      "original_author_id": "GOVERNMENT",
+      "published_tick": 22,
+      "available_tick": 23,
+      "text": "关于网上流传的“辽宁一名扶贫干部怒斥一对懒惰父子”的相关消息，本账号作出如下回应：该帖所述情况不属实，请勿继续将其作为事实传播。请关注后续核实信息，避免转发未经核实的内容。",
+      "repost_text": "官方账号已澄清：相关消息不属实，请勿传播。转发提醒一下。",
+      "parent_content_id": "RP21-A0033",
+      "comments": [],
+      "delivery": "followee",
+      "can_repost": false,
+      "block_reason": "duplicate_root_repost"
+    },
+    {
+      "content_id": "RP22-A0487",
+      "root_content_id": "G001",
+      "author_id": "A0487",
+      "original_author_id": "GOVERNMENT",
+      "published_tick": 22,
+      "available_tick": 23,
+      "text": "关于网上流传的“辽宁一名扶贫干部怒斥一对懒惰父子”的相关消息，本账号作出如下回应：该帖所述情况不属实，请勿继续将其作为事实传播。请关注后续核实信息，避免转发未经核实的内容。",
+      "repost_text": "",
+      "parent_content_id": "RP21-A0248",
+      "comments": [],
+      "delivery": "followee",
+      "can_repost": false,
+      "block_reason": "duplicate_root_repost"
+    },
+    {
+      "content_id": "RP22-A0564",
+      "root_content_id": "G001",
+      "author_id": "A0564",
+      "original_author_id": "GOVERNMENT",
+      "published_tick": 22,
+      "available_tick": 23,
+      "text": "关于网上流传的“辽宁一名扶贫干部怒斥一对懒惰父子”的相关消息，本账号作出如下回应：该帖所述情况不属实，请勿继续将其作为事实传播。请关注后续核实信息，避免转发未经核实的内容。",
+      "repost_text": "",
+      "parent_content_id": "RP21-A0041",
+      "comments": [],
+      "delivery": "followee",
+      "can_repost": false,
+      "block_reason": "duplicate_root_repost"
+    }
+  ],
+  "note": "batch not committed; see safe request diagnostics; no fallback"
+}

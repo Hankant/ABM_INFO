@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "多次看到这条转述，内容仍是同一段描述，没有附完整视频、官方通报或当事人回应。垃圾遍地、牛是否因无人照料饿死等细节，以及“扶贫干部”和“懒惰父子”的身份与定性，都还缺少原始材料核实。继续保持不确定，等看到完整证据再判断。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0230",
+      "RP03-A0290",
+      "RP03-A0367",
+      "RP03-A0372",
+      "C03-A0249",
+      "C03-A0344"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0249",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 567,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "120149567b22decccfb2b6bf836675a77ae8716fdf65f7ffd6b0f9ffe12ac596",
+    "input_reserved_units": 3656,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 2,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2264,
+    "actual_output_tokens": 170,
+    "elapsed_seconds": 2.594
+  },
+  "validation_status": "valid"
+}

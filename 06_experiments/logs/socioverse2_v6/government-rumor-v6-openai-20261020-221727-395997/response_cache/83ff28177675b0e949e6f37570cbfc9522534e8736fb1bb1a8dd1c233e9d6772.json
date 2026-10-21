@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "已有账号明确称网传描述不属实，而且目前多是同一段文字的重复转发，不能据此认定父子真如描述。完整视频和上下文仍待核实，也别给当事人贴标签。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "RP05-A0387",
+      "RP01-A0024",
+      "C02-A0041",
+      "RP04-A0387",
+      "G001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0232",
+    "tick": 6,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 1273,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "83ff28177675b0e949e6f37570cbfc9522534e8736fb1bb1a8dd1c233e9d6772",
+    "input_reserved_units": 4065,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 4,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 3,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2556,
+    "actual_output_tokens": 104,
+    "elapsed_seconds": 1.406
+  },
+  "validation_status": "valid"
+}

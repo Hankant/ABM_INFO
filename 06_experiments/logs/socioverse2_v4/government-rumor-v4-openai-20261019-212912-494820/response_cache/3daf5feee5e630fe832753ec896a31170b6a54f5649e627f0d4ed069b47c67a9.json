@@ -1,0 +1,44 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "看到官方账号已经辟谣了，说帖子里的情况不属实，那就不应该再传播未经核实的内容了。大家还是等后续核实信息吧。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "G001",
+      "text": "官方账号已明确澄清相关消息不属实，请勿继续传播未经核实的内容。"
+    },
+    "evidence_ids": [
+      "G001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0005",
+    "tick": 20,
+    "attempt": 1,
+    "request_number": 97,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "3daf5feee5e630fe832753ec896a31170b6a54f5649e627f0d4ed069b47c67a9",
+    "input_reserved_units": 3508,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "utf8_bytes_plus_256_proxy_not_actual_tokens",
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 842,
+    "actual_output_tokens": 118,
+    "elapsed_seconds": 5.14
+  }
+}

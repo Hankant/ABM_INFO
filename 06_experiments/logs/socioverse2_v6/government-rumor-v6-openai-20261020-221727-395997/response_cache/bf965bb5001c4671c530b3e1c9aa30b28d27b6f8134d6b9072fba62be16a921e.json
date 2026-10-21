@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": false,
+      "text": ""
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP03-A0449",
+      "text": "暂不采信原帖描述：目前缺少首发和完整证据，且已有账号回应称不属实，等待后续核实。"
+    },
+    "evidence_ids": [
+      "G001",
+      "RP03-A0449",
+      "RP03-A0457",
+      "RP03-A0471",
+      "RP03-A0482"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0357",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 718,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "bf965bb5001c4671c530b3e1c9aa30b28d27b6f8134d6b9072fba62be16a921e",
+    "input_reserved_units": 3247,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2081,
+    "actual_output_tokens": 93,
+    "elapsed_seconds": 0.938
+  },
+  "validation_status": "valid"
+}

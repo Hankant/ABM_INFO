@@ -1,0 +1,49 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "这类视频之前也看过不少转发，真假难辨。有没有辽宁本地的朋友确认一下这事的时间和地点？光凭一段视频不太好下结论。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0041",
+    "tick": 1,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 27,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "bfca554223d7fa5d0100b23d55a9bce287b967d159042f585ef193c72d7d2bfd",
+    "input_reserved_units": 2335,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1474,
+    "actual_output_tokens": 100,
+    "elapsed_seconds": 2.782
+  },
+  "validation_status": "valid"
+}

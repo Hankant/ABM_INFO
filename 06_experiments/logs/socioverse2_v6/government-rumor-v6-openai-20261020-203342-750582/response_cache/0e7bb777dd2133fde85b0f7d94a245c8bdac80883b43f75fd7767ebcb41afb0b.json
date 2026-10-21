@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频里的生活细节只能说明拍摄时的情况；干部称对方懒惰、不干活，还是带有主观评价。仅凭这段文字无法核实牛的死亡原因及家庭情况，建议先看完整视频和当地回应。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP01-A0020",
+      "text": "先求证：完整视频、时间地点、官方回应，以及所谓“牛被饿死”是否有证据。扶贫干部的评价也不等于客观事实。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0020"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0136",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 94,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "0e7bb777dd2133fde85b0f7d94a245c8bdac80883b43f75fd7767ebcb41afb0b",
+    "input_reserved_units": 2360,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1510,
+    "actual_output_tokens": 119,
+    "elapsed_seconds": 1.704
+  },
+  "validation_status": "valid"
+}

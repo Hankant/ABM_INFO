@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "看到转述但还没有完整视频和官方核实，这种描述性很强的内容容易被夸大或断章取义。转发的同学提到求证时间地点和官方回应，这点我同意——单凭一段转述不宜对当事人下结论。希望能有原始视频或当地通报再判断。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0024"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0257",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 142,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "4764329dec307d5f6ffc47dfa20aac9abfe330e87a091a42c51c4da34c2eb5ff",
+    "input_reserved_units": 2419,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1529,
+    "actual_output_tokens": 134,
+    "elapsed_seconds": 2.313
+  },
+  "validation_status": "valid"
+}

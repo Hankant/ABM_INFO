@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "event_id": "event_052",
+  "profile_count": 305,
+  "profile_status_counts": {
+    "observed": 305
+  },
+  "source_sheet_row_counts": {
+    "source": 1,
+    "comments": 250,
+    "reposts": 73
+  },
+  "resolved_unique_observed_records": {
+    "comments": 250,
+    "reposts": 72
+  },
+  "nonempty_cleaned_text_records": {
+    "comments": 250,
+    "reposts": 72
+  },
+  "records_with_nonempty_observed_time": {
+    "comments": 250,
+    "reposts": 72
+  },
+  "correction_keyword_flagged_records": {
+    "comments": 7,
+    "reposts": 0
+  },
+  "local_review_examples": 47,
+  "calibration_mode": "descriptive_behavior_conditioning_not_parameter_estimation_or_fine_tuning",
+  "network_relationships": "not_reconstructed_no_explicit_follow_or_reply_edges_available",
+  "historical_text_in_model_payload": false,
+  "historical_text_replay": false,
+  "limitations": [
+    "Behavior summaries are retrospective descriptions of this event's observed public expressions.",
+    "They are not pre-event psychological traits, private beliefs, government trust, or observed social ties.",
+    "A repost fraction is conditional on recorded public posts, not a probability of reposting after browsing.",
+    "No recorded comment does not imply silence during unobserved browsing; unavailable text metrics remain null.",
+    "Historical text and annotation labels are not initial memory and are not forwarded to the LLM.",
+    "Conditioning profiles on this event's completed behavior is a retrospective scenario, not a leakage-free historical forecast."
+  ]
+}

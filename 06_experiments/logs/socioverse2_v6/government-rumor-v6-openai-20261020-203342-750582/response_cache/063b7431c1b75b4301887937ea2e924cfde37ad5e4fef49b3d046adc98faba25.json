@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "看到连续几轮都是同一段视频及其转述，完整视频、当事人回应和当地正式说明都还没见到，单凭转述画面和“扶贫干部怒斥”的说法难以判断细节是否准确，也不宜给当事人贴标签。继续保持关注，等核实材料再下结论。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "RP02-A0553",
+      "RP02-A0312",
+      "RP03-A0018",
+      "RP03-A0183",
+      "C03-A0201",
+      "C03-A0514",
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0331",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 918,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "063b7431c1b75b4301887937ea2e924cfde37ad5e4fef49b3d046adc98faba25",
+    "input_reserved_units": 4048,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 2,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 6,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2492,
+    "actual_output_tokens": 169,
+    "elapsed_seconds": 3.015
+  },
+  "validation_status": "valid"
+}

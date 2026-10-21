@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": false,
+      "text": ""
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP03-A0007",
+      "text": "先存疑求证：视频片段可能呈现部分生活细节，但不足以确认“扶贫干部怒斥”、具体地点身份及后续情况；完整视频、原始报道或当地回应出来后再判断。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP03-A0007"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0294",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 593,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "c9d0e3dd3a110d92e101b6c35a0012a6b76f093ab94a7fa4456febaad94fdb85",
+    "input_reserved_units": 2453,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1555,
+    "actual_output_tokens": 118,
+    "elapsed_seconds": 4.187
+  },
+  "validation_status": "valid"
+}

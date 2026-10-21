@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前看到的都是同一段叙述的重复转发，缺少完整视频、干部身份、明确时间地点及当地回应，不能据此确认“懒惰”或“牛被饿死都不知道”等说法。环境卫生问题值得关注，但先别给当事人贴标签。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "C04-A0005",
+      "C04-A0009",
+      "RP04-A0158"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0055",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 782,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "d6a52728e21107792c0dd5492296b49965b29732f869dc6d6c2f8ca2f09c2f53",
+    "input_reserved_units": 3960,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 4,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 4,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2438,
+    "actual_output_tokens": 106,
+    "elapsed_seconds": 1.11
+  },
+  "validation_status": "valid"
+}

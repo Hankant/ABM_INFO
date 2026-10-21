@@ -1,0 +1,108 @@
+{
+  "agent_id": "A0012",
+  "tick": 2,
+  "decision_status": "error",
+  "error_type": "QuotaPause",
+  "file_error": {
+    "filename": null,
+    "filename2": null,
+    "errno": null,
+    "winerror": null
+  },
+  "observed_posts": [
+    {
+      "content_id": "G001",
+      "root_content_id": "G001",
+      "author_id": "GOVERNMENT",
+      "original_author_id": "GOVERNMENT",
+      "published_tick": 2,
+      "available_tick": 2,
+      "text": "关于网上流传的“辽宁一名扶贫干部怒斥一对懒惰父子”的相关消息，本账号作出如下回应：该帖所述情况不属实，请勿继续将其作为事实传播。请关注后续核实信息，避免转发未经核实的内容。",
+      "repost_text": "",
+      "comments": [],
+      "delivery": "direct_government",
+      "can_repost": true,
+      "block_reason": null,
+      "is_reread": false
+    },
+    {
+      "content_id": "RP01-A0030",
+      "root_content_id": "P001",
+      "author_id": "A0030",
+      "original_author_id": "SOURCE",
+      "published_tick": 1,
+      "available_tick": 2,
+      "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+      "repost_text": "转述冲击力很强，但目前只见片段式描述，暂不足以核实其全部指控。求完整视频及核查信息。",
+      "parent_content_id": "P001",
+      "comments": [],
+      "delivery": "followee",
+      "can_repost": true,
+      "block_reason": null,
+      "is_reread": false
+    },
+    {
+      "content_id": "RP01-A0061",
+      "root_content_id": "P001",
+      "author_id": "A0061",
+      "original_author_id": "SOURCE",
+      "published_tick": 1,
+      "available_tick": 2,
+      "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+      "repost_text": "先存疑：希望能看到完整视频或可靠报道，核实事件背景后再判断。",
+      "parent_content_id": "P001",
+      "comments": [],
+      "delivery": "followee",
+      "can_repost": true,
+      "block_reason": null,
+      "is_reread": false
+    },
+    {
+      "content_id": "RP01-A0077",
+      "root_content_id": "P001",
+      "author_id": "A0077",
+      "original_author_id": "SOURCE",
+      "published_tick": 1,
+      "available_tick": 2,
+      "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+      "repost_text": "先求证：希望看到原视频和完整背景，再判断这对父子的实际处境及干部发言是否恰当。",
+      "parent_content_id": "P001",
+      "comments": [],
+      "delivery": "followee",
+      "can_repost": true,
+      "block_reason": null,
+      "is_reread": false
+    },
+    {
+      "content_id": "P001",
+      "root_content_id": "P001",
+      "author_id": "SOURCE",
+      "original_author_id": "SOURCE",
+      "published_tick": 0,
+      "available_tick": 1,
+      "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+      "repost_text": "",
+      "comments": [
+        {
+          "comment_id": "C01-A0002",
+          "author_id": "A0002",
+          "published_tick": 1,
+          "target_content_id": "P001",
+          "text": "视频看着确实让人无语，但不知道完整前后语境，扶贫干部的反应是否合适也不好说。求证一下：这视频是哪天、哪家媒体首发？"
+        },
+        {
+          "comment_id": "C01-A0007",
+          "author_id": "A0007",
+          "published_tick": 1,
+          "target_content_id": "P001",
+          "text": "视频情节描述得很具体，但目前没有完整视频或可靠信源可核实，也无法确认干部、父子及家中情况是否被断章取义。先存疑。"
+        }
+      ],
+      "delivery": "followee",
+      "can_repost": true,
+      "block_reason": null,
+      "is_reread": true
+    }
+  ],
+  "note": "batch not committed; see safe request diagnostics; no fallback"
+}

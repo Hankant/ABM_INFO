@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "看了几个政府关联账号都明确说原帖情况不属实，而且一直没有看到完整视频或权威通报确认那些细节（什么尿桶放床边、牛被饿死之类的）。我倾向于不信，建议大家先别传播原帖里那些具体描述，等后续完整核实。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "G001",
+      "RP04-A0455",
+      "RP04-A0556",
+      "RP05-A0134",
+      "RP01-A0036",
+      "C06-A0161",
+      "C06-A0360"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0376",
+    "tick": 9,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 2282,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "2cfc7281566f0a3e7ce78044ec26684539876db3cb2e61738fbd0b1ea44bf46f",
+    "input_reserved_units": 3974,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 5,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 2,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2528,
+    "actual_output_tokens": 165,
+    "elapsed_seconds": 3.218
+  },
+  "validation_status": "valid"
+}

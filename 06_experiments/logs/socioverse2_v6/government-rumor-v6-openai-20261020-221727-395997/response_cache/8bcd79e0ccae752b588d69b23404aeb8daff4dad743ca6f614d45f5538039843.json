@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频里的场景描述得很具体，但现在只有转述，缺少原始视频和完整上下文；父子是否确实懒惰、扶贫干部身份及后续情况都还不能确认，先求证。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP01-A0026",
+      "text": "转述中的视频情节很具体，但目前无法核实原始来源、完整上下文和涉事干部身份；“懒惰”等评价先不当作已证实事实。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0026"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0290",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 151,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "8bcd79e0ccae752b588d69b23404aeb8daff4dad743ca6f614d45f5538039843",
+    "input_reserved_units": 2450,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1554,
+    "actual_output_tokens": 145,
+    "elapsed_seconds": 1.781
+  },
+  "validation_status": "valid"
+}

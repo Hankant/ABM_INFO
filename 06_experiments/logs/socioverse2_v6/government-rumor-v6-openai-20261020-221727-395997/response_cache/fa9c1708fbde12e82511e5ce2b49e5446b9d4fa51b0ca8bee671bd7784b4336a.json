@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "多个政府账号已明确回应称网传情况不属实，而原帖缺少完整视频、背景及可核实信源，因此不宜传播其中对“懒惰父子”和扶贫干部的指控，等待后续完整通报。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "RP04-A0130",
+      "RP03-A0042",
+      "C04-A0005",
+      "C04-A0142"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0146",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 917,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "fa9c1708fbde12e82511e5ce2b49e5446b9d4fa51b0ca8bee671bd7784b4336a",
+    "input_reserved_units": 4023,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 2,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2573,
+    "actual_output_tokens": 138,
+    "elapsed_seconds": 1.391
+  },
+  "validation_status": "valid"
+}

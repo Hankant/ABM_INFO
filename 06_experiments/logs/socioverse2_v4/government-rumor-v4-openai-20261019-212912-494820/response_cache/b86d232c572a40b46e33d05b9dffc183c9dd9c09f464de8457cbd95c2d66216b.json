@@ -1,0 +1,44 @@
+{
+  "answer": {
+    "belief": "believe",
+    "comment": {
+      "enabled": true,
+      "text": "扶贫先扶志，这种懒骨头不扶也罢。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0055",
+    "tick": 1,
+    "attempt": 1,
+    "request_number": 32,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "b86d232c572a40b46e33d05b9dffc183c9dd9c09f464de8457cbd95c2d66216b",
+    "input_reserved_units": 3487,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "utf8_bytes_plus_256_proxy_not_actual_tokens",
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 843,
+    "actual_output_tokens": 80,
+    "elapsed_seconds": 1.125
+  }
+}

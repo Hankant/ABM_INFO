@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "既然政府账号已明确回应为不属实，就不应再把视频中的身份、生活情况和“牛被饿死”等细节当作事实传播。等待后续完整核查结果即可。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "G001",
+      "RP06-A0456",
+      "P001",
+      "C02-A0035",
+      "C03-A0478"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0035",
+    "tick": 7,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 1485,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "1fb76c4e35abc5d9fb643ee10d9ff393a8acbe95be2d9630199b2bf0f583e8ec",
+    "input_reserved_units": 4016,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 5,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 5,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2552,
+    "actual_output_tokens": 96,
+    "elapsed_seconds": 4.297
+  },
+  "validation_status": "valid"
+}

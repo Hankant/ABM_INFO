@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "重复看到同一转述仍未增加独立证据。完整视频、时间地点、发布来源和当地通报都还缺失，也无法确认是否有前后语境，因此暂不能认定父子长期不干活或扶贫干部身份属实。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0026",
+      "RP01-A0065",
+      "C01-A0002",
+      "C01-A0007"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0023",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 55,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "d74adbb303bc1b1ff1ceecec0a850a2f424baa69a1da3a3348c6c8686af0363c",
+    "input_reserved_units": 4001,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      1
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2490,
+    "actual_output_tokens": 106,
+    "elapsed_seconds": 1.203
+  },
+  "validation_status": "valid"
+}

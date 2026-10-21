@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "已经有官方账号明确回应称该消息不属实，原始帖子里那些具体情节（垃圾遍地、尿桶放床边、牛被饿死）缺乏可核验来源，没必要继续当作事实传播。建议大家先等后续核实信息。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "G001",
+      "RP02-A0025",
+      "C03-A0077",
+      "C03-A0267"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0239",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 964,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "5d3206b32a449e1a6cbc1634bad571f87a5c4e0029983abfe4d4c85c058724a2",
+    "input_reserved_units": 3962,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 2,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2536,
+    "actual_output_tokens": 136,
+    "elapsed_seconds": 3.063
+  },
+  "validation_status": "valid"
+}

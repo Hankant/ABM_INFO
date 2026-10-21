@@ -1,0 +1,57 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": false,
+      "text": ""
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP03-A0412",
+      "text": "完整视频、当事人回应和当地通报都未见，先别把“懒惰”当成既定事实；环境卫生问题也值得核实。"
+    },
+    "evidence_ids": [
+      "C03-A0002",
+      "C03-A0017",
+      "RP02-A0013",
+      "RP03-A0006",
+      "RP03-A0252",
+      "RP03-A0412",
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0431",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 670,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "44930bacbd7878a9812c64ea919a3068922b8ba3e9e310d62844b3cfed8b3a1e",
+    "input_reserved_units": 4057,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      3
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2546,
+    "actual_output_tokens": 106,
+    "elapsed_seconds": 1.156
+  },
+  "validation_status": "valid"
+}

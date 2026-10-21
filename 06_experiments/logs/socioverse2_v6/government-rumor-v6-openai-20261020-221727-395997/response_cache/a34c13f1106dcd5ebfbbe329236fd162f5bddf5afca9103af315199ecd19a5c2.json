@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "看下来官方的辟谣回应已经明确说该帖不属实，而且原始视频细节也没法独立核实，这种情况下不宜继续传播这种给当事人贴标签的内容。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "G001",
+      "P001",
+      "RP02-A0059",
+      "RP03-A0138"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0291",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 684,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "a34c13f1106dcd5ebfbbe329236fd162f5bddf5afca9103af315199ecd19a5c2",
+    "input_reserved_units": 3933,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 2,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 3,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2460,
+    "actual_output_tokens": 103,
+    "elapsed_seconds": 2.672
+  },
+  "validation_status": "valid"
+}

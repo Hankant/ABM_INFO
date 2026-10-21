@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": false,
+      "text": ""
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP02-A0075",
+      "text": "仅有文字描述，无法确认视频中人物行为及干部说法全貌。希望先看到完整视频和可靠媒体核实，再判断。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0075"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0092",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 222,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "3f024b8b87b5921e0a228dc81d79357ac78cb6971e22005bb795b87b456e5f05",
+    "input_reserved_units": 2422,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1539,
+    "actual_output_tokens": 76,
+    "elapsed_seconds": 6.485
+  },
+  "validation_status": "valid"
+}

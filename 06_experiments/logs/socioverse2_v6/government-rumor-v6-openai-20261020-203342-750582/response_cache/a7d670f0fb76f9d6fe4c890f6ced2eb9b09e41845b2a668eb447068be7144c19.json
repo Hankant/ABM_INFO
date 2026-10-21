@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": false,
+      "text": ""
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP02-A0232",
+      "text": "转述仍不能确认细节，完整视频和当地官方通报未见到，求证中。"
+    },
+    "evidence_ids": [
+      "RP02-A0232",
+      "C02-A0023",
+      "C02-A0051",
+      "RP01-A0064",
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0113",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 231,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "a7d670f0fb76f9d6fe4c890f6ced2eb9b09e41845b2a668eb447068be7144c19",
+    "input_reserved_units": 3408,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      2
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2141,
+    "actual_output_tokens": 121,
+    "elapsed_seconds": 2.469
+  },
+  "validation_status": "valid"
+}

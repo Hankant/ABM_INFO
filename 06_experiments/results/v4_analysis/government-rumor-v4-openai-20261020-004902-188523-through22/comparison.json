@@ -1,0 +1,281 @@
+{
+  "run": "government-rumor-v4-openai-20261020-004902-188523",
+  "through_tick": 22,
+  "snapshot": {
+    "19": {
+      "llm": {
+        "uncertain": 64,
+        "believe": 8,
+        "unjudged": 233
+      },
+      "rule": {
+        "believe": 50,
+        "reject": 24,
+        "unjudged": 203
+      }
+    },
+    "20": {
+      "llm": {
+        "uncertain": 45,
+        "reject": 21,
+        "believe": 6,
+        "unjudged": 233
+      },
+      "rule": {
+        "believe": 45,
+        "reject": 29,
+        "unjudged": 203
+      }
+    },
+    "21": {
+      "llm": {
+        "reject": 112,
+        "believe": 4,
+        "uncertain": 30,
+        "unjudged": 159
+      },
+      "rule": {
+        "believe": 27,
+        "reject": 87,
+        "unjudged": 163
+      }
+    },
+    "22": {
+      "llm": {
+        "reject": 272,
+        "believe": 2,
+        "unjudged": 20,
+        "uncertain": 11
+      },
+      "rule": {
+        "believe": 11,
+        "reject": 185,
+        "unjudged": 81
+      }
+    }
+  },
+  "first_exposure": {
+    "rule|rumor|all": {
+      "n": 74,
+      "believe": 50,
+      "before_unjudged": 74,
+      "repost": 5,
+      "reject": 24
+    },
+    "rule|rumor|inside": {
+      "n": 39,
+      "believe": 25,
+      "before_unjudged": 39,
+      "repost": 4,
+      "reject": 14
+    },
+    "llm|rumor|all": {
+      "n": 72,
+      "uncertain": 64,
+      "before_unjudged": 72,
+      "repost": 0,
+      "believe": 8
+    },
+    "llm|rumor|inside": {
+      "n": 43,
+      "uncertain": 39,
+      "before_unjudged": 43,
+      "repost": 0,
+      "believe": 4
+    },
+    "rule|rumor|outside": {
+      "n": 35,
+      "believe": 25,
+      "before_unjudged": 35,
+      "repost": 1,
+      "reject": 10
+    },
+    "llm|rumor|outside": {
+      "n": 29,
+      "uncertain": 25,
+      "before_unjudged": 29,
+      "repost": 0,
+      "believe": 4
+    },
+    "rule|correction|all": {
+      "n": 256,
+      "reject": 170,
+      "before_reject": 23,
+      "repost": 97,
+      "before_believe": 49,
+      "believe": 17,
+      "before_unjudged": 184,
+      "unjudged": 69
+    },
+    "rule|correction|inside": {
+      "n": 39,
+      "reject": 30,
+      "before_reject": 14,
+      "repost": 15,
+      "before_believe": 25,
+      "believe": 9
+    },
+    "llm|correction|all": {
+      "n": 283,
+      "reject": 266,
+      "before_uncertain": 62,
+      "repost": 114,
+      "before_believe": 8,
+      "believe": 2,
+      "uncertain": 15,
+      "before_unjudged": 213
+    },
+    "llm|correction|inside": {
+      "n": 43,
+      "reject": 42,
+      "before_uncertain": 39,
+      "repost": 19,
+      "before_believe": 4,
+      "believe": 1
+    },
+    "rule|correction|outside": {
+      "n": 217,
+      "reject": 140,
+      "before_unjudged": 184,
+      "repost": 82,
+      "unjudged": 69,
+      "before_believe": 24,
+      "before_reject": 9,
+      "believe": 8
+    },
+    "llm|correction|outside": {
+      "n": 240,
+      "uncertain": 15,
+      "before_unjudged": 213,
+      "repost": 95,
+      "reject": 224,
+      "before_uncertain": 23,
+      "before_believe": 4,
+      "believe": 1
+    }
+  },
+  "events": {
+    "rule|rumor": {
+      "decisions": 89,
+      "comments": 0,
+      "before_unjudged": 74,
+      "transition_unjudged_believe": 50,
+      "transition_unjudged_reject": 24,
+      "before_reject": 3,
+      "transition_reject_reject": 3,
+      "before_believe": 12,
+      "transition_believe_believe": 12
+    },
+    "rule|P001": {
+      "eligible_decisions": 87,
+      "share_belief_believe": 6
+    },
+    "llm|rumor": {
+      "decisions": 96,
+      "comments": 6,
+      "before_unjudged": 72,
+      "transition_unjudged_uncertain": 64,
+      "transition_unjudged_believe": 8,
+      "before_uncertain": 22,
+      "transition_uncertain_uncertain": 22,
+      "before_believe": 2,
+      "transition_believe_believe": 2
+    },
+    "llm|P001": {
+      "eligible_decisions": 96
+    },
+    "rule|correction": {
+      "decisions": 356,
+      "comments": 0,
+      "before_reject": 99,
+      "transition_reject_reject": 99,
+      "before_believe": 59,
+      "transition_believe_reject": 39,
+      "transition_believe_believe": 20,
+      "before_unjudged": 198,
+      "transition_unjudged_reject": 122,
+      "transition_unjudged_unjudged": 76
+    },
+    "rule|G001": {
+      "eligible_decisions": 309,
+      "share_belief_reject": 118
+    },
+    "llm|correction": {
+      "decisions": 400,
+      "comments": 37,
+      "before_uncertain": 70,
+      "transition_uncertain_reject": 67,
+      "before_believe": 10,
+      "transition_believe_reject": 8,
+      "transition_uncertain_believe": 1,
+      "before_reject": 107,
+      "transition_reject_reject": 107,
+      "transition_believe_believe": 2,
+      "before_unjudged": 213,
+      "transition_unjudged_uncertain": 15,
+      "transition_unjudged_reject": 197,
+      "transition_uncertain_uncertain": 2,
+      "transition_unjudged_believe": 1
+    },
+    "llm|G001": {
+      "eligible_decisions": 347,
+      "share_belief_reject": 114,
+      "share_belief_believe": 1
+    }
+  },
+  "exposed": {
+    "rule|P001": 74,
+    "llm|P001": 72,
+    "rule|G001": 256,
+    "llm|G001": 283
+  },
+  "shared": {
+    "rule|P001": 6,
+    "llm|G001": 115,
+    "rule|G001": 118
+  },
+  "cohort19": {
+    "llm": {
+      "n": 8,
+      "reject_at22": 8
+    },
+    "rule": {
+      "n": 50,
+      "reject_at22": 39
+    }
+  },
+  "group_composition": {
+    "llm": {
+      "inside": 43,
+      "outside": 262
+    },
+    "rule": {
+      "inside": 39,
+      "outside": 238
+    }
+  },
+  "checkpoint_sha256": {
+    "tick-001.json": "1b06ea8e2df53fdd436de4674d95b8e07dee36d3e948666ad8223e6e2c9d272a",
+    "tick-002.json": "6f5268afbd63692dbb7023218f861c35a195f31244aa23fba1115aa2581d2d92",
+    "tick-003.json": "43273667a82cdb5cc7235e6307373e766ab3d826d68e0bc9c87b7a51bb535799",
+    "tick-004.json": "28d126d9a49a4625a86adb84a2d2e876aa7f86b7b069b0f86aef033649028306",
+    "tick-005.json": "41379377cf90ee5b3b90163d656256a089c0edae0b59ede39a9c1dcd30fa32e3",
+    "tick-006.json": "b3f244fceff03baf521425b5d04a90ebec4f501be6861f8aa31762fb2ebf43bc",
+    "tick-007.json": "65aa591d5691285b0010b9e84dd56c72d49d47a348f473d45a0cbc968ab3ec36",
+    "tick-008.json": "9f84727da2da77238e5928f3c79459478b5b2093989157a2a93a308aa3be81f6",
+    "tick-009.json": "44eaefa4858e1a252795647e3c1d4d5ee3a35871b9acf48952c2f683b89870e8",
+    "tick-010.json": "f053582c6788eb444f85aa7d818897f05eac095b5a798e764a59382664f44148",
+    "tick-011.json": "62c83e8c20fa92dd9577e8e711e45c4fc63bb990c2b6091a6aa2860feb062852",
+    "tick-012.json": "53f234c299c58a8b7f7612f4b6437210aedb6eaa7c642d07a7becb8b7f87d6db",
+    "tick-013.json": "221ab0616afa1299b5c0920ef83d7bbda9fd4f4360dab2b161e218a9084b3880",
+    "tick-014.json": "7cffd0de3e491b33f75f24df1885d2e6e37830b60114c869ee611276c3645380",
+    "tick-015.json": "3f55838a6081eeba0cd2172a6febe6f123fa2e0570e458f7031f4d695cc3492c",
+    "tick-016.json": "42ff55c12385fd01a8bb4f55ee6cdc60ac7604f04364f852cc7a73c1f2c14e28",
+    "tick-017.json": "40567b6f56d806ae91a63eba317879e85b774fe559a95dcb024e94ee2d91370f",
+    "tick-018.json": "1b199a4596430d41315fd3e6ff30ae9bf1600d0e6aaa50001653f5bd6bd1cc8e",
+    "tick-019.json": "830c08433555afac31106d0c4d4c6cbec35b16d4df4f78274db5ba54565192d2",
+    "tick-020.json": "ecf3c0fc5f076cee79146accd9374eeabd0a53cfd552062225babd322b191b5d",
+    "tick-021.json": "838d495082d0bae1c2632e78ac35cabccdccc2349a33254d780b9e16bef3562b",
+    "tick-022.json": "ff393a4e45e5d362aee9d6b18d51cd596316859ef4f7eb7829fab25a740b0a24"
+  }
+}

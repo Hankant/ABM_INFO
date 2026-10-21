@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "仅凭这段转述还无法核实视频中父子是否确实长期不干活、牛是否因此饿死，也难以判断干部发言的背景和是否有所夸张。最好先看原视频及当地回应。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP01-A0020",
+      "text": "转述很具体，但目前只见文字描述，无法独立核实；建议关注原视频完整内容及当地回应。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0020"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0315",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 158,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "a8f4edfd012beb45167f4deea41f3b881891e5087f1963951762635b8c3fc4e6",
+    "input_reserved_units": 2356,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1508,
+    "actual_output_tokens": 145,
+    "elapsed_seconds": 2.563
+  },
+  "validation_status": "valid"
+}

@@ -1,0 +1,51 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频片段和文字描述都不足以核实事件地点、父子的实际处境及干部表述，建议先别给当事人贴标签，有完整原视频和权威通报再判断。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP01-A0014",
+      "text": "仅凭传播视频和文字描述，暂时无法核实事件及当事人处境；建议等待完整视频和权威信息，避免把“懒惰”等指责直接当成事实。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0014",
+      "RP01-A0064"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0426",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 183,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "3b30ab597b2899b051d3f1d384712163a3cf56d03546a5f1e7d6027cd5e39acd",
+    "input_reserved_units": 2623,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1673,
+    "actual_output_tokens": 121,
+    "elapsed_seconds": 1.454
+  },
+  "validation_status": "valid"
+}

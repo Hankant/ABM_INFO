@@ -1,0 +1,57 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "看了几个转发都还是同样的片段描述，没有看到完整视频、官方通报或权威媒体报道，扶贫干部身份、现场情况、牛的死亡原因都无法核实。在有更完整材料之前，我保持不确定的态度，不因多次看到相同转述就当作已证实，也反对仅凭一段视频就给当事人贴'懒惰'这类标签。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "RP02-A0038",
+      "RP02-A0297",
+      "RP02-A0395",
+      "C03-A0209",
+      "C04-A0209",
+      "C03-A0439",
+      "C03-A0554",
+      "C03-A0532",
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0200",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 852,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "6d2c0e809fa7a4702bbf87677f45dde1fd5649c20953d0b79f855be236fbe0dd",
+    "input_reserved_units": 3888,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 2,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2384,
+    "actual_output_tokens": 191,
+    "elapsed_seconds": 3.437
+  },
+  "validation_status": "valid"
+}

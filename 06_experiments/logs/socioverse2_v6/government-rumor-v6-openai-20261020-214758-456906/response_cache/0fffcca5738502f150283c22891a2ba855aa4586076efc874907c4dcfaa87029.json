@@ -1,0 +1,49 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频情节描述得很具体，但目前没有完整视频或可靠信源可核实，也无法确认干部、父子及家中情况是否被断章取义。先存疑。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "P001",
+      "text": "转一下求证：仅凭这段文字无法确认视频完整语境及涉事父子情况，建议先看原视频和后续通报。"
+    },
+    "evidence_ids": [
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0007",
+    "tick": 1,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 6,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "0fffcca5738502f150283c22891a2ba855aa4586076efc874907c4dcfaa87029",
+    "input_reserved_units": 2335,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1487,
+    "actual_output_tokens": 102,
+    "elapsed_seconds": 10.172
+  },
+  "validation_status": "valid"
+}

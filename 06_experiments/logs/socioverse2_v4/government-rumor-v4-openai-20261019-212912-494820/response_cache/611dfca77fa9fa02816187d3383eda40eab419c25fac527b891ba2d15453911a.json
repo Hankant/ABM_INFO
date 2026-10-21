@@ -1,0 +1,44 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "看到政府账号已经出来澄清说这个扶贫干部怒斥懒惰父子的事情不属实了，转发之前还是要多核实一下，不要再让它继续扩散了。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "G001",
+      "text": "政府部门已明确说明“扶贫干部怒斥懒惰父子”不属实，请大家不要继续把它当作真的转发，避免以讹传讹。"
+    },
+    "evidence_ids": [
+      "G001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0059",
+    "tick": 20,
+    "attempt": 1,
+    "request_number": 116,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "611dfca77fa9fa02816187d3383eda40eab419c25fac527b891ba2d15453911a",
+    "input_reserved_units": 3505,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "utf8_bytes_plus_256_proxy_not_actual_tokens",
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 842,
+    "actual_output_tokens": 134,
+    "elapsed_seconds": 2.687
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频细节如果属实，确实值得讨论，但仅凭转述无法核实“扶贫干部怒斥”“父子不干活”“牛被饿死”等具体说法，建议先看完整视频及当事人回应。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0047",
+      "RP02-A0298"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0166",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 250,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "7b080f1a521bfc6c526c895dee2a99acfaee597dfe35000d1bfe607af13d873d",
+    "input_reserved_units": 2665,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1697,
+    "actual_output_tokens": 91,
+    "elapsed_seconds": 1.188
+  },
+  "validation_status": "valid"
+}

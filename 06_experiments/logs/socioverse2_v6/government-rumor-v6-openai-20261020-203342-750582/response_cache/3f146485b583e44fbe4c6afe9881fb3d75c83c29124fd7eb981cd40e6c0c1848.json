@@ -1,0 +1,56 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "看到好几个转贴都是同一段转述，还是缺少完整视频和当地回应。仅凭片段对当事父子贴标签容易造成伤害，希望有完整视频、当事人说法或官方通报后再讨论。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0059",
+      "RP02-A0090",
+      "RP03-A0357",
+      "RP03-A0461",
+      "RP03-A0508",
+      "C03-A0248",
+      "C03-A0291"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0291",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 592,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "3f146485b583e44fbe4c6afe9881fb3d75c83c29124fd7eb981cd40e6c0c1848",
+    "input_reserved_units": 4030,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 1,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 2,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2482,
+    "actual_output_tokens": 158,
+    "elapsed_seconds": 3.234
+  },
+  "validation_status": "valid"
+}

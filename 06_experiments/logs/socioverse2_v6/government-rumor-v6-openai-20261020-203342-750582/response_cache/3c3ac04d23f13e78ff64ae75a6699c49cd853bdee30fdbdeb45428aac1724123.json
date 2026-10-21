@@ -1,0 +1,56 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "仍是同一段转述，缺少完整视频、具体地点及官方或当事人回应，无法确认扶贫干部身份、“懒惰”评价和牛被饿死等细节；生活状况也不能直接等同于个人品德。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0049",
+      "RP02-A0058",
+      "RP02-A0434",
+      "C02-A0025",
+      "C02-A0028"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0578",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 441,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "3c3ac04d23f13e78ff64ae75a6699c49cd853bdee30fdbdeb45428aac1724123",
+    "input_reserved_units": 3651,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      2
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2306,
+    "actual_output_tokens": 110,
+    "elapsed_seconds": 1.078
+  },
+  "validation_status": "valid"
+}

@@ -1,0 +1,56 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": false,
+      "text": ""
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP01-A0061",
+      "text": "我也在观望，没有完整视频和官方核实之前不敢下结论。也想求证一下完整视频源、事件时间地点以及是否有官方回应。"
+    },
+    "evidence_ids": [
+      "C01-A0002",
+      "C01-A0007",
+      "RP01-A0024",
+      "RP01-A0030",
+      "RP01-A0061",
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0081",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 90,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "2ce1fd7e1d4b6969f8106eb0329f0b2bab5978b6864807db9c5a175f819e0deb",
+    "input_reserved_units": 3849,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      1
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2415,
+    "actual_output_tokens": 121,
+    "elapsed_seconds": 3.0
+  },
+  "validation_status": "valid"
+}

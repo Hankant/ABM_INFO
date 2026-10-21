@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "先求证完整视频及后续官方回应。视频里若只有干部陈述，还不足以确认父子长期不劳动、牛被饿死等情况，也应核实当事人是否有疾病或特殊困难。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP02-A0136",
+      "text": "转引求证：目前只是扶贫干部对家庭情况的描述，完整视频、时间地点、官方调查及“牛被饿死”的证据均待核实。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0136"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0567",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 438,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "1c175e5577d3551086b804d70b9fec4ba55d50523d99d9f4e5e795b9cceda75b",
+    "input_reserved_units": 2432,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1543,
+    "actual_output_tokens": 118,
+    "elapsed_seconds": 1.25
+  },
+  "validation_status": "valid"
+}

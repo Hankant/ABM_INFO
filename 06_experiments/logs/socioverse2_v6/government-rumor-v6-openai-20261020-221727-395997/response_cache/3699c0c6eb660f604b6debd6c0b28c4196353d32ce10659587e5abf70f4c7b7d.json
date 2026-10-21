@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "暂不相信这则网传描述。现有回应称相关帖述不属实，而且完整视频、当事人身份及“懒惰”“牛被饿死”等细节仍缺少独立核实，建议先停止传播，等待可验证材料。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "G001",
+      "RP08-A0020",
+      "P001",
+      "RP04-A0323",
+      "C05-A0171"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0496",
+    "tick": 9,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 2349,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "3699c0c6eb660f604b6debd6c0b28c4196353d32ce10659587e5abf70f4c7b7d",
+    "input_reserved_units": 3992,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 5,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2526,
+    "actual_output_tokens": 142,
+    "elapsed_seconds": 1.25
+  },
+  "validation_status": "valid"
+}

@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "原帖把视频中的身份和情节描述得很确定，但现有回应已明确称该帖所述情况不属实。目前也没看到完整视频、首发来源或独立可靠信源可交叉核实，因此不宜继续当作事实传播。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "G001",
+      "text": "转述暂不采信：原帖描述很具体，但目前未见完整视频、首发来源或独立可靠信源，相关回应也已称情况不属实。建议等待后续核实结果。"
+    },
+    "evidence_ids": [
+      "G001",
+      "P001",
+      "C01-A0007"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0017",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 54,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "4e888e5d17732ff8d9239c085253b6f445ae8702f6113cde8e2079fb16f198bc",
+    "input_reserved_units": 3623,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      1
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2324,
+    "actual_output_tokens": 133,
+    "elapsed_seconds": 1.797
+  },
+  "validation_status": "valid"
+}

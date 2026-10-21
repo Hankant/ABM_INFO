@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-18",
+  "counts": {
+    "inside_rule": 39,
+    "inside_llm": 43,
+    "outside_rule": 238,
+    "outside_llm": 262
+  },
+  "unique_profiles": 305,
+  "profiles_reused": 0,
+  "rules_with_llm_prompts": 0,
+  "identity_and_group_preserved": true,
+  "sources": {
+    "V3_Agent整合包/账户资料_305.jsonl": "ece16bc5fe2971b09b16329c03b621b465f03fc1f980ab99a21dab8af5e20d4b",
+    "V3_目标人群/用户身份表.csv": "a88d9a7e5767e8b6a3d7013eb191ccea736816b3fcdbd00d599ef728d58e3daa",
+    "同模型双框架_最小共同输入包/inputs/model_parameters.json": "c8273c928736b9c2a8f8b3750c8f2b0cc786a942ccdd0971b6249586ab5ae161"
+  },
+  "output_sha256": "47dc8258be017f678b9aaba4f256a6d806a2dfe65be575e5d0901fadedf73c91"
+}

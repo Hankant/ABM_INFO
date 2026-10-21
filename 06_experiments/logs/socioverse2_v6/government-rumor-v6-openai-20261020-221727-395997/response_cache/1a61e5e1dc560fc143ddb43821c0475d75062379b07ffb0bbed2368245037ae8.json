@@ -1,0 +1,51 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "这段转述只有片段式描述，尚无法核实父子是否确属扶贫对象、干部身份及现场全貌。建议先等完整视频和官方通报，别仅凭情绪化标题下结论。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP02-A0194",
+      "text": "先存疑：现有内容不足以核实扶贫对象身份和现场背景，期待完整视频、官方通报或其他可靠材料。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0194",
+      "RP02-A0500"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0391",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 426,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "1a61e5e1dc560fc143ddb43821c0475d75062379b07ffb0bbed2368245037ae8",
+    "input_reserved_units": 2761,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1737,
+    "actual_output_tokens": 119,
+    "elapsed_seconds": 1.453
+  },
+  "validation_status": "valid"
+}

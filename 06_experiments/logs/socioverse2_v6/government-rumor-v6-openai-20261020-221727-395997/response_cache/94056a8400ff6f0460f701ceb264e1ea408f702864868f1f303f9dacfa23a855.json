@@ -1,0 +1,57 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "综合多轮看到的官号回应都明确说相关帖述不属实，原帖里的具体描写（垃圾遍地、尿桶放床边、牛饿死等）不宜再当作事实传播，也请别急着给当事人贴“懒惰”之类的标签，等待完整调查材料再作判断。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "G001",
+      "P001",
+      "RP02-A0054",
+      "RP02-A0532",
+      "RP03-A0207",
+      "RP06-A0185",
+      "RP06-A0207",
+      "C03-A0180",
+      "C03-A0194"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0180",
+    "tick": 7,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 1559,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "94056a8400ff6f0460f701ceb264e1ea408f702864868f1f303f9dacfa23a855",
+    "input_reserved_units": 4093,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 5,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 2,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2579,
+    "actual_output_tokens": 160,
+    "elapsed_seconds": 3.141
+  },
+  "validation_status": "valid"
+}

@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "看了其他人的评论，意见比较一致：视频里的生活场景或许可信，但\"扶贫干部怒斥\"\"牛被饿死\"这些关键说法还需要更完整视频或当地报道来核实，单凭一段转述不好下结论。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "C01-A0005",
+      "C01-A0006"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0037",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 67,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "50e28951c6747f2bf5c3484c8ab87575901f6983b39ec3536d522715f04b12e7",
+    "input_reserved_units": 3010,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      1
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1885,
+    "actual_output_tokens": 113,
+    "elapsed_seconds": 2.391
+  },
+  "validation_status": "valid"
+}

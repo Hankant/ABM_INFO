@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "已有官方回应该称网传描述不属实，而且现有内容只是视频转述，缺少完整视频和背景；不宜再把这对父子直接定性为“懒惰”，建议等完整核实结果。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "G001",
+      "RP01-A0028",
+      "RP03-A0120",
+      "C07-A0401"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0041",
+    "tick": 8,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 1799,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "bda6f74cc50915a52286c991b2d908c050d8844f53b5468071ac4bff4f4598ab",
+    "input_reserved_units": 3988,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 5,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 3,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2513,
+    "actual_output_tokens": 99,
+    "elapsed_seconds": 2.282
+  },
+  "validation_status": "valid"
+}

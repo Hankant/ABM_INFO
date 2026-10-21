@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前看到的仍主要是相同转述，不能因多次转发就当作多方证实。视频画面即使能呈现卫生或生活细节，也不足以确认父子身份、长期不劳动、牛被饿死及干部怒斥的背景；建议等完整视频和当地权威通报后再下结论。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0361",
+      "C03-A0006",
+      "RP04-A0254"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0188",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 846,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "b6271b7827487f9d985a8c9c8676845c3112851a1504e3b2504a0800012ef0c8",
+    "input_reserved_units": 3973,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 3,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 4,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2442,
+    "actual_output_tokens": 113,
+    "elapsed_seconds": 5.125
+  },
+  "validation_status": "valid"
+}

@@ -1,0 +1,49 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频中的生活细节看起来很恶劣，但仅凭这段文字还无法确认父子是否确实长期不干活、家中情况及干部身份。是否有完整视频或当地官方通报可供核实？"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "P001",
+      "text": "先求证：完整视频、拍摄时间地点及当地通报是否已公开？若情况属实，也应避免仅凭一段剪辑给当事人贴标签。"
+    },
+    "evidence_ids": [
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0023",
+    "tick": 1,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 10,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "7e3ba5c8009341c33158b20fb918a62739b5ea44297c26596eb4cdbf6d3b65b7",
+    "input_reserved_units": 2344,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1489,
+    "actual_output_tokens": 110,
+    "elapsed_seconds": 1.984
+  },
+  "validation_status": "valid"
+}

@@ -1,0 +1,51 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "既然官方账号已经明确澄清该视频内容不属实，那就不要再传播了。大家在转发前多留个心眼，警惕那些容易被断章取义、刻意制造的扶贫对立叙事。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP20-A0057"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0006",
+    "tick": 21,
+    "attempt": 1,
+    "request_number": 121,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "f5630497c696b6a15cfb9672a2b250a99020cc0eda0b12acfe0e17f5981be67b",
+    "input_reserved_units": 1661,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      1
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1084,
+    "actual_output_tokens": 114,
+    "elapsed_seconds": 2.922
+  },
+  "validation_status": "valid"
+}

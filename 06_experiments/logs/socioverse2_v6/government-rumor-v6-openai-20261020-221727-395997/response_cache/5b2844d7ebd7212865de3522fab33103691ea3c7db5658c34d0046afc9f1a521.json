@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": false,
+      "text": ""
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP03-A0213",
+      "text": "现在看到官方账号明确回应原帖所述情况不属实，但完整调查材料还没看到，原视频的情节和'懒惰'定性都没法确认。先不传播原帖描述，等后续证据更完整再判断。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0213",
+      "RP03-A0042",
+      "RP03-A0080",
+      "RP03-A0156",
+      "RP03-A0213",
+      "G001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0365",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 723,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "5b2844d7ebd7212865de3522fab33103691ea3c7db5658c34d0046afc9f1a521",
+    "input_reserved_units": 4034,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 1,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 1,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2535,
+    "actual_output_tokens": 139,
+    "elapsed_seconds": 3.203
+  },
+  "validation_status": "valid"
+}

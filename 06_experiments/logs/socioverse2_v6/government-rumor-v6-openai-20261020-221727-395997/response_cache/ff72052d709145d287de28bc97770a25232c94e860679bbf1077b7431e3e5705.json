@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频里的情境如果属实，确实值得讨论，但目前只有转述，缺少完整视频、发布时间和事件背景。“懒惰”“牛被饿死”等说法也需要核实，暂时不能直接给当事人下结论。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP01-A0026",
+      "text": "先保留疑问：这段描述很具体，但目前不足以确认视频来源、完整上下文及涉事扶贫干部身份。希望能看到原视频并核实相关说法。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0026"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0309",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 157,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "ff72052d709145d287de28bc97770a25232c94e860679bbf1077b7431e3e5705",
+    "input_reserved_units": 2451,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1554,
+    "actual_output_tokens": 121,
+    "elapsed_seconds": 1.922
+  },
+  "validation_status": "valid"
+}

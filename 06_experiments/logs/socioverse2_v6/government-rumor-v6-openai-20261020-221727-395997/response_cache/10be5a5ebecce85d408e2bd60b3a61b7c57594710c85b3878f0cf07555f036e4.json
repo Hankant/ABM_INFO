@@ -1,0 +1,54 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "已有多个政府账号明确回应称该帖所述情况不属实，原帖又缺少完整视频、人物身份和现场背景等可核实材料，因此不宜继续把“懒惰父子”“扶贫干部怒斥”及“牛被饿死”等内容当作事实传播。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "RP05-A0043",
+      "RP04-A0393",
+      "RP04-A0412",
+      "RP01-A0059",
+      "C02-A0075",
+      "C02-A0291"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0552",
+    "tick": 6,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 1456,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "10be5a5ebecce85d408e2bd60b3a61b7c57594710c85b3878f0cf07555f036e4",
+    "input_reserved_units": 4076,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 4,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2596,
+    "actual_output_tokens": 125,
+    "elapsed_seconds": 5.562
+  },
+  "validation_status": "valid"
+}

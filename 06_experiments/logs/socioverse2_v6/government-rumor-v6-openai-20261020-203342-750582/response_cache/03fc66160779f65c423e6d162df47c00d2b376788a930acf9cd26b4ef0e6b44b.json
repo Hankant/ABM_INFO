@@ -1,0 +1,51 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前只看到对视频内容的概括描述，没有完整视频、当事人回应或第三方核实，无法确认父子行为是否符合全部描述。建议先找到完整视频和官方/记者核实再讨论。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0025",
+      "RP02-A0104"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0239",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 283,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "03fc66160779f65c423e6d162df47c00d2b376788a930acf9cd26b4ef0e6b44b",
+    "input_reserved_units": 2787,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1732,
+    "actual_output_tokens": 120,
+    "elapsed_seconds": 2.453
+  },
+  "validation_status": "valid"
+}

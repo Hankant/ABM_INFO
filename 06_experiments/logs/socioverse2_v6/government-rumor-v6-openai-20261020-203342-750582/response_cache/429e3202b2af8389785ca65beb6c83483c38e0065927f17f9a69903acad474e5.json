@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": false,
+      "text": ""
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP01-A0020",
+      "text": "文字描述挺具体的，但光凭这段还是没法确认扶贫干部怒斥、牛被饿死这些说法的真实性，需要看到完整视频或官方通报再说。"
+    },
+    "evidence_ids": [
+      "RP01-A0020",
+      "C02-A0035",
+      "C02-A0061"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0527",
+    "tick": 3,
+    "attempt": 2,
+    "format_max_attempts": 4,
+    "request_number": 417,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "429e3202b2af8389785ca65beb6c83483c38e0065927f17f9a69903acad474e5",
+    "input_reserved_units": 3092,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      2
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1943,
+    "actual_output_tokens": 122,
+    "elapsed_seconds": 4.75
+  },
+  "validation_status": "valid"
+}

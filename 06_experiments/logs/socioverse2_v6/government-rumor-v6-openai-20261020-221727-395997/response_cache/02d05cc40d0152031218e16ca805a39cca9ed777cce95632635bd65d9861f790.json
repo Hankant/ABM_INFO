@@ -1,0 +1,51 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "已有回应明确称网传情节不属实，而且原视频上下文、涉事人员及“牛被饿死”等细节仍缺少可核验依据。建议先停止传播，也别给当事人贴“懒惰”等标签，等完整视频和正式调查结果再判断。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "RP02-A0376",
+      "RP04-A0136",
+      "C05-A0169"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0175",
+    "tick": 9,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 2170,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "02d05cc40d0152031218e16ca805a39cca9ed777cce95632635bd65d9861f790",
+    "input_reserved_units": 4030,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 5,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 4,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2558,
+    "actual_output_tokens": 140,
+    "elapsed_seconds": 2.469
+  },
+  "validation_status": "valid"
+}

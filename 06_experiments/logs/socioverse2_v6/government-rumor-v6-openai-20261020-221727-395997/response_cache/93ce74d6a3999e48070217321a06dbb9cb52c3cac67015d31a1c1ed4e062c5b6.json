@@ -1,0 +1,49 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": false,
+      "text": ""
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP01-A0061",
+      "text": "先存疑：仅有截取式描述，希望能看到完整视频或可靠报道，核实事件背景后再判断。"
+    },
+    "evidence_ids": [
+      "RP01-A0061"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0189",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 117,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "93ce74d6a3999e48070217321a06dbb9cb52c3cac67015d31a1c1ed4e062c5b6",
+    "input_reserved_units": 2407,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1534,
+    "actual_output_tokens": 70,
+    "elapsed_seconds": 1.156
+  },
+  "validation_status": "valid"
+}

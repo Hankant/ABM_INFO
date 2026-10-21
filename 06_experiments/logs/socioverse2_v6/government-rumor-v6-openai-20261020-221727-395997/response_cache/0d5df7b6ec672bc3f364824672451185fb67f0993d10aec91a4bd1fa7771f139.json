@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频细节如果属实，确实值得讨论；但目前只有二手转述，干部身份、现场经过以及是否经过剪辑都还无法确认。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0049"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0476",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 197,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "0d5df7b6ec672bc3f364824672451185fb67f0993d10aec91a4bd1fa7771f139",
+    "input_reserved_units": 2361,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1511,
+    "actual_output_tokens": 73,
+    "elapsed_seconds": 1.437
+  },
+  "validation_status": "valid"
+}

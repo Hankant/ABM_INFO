@@ -1,0 +1,44 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "看到政府账号已经出来辟谣了，说这个‘扶贫干部怒斥懒惰父子’的帖子内容不属实，那就不要继续传播了。大家等后续核实信息吧，别被不实消息带节奏。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "RP20-A0048"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0028",
+    "tick": 21,
+    "attempt": 1,
+    "request_number": 135,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "45adbaf2026a3342e178efcc6e7485654520be747efafa7ab53c71184050aefe",
+    "input_reserved_units": 3537,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "utf8_bytes_plus_256_proxy_not_actual_tokens",
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 859,
+    "actual_output_tokens": 113,
+    "elapsed_seconds": 2.687
+  }
+}

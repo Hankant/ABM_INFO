@@ -1,0 +1,46 @@
+{
+  "input_sha256": {
+    "01_Agent基础信息表.csv": "b37ef99ec289197e1ed0ee9fb37569fb5a551a142130875abaa6b779a470b491",
+    "02_Prompt固定提示词.md": "b8424d68a2e9aef72926db7bee987795d1b5c45cf23618724b3ea920259e7361",
+    "03_新环境设定.md": "ae072703340c86895dd4714f522087f1c635b8c37eeaac37811803d8d3b6901c",
+    "04_新版本操作指南.md": "c9e6cf99575a2c494b0d788d4952760ad4419bcbcd4576890e8072e3ddcd38ab"
+  },
+  "code_sha256": {
+    "check_minimax.py": "8fceb57bd82cf86e30d7b9081e91456101199d2ba07ce9a02a611d812817ac54",
+    "check_minimax_key.py": "f1a1332a58e2e85c53bac32bd1ac71aa26c631e1bf15bfde8930f6dcc437be63",
+    "llm_client.py": "e16df66b455dca2f46de66c1a76779a466d4a2fec5723ea48c4d2c8f79b3438c",
+    "model.py": "55f946927b9148dcd4f70b871281831a3ad437f1d6562b143cd59dda333bf634",
+    "run.py": "e3c276e82ec87b05154e69ab2a354821dbb0a9270661cce2b25389628108f793",
+    "test_model.py": "4673210bfba9ca71a64bd50b236842b3ed45973997f47be25fe9375112f5f3ab",
+    "test_recovery.py": "e9c960371c68bddffc5405ab8403d54f2e7c9e496a9f4f43b0b643ff4b49da41",
+    "verify_run.py": "090e4e377cd4c732432d2c50e61faf0e59a906e54f206e46baf03f8478e68e0d"
+  },
+  "numpy_version": "2.5.4",
+  "upstream_url": "https://github.com/sii-research/SocioVerse2",
+  "upstream_commit": "9c3ac774816511c121184ca11f539dc398ba1544",
+  "mode": "scripted",
+  "dry_run": true,
+  "config": {
+    "contract_status": "engineering_only_pending_confirmation",
+    "pbd": 0.0,
+    "gt": 0.6,
+    "rf": 0.6,
+    "behavior_seed": 20261020,
+    "strategy": "inside",
+    "base_url": "https://api.zetatechs.com/v1",
+    "model": "deepseek-v4-flash",
+    "max_requests": 12200,
+    "tbu_definition": "end19_believers_first_reject_at_or_after20_mean_wait_completers",
+    "probability_precision": "table_values",
+    "contact_rule": "once_per_tick_correction_priority",
+    "rule_rebelief": false,
+    "direct_relay_same_gt": true,
+    "comment_target": "first_displayed_post",
+    "token_guard": "cl100k_base_estimate_15percent_plus64",
+    "runtime_version": "v4-recovery-2"
+  },
+  "audit_dir": "G:\\ABM_INFO\\06_experiments\\logs\\socioverse2_v4\\government-rumor-v4-scripted-20261019-222749-263992",
+  "config_dir": "G:\\ABM_INFO\\06_experiments\\configs\\socioverse2_v4\\government-rumor-v4-scripted-20261019-222749-263992",
+  "resumed_from": "G:\\ABM_INFO\\06_experiments\\results\\socioverse2_v4\\government-rumor-v4-scripted-20261019-222745-682342",
+  "inherited_completed_tick": 3
+}

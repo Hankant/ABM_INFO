@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前只有转述，完整视频、前后背景和当地回应都未展示，暂时无法确认父子是否懒惰，也无法确认牛是否确实因此饿死。建议先核实原始视频及事件背景。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0021"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0538",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 218,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "71262062478fe87fb053e9dbe0c71f7a460bda888d37e5a92a5562aa2d534ed2",
+    "input_reserved_units": 2425,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1543,
+    "actual_output_tokens": 84,
+    "elapsed_seconds": 1.39
+  },
+  "validation_status": "valid"
+}

@@ -1,0 +1,49 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频里能确认的似乎只有生活环境和当事人状态，‘懒惰’‘牛被饿死却不知道’带有明显评价与推断，还是先等完整视频和可靠来源核实。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0051",
+    "tick": 1,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 30,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "aaee14672c4577d82dfd07be3c74fca8fb1bd04bddde1d7adb6f61a7bf4a5cbe",
+    "input_reserved_units": 2340,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1491,
+    "actual_output_tokens": 76,
+    "elapsed_seconds": 1.641
+  },
+  "validation_status": "valid"
+}

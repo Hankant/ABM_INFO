@@ -1,0 +1,54 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前看到的是同一段文字的重复转述，仍缺完整视频、可靠信源和当事人回应。画面即便能反映生活环境，也不能直接据此认定父子“懒惰”或扶贫失败，建议先核实。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "C04-A0010",
+      "C04-A0032",
+      "RP03-A0139",
+      "RP04-A0143",
+      "RP04-A0218"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0243",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 872,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "b5693f26d8fcc5462ef078ebb92a9b3ff60dc73d956b2af1d61db5a0f381032d",
+    "input_reserved_units": 4083,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 1,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 2,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2518,
+    "actual_output_tokens": 112,
+    "elapsed_seconds": 1.265
+  },
+  "validation_status": "valid"
+}

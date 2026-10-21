@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "仅凭这段网传视频还无法确认涉事人员的身份和完整背景，垃圾遍地、尿桶在床边以及牛被饿死等细节也需要核实。建议先看原始发布来源、完整视频和当地回应，不宜直接给父子贴上“懒惰”的标签。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP02-A0374",
+      "text": "网传片段不足以核实扶贫干部、父子身份及“懒惰”等评价。转存此帖是为了求证：希望能看到完整视频、来源和当地回应，避免仅凭片段给他人定性。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0374"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0508",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 405,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "d10e8b6526ad2574a1e6463db291c3f0ec6cd0d7f8f97844ca578c67d63b1f2b",
+    "input_reserved_units": 2438,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1551,
+    "actual_output_tokens": 145,
+    "elapsed_seconds": 1.594
+  },
+  "validation_status": "valid"
+}

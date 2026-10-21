@@ -1,0 +1,49 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频里的生活状况可以看见，但“扶贫干部怒斥”“父子懒惰”以及牛被饿死等说法还需要核实，不能仅凭片段就给人下结论。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "P001",
+      "text": "先求证完整视频、事发背景和官方通报；生活失序的具体归因不宜只凭一段画面判断。"
+    },
+    "evidence_ids": [
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0034",
+    "tick": 1,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 20,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "a8a9a26b89672a29b7178c976aa8cf3926060f4c13576e28764b12e4dbc438f0",
+    "input_reserved_units": 2333,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1485,
+    "actual_output_tokens": 125,
+    "elapsed_seconds": 2.891
+  },
+  "validation_status": "valid"
+}

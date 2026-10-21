@@ -1,0 +1,54 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前看到的仍是同一段文字和重复评论，没有完整视频、官方通报或当事人回应。环境卫生状况也许能从画面确认，但“扶贫干部怒斥懒惰父子”“牛被饿死都不知道”等具体说法仍需核实，不宜据此直接给当事人定性。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "C02-A0021",
+      "C02-A0034",
+      "C02-A0035",
+      "C02-A0061",
+      "RP02-A0075"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0061",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 211,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "bd31f8b51b81a279a2cf9bd02d744f2fa48ad2c87716fb7b921a7b4ffe6aff89",
+    "input_reserved_units": 3987,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 2,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 1,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2458,
+    "actual_output_tokens": 122,
+    "elapsed_seconds": 1.313
+  },
+  "validation_status": "valid"
+}

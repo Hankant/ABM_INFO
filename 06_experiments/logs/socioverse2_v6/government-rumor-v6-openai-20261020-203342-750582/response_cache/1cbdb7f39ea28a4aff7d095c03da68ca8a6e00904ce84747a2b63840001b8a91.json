@@ -1,0 +1,49 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频里的生活状况看起来确实很糟，但仅凭这段转述，还无法确认扶贫干部身份、父子是否属于被帮扶对象，以及“牛被饿死都不知道”等细节。建议先等完整视频或当事人回应，别急着给这对父子定性。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "P001",
+      "text": "先求证完整视频和当事人回应。环境卫生差值得关注，但不能只凭片段就认定他们懒惰或“扶贫失败”。"
+    },
+    "evidence_ids": [
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0065",
+    "tick": 1,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 40,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "1cbdb7f39ea28a4aff7d095c03da68ca8a6e00904ce84747a2b63840001b8a91",
+    "input_reserved_units": 2335,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1485,
+    "actual_output_tokens": 116,
+    "elapsed_seconds": 2.032
+  },
+  "validation_status": "valid"
+}

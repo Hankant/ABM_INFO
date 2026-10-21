@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频画面看起来确实触目，但只有片段无法判断前因后果——是长期如此还是临时状态？父子俩的处境和扶贫干部的做法都需要更多完整信息才能下结论。希望能看到完整视频和当地回应。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP02-A0230",
+      "text": "转发求证。视频卫生状况触目惊心是事实，但\"扶贫干部\"\"懒惰父子\"这些身份认定和道德判断不宜仅凭几秒片段敲定，等更完整的报道和当事人说法再说。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0025",
+      "RP02-A0230",
+      "RP02-A0274"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0267",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 297,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "9fb8702c8cef3c8a62f52d1f25414e2c776229351ebe93d13a0e2bc84ca25d01",
+    "input_reserved_units": 3089,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1917,
+    "actual_output_tokens": 185,
+    "elapsed_seconds": 3.25
+  },
+  "validation_status": "valid"
+}

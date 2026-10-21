@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "这种扶贫场景的爆料这几年听过不少，但视频片段很容易断章取义。光凭转述看不出父子俩是真的懒惰还是有其他原因（比如残疾、生病），也不知道当地扶贫干部介入的具体过程。希望看到完整视频和官方核实，再下结论不迟。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP01-A0030",
+      "text": "转出来是想提醒一下：扶贫领域的故事很容易被加工成“典型”，既有可能是真问题，也可能是片段剪辑。最好等当地有正式说明再判断对错，单凭一段转述视频就骂人容易误伤。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0030"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0553",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 172,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "9f8826ed685a64bfa18557df8125c4e06a41dec5258b39df4ac9ef96e1e97db1",
+    "input_reserved_units": 2422,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1525,
+    "actual_output_tokens": 182,
+    "elapsed_seconds": 2.922
+  },
+  "validation_status": "valid"
+}

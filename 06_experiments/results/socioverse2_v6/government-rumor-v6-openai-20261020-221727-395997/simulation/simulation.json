@@ -1,0 +1,58 @@
+{
+  "study_id": "government-rumor-v6-openai-20261020-221727-395997",
+  "n_steps": 10,
+  "seed": 20261020,
+  "warm_start": {
+    "source_version": "government-rumor-v6-openai-20261020-221449-541204",
+    "source_trajectory": "G:\\ABM_INFO\\06_experiments\\results\\socioverse2_v6\\government-rumor-v6-openai-20261020-221727-395997\\recovery_actions.jsonl",
+    "resume_from": 1
+  },
+  "decision_ref": "rumor_v6.decision",
+  "decision_args": {
+    "config": {
+      "contract_status": "authorized_engineering_run",
+      "pbd": 0.0,
+      "gt": 0.6,
+      "rf": 0.6,
+      "behavior_seed": 20261020,
+      "strategy": "inside",
+      "base_url": "https://api.minimax.cn/v1",
+      "model": "MiniMax-M3",
+      "max_requests": 12200,
+      "government_tick": 2,
+      "government_reach": 40,
+      "targeting_inside_ratio": null,
+      "government_trust_mean": null,
+      "government_trust_sd": 0.1,
+      "government_target_seed": 20261019,
+      "government_trust_seed": 20261022,
+      "tbu_definition": "pre_government_tick_believers_first_reject_mean_wait_completers",
+      "probability_precision": "table_values",
+      "contact_rule": "once_per_tick_correction_priority",
+      "rule_rebelief": false,
+      "direct_relay_same_gt": true,
+      "comment_target": "first_displayed_post",
+      "token_guard": "cl100k_base_estimate_15percent_plus64",
+      "runtime_version": "v6-rate-retry-5",
+      "rate_limit_max_retries": 6,
+      "rate_limit_wait_seconds": 2.0,
+      "rate_limit_max_wait_seconds": 60.0,
+      "rate_limit_spacing_seconds": 1.0,
+      "max_concurrency": 5,
+      "format_max_attempts": 4,
+      "rule_reconsider_rumor": true,
+      "api_profile": "minimax_m3"
+    },
+    "prompt_file": "G:\\ABM_INFO\\06_experiments\\configs\\socioverse2_v6\\government-rumor-v6-openai-20261020-221727-395997\\02_Prompt固定提示词.md",
+    "audit_dir": "G:\\ABM_INFO\\06_experiments\\logs\\socioverse2_v6\\government-rumor-v6-openai-20261020-221727-395997",
+    "llm_kind": "openai"
+  },
+  "collector_ref": "rumor_v6.metrics",
+  "collector_args": {},
+  "interaction_rounds": 1,
+  "engine_args": {
+    "memory_window": 5
+  },
+  "store_ref": "duckdb",
+  "store_args": {}
+}

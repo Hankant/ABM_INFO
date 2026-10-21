@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": false,
+      "text": ""
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP03-A0450",
+      "text": "先转出来求证：目前只有片段式描述，尚不足以确认干部身份、现场全貌及牛死亡的具体原因，也应避免仅凭视频给当事人贴标签。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0453",
+      "RP03-A0450"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0557",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 742,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "499d28a03ed32142aaf4b865c3355a48f63ab02b57d44b9152dd9a3d8121a667",
+    "input_reserved_units": 2859,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [
+      3
+    ],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1812,
+    "actual_output_tokens": 119,
+    "elapsed_seconds": 1.406
+  },
+  "validation_status": "valid"
+}

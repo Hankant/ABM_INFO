@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前看到的多是同一段文字转述和截屏，缺少完整视频、当事人回应及独立信源，无法核实扶贫干部言论、父子日常和“牛被饿死”的具体细节。单凭片段不宜直接定性为“懒惰”或“扶贫失败”，建议等原始材料和当地回应。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "RP02-A0274",
+      "C03-A0179",
+      "C03-A0526",
+      "RP03-A0364",
+      "RP03-A0394"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0412",
+    "tick": 4,
+    "attempt": 2,
+    "format_max_attempts": 4,
+    "request_number": 656,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "08eb04187b55e67125504a543c8b0a6e91dc5aff56b7582ce7f68a619c6d0716",
+    "input_reserved_units": 3647,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 1,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2260,
+    "actual_output_tokens": 160,
+    "elapsed_seconds": 4.859
+  },
+  "validation_status": "valid"
+}

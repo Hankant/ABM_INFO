@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "光看这段描述和截图确实冲击力挺强，但'扶贫干部怒斥''牛被饿死'这些细节还是得看到完整视频和当地回应才好判断，不能仅凭截图文本来定性。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0022",
+      "RP02-A0041",
+      "RP02-A0318"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0278",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 303,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "de701169ed361f2bb59f16f4de69c2dd89471fd5e733f6661581ad221d49c1c7",
+    "input_reserved_units": 3164,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1948,
+    "actual_output_tokens": 131,
+    "elapsed_seconds": 3.328
+  },
+  "validation_status": "valid"
+}

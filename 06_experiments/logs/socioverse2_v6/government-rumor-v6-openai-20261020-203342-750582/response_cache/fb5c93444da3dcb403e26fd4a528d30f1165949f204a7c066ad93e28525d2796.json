@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "看到这一描述已经被多人重复转发，但都缺少完整视频、当事人回应和官方说明。在这些材料补齐之前，我同样倾向于先存疑求证，不直接接受\"懒惰\"\"牛饿死都不知道\"等定性。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "C03-A0248",
+      "C03-A0291",
+      "C04-A0005",
+      "P001",
+      "RP02-A0059"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0075",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 790,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "fb5c93444da3dcb403e26fd4a528d30f1165949f204a7c066ad93e28525d2796",
+    "input_reserved_units": 3979,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 4,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 3,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2465,
+    "actual_output_tokens": 143,
+    "elapsed_seconds": 2.719
+  },
+  "validation_status": "valid"
+}

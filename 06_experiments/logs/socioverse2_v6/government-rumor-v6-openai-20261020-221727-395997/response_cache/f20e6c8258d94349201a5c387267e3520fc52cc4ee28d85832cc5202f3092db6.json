@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "视频里的卫生和生活情况如果属实，扶贫干部批评或许有现实依据；但“这是懒惰父亲和儿子”以及“牛被饿死都不知道”等说法，仅凭这段文字还无法核实，希望能看到完整视频及当地回应。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP01-A0064",
+      "text": "暂不确定事件细节，垃圾遍地、尿桶放床边等画面也需要结合完整视频核实。扶贫工作不能只靠公开辱骂和“懒惰”标签来处理。"
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0064"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0443",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 189,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "f20e6c8258d94349201a5c387267e3520fc52cc4ee28d85832cc5202f3092db6",
+    "input_reserved_units": 2356,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1507,
+    "actual_output_tokens": 128,
+    "elapsed_seconds": 1.734
+  },
+  "validation_status": "valid"
+}

@@ -1,0 +1,54 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前看到的都是同一视频及相近描述，不能算多方独立证实。环境卫生状况值得关注，但“懒惰”“扶贫干部怒斥”“牛被饿死”等具体表述仍需完整视频、地点信息或官方通报核实，先等更多信源。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "C03-A0025",
+      "RP01-A0009",
+      "RP02-A0023",
+      "RP02-A0044",
+      "RP02-A0059"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0080",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 484,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "6544f9a2756bd7f4760b79cb74186ab9a9a12b69fc0b099ba58e0a47986c3e07",
+    "input_reserved_units": 3889,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 3,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 9,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2374,
+    "actual_output_tokens": 118,
+    "elapsed_seconds": 1.656
+  },
+  "validation_status": "valid"
+}

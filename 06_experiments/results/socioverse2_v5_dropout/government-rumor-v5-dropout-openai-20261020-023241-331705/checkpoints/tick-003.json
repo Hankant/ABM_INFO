@@ -1,0 +1,7318 @@
+{
+  "actions": [
+    {
+      "agent_id": "A0001",
+      "step": 3,
+      "action_kind": "decide",
+      "action_payload": {
+        "answer": {
+          "belief": "believe",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0047"
+          ],
+          "decision_status": "applied"
+        },
+        "raw_answer": {
+          "belief": "believe",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0047"
+          ]
+        },
+        "observed_posts": [
+          {
+            "content_id": "RP02-A0047",
+            "root_content_id": "P001",
+            "author_id": "A0047",
+            "original_author_id": "SOURCE",
+            "published_tick": 2,
+            "available_tick": 3,
+            "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+            "repost_text": "",
+            "parent_content_id": "RP01-A0014",
+            "comments": [],
+            "delivery": "followee",
+            "can_repost": true,
+            "block_reason": null
+          }
+        ],
+        "draws": [
+          {
+            "name": "RC",
+            "probability": 0.1,
+            "uniform": 0.5512873874233193,
+            "passed": false
+          }
+        ],
+        "dry_run": false,
+        "api": {},
+        "used_memory_ticks": [
+          1
+        ],
+        "decision_status": "applied"
+      }
+    },
+    {
+      "agent_id": "A0002",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0003",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0004",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0005",
+      "step": 3,
+      "action_kind": "decide",
+      "action_payload": {
+        "answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "P001",
+            "RP02-A0047"
+          ],
+          "decision_status": "applied"
+        },
+        "raw_answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "P001",
+            "RP02-A0047"
+          ]
+        },
+        "observed_posts": [
+          {
+            "content_id": "RP02-A0047",
+            "root_content_id": "P001",
+            "author_id": "A0047",
+            "original_author_id": "SOURCE",
+            "published_tick": 2,
+            "available_tick": 3,
+            "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+            "repost_text": "",
+            "parent_content_id": "RP01-A0014",
+            "comments": [],
+            "delivery": "followee",
+            "can_repost": true,
+            "block_reason": null
+          }
+        ],
+        "draws": [],
+        "dry_run": false,
+        "api": {
+          "agent_id": "A0005",
+          "tick": 3,
+          "attempt": 1,
+          "format_max_attempts": 4,
+          "request_number": 82,
+          "requested_model": "MiniMax-M3",
+          "prompt_sha256": "510e36b844b34ea3419266e1c03edb21af9a53e3c0a8d516557d5a924d879e30",
+          "input_reserved_units": 1888,
+          "request_options": {
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "max_tokens": 512,
+            "extra_body": {
+              "thinking": {
+                "type": "disabled"
+              },
+              "reasoning_split": true
+            }
+          },
+          "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+          "trimmed_memory_count": 0,
+          "trimmed_post_count": 0,
+          "trimmed_comment_count": 0,
+          "used_memory_ticks": [
+            1
+          ],
+          "cached": false,
+          "returned_model": "MiniMax-M3",
+          "actual_input_tokens": 1212,
+          "actual_output_tokens": 67,
+          "elapsed_seconds": 2.672
+        },
+        "used_memory_ticks": [
+          1
+        ],
+        "decision_status": "applied"
+      }
+    },
+    {
+      "agent_id": "A0006",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0007",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0008",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0009",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0010",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0011",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0012",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0013",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0014",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0015",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0016",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0017",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0018",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0019",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0020",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0021",
+      "step": 3,
+      "action_kind": "decide",
+      "action_payload": {
+        "answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "P001",
+            "RP02-A0047"
+          ],
+          "decision_status": "applied"
+        },
+        "raw_answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "P001",
+            "RP02-A0047"
+          ]
+        },
+        "observed_posts": [
+          {
+            "content_id": "RP02-A0047",
+            "root_content_id": "P001",
+            "author_id": "A0047",
+            "original_author_id": "SOURCE",
+            "published_tick": 2,
+            "available_tick": 3,
+            "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+            "repost_text": "",
+            "parent_content_id": "RP01-A0014",
+            "comments": [],
+            "delivery": "followee",
+            "can_repost": true,
+            "block_reason": null
+          }
+        ],
+        "draws": [],
+        "dry_run": false,
+        "api": {
+          "agent_id": "A0021",
+          "tick": 3,
+          "attempt": 1,
+          "format_max_attempts": 4,
+          "request_number": 83,
+          "requested_model": "MiniMax-M3",
+          "prompt_sha256": "112abdd09820221e4b9570033491877674275e6832580b3076c1b3edf93c800c",
+          "input_reserved_units": 1887,
+          "request_options": {
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "max_tokens": 512,
+            "extra_body": {
+              "thinking": {
+                "type": "disabled"
+              },
+              "reasoning_split": true
+            }
+          },
+          "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+          "trimmed_memory_count": 0,
+          "trimmed_post_count": 0,
+          "trimmed_comment_count": 0,
+          "used_memory_ticks": [
+            1
+          ],
+          "cached": false,
+          "returned_model": "MiniMax-M3",
+          "actual_input_tokens": 1213,
+          "actual_output_tokens": 76,
+          "elapsed_seconds": 3.172
+        },
+        "used_memory_ticks": [
+          1
+        ],
+        "decision_status": "applied"
+      }
+    },
+    {
+      "agent_id": "A0022",
+      "step": 3,
+      "action_kind": "decide",
+      "action_payload": {
+        "answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "P001",
+            "RP01-A0049",
+            "RP02-A0047"
+          ],
+          "decision_status": "applied"
+        },
+        "raw_answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "P001",
+            "RP01-A0049",
+            "RP02-A0047"
+          ]
+        },
+        "observed_posts": [
+          {
+            "content_id": "RP02-A0047",
+            "root_content_id": "P001",
+            "author_id": "A0047",
+            "original_author_id": "SOURCE",
+            "published_tick": 2,
+            "available_tick": 3,
+            "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+            "repost_text": "",
+            "parent_content_id": "RP01-A0014",
+            "comments": [],
+            "delivery": "followee",
+            "can_repost": true,
+            "block_reason": null
+          }
+        ],
+        "draws": [],
+        "dry_run": false,
+        "api": {
+          "agent_id": "A0022",
+          "tick": 3,
+          "attempt": 1,
+          "format_max_attempts": 4,
+          "request_number": 84,
+          "requested_model": "MiniMax-M3",
+          "prompt_sha256": "81ce04a33445eddc87c99e87be1dd5d755aca20b9ae380761fda131efc11de16",
+          "input_reserved_units": 2215,
+          "request_options": {
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "max_tokens": 512,
+            "extra_body": {
+              "thinking": {
+                "type": "disabled"
+              },
+              "reasoning_split": true
+            }
+          },
+          "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+          "trimmed_memory_count": 0,
+          "trimmed_post_count": 0,
+          "trimmed_comment_count": 0,
+          "used_memory_ticks": [
+            1,
+            2
+          ],
+          "cached": false,
+          "returned_model": "MiniMax-M3",
+          "actual_input_tokens": 1434,
+          "actual_output_tokens": 74,
+          "elapsed_seconds": 1.016
+        },
+        "used_memory_ticks": [
+          1,
+          2
+        ],
+        "decision_status": "applied"
+      }
+    },
+    {
+      "agent_id": "A0023",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0024",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0025",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0026",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0027",
+      "step": 3,
+      "action_kind": "decide",
+      "action_payload": {
+        "answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "P001",
+            "RP02-A0047"
+          ],
+          "decision_status": "applied"
+        },
+        "raw_answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "P001",
+            "RP02-A0047"
+          ]
+        },
+        "observed_posts": [
+          {
+            "content_id": "RP02-A0047",
+            "root_content_id": "P001",
+            "author_id": "A0047",
+            "original_author_id": "SOURCE",
+            "published_tick": 2,
+            "available_tick": 3,
+            "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+            "repost_text": "",
+            "parent_content_id": "RP01-A0014",
+            "comments": [],
+            "delivery": "followee",
+            "can_repost": true,
+            "block_reason": null
+          }
+        ],
+        "draws": [],
+        "dry_run": false,
+        "api": {
+          "agent_id": "A0027",
+          "tick": 3,
+          "attempt": 1,
+          "format_max_attempts": 4,
+          "request_number": 85,
+          "requested_model": "MiniMax-M3",
+          "prompt_sha256": "f84d9d2106cb2d1a82a606ef8ef74502951356bf2c0f5d703f24953107002241",
+          "input_reserved_units": 1881,
+          "request_options": {
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "max_tokens": 512,
+            "extra_body": {
+              "thinking": {
+                "type": "disabled"
+              },
+              "reasoning_split": true
+            }
+          },
+          "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+          "trimmed_memory_count": 0,
+          "trimmed_post_count": 0,
+          "trimmed_comment_count": 0,
+          "used_memory_ticks": [
+            1
+          ],
+          "cached": false,
+          "returned_model": "MiniMax-M3",
+          "actual_input_tokens": 1213,
+          "actual_output_tokens": 58,
+          "elapsed_seconds": 1.343
+        },
+        "used_memory_ticks": [
+          1
+        ],
+        "decision_status": "applied"
+      }
+    },
+    {
+      "agent_id": "A0028",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0029",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0030",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0031",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0032",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0033",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0034",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0035",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0036",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0037",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0038",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0039",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0040",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0041",
+      "step": 3,
+      "action_kind": "decide",
+      "action_payload": {
+        "answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "P001",
+            "RP02-A0047"
+          ],
+          "decision_status": "applied"
+        },
+        "raw_answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "P001",
+            "RP02-A0047"
+          ]
+        },
+        "observed_posts": [
+          {
+            "content_id": "RP02-A0047",
+            "root_content_id": "P001",
+            "author_id": "A0047",
+            "original_author_id": "SOURCE",
+            "published_tick": 2,
+            "available_tick": 3,
+            "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+            "repost_text": "",
+            "parent_content_id": "RP01-A0014",
+            "comments": [],
+            "delivery": "followee",
+            "can_repost": true,
+            "block_reason": null
+          }
+        ],
+        "draws": [],
+        "dry_run": false,
+        "api": {
+          "agent_id": "A0041",
+          "tick": 3,
+          "attempt": 1,
+          "format_max_attempts": 4,
+          "request_number": 86,
+          "requested_model": "MiniMax-M3",
+          "prompt_sha256": "7a109242e582c4f709def3aedc877b24b2787d6729ae2b79411825493cd9298b",
+          "input_reserved_units": 1878,
+          "request_options": {
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "max_tokens": 512,
+            "extra_body": {
+              "thinking": {
+                "type": "disabled"
+              },
+              "reasoning_split": true
+            }
+          },
+          "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+          "trimmed_memory_count": 0,
+          "trimmed_post_count": 0,
+          "trimmed_comment_count": 0,
+          "used_memory_ticks": [
+            1
+          ],
+          "cached": false,
+          "returned_model": "MiniMax-M3",
+          "actual_input_tokens": 1211,
+          "actual_output_tokens": 76,
+          "elapsed_seconds": 2.062
+        },
+        "used_memory_ticks": [
+          1
+        ],
+        "decision_status": "applied"
+      }
+    },
+    {
+      "agent_id": "A0042",
+      "step": 3,
+      "action_kind": "decide",
+      "action_payload": {
+        "answer": {
+          "belief": "believe",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0047"
+          ],
+          "decision_status": "applied"
+        },
+        "raw_answer": {
+          "belief": "believe",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0047"
+          ]
+        },
+        "observed_posts": [
+          {
+            "content_id": "RP02-A0047",
+            "root_content_id": "P001",
+            "author_id": "A0047",
+            "original_author_id": "SOURCE",
+            "published_tick": 2,
+            "available_tick": 3,
+            "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+            "repost_text": "",
+            "parent_content_id": "RP01-A0014",
+            "comments": [],
+            "delivery": "followee",
+            "can_repost": true,
+            "block_reason": null
+          }
+        ],
+        "draws": [
+          {
+            "name": "RC",
+            "probability": 0.1,
+            "uniform": 0.5248233672815266,
+            "passed": false
+          }
+        ],
+        "dry_run": false,
+        "api": {},
+        "used_memory_ticks": [
+          1
+        ],
+        "decision_status": "applied"
+      }
+    },
+    {
+      "agent_id": "A0043",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0044",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0045",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0046",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0047",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0048",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0049",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0050",
+      "step": 3,
+      "action_kind": "decide",
+      "action_payload": {
+        "answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "P001",
+            "RP02-A0047"
+          ],
+          "decision_status": "applied"
+        },
+        "raw_answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "P001",
+            "RP02-A0047"
+          ]
+        },
+        "observed_posts": [
+          {
+            "content_id": "RP02-A0047",
+            "root_content_id": "P001",
+            "author_id": "A0047",
+            "original_author_id": "SOURCE",
+            "published_tick": 2,
+            "available_tick": 3,
+            "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+            "repost_text": "",
+            "parent_content_id": "RP01-A0014",
+            "comments": [],
+            "delivery": "followee",
+            "can_repost": true,
+            "block_reason": null
+          }
+        ],
+        "draws": [],
+        "dry_run": false,
+        "api": {
+          "agent_id": "A0050",
+          "tick": 3,
+          "attempt": 1,
+          "format_max_attempts": 4,
+          "request_number": 87,
+          "requested_model": "MiniMax-M3",
+          "prompt_sha256": "c785449586884b7aa9ebb895d8ad73a11e61e2aa8a2beb9b7ddeed063bc512c2",
+          "input_reserved_units": 1885,
+          "request_options": {
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "max_tokens": 512,
+            "extra_body": {
+              "thinking": {
+                "type": "disabled"
+              },
+              "reasoning_split": true
+            }
+          },
+          "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+          "trimmed_memory_count": 0,
+          "trimmed_post_count": 0,
+          "trimmed_comment_count": 0,
+          "used_memory_ticks": [
+            1
+          ],
+          "cached": false,
+          "returned_model": "MiniMax-M3",
+          "actual_input_tokens": 1215,
+          "actual_output_tokens": 76,
+          "elapsed_seconds": 1.219
+        },
+        "used_memory_ticks": [
+          1
+        ],
+        "decision_status": "applied"
+      }
+    },
+    {
+      "agent_id": "A0051",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0052",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0053",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0054",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0055",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0056",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0057",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0058",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0059",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0060",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0061",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0062",
+      "step": 3,
+      "action_kind": "decide",
+      "action_payload": {
+        "answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "P001",
+            "RP02-A0047"
+          ],
+          "decision_status": "applied"
+        },
+        "raw_answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "P001",
+            "RP02-A0047"
+          ]
+        },
+        "observed_posts": [
+          {
+            "content_id": "RP02-A0047",
+            "root_content_id": "P001",
+            "author_id": "A0047",
+            "original_author_id": "SOURCE",
+            "published_tick": 2,
+            "available_tick": 3,
+            "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+            "repost_text": "",
+            "parent_content_id": "RP01-A0014",
+            "comments": [],
+            "delivery": "followee",
+            "can_repost": true,
+            "block_reason": null
+          }
+        ],
+        "draws": [],
+        "dry_run": false,
+        "api": {
+          "agent_id": "A0062",
+          "tick": 3,
+          "attempt": 1,
+          "format_max_attempts": 4,
+          "request_number": 88,
+          "requested_model": "MiniMax-M3",
+          "prompt_sha256": "c973a7608c37fb1605c9b77e0de70d2e70f7520f5063b9ed5620cc23d6807554",
+          "input_reserved_units": 1884,
+          "request_options": {
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "max_tokens": 512,
+            "extra_body": {
+              "thinking": {
+                "type": "disabled"
+              },
+              "reasoning_split": true
+            }
+          },
+          "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+          "trimmed_memory_count": 0,
+          "trimmed_post_count": 0,
+          "trimmed_comment_count": 0,
+          "used_memory_ticks": [
+            1
+          ],
+          "cached": false,
+          "returned_model": "MiniMax-M3",
+          "actual_input_tokens": 1213,
+          "actual_output_tokens": 67,
+          "elapsed_seconds": 1.485
+        },
+        "used_memory_ticks": [
+          1
+        ],
+        "decision_status": "applied"
+      }
+    },
+    {
+      "agent_id": "A0063",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0064",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0065",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0066",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0067",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0068",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0069",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0070",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0071",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0072",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0073",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0074",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0075",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0076",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0077",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0078",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0079",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0080",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0081",
+      "step": 3,
+      "action_kind": "decide",
+      "action_payload": {
+        "answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "P001",
+            "RP02-A0047"
+          ],
+          "decision_status": "applied"
+        },
+        "raw_answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "P001",
+            "RP02-A0047"
+          ]
+        },
+        "observed_posts": [
+          {
+            "content_id": "RP02-A0047",
+            "root_content_id": "P001",
+            "author_id": "A0047",
+            "original_author_id": "SOURCE",
+            "published_tick": 2,
+            "available_tick": 3,
+            "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+            "repost_text": "",
+            "parent_content_id": "RP01-A0014",
+            "comments": [],
+            "delivery": "followee",
+            "can_repost": true,
+            "block_reason": null
+          }
+        ],
+        "draws": [],
+        "dry_run": false,
+        "api": {
+          "agent_id": "A0081",
+          "tick": 3,
+          "attempt": 1,
+          "format_max_attempts": 4,
+          "request_number": 89,
+          "requested_model": "MiniMax-M3",
+          "prompt_sha256": "838f2f233ef0e1b4cce9e0aba3de7cc603ccf3dee221b328dc67f1448d60962e",
+          "input_reserved_units": 1876,
+          "request_options": {
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "max_tokens": 512,
+            "extra_body": {
+              "thinking": {
+                "type": "disabled"
+              },
+              "reasoning_split": true
+            }
+          },
+          "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+          "trimmed_memory_count": 0,
+          "trimmed_post_count": 0,
+          "trimmed_comment_count": 0,
+          "used_memory_ticks": [
+            1
+          ],
+          "cached": false,
+          "returned_model": "MiniMax-M3",
+          "actual_input_tokens": 1210,
+          "actual_output_tokens": 76,
+          "elapsed_seconds": 1.25
+        },
+        "used_memory_ticks": [
+          1
+        ],
+        "decision_status": "applied"
+      }
+    },
+    {
+      "agent_id": "A0082",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0083",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0084",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0085",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0086",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0087",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0088",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0089",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0090",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0091",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0092",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0093",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0094",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0095",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0096",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0097",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0098",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0099",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0100",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0101",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0102",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0103",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0104",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0105",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0106",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0107",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0108",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0109",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0110",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0111",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0112",
+      "step": 3,
+      "action_kind": "decide",
+      "action_payload": {
+        "answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0047"
+          ],
+          "decision_status": "applied"
+        },
+        "raw_answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0047"
+          ]
+        },
+        "observed_posts": [
+          {
+            "content_id": "RP02-A0047",
+            "root_content_id": "P001",
+            "author_id": "A0047",
+            "original_author_id": "SOURCE",
+            "published_tick": 2,
+            "available_tick": 3,
+            "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+            "repost_text": "",
+            "parent_content_id": "RP01-A0014",
+            "comments": [],
+            "delivery": "followee",
+            "can_repost": true,
+            "block_reason": null
+          }
+        ],
+        "draws": [],
+        "dry_run": false,
+        "api": {
+          "agent_id": "A0112",
+          "tick": 3,
+          "attempt": 1,
+          "format_max_attempts": 4,
+          "request_number": 90,
+          "requested_model": "MiniMax-M3",
+          "prompt_sha256": "11a787a1177c5380091ee51508881c64ecda782bc01f1315afbe257be6b7e880",
+          "input_reserved_units": 1577,
+          "request_options": {
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "max_tokens": 512,
+            "extra_body": {
+              "thinking": {
+                "type": "disabled"
+              },
+              "reasoning_split": true
+            }
+          },
+          "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+          "trimmed_memory_count": 0,
+          "trimmed_post_count": 0,
+          "trimmed_comment_count": 0,
+          "used_memory_ticks": [],
+          "cached": false,
+          "returned_model": "MiniMax-M3",
+          "actual_input_tokens": 1014,
+          "actual_output_tokens": 72,
+          "elapsed_seconds": 2.031
+        },
+        "used_memory_ticks": [],
+        "decision_status": "applied"
+      }
+    },
+    {
+      "agent_id": "A0113",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0114",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0115",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0116",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0117",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0118",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0119",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0120",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0121",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0122",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0123",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0124",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0125",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0126",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0127",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0128",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0129",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0130",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0131",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0132",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0133",
+      "step": 3,
+      "action_kind": "decide",
+      "action_payload": {
+        "answer": {
+          "belief": "reject",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0047"
+          ],
+          "decision_status": "applied"
+        },
+        "raw_answer": {
+          "belief": "reject",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0047"
+          ]
+        },
+        "observed_posts": [
+          {
+            "content_id": "RP02-A0047",
+            "root_content_id": "P001",
+            "author_id": "A0047",
+            "original_author_id": "SOURCE",
+            "published_tick": 2,
+            "available_tick": 3,
+            "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+            "repost_text": "",
+            "parent_content_id": "RP01-A0014",
+            "comments": [],
+            "delivery": "followee",
+            "can_repost": true,
+            "block_reason": null
+          }
+        ],
+        "draws": [
+          {
+            "name": "PB",
+            "probability": 0.579,
+            "uniform": 0.8427847892214819,
+            "passed": false
+          }
+        ],
+        "dry_run": false,
+        "api": {},
+        "used_memory_ticks": [],
+        "decision_status": "applied"
+      }
+    },
+    {
+      "agent_id": "A0134",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0135",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0136",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0137",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0138",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0139",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0140",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0141",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0142",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0143",
+      "step": 3,
+      "action_kind": "decide",
+      "action_payload": {
+        "answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0447"
+          ],
+          "decision_status": "applied"
+        },
+        "raw_answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0447"
+          ]
+        },
+        "observed_posts": [
+          {
+            "content_id": "RP02-A0447",
+            "root_content_id": "P001",
+            "author_id": "A0447",
+            "original_author_id": "SOURCE",
+            "published_tick": 2,
+            "available_tick": 3,
+            "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+            "repost_text": "",
+            "parent_content_id": "RP01-A0020",
+            "comments": [],
+            "delivery": "followee",
+            "can_repost": true,
+            "block_reason": null
+          }
+        ],
+        "draws": [],
+        "dry_run": false,
+        "api": {
+          "agent_id": "A0143",
+          "tick": 3,
+          "attempt": 1,
+          "format_max_attempts": 4,
+          "request_number": 91,
+          "requested_model": "MiniMax-M3",
+          "prompt_sha256": "3289657fc805b188fcee20b157059d51c784e84ea260fbc2e0da3c1a23b6d8e1",
+          "input_reserved_units": 1571,
+          "request_options": {
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "max_tokens": 512,
+            "extra_body": {
+              "thinking": {
+                "type": "disabled"
+              },
+              "reasoning_split": true
+            }
+          },
+          "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+          "trimmed_memory_count": 0,
+          "trimmed_post_count": 0,
+          "trimmed_comment_count": 0,
+          "used_memory_ticks": [],
+          "cached": false,
+          "returned_model": "MiniMax-M3",
+          "actual_input_tokens": 1011,
+          "actual_output_tokens": 63,
+          "elapsed_seconds": 1.344
+        },
+        "used_memory_ticks": [],
+        "decision_status": "applied"
+      }
+    },
+    {
+      "agent_id": "A0144",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0145",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0146",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0147",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0148",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0149",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0150",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0151",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0152",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0153",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0154",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0155",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0156",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0157",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0158",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0159",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0160",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0161",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0162",
+      "step": 3,
+      "action_kind": "decide",
+      "action_payload": {
+        "answer": {
+          "belief": "believe",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0047"
+          ],
+          "decision_status": "applied"
+        },
+        "raw_answer": {
+          "belief": "believe",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0047"
+          ]
+        },
+        "observed_posts": [
+          {
+            "content_id": "RP02-A0047",
+            "root_content_id": "P001",
+            "author_id": "A0047",
+            "original_author_id": "SOURCE",
+            "published_tick": 2,
+            "available_tick": 3,
+            "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+            "repost_text": "",
+            "parent_content_id": "RP01-A0014",
+            "comments": [],
+            "delivery": "followee",
+            "can_repost": true,
+            "block_reason": null
+          }
+        ],
+        "draws": [
+          {
+            "name": "PB",
+            "probability": 0.579,
+            "uniform": 0.4793623017378379,
+            "passed": true
+          },
+          {
+            "name": "RC",
+            "probability": 0.1,
+            "uniform": 0.2254725096083321,
+            "passed": false
+          }
+        ],
+        "dry_run": false,
+        "api": {},
+        "used_memory_ticks": [],
+        "decision_status": "applied"
+      }
+    },
+    {
+      "agent_id": "A0163",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0164",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0165",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0166",
+      "step": 3,
+      "action_kind": "decide",
+      "action_payload": {
+        "answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "P001",
+            "RP02-A0047"
+          ],
+          "decision_status": "applied"
+        },
+        "raw_answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "P001",
+            "RP02-A0047"
+          ]
+        },
+        "observed_posts": [
+          {
+            "content_id": "RP02-A0047",
+            "root_content_id": "P001",
+            "author_id": "A0047",
+            "original_author_id": "SOURCE",
+            "published_tick": 2,
+            "available_tick": 3,
+            "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+            "repost_text": "",
+            "parent_content_id": "RP01-A0014",
+            "comments": [],
+            "delivery": "followee",
+            "can_repost": true,
+            "block_reason": null
+          }
+        ],
+        "draws": [],
+        "dry_run": false,
+        "api": {
+          "agent_id": "A0166",
+          "tick": 3,
+          "attempt": 1,
+          "format_max_attempts": 4,
+          "request_number": 92,
+          "requested_model": "MiniMax-M3",
+          "prompt_sha256": "7de4604d26ba7bf8210bc301d5c3b9b5b8eb68dab08a9c3c6eca77e9679655c2",
+          "input_reserved_units": 1571,
+          "request_options": {
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "max_tokens": 512,
+            "extra_body": {
+              "thinking": {
+                "type": "disabled"
+              },
+              "reasoning_split": true
+            }
+          },
+          "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+          "trimmed_memory_count": 0,
+          "trimmed_post_count": 0,
+          "trimmed_comment_count": 0,
+          "used_memory_ticks": [],
+          "cached": false,
+          "returned_model": "MiniMax-M3",
+          "actual_input_tokens": 1011,
+          "actual_output_tokens": 76,
+          "elapsed_seconds": 1.532
+        },
+        "used_memory_ticks": [],
+        "decision_status": "applied"
+      }
+    },
+    {
+      "agent_id": "A0167",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0168",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0169",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0170",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0171",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0172",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0173",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0174",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0175",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0176",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0177",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0178",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0179",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0180",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0181",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0182",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0183",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0184",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0185",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0186",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0187",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0188",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0189",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0190",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0191",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0192",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0193",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0194",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0195",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0196",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0197",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0198",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0199",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0200",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0201",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0202",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0203",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0204",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0205",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0206",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0207",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0208",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0209",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0210",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0211",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0212",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0213",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0214",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0215",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0216",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0217",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0218",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0219",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0220",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0221",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0222",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0223",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0224",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0225",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0226",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0227",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0228",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0229",
+      "step": 3,
+      "action_kind": "decide",
+      "action_payload": {
+        "answer": {
+          "belief": "reject",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0447"
+          ],
+          "decision_status": "applied"
+        },
+        "raw_answer": {
+          "belief": "reject",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0447"
+          ]
+        },
+        "observed_posts": [
+          {
+            "content_id": "RP02-A0447",
+            "root_content_id": "P001",
+            "author_id": "A0447",
+            "original_author_id": "SOURCE",
+            "published_tick": 2,
+            "available_tick": 3,
+            "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+            "repost_text": "",
+            "parent_content_id": "RP01-A0020",
+            "comments": [],
+            "delivery": "followee",
+            "can_repost": true,
+            "block_reason": null
+          }
+        ],
+        "draws": [
+          {
+            "name": "PB",
+            "probability": 0.579,
+            "uniform": 0.7050015098043365,
+            "passed": false
+          }
+        ],
+        "dry_run": false,
+        "api": {},
+        "used_memory_ticks": [],
+        "decision_status": "applied"
+      }
+    },
+    {
+      "agent_id": "A0230",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0231",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0232",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0233",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0234",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0235",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0236",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0237",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0238",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0239",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0240",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0241",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0242",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0243",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0244",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0245",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0246",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0247",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0248",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0249",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0250",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0251",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0252",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0253",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0254",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0255",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0256",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0257",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0258",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0259",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0260",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0261",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0262",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0263",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0264",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0265",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0266",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0267",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0268",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0269",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0270",
+      "step": 3,
+      "action_kind": "decide",
+      "action_payload": {
+        "answer": {
+          "belief": "reject",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0047"
+          ],
+          "decision_status": "applied"
+        },
+        "raw_answer": {
+          "belief": "reject",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0047"
+          ]
+        },
+        "observed_posts": [
+          {
+            "content_id": "RP02-A0047",
+            "root_content_id": "P001",
+            "author_id": "A0047",
+            "original_author_id": "SOURCE",
+            "published_tick": 2,
+            "available_tick": 3,
+            "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+            "repost_text": "",
+            "parent_content_id": "RP01-A0014",
+            "comments": [],
+            "delivery": "followee",
+            "can_repost": true,
+            "block_reason": null
+          }
+        ],
+        "draws": [
+          {
+            "name": "PB",
+            "probability": 0.579,
+            "uniform": 0.7789906563511251,
+            "passed": false
+          }
+        ],
+        "dry_run": false,
+        "api": {},
+        "used_memory_ticks": [],
+        "decision_status": "applied"
+      }
+    },
+    {
+      "agent_id": "A0271",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0272",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0273",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0274",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0275",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0276",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0277",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0278",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0279",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0280",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0281",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0282",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0283",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0284",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0285",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0286",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0287",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0288",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0289",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0290",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0291",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0292",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0293",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0294",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0295",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0296",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0297",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0298",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0299",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0300",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0301",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0302",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0303",
+      "step": 3,
+      "action_kind": "decide",
+      "action_payload": {
+        "answer": {
+          "belief": "reject",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0447"
+          ],
+          "decision_status": "applied"
+        },
+        "raw_answer": {
+          "belief": "reject",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0447"
+          ]
+        },
+        "observed_posts": [
+          {
+            "content_id": "RP02-A0447",
+            "root_content_id": "P001",
+            "author_id": "A0447",
+            "original_author_id": "SOURCE",
+            "published_tick": 2,
+            "available_tick": 3,
+            "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+            "repost_text": "",
+            "parent_content_id": "RP01-A0020",
+            "comments": [],
+            "delivery": "followee",
+            "can_repost": true,
+            "block_reason": null
+          }
+        ],
+        "draws": [
+          {
+            "name": "PB",
+            "probability": 0.579,
+            "uniform": 0.5884026504596801,
+            "passed": false
+          }
+        ],
+        "dry_run": false,
+        "api": {},
+        "used_memory_ticks": [],
+        "decision_status": "applied"
+      }
+    },
+    {
+      "agent_id": "A0304",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0305",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0306",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0307",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0308",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0309",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0310",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0311",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0312",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0313",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0314",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0315",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0316",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0317",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0318",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0319",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0320",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0321",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0322",
+      "step": 3,
+      "action_kind": "decide",
+      "action_payload": {
+        "answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "P001",
+            "RP02-A0047"
+          ],
+          "decision_status": "applied"
+        },
+        "raw_answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "P001",
+            "RP02-A0047"
+          ]
+        },
+        "observed_posts": [
+          {
+            "content_id": "RP02-A0047",
+            "root_content_id": "P001",
+            "author_id": "A0047",
+            "original_author_id": "SOURCE",
+            "published_tick": 2,
+            "available_tick": 3,
+            "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+            "repost_text": "",
+            "parent_content_id": "RP01-A0014",
+            "comments": [],
+            "delivery": "followee",
+            "can_repost": true,
+            "block_reason": null
+          }
+        ],
+        "draws": [],
+        "dry_run": false,
+        "api": {
+          "agent_id": "A0322",
+          "tick": 3,
+          "attempt": 1,
+          "format_max_attempts": 4,
+          "request_number": 93,
+          "requested_model": "MiniMax-M3",
+          "prompt_sha256": "e83d3712782a85ebdc2212be2899da8e8329b2a574d24ebeda389f07e0a2fd3f",
+          "input_reserved_units": 1580,
+          "request_options": {
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "max_tokens": 512,
+            "extra_body": {
+              "thinking": {
+                "type": "disabled"
+              },
+              "reasoning_split": true
+            }
+          },
+          "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+          "trimmed_memory_count": 0,
+          "trimmed_post_count": 0,
+          "trimmed_comment_count": 0,
+          "used_memory_ticks": [],
+          "cached": false,
+          "returned_model": "MiniMax-M3",
+          "actual_input_tokens": 1016,
+          "actual_output_tokens": 76,
+          "elapsed_seconds": 1.39
+        },
+        "used_memory_ticks": [],
+        "decision_status": "applied"
+      }
+    },
+    {
+      "agent_id": "A0323",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0324",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0325",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0326",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0327",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0328",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0329",
+      "step": 3,
+      "action_kind": "decide",
+      "action_payload": {
+        "answer": {
+          "belief": "believe",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0047"
+          ],
+          "decision_status": "applied"
+        },
+        "raw_answer": {
+          "belief": "believe",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0047"
+          ]
+        },
+        "observed_posts": [
+          {
+            "content_id": "RP02-A0047",
+            "root_content_id": "P001",
+            "author_id": "A0047",
+            "original_author_id": "SOURCE",
+            "published_tick": 2,
+            "available_tick": 3,
+            "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+            "repost_text": "",
+            "parent_content_id": "RP01-A0014",
+            "comments": [],
+            "delivery": "followee",
+            "can_repost": true,
+            "block_reason": null
+          }
+        ],
+        "draws": [
+          {
+            "name": "PB",
+            "probability": 0.579,
+            "uniform": 0.5619017844140447,
+            "passed": true
+          },
+          {
+            "name": "RC",
+            "probability": 0.1,
+            "uniform": 0.2101536118601588,
+            "passed": false
+          }
+        ],
+        "dry_run": false,
+        "api": {},
+        "used_memory_ticks": [],
+        "decision_status": "applied"
+      }
+    },
+    {
+      "agent_id": "A0330",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0331",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0332",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0333",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0334",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0335",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0336",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0337",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0338",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0339",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0340",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0341",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0342",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0343",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0344",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0345",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0346",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0347",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0348",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0349",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0350",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0351",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0352",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0353",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0354",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0355",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0356",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0357",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0358",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0359",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0360",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0361",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0362",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0363",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0364",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0365",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0366",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0367",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0368",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0369",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0370",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0371",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0372",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0373",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0374",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0375",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0376",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0377",
+      "step": 3,
+      "action_kind": "decide",
+      "action_payload": {
+        "answer": {
+          "belief": "believe",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0047"
+          ],
+          "decision_status": "applied"
+        },
+        "raw_answer": {
+          "belief": "believe",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0047"
+          ]
+        },
+        "observed_posts": [
+          {
+            "content_id": "RP02-A0047",
+            "root_content_id": "P001",
+            "author_id": "A0047",
+            "original_author_id": "SOURCE",
+            "published_tick": 2,
+            "available_tick": 3,
+            "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+            "repost_text": "",
+            "parent_content_id": "RP01-A0014",
+            "comments": [],
+            "delivery": "followee",
+            "can_repost": true,
+            "block_reason": null
+          }
+        ],
+        "draws": [
+          {
+            "name": "PB",
+            "probability": 0.579,
+            "uniform": 0.010144803880179687,
+            "passed": true
+          },
+          {
+            "name": "RC",
+            "probability": 0.1,
+            "uniform": 0.7950369247797843,
+            "passed": false
+          }
+        ],
+        "dry_run": false,
+        "api": {},
+        "used_memory_ticks": [],
+        "decision_status": "applied"
+      }
+    },
+    {
+      "agent_id": "A0378",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0379",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0380",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0381",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0382",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0383",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0384",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0385",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0386",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0387",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0388",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0389",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0390",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0391",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0392",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0393",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0394",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0395",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0396",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0397",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0398",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0399",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0400",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0401",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0402",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0403",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0404",
+      "step": 3,
+      "action_kind": "decide",
+      "action_payload": {
+        "answer": {
+          "belief": "believe",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0447"
+          ],
+          "decision_status": "applied"
+        },
+        "raw_answer": {
+          "belief": "believe",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0447"
+          ]
+        },
+        "observed_posts": [
+          {
+            "content_id": "RP02-A0447",
+            "root_content_id": "P001",
+            "author_id": "A0447",
+            "original_author_id": "SOURCE",
+            "published_tick": 2,
+            "available_tick": 3,
+            "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+            "repost_text": "",
+            "parent_content_id": "RP01-A0020",
+            "comments": [],
+            "delivery": "followee",
+            "can_repost": true,
+            "block_reason": null
+          }
+        ],
+        "draws": [
+          {
+            "name": "PB",
+            "probability": 0.579,
+            "uniform": 0.2638061955511801,
+            "passed": true
+          },
+          {
+            "name": "RC",
+            "probability": 0.1,
+            "uniform": 0.12951691002193222,
+            "passed": false
+          }
+        ],
+        "dry_run": false,
+        "api": {},
+        "used_memory_ticks": [],
+        "decision_status": "applied"
+      }
+    },
+    {
+      "agent_id": "A0405",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0406",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0407",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0408",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0409",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0410",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0411",
+      "step": 3,
+      "action_kind": "decide",
+      "action_payload": {
+        "answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "P001",
+            "RP02-A0447"
+          ],
+          "decision_status": "applied"
+        },
+        "raw_answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "P001",
+            "RP02-A0447"
+          ]
+        },
+        "observed_posts": [
+          {
+            "content_id": "RP02-A0447",
+            "root_content_id": "P001",
+            "author_id": "A0447",
+            "original_author_id": "SOURCE",
+            "published_tick": 2,
+            "available_tick": 3,
+            "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+            "repost_text": "",
+            "parent_content_id": "RP01-A0020",
+            "comments": [],
+            "delivery": "followee",
+            "can_repost": true,
+            "block_reason": null
+          }
+        ],
+        "draws": [],
+        "dry_run": false,
+        "api": {
+          "agent_id": "A0411",
+          "tick": 3,
+          "attempt": 1,
+          "format_max_attempts": 4,
+          "request_number": 94,
+          "requested_model": "MiniMax-M3",
+          "prompt_sha256": "dcbfdb9977fc882cd05000da0485019ed74218604350928603991b50d1f74e8e",
+          "input_reserved_units": 1580,
+          "request_options": {
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "max_tokens": 512,
+            "extra_body": {
+              "thinking": {
+                "type": "disabled"
+              },
+              "reasoning_split": true
+            }
+          },
+          "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+          "trimmed_memory_count": 0,
+          "trimmed_post_count": 0,
+          "trimmed_comment_count": 0,
+          "used_memory_ticks": [],
+          "cached": false,
+          "returned_model": "MiniMax-M3",
+          "actual_input_tokens": 1015,
+          "actual_output_tokens": 67,
+          "elapsed_seconds": 1.328
+        },
+        "used_memory_ticks": [],
+        "decision_status": "applied"
+      }
+    },
+    {
+      "agent_id": "A0412",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0413",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0414",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0415",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0416",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0417",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0418",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0419",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0420",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0421",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0422",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0423",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0424",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0425",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0426",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0427",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0428",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0429",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0430",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0431",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0432",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0433",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0434",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0435",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0436",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0437",
+      "step": 3,
+      "action_kind": "decide",
+      "action_payload": {
+        "answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0447"
+          ],
+          "decision_status": "applied"
+        },
+        "raw_answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0447"
+          ]
+        },
+        "observed_posts": [
+          {
+            "content_id": "RP02-A0447",
+            "root_content_id": "P001",
+            "author_id": "A0447",
+            "original_author_id": "SOURCE",
+            "published_tick": 2,
+            "available_tick": 3,
+            "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+            "repost_text": "",
+            "parent_content_id": "RP01-A0020",
+            "comments": [],
+            "delivery": "followee",
+            "can_repost": true,
+            "block_reason": null
+          }
+        ],
+        "draws": [],
+        "dry_run": false,
+        "api": {
+          "agent_id": "A0437",
+          "tick": 3,
+          "attempt": 1,
+          "format_max_attempts": 4,
+          "request_number": 95,
+          "requested_model": "MiniMax-M3",
+          "prompt_sha256": "e6f54512bbb614bd719fbf903e3f679f0b4adfbbc99f8f55b5b0a45342974454",
+          "input_reserved_units": 1573,
+          "request_options": {
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "max_tokens": 512,
+            "extra_body": {
+              "thinking": {
+                "type": "disabled"
+              },
+              "reasoning_split": true
+            }
+          },
+          "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+          "trimmed_memory_count": 0,
+          "trimmed_post_count": 0,
+          "trimmed_comment_count": 0,
+          "used_memory_ticks": [],
+          "cached": false,
+          "returned_model": "MiniMax-M3",
+          "actual_input_tokens": 1013,
+          "actual_output_tokens": 44,
+          "elapsed_seconds": 3.047
+        },
+        "used_memory_ticks": [],
+        "decision_status": "applied"
+      }
+    },
+    {
+      "agent_id": "A0438",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0439",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0440",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0441",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0442",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0443",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0444",
+      "step": 3,
+      "action_kind": "decide",
+      "action_payload": {
+        "answer": {
+          "belief": "reject",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0447"
+          ],
+          "decision_status": "applied"
+        },
+        "raw_answer": {
+          "belief": "reject",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0447"
+          ]
+        },
+        "observed_posts": [
+          {
+            "content_id": "RP02-A0447",
+            "root_content_id": "P001",
+            "author_id": "A0447",
+            "original_author_id": "SOURCE",
+            "published_tick": 2,
+            "available_tick": 3,
+            "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+            "repost_text": "",
+            "parent_content_id": "RP01-A0020",
+            "comments": [],
+            "delivery": "followee",
+            "can_repost": true,
+            "block_reason": null
+          }
+        ],
+        "draws": [
+          {
+            "name": "PB",
+            "probability": 0.579,
+            "uniform": 0.6827931174805794,
+            "passed": false
+          }
+        ],
+        "dry_run": false,
+        "api": {},
+        "used_memory_ticks": [],
+        "decision_status": "applied"
+      }
+    },
+    {
+      "agent_id": "A0445",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0446",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0447",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0448",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0449",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0450",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0451",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0452",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0453",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0454",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0455",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0456",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0457",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0458",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0459",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0460",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0461",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0462",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0463",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0464",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0465",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0466",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0467",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0468",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0469",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0470",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0471",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0472",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0473",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0474",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0475",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0476",
+      "step": 3,
+      "action_kind": "decide",
+      "action_payload": {
+        "answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "P001",
+            "RP01-A0049",
+            "RP02-A0047"
+          ],
+          "decision_status": "applied"
+        },
+        "raw_answer": {
+          "belief": "uncertain",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "P001",
+            "RP01-A0049",
+            "RP02-A0047"
+          ]
+        },
+        "observed_posts": [
+          {
+            "content_id": "RP02-A0047",
+            "root_content_id": "P001",
+            "author_id": "A0047",
+            "original_author_id": "SOURCE",
+            "published_tick": 2,
+            "available_tick": 3,
+            "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+            "repost_text": "",
+            "parent_content_id": "RP01-A0014",
+            "comments": [],
+            "delivery": "followee",
+            "can_repost": true,
+            "block_reason": null
+          }
+        ],
+        "draws": [],
+        "dry_run": false,
+        "api": {
+          "agent_id": "A0476",
+          "tick": 3,
+          "attempt": 1,
+          "format_max_attempts": 4,
+          "request_number": 96,
+          "requested_model": "MiniMax-M3",
+          "prompt_sha256": "38c359dbe0fab2085240d175bc8b267ae95f09dcdd72c3e50e23294ad1664a30",
+          "input_reserved_units": 1901,
+          "request_options": {
+            "temperature": 0.7,
+            "top_p": 0.8,
+            "max_tokens": 512,
+            "extra_body": {
+              "thinking": {
+                "type": "disabled"
+              },
+              "reasoning_split": true
+            }
+          },
+          "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+          "trimmed_memory_count": 0,
+          "trimmed_post_count": 0,
+          "trimmed_comment_count": 0,
+          "used_memory_ticks": [
+            2
+          ],
+          "cached": false,
+          "returned_model": "MiniMax-M3",
+          "actual_input_tokens": 1232,
+          "actual_output_tokens": 83,
+          "elapsed_seconds": 1.265
+        },
+        "used_memory_ticks": [
+          2
+        ],
+        "decision_status": "applied"
+      }
+    },
+    {
+      "agent_id": "A0477",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0478",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0479",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0480",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0481",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0482",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0483",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0484",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0485",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0486",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0487",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0488",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0489",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0490",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0491",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0492",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0493",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0494",
+      "step": 3,
+      "action_kind": "decide",
+      "action_payload": {
+        "answer": {
+          "belief": "believe",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0047"
+          ],
+          "decision_status": "applied"
+        },
+        "raw_answer": {
+          "belief": "believe",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0047"
+          ]
+        },
+        "observed_posts": [
+          {
+            "content_id": "RP02-A0047",
+            "root_content_id": "P001",
+            "author_id": "A0047",
+            "original_author_id": "SOURCE",
+            "published_tick": 2,
+            "available_tick": 3,
+            "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+            "repost_text": "",
+            "parent_content_id": "RP01-A0014",
+            "comments": [],
+            "delivery": "followee",
+            "can_repost": true,
+            "block_reason": null
+          }
+        ],
+        "draws": [
+          {
+            "name": "PB",
+            "probability": 0.579,
+            "uniform": 0.4885528138787677,
+            "passed": true
+          },
+          {
+            "name": "RC",
+            "probability": 0.1,
+            "uniform": 0.893368584334009,
+            "passed": false
+          }
+        ],
+        "dry_run": false,
+        "api": {},
+        "used_memory_ticks": [],
+        "decision_status": "applied"
+      }
+    },
+    {
+      "agent_id": "A0495",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0496",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0497",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0498",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0499",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0500",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0501",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0502",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0503",
+      "step": 3,
+      "action_kind": "decide",
+      "action_payload": {
+        "answer": {
+          "belief": "believe",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0047"
+          ],
+          "decision_status": "applied"
+        },
+        "raw_answer": {
+          "belief": "believe",
+          "comment": {
+            "enabled": false,
+            "text": ""
+          },
+          "repost": {
+            "enabled": false,
+            "target_content_id": null,
+            "text": ""
+          },
+          "evidence_ids": [
+            "RP02-A0047"
+          ]
+        },
+        "observed_posts": [
+          {
+            "content_id": "RP02-A0047",
+            "root_content_id": "P001",
+            "author_id": "A0047",
+            "original_author_id": "SOURCE",
+            "published_tick": 2,
+            "available_tick": 3,
+            "text": "近日，辽宁一名扶贫干部怒斥一对懒惰父子的视频引发热议。视频中，这对父子家里地面上垃圾遍地，尿桶就被他们放在床边，父子俩每天睡到自然醒，不干活，自家的牛被饿死了都不知道。。。",
+            "repost_text": "",
+            "parent_content_id": "RP01-A0014",
+            "comments": [],
+            "delivery": "followee",
+            "can_repost": true,
+            "block_reason": null
+          }
+        ],
+        "draws": [
+          {
+            "name": "PB",
+            "probability": 0.579,
+            "uniform": 0.07321678617095218,
+            "passed": true
+          },
+          {
+            "name": "RC",
+            "probability": 0.1,
+            "uniform": 0.47612245873022996,
+            "passed": false
+          }
+        ],
+        "dry_run": false,
+        "api": {},
+        "used_memory_ticks": [],
+        "decision_status": "applied"
+      }
+    },
+    {
+      "agent_id": "A0504",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0505",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0506",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0507",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0508",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0509",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0510",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0511",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0512",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0513",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0514",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0515",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0516",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0517",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0518",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0519",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0520",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0521",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0522",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0523",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0524",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0525",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0526",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0527",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0528",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0529",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0530",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0531",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0532",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0533",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0534",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0535",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0536",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0537",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0538",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0539",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0540",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0541",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0542",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0543",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0544",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0545",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0546",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0547",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0548",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0549",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0550",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0551",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0552",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0553",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0554",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0555",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0556",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0557",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0558",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0559",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0560",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0561",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0562",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0563",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0564",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0565",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0566",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0567",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0568",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0569",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0570",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0571",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0572",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0573",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0574",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0575",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0576",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0577",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0578",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0579",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0580",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0581",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    },
+    {
+      "agent_id": "A0582",
+      "step": 3,
+      "action_kind": "idle",
+      "action_payload": {
+        "decision_status": "idle",
+        "dry_run": false
+      }
+    }
+  ],
+  "sha256": "ba4fc841cf85992d6059382ecdaa3ab880bb3556d2735cd62b493325611e36cf"
+}

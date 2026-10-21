@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "已有回应明确称该段情节不属实，而且完整视频和上下文尚未确认。原帖里的“懒惰”及生活细节属于未经核实的标签化描述，建议先别继续传播。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "G001",
+      "P001",
+      "RP05-A0383",
+      "RP05-A0037"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0248",
+    "tick": 6,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 1283,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "b576878704f8003b8c425e417263420ed187bd5f4307f7cefde53a65537967c6",
+    "input_reserved_units": 3757,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 4,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2397,
+    "actual_output_tokens": 92,
+    "elapsed_seconds": 1.406
+  },
+  "validation_status": "valid"
+}

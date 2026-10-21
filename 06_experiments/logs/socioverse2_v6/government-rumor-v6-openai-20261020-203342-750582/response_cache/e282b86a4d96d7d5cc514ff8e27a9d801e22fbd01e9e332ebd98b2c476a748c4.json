@@ -1,0 +1,56 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前看到的多是同一段转述，缺少完整视频、扶贫干部身份、当事人回应或当地权威说明。环境卫生状况可以讨论，但“懒惰”“牛被饿死”等说法暂不能确认，也不宜先给当事人贴标签。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP03-A0467",
+      "text": "转出来求证：目前只有片段化概括，尚未看到完整视频或可靠材料核实人物身份及后续说法，不宜据此直接给当事人定性。"
+    },
+    "evidence_ids": [
+      "RP03-A0467",
+      "RP02-A0025",
+      "RP02-A0104",
+      "C03-A0010",
+      "C03-A0012",
+      "C03-A0077",
+      "C03-A0429",
+      "P001"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0239",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 562,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "e282b86a4d96d7d5cc514ff8e27a9d801e22fbd01e9e332ebd98b2c476a748c4",
+    "input_reserved_units": 3826,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 1,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2347,
+    "actual_output_tokens": 210,
+    "elapsed_seconds": 6.922
+  },
+  "validation_status": "valid"
+}

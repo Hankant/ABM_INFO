@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "原始视频目前看不到，仅凭这段转述无法确认父子身份、牛的死因以及扶贫干部怒斥的具体情境。标签化的'懒惰'说法也带有主观色彩，建议等完整视频或当地官方通报出来后再判断。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "C03-A0443",
+      "C03-A0519",
+      "P001",
+      "RP02-A0194",
+      "RP03-A0199"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0519",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 720,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "fb48112850bc178a056b8f18a0413db6719e0b7610bf331a6f13f48f8fe30a80",
+    "input_reserved_units": 3038,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 2,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1902,
+    "actual_output_tokens": 143,
+    "elapsed_seconds": 11.078
+  },
+  "validation_status": "valid"
+}

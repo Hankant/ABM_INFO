@@ -1,0 +1,50 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "目前只有一段转发描述，没有看到完整视频或官方通报，细节暂无法核实。父子具体情况、当地扶贫干部身份、事件完整经过都有待证实，先保留判断。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0061"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0143",
+    "tick": 2,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 97,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "f1498cfcdb4fd18f95bf1685a09aeec650772507d179af22ffb21b8be6d81528",
+    "input_reserved_units": 2401,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1517,
+    "actual_output_tokens": 112,
+    "elapsed_seconds": 2.375
+  },
+  "validation_status": "valid"
+}

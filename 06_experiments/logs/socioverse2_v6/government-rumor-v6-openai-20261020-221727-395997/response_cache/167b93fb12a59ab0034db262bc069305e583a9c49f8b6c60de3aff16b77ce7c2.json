@@ -1,0 +1,55 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "既然已有官方核查称该网传情况不属实，就不宜再把视频情节及“懒惰父子”的标签当作事实传播；相关后续材料也应以完整核查结果为准。"
+    },
+    "repost": {
+      "enabled": true,
+      "target_content_id": "RP02-A0026",
+      "text": "官方核查已称网传情况不属实，提醒大家不要继续转述视频细节或给当事人贴标签，后续以完整核查信息为准。"
+    },
+    "evidence_ids": [
+      "G001",
+      "RP02-A0026",
+      "P001",
+      "RP01-A0026",
+      "RP02-A0250",
+      "C02-A0023",
+      "C02-A0045"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0290",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 375,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "167b93fb12a59ab0034db262bc069305e583a9c49f8b6c60de3aff16b77ce7c2",
+    "input_reserved_units": 3893,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 1,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2456,
+    "actual_output_tokens": 142,
+    "elapsed_seconds": 1.375
+  },
+  "validation_status": "valid"
+}

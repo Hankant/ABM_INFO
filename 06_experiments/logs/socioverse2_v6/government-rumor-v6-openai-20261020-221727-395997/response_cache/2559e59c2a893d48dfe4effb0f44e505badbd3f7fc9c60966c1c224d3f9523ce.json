@@ -1,0 +1,57 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "看了官方多个账号的回应，都说该帖情况不属实，加上原帖本身就是转述、缺完整视频和涉事干部身份，也不清楚是否有前置背景，我倾向于不信这个描述。提醒一下别再继续传这个未经核实的视频或给当事人贴标签了，等后续核查。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP01-A0059",
+      "G001",
+      "RP02-A0008",
+      "RP02-A0027",
+      "RP04-A0044",
+      "RP04-A0235",
+      "C02-A0075",
+      "C02-A0291"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0080",
+    "tick": 5,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 886,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "2559e59c2a893d48dfe4effb0f44e505badbd3f7fc9c60966c1c224d3f9523ce",
+    "input_reserved_units": 4072,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 4,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 4,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2588,
+    "actual_output_tokens": 182,
+    "elapsed_seconds": 3.469
+  },
+  "validation_status": "valid"
+}

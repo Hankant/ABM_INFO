@@ -1,0 +1,52 @@
+{
+  "answer": {
+    "belief": "uncertain",
+    "comment": {
+      "enabled": true,
+      "text": "光看转述难以判断原视频是否被剪辑，能不能贴一下原始视频链接或当地官方通报？这种扶贫一线的事容易被断章取义，建议先核实再下结论。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "P001",
+      "RP02-A0047",
+      "RP02-A0075",
+      "RP02-A0255"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0112",
+    "tick": 3,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 286,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "9a9be0f3b21da7e82f3419a4e006b8d78b9ef6af62e577f3e231f8147922c0cf",
+    "input_reserved_units": 3037,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 0,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 0,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 1906,
+    "actual_output_tokens": 128,
+    "elapsed_seconds": 7.594
+  },
+  "validation_status": "valid"
+}

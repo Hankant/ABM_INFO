@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "目前展示的仍只是网传情节及多次重复的“不属实”结论，没有原始视频、完整上下文或具体核查依据。重复转述不能互相印证，因此我不把“扶贫干部怒斥懒惰父子”及相关细节当作事实。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "RP01-A0026",
+      "RP05-A0222",
+      "G001",
+      "P001",
+      "C06-A0343"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0343",
+    "tick": 10,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 2570,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "5bd300799dad0c71b586106ea98e948f7761367779bcb798312bbbdb329de132",
+    "input_reserved_units": 3987,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 5,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 7,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2535,
+    "actual_output_tokens": 110,
+    "elapsed_seconds": 1.64
+  },
+  "validation_status": "valid"
+}

@@ -1,0 +1,53 @@
+{
+  "answer": {
+    "belief": "reject",
+    "comment": {
+      "enabled": true,
+      "text": "看了官方回应该贴所述情况不属实，而且在转述里也只能看到“扶贫干部怒斥”“尿桶放床边”“牛被饿死”这类细节，却没有原始视频、时间地点和发布来源。A0023评论也指出独立证据不足。我之前没有更可靠的核实材料，就不再把这类说法当事实传，提醒一下关注的也别再转了。"
+    },
+    "repost": {
+      "enabled": false,
+      "target_content_id": null,
+      "text": ""
+    },
+    "evidence_ids": [
+      "G001",
+      "P001",
+      "C02-A0023",
+      "RP01-A0026",
+      "RP03-A0035"
+    ]
+  },
+  "metadata": {
+    "agent_id": "A0519",
+    "tick": 4,
+    "attempt": 1,
+    "format_max_attempts": 4,
+    "request_number": 812,
+    "requested_model": "MiniMax-M3",
+    "prompt_sha256": "d0988ebce02057b2eefc1abf747a4b3da0c4e6a1c595f7c7386898fce9ef75ba",
+    "input_reserved_units": 4006,
+    "request_options": {
+      "temperature": 0.7,
+      "top_p": 0.8,
+      "max_tokens": 512,
+      "extra_body": {
+        "thinking": {
+          "type": "disabled"
+        },
+        "reasoning_split": true
+      }
+    },
+    "input_count_method": "cl100k_base_estimate_15percent_plus64_not_minimax_tokenizer",
+    "trimmed_memory_count": 2,
+    "trimmed_post_count": 0,
+    "trimmed_comment_count": 1,
+    "used_memory_ticks": [],
+    "cached": false,
+    "returned_model": "MiniMax-M3",
+    "actual_input_tokens": 2536,
+    "actual_output_tokens": 166,
+    "elapsed_seconds": 5.234
+  },
+  "validation_status": "valid"
+}
